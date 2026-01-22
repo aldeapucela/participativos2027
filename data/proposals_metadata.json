@@ -302,12 +302,13 @@
   },
   {
     "code": "7583",
-    "category": "Pavimentación y Aceras",
+    "category": "Zona Vías",
     "tags": [
       "Aceras",
       "Brea",
       "Calle Salud",
-      "Urbanismo"
+      "Urbanismo",
+      "Ferroviario"
     ],
     "urgent": false,
     "summary": "Sustitución de aceras de brea por losetas en calle Salud"
@@ -1779,12 +1780,13 @@
   },
   {
     "code": "7747",
-    "category": "Urbanismo",
+    "category": "Zona Vías",
     "tags": [
       "Aceras",
       "Calle de la Vía",
       "Circular",
-      "Reparación"
+      "Reparación",
+      "Ferroviario"
     ],
     "urgent": false,
     "summary": "Arreglo de aceras en la Calle de la Vía junto a la estación"
@@ -1959,7 +1961,7 @@
   },
   {
     "code": "7767",
-    "category": "Pavimentación y Aceras",
+    "category": "Zona Vías",
     "tags": [
       "Ferroviario",
       "Accesibilidad",
@@ -6227,12 +6229,13 @@
   },
   {
     "code": "8300",
-    "category": "Pavimentación y Aceras",
+    "category": "Zona Vías",
     "tags": [
       "Seguridad",
       "Vía férrea",
       "Calle Salud",
-      "Mantenimiento"
+      "Mantenimiento",
+      "Ferroviario"
     ],
     "urgent": false,
     "summary": "Mejora del cercado de la vía ferroviaria en la calle Salud"
@@ -7391,12 +7394,13 @@
   },
   {
     "code": "8440",
-    "category": "Urbanismo",
+    "category": "Zona Vías",
     "tags": [
       "Asfaltado",
       "Calle de la Vía",
       "Circular",
-      "Viales"
+      "Viales",
+      "Ferroviario"
     ],
     "urgent": false,
     "summary": "Asfaltado de la Calle de la Vía entre Plaza Circular y Paseo del Cauce"
@@ -8449,12 +8453,13 @@
   },
   {
     "code": "8560",
-    "category": "Pavimentación y Aceras",
+    "category": "Zona Vías",
     "tags": [
       "Aceras",
       "Árboles",
       "Calle Salud",
-      "Paseo San Isidro"
+      "Paseo San Isidro",
+      "Ferroviario"
     ],
     "urgent": false,
     "summary": "Renovación, ampliación y arbolado en la calle Salud"
