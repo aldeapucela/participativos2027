@@ -5,6 +5,7 @@ export class UIController {
     constructor() {
         this.listElement = document.getElementById('proposals-list');
         this.filterContainer = document.getElementById('category-filters');
+        this.zoneFilterContainer = document.getElementById('zone-filters');
         this.countElement = document.getElementById('proposals-count');
         this.searchInput = document.getElementById('search-input');
         this.activeTagsContainer = document.getElementById('active-tags-container');
@@ -12,6 +13,7 @@ export class UIController {
         this.popularTagsElement = document.getElementById('popular-tags');
 
         this.activeCategory = 'Todas';
+        this.activeZone = 'Todas las zonas';
         this.activeTags = new Set();
         this.showAllTags = false;
 
@@ -32,7 +34,7 @@ export class UIController {
         
         // Display names with emojis for better UX
         const displayNames = {
-            'Todas': 'Todas',
+            'Todas': 'Todas las categorías',
             'Parques y Naturaleza': '🌳 Parques y Naturaleza',
             'Instalaciones Deportivas': '⚽ Instalaciones Deportivas',
             'Movilidad Ciclista': '🚲 Movilidad Ciclista',
@@ -83,6 +85,74 @@ export class UIController {
         document.getElementById('category-select').addEventListener('change', (e) => {
             this.activeCategory = e.target.value;
             onFilterClick(this.activeCategory);
+        });
+    }
+
+    renderZoneFilters(allProposals, onZoneFilterClick) {
+        // Extract unique zones and sort by zone_id
+        const zonesMap = new Map();
+        allProposals.forEach(p => {
+            // Try to use zone_id if available, otherwise extract from zone name
+            let zoneId = p.zone_id;
+            if (zoneId === undefined && p.zone) {
+                // Extract zone_id from zone name (e.g., "1. Zona Este 1:" -> 1)
+                const match = p.zone.match(/^(\d+)\./);
+                if (match) {
+                    zoneId = parseInt(match[1]);
+                }
+            }
+            
+            if (p.zone && zoneId !== undefined) {
+                zonesMap.set(zoneId, p.zone);
+            }
+        });
+        
+        // Convert to array and sort by zone_id
+        const zones = Array.from(zonesMap.entries())
+            .sort((a, b) => a[0] - b[0])
+            .map(([id, name]) => ({ id, name }));
+        
+        // Add "Todas" option
+        const allZones = [{ id: 0, name: 'Todas las zonas' }, ...zones];
+        
+        // Count proposals per zone
+        const counts = {};
+        allZones.forEach(zone => {
+            if (zone.id === 0) {
+                counts[zone.name] = allProposals.length;
+            } else {
+                counts[zone.name] = allProposals.filter(p => {
+                    let pZoneId = p.zone_id;
+                    if (pZoneId === undefined && p.zone) {
+                        const match = p.zone.match(/^(\d+)\./);
+                        if (match) {
+                            pZoneId = parseInt(match[1]);
+                        }
+                    }
+                    return pZoneId === zone.id;
+                }).length;
+            }
+        });
+
+        this.zoneFilterContainer.innerHTML = `
+            <div class="relative w-full md:w-auto">
+                <select id="zone-select" class="w-full md:w-64 px-4 py-2 pr-10 border border-gray-300 rounded-lg bg-white text-sm font-medium text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 appearance-none cursor-pointer">
+                    ${allZones.map(zone => `
+                        <option value="${zone.name}" ${this.activeZone === zone.name ? 'selected' : ''}>
+                            ${zone.name === 'Todas las zonas' ? zone.name + ` (${allProposals.length})` : `${zone.name} (${counts[zone.name]})`}
+                        </option>
+                    `).join('')}
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-500">
+                    <i class="fa-solid fa-chevron-down text-xs"></i>
+                </div>
+            </div>
+        `;
+
+        // Add event listener
+        document.getElementById('zone-select').addEventListener('change', (e) => {
+            this.activeZone = e.target.value;
+            onZoneFilterClick(this.activeZone);
         });
     }
 
@@ -259,7 +329,9 @@ export class UIController {
                     ${proposal.urgent ? '<i class="fa-solid fa-triangle-exclamation text-red-500 animate-pulse-fast" title="Urgente"></i>' : ''}
                 </div>
                 
-                <h3 class="text-gray-900 font-bold leading-tight mb-1 text-base">${proposal.title}</h3>
+                <h3 class="text-gray-900 font-bold leading-tight mb-1 text-base">
+                    <a href="${proposal.external_url}" target="_blank" class="hover:text-indigo-600 transition-colors">${proposal.title}</a>
+                </h3>
                 <p class="text-gray-600 text-sm line-clamp-2 mb-3">${proposal.summary}</p>
                 
                 <div class="flex flex-wrap gap-1.5 mb-3" data-tags>
@@ -282,9 +354,16 @@ export class UIController {
                         <i class="fa-solid fa-location-dot mr-1"></i>
                         <span class="truncate max-w-[180px]">${proposal.zone || 'Varias zonas'}</span>
                     </div>
-                    <a href="${proposal.external_url}" target="_blank" class="text-indigo-600 hover:text-indigo-800 text-xs font-semibold flex items-center transition-colors shrink-0">
-                        Ver original <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-[10px]"></i>
-                    </a>
+                    <div class="flex items-center gap-3">
+                        ${proposal.lat && proposal.lng ? `
+                        <button class="text-indigo-600 hover:text-indigo-800 text-sm font-semibold transition-colors p-1" title="Centrar en mapa" onclick="window.centerMapOnProposal(${proposal.lat}, ${proposal.lng})">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </button>
+                        ` : ''}
+                        <a href="${proposal.external_url}" target="_blank" class="text-indigo-600 hover:text-indigo-800 text-sm font-semibold transition-colors p-1" title="Ver original">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
                 </div>
             `;
 
@@ -305,24 +384,20 @@ export class UIController {
     scrollToCard(id) {
         const element = document.getElementById(`proposal-${id}`);
         if (element) {
-            // On mobile, scroll to the card but ensure the map stays fixed
-            if (window.innerWidth < 768) {
-                // Get the list container and scroll within it
-                const listContainer = document.getElementById('proposals-list-container');
-                const elementRect = element.getBoundingClientRect();
-                const containerRect = listContainer.getBoundingClientRect();
-                
-                // Calculate scroll position relative to container
-                const scrollPosition = elementRect.top - containerRect.top + listContainer.scrollTop - 100;
-                
-                listContainer.scrollTo({
-                    top: scrollPosition,
-                    behavior: 'smooth'
-                });
-            } else {
-                // On desktop, use the original behavior
-                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
+            // On both mobile and desktop, scroll within the list container to keep map visible
+            const listContainer = document.getElementById('proposals-list-container');
+            const elementRect = element.getBoundingClientRect();
+            const containerRect = listContainer.getBoundingClientRect();
+            
+            // Calculate scroll position relative to container
+            // On desktop, position card higher to be more visible
+            const offset = window.innerWidth < 768 ? 100 : 50;
+            const scrollPosition = elementRect.top - containerRect.top + listContainer.scrollTop - offset;
+            
+            listContainer.scrollTo({
+                top: scrollPosition,
+                behavior: 'smooth'
+            });
             
             // Highlight effect
             element.classList.add('ring-2', 'ring-indigo-500', 'ring-opacity-50');

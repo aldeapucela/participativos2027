@@ -69,12 +69,6 @@ html, body {
 /* Layout adjustments */
 #map {
     background: #f8fafc;
-    height: calc(100vh - 140px);
-    min-height: 320px;
-}
-
-#proposals-list-container {
-    height: calc(100vh - 140px);
 }
 
 /* Pulsing animation for urgent icon */

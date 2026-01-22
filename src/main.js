@@ -10,6 +10,9 @@ async function init() {
     // 1. Initialize Controllers
     const ui = new UIController();
     const map = new MapController('map');
+    
+    // Store map controller globally for access from card buttons
+    window.mapController = map;
 
     // 2. Fetch Data
     const { proposals, categories } = await fetchData();
@@ -23,31 +26,35 @@ async function init() {
         } else {
             ui.addActiveTag(tag);
         }
-        handleFilterChange(ui.activeCategory, ui.searchInput.value);
+        handleFilterChange(ui.activeCategory, ui.activeZone, ui.searchInput.value);
     };
 
-    const handleFilterChange = (category, query) => {
-        currentProposals = filterData(proposals, category, query, ui.activeTags);
+    const handleFilterChange = (category, zone, query) => {
+        currentProposals = filterData(proposals, category, zone, query, ui.activeTags);
 
         ui.renderPopularTags(proposals, handleTagClick);
-        ui.renderActiveTags(() => handleFilterChange(ui.activeCategory, ui.searchInput.value));
+        ui.renderActiveTags(() => handleFilterChange(ui.activeCategory, ui.activeZone, ui.searchInput.value));
         ui.renderList(currentProposals, handleTagClick);
         map.renderMarkers(currentProposals, (id) => ui.scrollToCard(id));
     };
 
     // 4. Initial Render
     ui.renderFilters(categories, proposals, (category) => {
-        handleFilterChange(category, ui.searchInput.value);
+        handleFilterChange(category, ui.activeZone, ui.searchInput.value);
+    });
+    
+    ui.renderZoneFilters(proposals, (zone) => {
+        handleFilterChange(ui.activeCategory, zone, ui.searchInput.value);
     });
 
     ui.renderPopularTags(proposals, handleTagClick);
-    ui.renderActiveTags(() => handleFilterChange(ui.activeCategory, ui.searchInput.value));
+    ui.renderActiveTags(() => handleFilterChange(ui.activeCategory, ui.activeZone, ui.searchInput.value));
     ui.renderList(currentProposals, handleTagClick);
     map.renderMarkers(currentProposals, (id) => ui.scrollToCard(id));
 
     // 5. Event Listeners
     ui.searchInput.addEventListener('input', debounce((e) => {
-        handleFilterChange(ui.activeCategory, e.target.value);
+        handleFilterChange(ui.activeCategory, ui.activeZone, e.target.value);
     }, 300));
 }
 
@@ -61,3 +68,10 @@ if (document.readyState === 'loading') {
 
 // Also expose to window for debugging
 window.init = init;
+
+// Expose map centering function globally
+window.centerMapOnProposal = (lat, lng) => {
+    if (window.mapController) {
+        window.mapController.centerOnProposal(lat, lng);
+    }
+};

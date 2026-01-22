@@ -30,6 +30,7 @@ export async function fetchData() {
                 lat: proposal.latitude ? parseFloat(proposal.latitude) : null,
                 lng: proposal.longitude ? parseFloat(proposal.longitude) : null,
                 zone: proposal.zone,
+                zone_id: proposal.zone_id,
                 external_url: proposal.url || '#'
             };
         });

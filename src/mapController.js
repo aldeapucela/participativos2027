@@ -130,6 +130,12 @@ export class MapController {
         }
     }
 
+    centerOnProposal(lat, lng) {
+        if (lat && lng) {
+            this.map.setView([lat, lng], 18);
+        }
+    }
+
     getCategoryIcon(category) {
         const icons = {
             'Parques y Naturaleza': 'fa-solid fa-tree',
