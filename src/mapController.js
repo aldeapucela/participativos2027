@@ -3,11 +3,55 @@
  */
 export class MapController {
     constructor(elementId, center = [41.6523, -4.7285]) { // Valladolid coordinates
+        // Check if map container already has a map instance
+        const container = L.DomUtil.get(elementId);
+        if (container && container._leaflet_id) {
+            try {
+                container._leaflet_map?.remove?.();
+            } catch (e) {
+            }
+            delete container._leaflet_id;
+            while (container.firstChild) {
+                container.removeChild(container.firstChild);
+            }
+        }
+        
         this.map = L.map(elementId, {
-            zoomControl: false // Custom position later
+            zoomControl: false, // Custom position later
+            maxZoom: 20 // Required for MarkerClusterGroup
         }).setView(center, 13);
 
-        this.markers = L.layerGroup().addTo(this.map);
+        if (container) {
+            container._leaflet_map = this.map;
+        }
+
+        // Create marker cluster group instead of regular layer group
+        this.markers = L.markerClusterGroup({
+            chunkedLoading: true,
+            chunkProgress: function(processed, total) {
+                console.log(`Loading clusters: ${processed}/${total}`);
+            },
+            spiderfyOnMaxZoom: true, // Show spiderfy when too many markers at same location
+            showCoverageOnHover: true, // Show coverage area on hover
+            zoomToBoundsOnClick: true, // Zoom to cluster bounds on click
+            maxClusterRadius: 45, // Minimal clustering - only cluster very close markers
+            iconCreateFunction: function(cluster) {
+                var childCount = cluster.getChildCount();
+                var c = ' marker-cluster-';
+                if (childCount < 10) {
+                    c += 'small';
+                } else if (childCount < 100) {
+                    c += 'medium';
+                } else {
+                    c += 'large';
+                }
+                return new L.DivIcon({ 
+                    html: '<div><span>' + childCount + '</span></div>', 
+                    className: 'marker-cluster ' + c, 
+                    iconSize: new L.Point(40, 40) 
+                });
+            }
+        }).addTo(this.map);
 
         // CartoDB Positron Tiles (cleaner look)
         L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
@@ -75,7 +119,14 @@ export class MapController {
         });
 
         if (bounds.length > 0) {
-            this.map.fitBounds(bounds, { padding: [50, 50], maxZoom: 15 });
+            // On mobile, don't use fitBounds to prevent unwanted resizing
+            if (window.innerWidth < 768) {
+                // Set a reasonable center and zoom for mobile
+                this.map.setView([41.6523, -4.7285], 13);
+            } else {
+                // On desktop, use fitBounds but consider clusters
+                this.map.fitBounds(bounds, { padding: [50, 50], maxZoom: 15 });
+            }
         }
     }
 

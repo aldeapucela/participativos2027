@@ -7,6 +7,10 @@
     scrollbar-width: none;
 }
 
+html, body {
+    height: 100%;
+}
+
 /* Custom Scrollbar for Proposals List */
 #proposals-list-container::-webkit-scrollbar {
     width: 6px;
@@ -22,9 +26,55 @@
     background: #cbd5e1;
 }
 
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    main {
+        min-height: calc(100vh - 200px); /* Ensure content is scrollable */
+    }
+    
+    #map {
+        height: 40vh !important; /* Force fixed height on mobile */
+        min-height: 40vh;
+        max-height: 40vh;
+        position: relative;
+        z-index: 1;
+    }
+    
+    #proposals-list-container {
+        height: 60vh !important; /* Force fixed height on mobile */
+        min-height: 60vh;
+        max-height: 60vh;
+        overflow-y: auto;
+        position: relative;
+        z-index: 2;
+    }
+    
+    /* Prevent map from affecting page scroll */
+    .leaflet-container {
+        height: 100% !important;
+        width: 100% !important;
+    }
+    
+    /* Ensure popups don't break layout */
+    .leaflet-popup {
+        position: absolute !important;
+        z-index: 1000 !important;
+    }
+}
+
 /* Layout adjustments */
 #map {
     background: #f8fafc;
+    height: calc(100vh - 140px);
+    min-height: 320px;
+}
+
+#proposals-list-container {
+    height: calc(100vh - 140px);
 }
 
 /* Pulsing animation for urgent icon */
@@ -67,4 +117,68 @@
 }
 .leaflet-container a.leaflet-popup-close-button:hover {
     color: #4b5563;
+}
+
+/* Custom Marker Cluster Styles */
+.marker-cluster {
+    background: rgba(59, 130, 246, 0.8);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.marker-cluster-small {
+    background: rgba(34, 197, 94, 0.8);
+}
+
+.marker-cluster-medium {
+    background: rgba(245, 158, 11, 0.8);
+}
+
+.marker-cluster-large {
+    background: rgba(239, 68, 68, 0.8);
+}
+
+ .marker-cluster > div {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100% !important;
+     height: 100% !important;
+     line-height: 1;
+     box-sizing: border-box;
+     padding: 0 !important;
+     margin: 0 !important;
+     background: none !important;
+ }
+
+.marker-cluster span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    margin: 0;
+    padding: 0;
+}
+
+ 
+
+/* Spiderfy styles for overlapping markers */
+.leaflet-spider-leg {
+    stroke: #3b82f6 !important;
+    stroke-opacity: 0.6 !important;
+    stroke-width: 1px !important;
 }

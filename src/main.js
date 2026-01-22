@@ -51,5 +51,13 @@ async function init() {
     }, 300));
 }
 
-// Start App when DOM is ready
-document.addEventListener('DOMContentLoaded', init);
+// Wait for DOM to be ready before initializing
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+} else {
+    // DOM already loaded, initialize immediately
+    init();
+}
+
+// Also expose to window for debugging
+window.init = init;

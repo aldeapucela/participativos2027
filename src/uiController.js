@@ -305,7 +305,25 @@ export class UIController {
     scrollToCard(id) {
         const element = document.getElementById(`proposal-${id}`);
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // On mobile, scroll to the card but ensure the map stays fixed
+            if (window.innerWidth < 768) {
+                // Get the list container and scroll within it
+                const listContainer = document.getElementById('proposals-list-container');
+                const elementRect = element.getBoundingClientRect();
+                const containerRect = listContainer.getBoundingClientRect();
+                
+                // Calculate scroll position relative to container
+                const scrollPosition = elementRect.top - containerRect.top + listContainer.scrollTop - 100;
+                
+                listContainer.scrollTo({
+                    top: scrollPosition,
+                    behavior: 'smooth'
+                });
+            } else {
+                // On desktop, use the original behavior
+                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            
             // Highlight effect
             element.classList.add('ring-2', 'ring-indigo-500', 'ring-opacity-50');
             setTimeout(() => {
