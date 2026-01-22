@@ -26,15 +26,23 @@ export function filterData(proposals, category, zone, query, activeTags = new Se
         const categoryMatch = !category || category === 'Todas' || p.category === category || (isZonaVias && p.tags.includes('Ferroviario'));
 
         // Zone Match
-        let zoneMatch = !zone || zone === 'Todas zonas';
-        if (zone && zone !== 'Todas zonas') {
-            // Try to match by zone name directly first
-            if (p.zone === zone) {
-                zoneMatch = true;
+        let zoneMatch = zone == null || zone === 0 || zone === 'Todas zonas';
+        if (zone != null && zone !== 0 && zone !== 'Todas zonas') {
+            const targetZoneId = typeof zone === 'number' ? zone : null;
+
+            let pZoneId = p.zone_id;
+            if ((pZoneId === undefined || pZoneId === null) && p.zone) {
+                const match = p.zone.match(/^(\d+)\./);
+                if (match) {
+                    pZoneId = parseInt(match[1]);
+                }
+            }
+
+            if (targetZoneId != null) {
+                zoneMatch = pZoneId === targetZoneId;
             } else {
-                // If not direct match, this shouldn't happen with our current implementation
-                // but keeping for compatibility
-                zoneMatch = false;
+                // Backwards compatibility: zone passed as name
+                zoneMatch = p.zone === zone;
             }
         }
 
@@ -64,4 +72,14 @@ export function debounce(func, wait) {
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
     };
+}
+
+export function escapeHtml(value) {
+    if (value == null) return '';
+    return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
 }
