@@ -48,7 +48,11 @@ export class UIController {
     }
 
     renderFilters(categories, allProposals, onFilterClick) {
-        const allCategories = ['Todas', ...categories, 'Zona Vías'];
+        const allCategories = ['Todas', 
+    ...categories.filter(cat => cat !== 'Inadmitidas' && cat !== 'Sin categoría' && cat !== 'Zona Vías').sort((a, b) => a.localeCompare(b, 'es')),
+    'Inadmitidas', 
+    'Sin categoría', 
+    'Zona Vías'];
         
         // Display names with emojis for better UX
         const displayNames = {
@@ -69,7 +73,13 @@ export class UIController {
             'Medio Ambiente': '🌿 Medio Ambiente',
             'Grandes Infraestructuras': '🏗️ Grandes Infraestructuras',
             'Mobiliario e Iluminación': '💡 Mobiliario e Iluminación',
-            'Zona Vías': '🚂 Zona Vías'
+            'Inadmitidas': '🚫 Inadmitidas',
+            'Zona Vías': '🚂 Zona Vías',
+            'Accesibilidad': '♿ Accesibilidad',
+            'Cultura y Juventud': '🎭 Cultura y Juventud',
+            'Infancia y Educación': '👶 Infancia y Educación',
+            'Alumbrado Público': '💡 Alumbrado Público',
+            ' Social y Equipamientos': '👵 Social y Equipamientos'
         };
 
         // Count proposals per category
@@ -292,7 +302,14 @@ export class UIController {
             'Seguridad y Convivencia': 'fa-solid fa-shield-halved',
             'Medio Ambiente': 'fa-solid fa-leaf',
             'Grandes Infraestructuras': 'fa-solid fa-hammer',
-            'Mobiliario e Iluminación': 'fa-solid fa-lightbulb'
+            'Mobiliario e Iluminación': 'fa-solid fa-lightbulb',
+            'Inadmitidas': 'fa-solid fa-ban',
+            'Zona Vías': 'fa-solid fa-train',
+            'Accesibilidad': 'fa-solid fa-wheelchair',
+            'Cultura y Juventud': 'fa-solid fa-masks-theater',
+            'Infancia y Educación': 'fa-solid fa-graduation-cap',
+            'Alumbrado Público': 'fa-solid fa-lightbulb',
+            ' Social y Equipamientos': 'fa-solid fa-users'
         };
         return icons[category] || 'fa-solid fa-location-dot';
     }
@@ -313,7 +330,13 @@ export class UIController {
             'Seguridad y Convivencia': '#1e293b',
             'Medio Ambiente': '#10b981',
             'Grandes Infraestructuras': '#475569',
-            'Mobiliario e Iluminación': '#eab308'
+            'Mobiliario e Iluminación': '#eab308',
+            'Inadmitidas': '#dc2626',
+            'Accesibilidad': '#0891b2',
+            'Cultura y Juventud': '#c026d3',
+            'Infancia y Educación': '#2563eb',
+            'Alumbrado Público': '#eab308',
+            ' Social y Equipamientos': '#8b5cf6'
         };
         return colors[category] || '#94a3b8';
     }

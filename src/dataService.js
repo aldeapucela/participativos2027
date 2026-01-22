@@ -37,12 +37,23 @@ export async function fetchData() {
         const mergedData = rawData.map(proposal => {
             const meta = metaData.find(m => String(m.code) === String(proposal.code)) || {};
             
+            // Check if title contains "Inadmitida" and assign special category
+            let category = meta.category || 'Sin categoría';
+            if (proposal.title && proposal.title.toLowerCase().includes('inadmitida')) {
+                category = 'Inadmitidas';
+            }
+            
+            // Normalize categories with encoding issues
+            if (category && category.includes(' Social y Equipamientos')) {
+                category = 'Social y Equipamientos';
+            }
+            
             return {
                 id: proposal.code,
                 title: proposal.title,
                 full_description: proposal.description,
                 summary: meta.summary || 'Sin resumen disponible',
-                category: meta.category || 'Sin categoría',
+                category: category,
                 tags: meta.tags || [],
                 urgent: meta.urgent || false,
                 lat: proposal.latitude ? parseFloat(proposal.latitude) : null,
