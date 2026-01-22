@@ -115,11 +115,11 @@ export class UIController {
         const displayNames = {
             'Todas': 'Todas categorias',
             'Parques y Naturaleza': '🌳 Parques y Naturaleza',
+            'Parques y Jardines': '🌳 Parques y Jardines',
             'Instalaciones Deportivas': '⚽ Instalaciones Deportivas',
             'Movilidad Ciclista': '🚲 Movilidad Ciclista',
             'Urbanismo': '🏢 Urbanismo',
             'Movilidad Activa': '🚲 Movilidad Activa',
-            'Parques y Jardines': '🌳 Parques y Jardines',
             'Limpieza y Residuos': '🧹 Limpieza y Residuos',
             'Pavimentación y Aceras': '🚧 Pavimentación y Aceras',
             'Transporte y Tráfico': '🚌 Transporte y Tráfico',
@@ -127,13 +127,16 @@ export class UIController {
             'Social y Equipamientos': '👵 Social y Equipamientos',
             'Educación y Colegios': '🏫 Educación y Colegios',
             'Seguridad y Convivencia': '👮 Seguridad y Convivencia',
+            'Seguridad Vial': '🚗 Seguridad Vial',
             'Medio Ambiente': '🌿 Medio Ambiente',
             'Grandes Infraestructuras': '🏗️ Grandes Infraestructuras',
             'Mobiliario e Iluminación': '💡 Mobiliario e Iluminación',
             'Inadmitidas': '🚫 Inadmitidas',
             'Zona Vías': '🚂 Zona Vías',
+            'Zonas Caninas': '🐕 Zonas Caninas',
             'Accesibilidad': '♿ Accesibilidad',
             'Cultura y Juventud': '🎭 Cultura y Juventud',
+            'Cultura y Patrimonio': '🏛️ Cultura y Patrimonio',
             'Infancia y Educación': '👶 Infancia y Educación',
             'Alumbrado Público': '💡 Alumbrado Público',
             ' Social y Equipamientos': '👵 Social y Equipamientos'
@@ -344,9 +347,15 @@ export class UIController {
         this.activeTags.add(tag);
     }
 
+    cleanCategoryName(category) {
+        // Remove emojis and special characters from category name
+        return category.replace(/[^\w\sáéíóúÁÉÍÓÚñÑüÜ-]/g, '').trim();
+    }
+
     getCategoryIcon(category) {
         const icons = {
             'Parques y Naturaleza': 'fa-solid fa-tree',
+            'Parques y Jardines': 'fa-solid fa-tree',
             'Instalaciones Deportivas': 'fa-solid fa-futbol',
             'Movilidad Ciclista': 'fa-solid fa-bicycle',
             'Urbanismo': 'fa-solid fa-building',
@@ -358,13 +367,16 @@ export class UIController {
             'Social y Equipamientos': 'fa-solid fa-users',
             'Educación y Colegios': 'fa-solid fa-school',
             'Seguridad y Convivencia': 'fa-solid fa-shield-halved',
+            'Seguridad Vial': 'fa-solid fa-car',
             'Medio Ambiente': 'fa-solid fa-leaf',
             'Grandes Infraestructuras': 'fa-solid fa-hammer',
             'Mobiliario e Iluminación': 'fa-solid fa-lightbulb',
             'Inadmitidas': 'fa-solid fa-ban',
             'Zona Vías': 'fa-solid fa-train',
+            'Zonas Caninas': 'fa-solid fa-dog',
             'Accesibilidad': 'fa-solid fa-wheelchair',
             'Cultura y Juventud': 'fa-solid fa-masks-theater',
+            'Cultura y Patrimonio': 'fa-solid fa-landmark',
             'Infancia y Educación': 'fa-solid fa-graduation-cap',
             'Alumbrado Público': 'fa-solid fa-lightbulb',
             ' Social y Equipamientos': 'fa-solid fa-users',
@@ -379,6 +391,7 @@ export class UIController {
     getCategoryColor(category) {
         const colors = {
             'Parques y Naturaleza': '#22c55e',
+            'Parques y Jardines': '#22c55e',
             'Instalaciones Deportivas': '#f59e0b',
             'Movilidad Ciclista': '#3b82f6',
             'Urbanismo': '#64748b',
@@ -390,12 +403,14 @@ export class UIController {
             'Social y Equipamientos': '#8b5cf6',
             'Educación y Colegios': '#3b82f6',
             'Seguridad y Convivencia': '#1e293b',
+            'Seguridad Vial': '#dc2626',
             'Medio Ambiente': '#10b981',
             'Grandes Infraestructuras': '#475569',
             'Mobiliario e Iluminación': '#eab308',
             'Inadmitidas': '#dc2626',
             'Accesibilidad': '#0891b2',
             'Cultura y Juventud': '#c026d3',
+            'Cultura y Patrimonio': '#9333ea',
             'Infancia y Educación': '#2563eb',
             'Alumbrado Público': '#eab308',
             ' Social y Equipamientos': '#8b5cf6',
@@ -431,7 +446,7 @@ export class UIController {
                 <div class="flex justify-between items-start mb-2">
                     <span class="text-[10px] font-bold uppercase tracking-wider text-white px-2 py-0.5 rounded flex items-center gap-1" style="background-color: ${this.getCategoryColor(proposal.category)};">
                         <i class="${this.getCategoryIcon(proposal.category)}"></i>
-                        ${escapeHtml(proposal.category)}
+                        ${escapeHtml(this.cleanCategoryName(proposal.category))}
                     </span>
                     ${proposal.urgent ? '<i class="fa-solid fa-triangle-exclamation text-red-500 animate-pulse-fast" title="Urgente"></i>' : ''}
                 </div>
