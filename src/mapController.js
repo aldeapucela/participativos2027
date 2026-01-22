@@ -190,6 +190,7 @@ export class MapController {
     getCategoryIcon(category) {
         const icons = {
             'Parques y Naturaleza': 'fa-solid fa-tree',
+            'Parques y Jardines': 'fa-solid fa-tree',
             'Instalaciones Deportivas': 'fa-solid fa-futbol',
             'Movilidad Ciclista': 'fa-solid fa-bicycle',
             'Urbanismo': 'fa-solid fa-building',
@@ -198,13 +199,21 @@ export class MapController {
             'Pavimentación y Aceras': 'fa-solid fa-road',
             'Transporte y Tráfico': 'fa-solid fa-bus',
             'Infancia y Juegos': 'fa-solid fa-child',
+            'Infancia y Educación': 'fa-solid fa-graduation-cap',
             'Social y Equipamientos': 'fa-solid fa-users',
             'Educación y Colegios': 'fa-solid fa-school',
             'Seguridad y Convivencia': 'fa-solid fa-shield-halved',
             'Medio Ambiente': 'fa-solid fa-leaf',
             'Grandes Infraestructuras': 'fa-solid fa-hammer',
             'Mobiliario e Iluminación': 'fa-solid fa-lightbulb',
-            'Zona Vías': 'fa-solid fa-train'
+            'Zona Vías': 'fa-solid fa-train',
+            'Accesibilidad': 'fa-solid fa-wheelchair',
+            'Alumbrado Público': 'fa-solid fa-lightbulb',
+            'Cultura y Juventud': 'fa-solid fa-masks-theater',
+            '♿ Accesibilidad': 'fa-solid fa-wheelchair',
+            '💡 Alumbrado Público': 'fa-solid fa-lightbulb',
+            '🎭 Cultura y Juventud': 'fa-solid fa-masks-theater',
+            '👶 Infancia y Educación': 'fa-solid fa-graduation-cap'
         };
         return icons[category] || 'fa-solid fa-location-dot';
     }
@@ -212,6 +221,7 @@ export class MapController {
     getCategoryColor(category) {
         const colors = {
             'Parques y Naturaleza': '#22c55e',
+            'Parques y Jardines': '#22c55e',
             'Instalaciones Deportivas': '#f59e0b',
             'Movilidad Ciclista': '#3b82f6',
             'Urbanismo': '#64748b',
@@ -220,13 +230,21 @@ export class MapController {
             'Pavimentación y Aceras': '#f97316',
             'Transporte y Tráfico': '#ef4444',
             'Infancia y Juegos': '#ec4899',
+            'Infancia y Educación': '#2563eb',
             'Social y Equipamientos': '#8b5cf6',
             'Educación y Colegios': '#3b82f6',
             'Seguridad y Convivencia': '#1e293b',
             'Medio Ambiente': '#10b981',
             'Grandes Infraestructuras': '#475569',
             'Mobiliario e Iluminación': '#eab308',
-            'Zona Vías': '#374151'
+            'Zona Vías': '#374151',
+            'Accesibilidad': '#0891b2',
+            'Alumbrado Público': '#eab308',
+            'Cultura y Juventud': '#c026d3',
+            '♿ Accesibilidad': '#0891b2',
+            '💡 Alumbrado Público': '#eab308',
+            '🎭 Cultura y Juventud': '#c026d3',
+            '👶 Infancia y Educación': '#2563eb'
         };
         return colors[category] || '#94a3b8';
     }

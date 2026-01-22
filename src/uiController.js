@@ -309,7 +309,11 @@ export class UIController {
             'Cultura y Juventud': 'fa-solid fa-masks-theater',
             'Infancia y Educación': 'fa-solid fa-graduation-cap',
             'Alumbrado Público': 'fa-solid fa-lightbulb',
-            ' Social y Equipamientos': 'fa-solid fa-users'
+            ' Social y Equipamientos': 'fa-solid fa-users',
+            '♿ Accesibilidad': 'fa-solid fa-wheelchair',
+            '💡 Alumbrado Público': 'fa-solid fa-lightbulb',
+            '🎭 Cultura y Juventud': 'fa-solid fa-masks-theater',
+            '👶 Infancia y Educación': 'fa-solid fa-graduation-cap'
         };
         return icons[category] || 'fa-solid fa-location-dot';
     }
@@ -336,7 +340,11 @@ export class UIController {
             'Cultura y Juventud': '#c026d3',
             'Infancia y Educación': '#2563eb',
             'Alumbrado Público': '#eab308',
-            ' Social y Equipamientos': '#8b5cf6'
+            ' Social y Equipamientos': '#8b5cf6',
+            '♿ Accesibilidad': '#0891b2',
+            '💡 Alumbrado Público': '#eab308',
+            '🎭 Cultura y Juventud': '#c026d3',
+            '👶 Infancia y Educación': '#2563eb'
         };
         return colors[category] || '#94a3b8';
     }
