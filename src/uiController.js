@@ -31,7 +31,7 @@ export class UIController {
         this.popularTagsElement = document.getElementById('popular-tags');
 
         this.activeCategory = 'Todas';
-        this.activeZone = 'Todas las zonas';
+        this.activeZone = 'Todas zonas';
         this.activeTags = new Set();
         this.showAllTags = false;
 
@@ -56,7 +56,7 @@ export class UIController {
         
         // Display names with emojis for better UX
         const displayNames = {
-            'Todas': 'Todas las categorías',
+            'Todas': 'Todas categorias',
             'Parques y Naturaleza': '🌳 Parques y Naturaleza',
             'Instalaciones Deportivas': '⚽ Instalaciones Deportivas',
             'Movilidad Ciclista': '🚲 Movilidad Ciclista',
@@ -96,7 +96,7 @@ export class UIController {
 
         this.filterContainer.innerHTML = `
             <div class="relative w-full md:w-auto">
-                <select id="category-select" class="w-full md:w-64 px-4 py-2 pr-10 border border-gray-300 rounded-lg bg-white text-sm font-medium text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 appearance-none cursor-pointer">
+                <select id="category-select" class="w-full md:w-64 px-4 py-2 pr-10 border border-gray-300 rounded-lg bg-white text-sm font-medium text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 appearance-none cursor-pointer truncate overflow-hidden whitespace-nowrap text-ellipsis">
                     ${allCategories.map(cat => `
                         <option value="${cat}" ${this.activeCategory === cat ? 'selected' : ''}>
                             ${displayNames[cat] || cat} (${counts[cat]})
@@ -141,7 +141,7 @@ export class UIController {
             .map(([id, name]) => ({ id, name }));
         
         // Add "Todas" option
-        const allZones = [{ id: 0, name: 'Todas las zonas' }, ...zones];
+        const allZones = [{ id: 0, name: 'Todas zonas' }, ...zones];
         
         // Count proposals per zone
         const counts = {};
@@ -164,10 +164,10 @@ export class UIController {
 
         this.zoneFilterContainer.innerHTML = `
             <div class="relative w-full md:w-auto">
-                <select id="zone-select" class="w-full md:w-64 px-4 py-2 pr-10 border border-gray-300 rounded-lg bg-white text-sm font-medium text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 appearance-none cursor-pointer">
+                <select id="zone-select" class="w-full md:w-64 px-4 py-2 pr-10 border border-gray-300 rounded-lg bg-white text-sm font-medium text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 appearance-none cursor-pointer truncate overflow-hidden whitespace-nowrap text-ellipsis">
                     ${allZones.map(zone => `
                         <option value="${zone.name}" ${this.activeZone === zone.name ? 'selected' : ''}>
-                            ${zone.name === 'Todas las zonas' ? zone.name + ` (${allProposals.length})` : `${zone.name} (${counts[zone.name]})`}
+                            ${zone.name === 'Todas zonas' ? zone.name + ` (${allProposals.length})` : `${zone.name} (${counts[zone.name]})`}
                         </option>
                     `).join('')}
                 </select>

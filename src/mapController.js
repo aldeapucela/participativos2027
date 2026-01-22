@@ -88,6 +88,23 @@ export class MapController {
         if (proposals.length === 0) return;
 
         const bounds = [];
+        const boundsForFit = [];
+        const valladolidCenter = [41.6523, -4.7285];
+        const maxDistanceKmForFit = 30;
+        const minCityZoom = 12;
+
+        const distanceKm = (a, b) => {
+            const toRad = (deg) => (deg * Math.PI) / 180;
+            const R = 6371;
+            const dLat = toRad(b[0] - a[0]);
+            const dLon = toRad(b[1] - a[1]);
+            const lat1 = toRad(a[0]);
+            const lat2 = toRad(b[0]);
+            const sinDLat = Math.sin(dLat / 2);
+            const sinDLon = Math.sin(dLon / 2);
+            const h = sinDLat * sinDLat + Math.cos(lat1) * Math.cos(lat2) * sinDLon * sinDLon;
+            return 2 * R * Math.asin(Math.min(1, Math.sqrt(h)));
+        };
 
         proposals.forEach(proposal => {
             if (proposal.lat && proposal.lng) {
@@ -133,6 +150,12 @@ export class MapController {
 
                 marker.addTo(this.markers);
                 bounds.push([proposal.lat, proposal.lng]);
+
+                // Only use sane points around Valladolid for fitBounds (prevents zooming out due to bad geocoding)
+                const d = distanceKm(valladolidCenter, [proposal.lat, proposal.lng]);
+                if (d <= maxDistanceKmForFit) {
+                    boundsForFit.push([proposal.lat, proposal.lng]);
+                }
             }
         });
 
@@ -142,8 +165,18 @@ export class MapController {
                 // Set a reasonable center and zoom for mobile
                 this.map.setView([41.6523, -4.7285], 13);
             } else {
-                // On desktop, use fitBounds but consider clusters
-                this.map.fitBounds(bounds, { padding: [50, 50], maxZoom: 15 });
+                // On desktop, use fitBounds but ignore far outliers (bad geocoding)
+                if (boundsForFit.length > 0) {
+                    const targetZoom = this.map.getBoundsZoom(boundsForFit, false, [50, 50]);
+                    if (targetZoom < minCityZoom) {
+                        // Prioritize a city-level view even if some points are far apart
+                        this.map.setView(valladolidCenter, minCityZoom);
+                    } else {
+                        this.map.fitBounds(boundsForFit, { padding: [50, 50], maxZoom: 15 });
+                    }
+                } else {
+                    this.map.setView(valladolidCenter, 13);
+                }
             }
         }
     }

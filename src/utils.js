@@ -26,8 +26,8 @@ export function filterData(proposals, category, zone, query, activeTags = new Se
         const categoryMatch = !category || category === 'Todas' || p.category === category || (isZonaVias && p.tags.includes('Ferroviario'));
 
         // Zone Match
-        let zoneMatch = !zone || zone === 'Todas las zonas';
-        if (zone && zone !== 'Todas las zonas') {
+        let zoneMatch = !zone || zone === 'Todas zonas';
+        if (zone && zone !== 'Todas zonas') {
             // Try to match by zone name directly first
             if (p.zone === zone) {
                 zoneMatch = true;

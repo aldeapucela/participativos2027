@@ -71,6 +71,51 @@ html, body {
     background: #f8fafc;
 }
 
+/* Desktop-only improvements (do not affect mobile) */
+@media (min-width: 769px) {
+    body {
+        background: linear-gradient(180deg, #f8fafc 0%, #f3f4f6 100%);
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    main {
+        width: 100%;
+        max-width: 80rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1rem;
+        gap: 1rem;
+        align-items: stretch;
+    }
+
+    #map {
+        height: calc(100vh - 160px) !important;
+        min-height: 560px;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.10);
+        border: 1px solid #e5e7eb;
+    }
+
+    #proposals-list-container {
+        height: calc(100vh - 160px) !important;
+        overflow-y: auto;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+        border: 1px solid #e5e7eb;
+    }
+}
+
 /* Pulsing animation for urgent icon */
 @keyframes custom-pulse {
     0%, 100% { opacity: 1; }
