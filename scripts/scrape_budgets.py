@@ -1,3 +1,22 @@
+#!/usr/bin/env python3
+"""
+Participativos2027 - Plataforma Web de Presupuestos Participativos Valladolid
+Copyright (C) 2025
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+"""
+
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -10,9 +29,9 @@ from tqdm import tqdm
 # Constantes
 BASE_URL = "https://www10.ava.es"
 START_URL = "https://www10.ava.es/presupuestosparticipativos/budgets"
-OUTPUT_JSON = "proposals_data.json"
-OUTPUT_CSV = "proposals_data.csv"
-DISCOVERED_URLS = "discovered_urls.json"
+OUTPUT_JSON = "../data/proposals_data.json"
+OUTPUT_CSV = "../data/proposals_data.csv"
+DISCOVERED_URLS = "../data/discovered_urls.json"
 DELAY = 0.5  # Segundos entre peticiones para ser amable con el servidor
 
 def get_soup(url):
