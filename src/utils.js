@@ -4,7 +4,7 @@
 export function filterData(proposals, category, query, activeTags = new Set()) {
     return proposals.filter(p => {
         // Special Category: Zona Vías (Ferroviario tag)
-        const isZonaVias = category === '🚂 Zona Vías';
+        const isZonaVias = category === 'Zona Vías';
         const categoryMatch = !category || category === 'Todas' || p.category === category || (isZonaVias && p.tags.includes('Ferroviario'));
 
         // Tag Match: Proposal must have ALL active tags

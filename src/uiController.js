@@ -28,14 +28,36 @@ export class UIController {
     }
 
     renderFilters(categories, allProposals, onFilterClick) {
-        const allCategories = ['Todas', ...categories, '🚂 Zona Vías'];
+        const allCategories = ['Todas', ...categories, 'Zona Vías'];
+        
+        // Display names with emojis for better UX
+        const displayNames = {
+            'Todas': 'Todas',
+            'Parques y Naturaleza': '🌳 Parques y Naturaleza',
+            'Instalaciones Deportivas': '⚽ Instalaciones Deportivas',
+            'Movilidad Ciclista': '🚲 Movilidad Ciclista',
+            'Urbanismo': '🏢 Urbanismo',
+            'Movilidad Activa': '🚲 Movilidad Activa',
+            'Parques y Jardines': '🌳 Parques y Jardines',
+            'Limpieza y Residuos': '🧹 Limpieza y Residuos',
+            'Pavimentación y Aceras': '🚧 Pavimentación y Aceras',
+            'Transporte y Tráfico': '🚌 Transporte y Tráfico',
+            'Infancia y Juegos': '🧸 Infancia y Juegos',
+            'Social y Equipamientos': '👵 Social y Equipamientos',
+            'Educación y Colegios': '🏫 Educación y Colegios',
+            'Seguridad y Convivencia': '👮 Seguridad y Convivencia',
+            'Medio Ambiente': '🌿 Medio Ambiente',
+            'Grandes Infraestructuras': '🏗️ Grandes Infraestructuras',
+            'Mobiliario e Iluminación': '💡 Mobiliario e Iluminación',
+            'Zona Vías': '🚂 Zona Vías'
+        };
 
         // Count proposals per category
         const counts = {};
         allCategories.forEach(cat => {
             if (cat === 'Todas') {
                 counts[cat] = allProposals.length;
-            } else if (cat === '🚂 Zona Vías') {
+            } else if (cat === 'Zona Vías') {
                 counts[cat] = allProposals.filter(p => p.tags.includes('Ferroviario')).length;
             } else {
                 counts[cat] = allProposals.filter(p => p.category === cat).length;
@@ -47,7 +69,7 @@ export class UIController {
                 <select id="category-select" class="w-full md:w-64 px-4 py-2 pr-10 border border-gray-300 rounded-lg bg-white text-sm font-medium text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 appearance-none cursor-pointer">
                     ${allCategories.map(cat => `
                         <option value="${cat}" ${this.activeCategory === cat ? 'selected' : ''}>
-                            ${cat} (${counts[cat]})
+                            ${displayNames[cat] || cat} (${counts[cat]})
                         </option>
                     `).join('')}
                 </select>
@@ -166,6 +188,48 @@ export class UIController {
         this.activeTags.add(tag);
     }
 
+    getCategoryIcon(category) {
+        const icons = {
+            'Parques y Naturaleza': 'fa-solid fa-tree',
+            'Instalaciones Deportivas': 'fa-solid fa-futbol',
+            'Movilidad Ciclista': 'fa-solid fa-bicycle',
+            'Urbanismo': 'fa-solid fa-building',
+            'Movilidad Activa': 'fa-solid fa-person-biking',
+            'Limpieza y Residuos': 'fa-solid fa-broom',
+            'Pavimentación y Aceras': 'fa-solid fa-road',
+            'Transporte y Tráfico': 'fa-solid fa-bus',
+            'Infancia y Juegos': 'fa-solid fa-child',
+            'Social y Equipamientos': 'fa-solid fa-users',
+            'Educación y Colegios': 'fa-solid fa-school',
+            'Seguridad y Convivencia': 'fa-solid fa-shield-halved',
+            'Medio Ambiente': 'fa-solid fa-leaf',
+            'Grandes Infraestructuras': 'fa-solid fa-hammer',
+            'Mobiliario e Iluminación': 'fa-solid fa-lightbulb'
+        };
+        return icons[category] || 'fa-solid fa-location-dot';
+    }
+
+    getCategoryColor(category) {
+        const colors = {
+            'Parques y Naturaleza': '#22c55e',
+            'Instalaciones Deportivas': '#f59e0b',
+            'Movilidad Ciclista': '#3b82f6',
+            'Urbanismo': '#64748b',
+            'Movilidad Activa': '#06b6d4',
+            'Limpieza y Residuos': '#78350f',
+            'Pavimentación y Aceras': '#f97316',
+            'Transporte y Tráfico': '#ef4444',
+            'Infancia y Juegos': '#ec4899',
+            'Social y Equipamientos': '#8b5cf6',
+            'Educación y Colegios': '#3b82f6',
+            'Seguridad y Convivencia': '#1e293b',
+            'Medio Ambiente': '#10b981',
+            'Grandes Infraestructuras': '#475569',
+            'Mobiliario e Iluminación': '#eab308'
+        };
+        return colors[category] || '#94a3b8';
+    }
+
     renderList(proposals, onTagClick) {
         this.listElement.innerHTML = '';
         this.countElement.textContent = `${proposals.length} propuestas`;
@@ -188,7 +252,8 @@ export class UIController {
 
             card.innerHTML = `
                 <div class="flex justify-between items-start mb-2">
-                    <span class="text-[10px] font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-white px-2 py-0.5 rounded flex items-center gap-1" style="background-color: ${this.getCategoryColor(proposal.category)};">
+                        <i class="${this.getCategoryIcon(proposal.category)}"></i>
                         ${proposal.category}
                     </span>
                     ${proposal.urgent ? '<i class="fa-solid fa-triangle-exclamation text-red-500 animate-pulse-fast" title="Urgente"></i>' : ''}

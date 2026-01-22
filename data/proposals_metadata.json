@@ -1,7 +1,7 @@
 [
   {
     "code": "7553",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Paso peatonal",
       "Zona verde",
@@ -13,7 +13,7 @@
   },
   {
     "code": "7554",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Piscina Canterac",
       "Accesibilidad",
@@ -25,7 +25,7 @@
   },
   {
     "code": "7555",
-    "category": "🚲 Movilidad Ciclista",
+    "category": "Movilidad Ciclista",
     "tags": [
       "Carril Bici",
       "Mantenimiento",
@@ -37,7 +37,7 @@
   },
   {
     "code": "7556",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Aceras",
       "Girón",
@@ -49,7 +49,7 @@
   },
   {
     "code": "7557",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Raíces",
@@ -61,7 +61,7 @@
   },
   {
     "code": "7558",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Soterramiento",
       "Aparcamiento",
@@ -73,7 +73,7 @@
   },
   {
     "code": "7559",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Pista deportiva",
       "Jardines de la Alhambra",
@@ -85,7 +85,7 @@
   },
   {
     "code": "7561",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Máquinas gimnasio",
       "Ocio saludable",
@@ -97,7 +97,7 @@
   },
   {
     "code": "7563",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Baloncesto",
       "Minibasket",
@@ -109,7 +109,7 @@
   },
   {
     "code": "7564",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Deterioro",
       "Adoquinado",
@@ -121,7 +121,7 @@
   },
   {
     "code": "7565",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Juan Carlos I",
@@ -133,7 +133,7 @@
   },
   {
     "code": "7566",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Autobús",
       "Río Hortega",
@@ -145,7 +145,7 @@
   },
   {
     "code": "7567",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Plaza Solidaridad",
       "La Victoria",
@@ -157,7 +157,7 @@
   },
   {
     "code": "7568",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Plaza Solidaridad",
@@ -169,7 +169,7 @@
   },
   {
     "code": "7569",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Contaminación",
       "Salud",
@@ -181,7 +181,7 @@
   },
   {
     "code": "7571",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Ferroviario",
       "Centro de salud",
@@ -194,7 +194,7 @@
   },
   {
     "code": "7575",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Asfaltado",
       "Ctra. Rueda",
@@ -206,7 +206,7 @@
   },
   {
     "code": "7577",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Arte urbano",
       "Grafitis",
@@ -218,7 +218,7 @@
   },
   {
     "code": "7577_mur",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Arte urbano",
       "Grafitis",
@@ -230,7 +230,7 @@
   },
   {
     "code": "7578",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Parque canino",
       "Moreras",
@@ -242,7 +242,7 @@
   },
   {
     "code": "7580",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque León de la Riva",
       "Cama elástica",
@@ -254,7 +254,7 @@
   },
   {
     "code": "7581",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Suelo resbaladizo",
       "Seguridad",
@@ -266,7 +266,7 @@
   },
   {
     "code": "7582",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Fuentes",
       "Agua Potable",
@@ -278,7 +278,7 @@
   },
   {
     "code": "7582_inf",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque Poniente",
       "Deterioro",
@@ -290,7 +290,7 @@
   },
   {
     "code": "7582_pon",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque Poniente",
       "Deterioro",
@@ -302,7 +302,7 @@
   },
   {
     "code": "7583",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Brea",
@@ -314,7 +314,7 @@
   },
   {
     "code": "7584",
-    "category": "🌳 Parques y Jardines",
+    "category": "Parques y Jardines",
     "tags": [
       "Colchoneta Gigante",
       "Hopar",
@@ -326,7 +326,7 @@
   },
   {
     "code": "7585",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Barro",
       "Limpieza",
@@ -338,7 +338,7 @@
   },
   {
     "code": "7586",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Ctra. Rueda",
@@ -350,7 +350,7 @@
   },
   {
     "code": "7586_sot",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Soterramiento",
       "Calle Torrecilla",
@@ -362,7 +362,7 @@
   },
   {
     "code": "7586_tor",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Soterramiento",
       "Calle Torrecilla",
@@ -374,7 +374,7 @@
   },
   {
     "code": "7587",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Parque canino",
       "Animales",
@@ -386,7 +386,7 @@
   },
   {
     "code": "7588",
-    "category": "🏫 Educación y Colegios",
+    "category": "Educación y Colegios",
     "tags": [
       "Colegio Marina Escobar",
       "Fachada",
@@ -398,7 +398,7 @@
   },
   {
     "code": "7589",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Suelo de color",
       "Calle Hernán Cortés",
@@ -410,7 +410,7 @@
   },
   {
     "code": "7590_Biki",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Biki",
       "Pinar de Antequera",
@@ -422,7 +422,7 @@
   },
   {
     "code": "7590_L1",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Autobús",
       "Línea 1",
@@ -434,7 +434,7 @@
   },
   {
     "code": "7590_pinar",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Biki",
       "Pinar de Antequera",
@@ -446,7 +446,7 @@
   },
   {
     "code": "7591",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Raíces",
@@ -458,7 +458,7 @@
   },
   {
     "code": "7593",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Bicicletas",
       "Lavado",
@@ -470,7 +470,7 @@
   },
   {
     "code": "7594",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Centro Cívico Rondilla",
       "Ludoteca",
@@ -482,7 +482,7 @@
   },
   {
     "code": "7595",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Aparcamiento",
       "Seguridad vial",
@@ -494,7 +494,7 @@
   },
   {
     "code": "7596",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Turismo",
       "Patrimonio",
@@ -506,7 +506,7 @@
   },
   {
     "code": "7596_rut",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Turismo",
       "Patrimonio",
@@ -518,7 +518,7 @@
   },
   {
     "code": "7597",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Paso Peatonal",
       "Zona Verde",
@@ -530,7 +530,7 @@
   },
   {
     "code": "7598",
-    "category": "🏫 Educación y Colegios",
+    "category": "Educación y Colegios",
     "tags": [
       "Colegio Marina Escobar",
       "Cubierta",
@@ -542,7 +542,7 @@
   },
   {
     "code": "7600",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Parque de la Paz",
       "Ruido",
@@ -555,7 +555,7 @@
   },
   {
     "code": "7601",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Pista cubierta",
       "Polideportivo",
@@ -567,7 +567,7 @@
   },
   {
     "code": "7602",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Gimnasio",
       "Máquinas de fuerza",
@@ -579,7 +579,7 @@
   },
   {
     "code": "7604",
-    "category": "🏫 Educación y Colegios",
+    "category": "Educación y Colegios",
     "tags": [
       "Colegio Marina Escobar",
       "Columpios",
@@ -591,7 +591,7 @@
   },
   {
     "code": "7605",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aparcamiento",
       "Asfaltado",
@@ -603,7 +603,7 @@
   },
   {
     "code": "7606",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Paso de Peatones",
       "Seguridad Vial",
@@ -615,7 +615,7 @@
   },
   {
     "code": "7608",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Badenes",
       "Espejos",
@@ -627,7 +627,7 @@
   },
   {
     "code": "7609",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Baches",
@@ -639,7 +639,7 @@
   },
   {
     "code": "7611",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Acera",
       "Barro",
@@ -651,7 +651,7 @@
   },
   {
     "code": "7613",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Don Bosco",
@@ -663,7 +663,7 @@
   },
   {
     "code": "7614",
-    "category": "🌿 Medio Ambiente",
+    "category": "Medio Ambiente",
     "tags": [
       "Contenedores",
       "Soterramiento",
@@ -675,7 +675,7 @@
   },
   {
     "code": "7615",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Tráfico",
       "Arco de Ladrillo",
@@ -687,7 +687,7 @@
   },
   {
     "code": "7616",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Seguridad vial",
       "Badenes",
@@ -699,7 +699,7 @@
   },
   {
     "code": "7618",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Iluminación",
       "Ctra. Rueda",
@@ -711,7 +711,7 @@
   },
   {
     "code": "7620",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Asfaltado",
       "Red de calor",
@@ -723,7 +723,7 @@
   },
   {
     "code": "7621",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Raíces",
@@ -735,7 +735,7 @@
   },
   {
     "code": "7621_centro",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Centro de Mayores",
       "Tercera edad",
@@ -747,7 +747,7 @@
   },
   {
     "code": "7623_pasarela",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Pasarela",
       "Pisuerga",
@@ -759,7 +759,7 @@
   },
   {
     "code": "7623_vel",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Badenes",
       "Seguridad vial",
@@ -771,7 +771,7 @@
   },
   {
     "code": "7625",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Aceras",
       "Ampliación",
@@ -783,7 +783,7 @@
   },
   {
     "code": "7626",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Iluminación",
       "Pinar de Antequera",
@@ -795,7 +795,7 @@
   },
   {
     "code": "7627",
-    "category": "🚲 Movilidad Ciclista",
+    "category": "Movilidad Ciclista",
     "tags": [
       "Carril Bici",
       "Gloria Fuertes",
@@ -807,7 +807,7 @@
   },
   {
     "code": "7628",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Autobús",
       "Línea 6",
@@ -819,7 +819,7 @@
   },
   {
     "code": "7629",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Sanidad",
       "Delicias",
@@ -831,7 +831,7 @@
   },
   {
     "code": "7630",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Autobús",
       "Pajarillos Altos",
@@ -843,7 +843,7 @@
   },
   {
     "code": "7632",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Autobús",
       "Frecuencia",
@@ -855,7 +855,7 @@
   },
   {
     "code": "7634",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Zonas verdes",
       "Aparcamiento",
@@ -867,7 +867,7 @@
   },
   {
     "code": "7635_acera",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Acera",
       "Camino Viejo Simancas",
@@ -879,7 +879,7 @@
   },
   {
     "code": "7635_bal",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Baloncesto",
       "Triple tablero",
@@ -891,7 +891,7 @@
   },
   {
     "code": "7636",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Árboles",
       "Reforestación",
@@ -903,7 +903,7 @@
   },
   {
     "code": "7637",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Seguridad vial",
       "Semáforo",
@@ -915,7 +915,7 @@
   },
   {
     "code": "7638",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Skatepark",
       "Patinaje",
@@ -927,7 +927,7 @@
   },
   {
     "code": "7639",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Aparcamiento",
       "Pintura vial",
@@ -939,7 +939,7 @@
   },
   {
     "code": "7640",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Pádel",
       "Cubierta",
@@ -951,7 +951,7 @@
   },
   {
     "code": "7642",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Barro",
       "Accesibilidad",
@@ -963,7 +963,7 @@
   },
   {
     "code": "7643",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Colonias felinas",
       "Gatos",
@@ -975,7 +975,7 @@
   },
   {
     "code": "7644",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Asfaltado",
       "Jiménez Alfaro",
@@ -987,7 +987,7 @@
   },
   {
     "code": "7645_acacia",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Deterioro",
@@ -999,7 +999,7 @@
   },
   {
     "code": "7646",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Ctra. Rueda",
@@ -1011,7 +1011,7 @@
   },
   {
     "code": "7646_patio",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Patio cubierto",
       "Alonso Berruguete",
@@ -1023,7 +1023,7 @@
   },
   {
     "code": "7647_parada",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Parada autobús",
       "Pinar de Antequera",
@@ -1035,7 +1035,7 @@
   },
   {
     "code": "7648",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Contenedores",
       "Reciclaje",
@@ -1047,7 +1047,7 @@
   },
   {
     "code": "7649",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Minibasket",
       "Infantil",
@@ -1059,7 +1059,7 @@
   },
   {
     "code": "7650",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Urbanización",
       "Parada bus",
@@ -1071,7 +1071,7 @@
   },
   {
     "code": "7651",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Deterioro",
@@ -1083,7 +1083,7 @@
   },
   {
     "code": "7652",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Seguridad Vial",
       "Velocidad",
@@ -1095,7 +1095,7 @@
   },
   {
     "code": "7653",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Iluminación",
       "Seguridad",
@@ -1107,7 +1107,7 @@
   },
   {
     "code": "7654",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Caucho",
       "Higiene",
@@ -1119,7 +1119,7 @@
   },
   {
     "code": "7655",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Contenedores",
       "Capacidad",
@@ -1131,7 +1131,7 @@
   },
   {
     "code": "7656_cont",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Contenedores",
       "Reciclaje",
@@ -1143,7 +1143,7 @@
   },
   {
     "code": "7657",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Pista Deportiva",
       "Calle Azalea",
@@ -1155,7 +1155,7 @@
   },
   {
     "code": "7658",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Cubierta",
       "Calle Azalea",
@@ -1167,7 +1167,7 @@
   },
   {
     "code": "7660",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Baches",
       "Campo Grande",
@@ -1179,7 +1179,7 @@
   },
   {
     "code": "7661",
-    "category": "🏫 Educación y Colegios",
+    "category": "Educación y Colegios",
     "tags": [
       "Colegio Francisco Pino",
       "Pista cubierta",
@@ -1191,7 +1191,7 @@
   },
   {
     "code": "7662",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Accesibilidad",
       "Rampa",
@@ -1203,7 +1203,7 @@
   },
   {
     "code": "7663",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Peatonalización",
       "Calle Numancia",
@@ -1215,7 +1215,7 @@
   },
   {
     "code": "7665",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Santa Rita",
@@ -1227,7 +1227,7 @@
   },
   {
     "code": "7666",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Deterioro",
@@ -1239,7 +1239,7 @@
   },
   {
     "code": "7666_pinar",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Deterioro",
@@ -1251,7 +1251,7 @@
   },
   {
     "code": "7671",
-    "category": "🌿 Medio Ambiente",
+    "category": "Medio Ambiente",
     "tags": [
       "Río Esgueva",
       "Limpieza",
@@ -1263,7 +1263,7 @@
   },
   {
     "code": "7672",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Equipamiento",
       "Cancha",
@@ -1275,7 +1275,7 @@
   },
   {
     "code": "7674",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Canchas",
       "Fútbol",
@@ -1287,7 +1287,7 @@
   },
   {
     "code": "7675",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Cancha",
       "Las Flores",
@@ -1299,7 +1299,7 @@
   },
   {
     "code": "7677",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Pista Deportiva",
       "Mantenimiento",
@@ -1311,7 +1311,7 @@
   },
   {
     "code": "7678_aceras",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Isletas",
@@ -1323,7 +1323,7 @@
   },
   {
     "code": "7680",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Cancha",
       "Azalea",
@@ -1335,7 +1335,7 @@
   },
   {
     "code": "7681",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Contenedores",
       "Higiene",
@@ -1347,7 +1347,7 @@
   },
   {
     "code": "7684",
-    "category": "🌳 Parques y Jardines",
+    "category": "Parques y Jardines",
     "tags": [
       "Plaza de Mayo",
       "Mobiliario",
@@ -1359,7 +1359,7 @@
   },
   {
     "code": "7685",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Material deportivo",
       "Calle Azucena",
@@ -1371,7 +1371,7 @@
   },
   {
     "code": "7686",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Autobús",
       "Las Flores",
@@ -1383,7 +1383,7 @@
   },
   {
     "code": "7687",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Cancha",
       "Azalea",
@@ -1395,7 +1395,7 @@
   },
   {
     "code": "7688",
-    "category": "🌿 Medio Ambiente",
+    "category": "Medio Ambiente",
     "tags": [
       "Pipican",
       "Perros",
@@ -1407,7 +1407,7 @@
   },
   {
     "code": "7689",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Cancha",
       "Azalea",
@@ -1419,7 +1419,7 @@
   },
   {
     "code": "7692",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Canchas",
       "Deportes",
@@ -1431,7 +1431,7 @@
   },
   {
     "code": "7693",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Autobús",
       "Calle Salvia",
@@ -1443,7 +1443,7 @@
   },
   {
     "code": "7694",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Piscina Cubierta",
       "Polideportivo",
@@ -1455,7 +1455,7 @@
   },
   {
     "code": "7695",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Limpieza",
       "Abandono",
@@ -1467,7 +1467,7 @@
   },
   {
     "code": "7696",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Plaza de la Armonía",
       "La Victoria",
@@ -1479,7 +1479,7 @@
   },
   {
     "code": "7698",
-    "category": "🌳 Parques y Jardines",
+    "category": "Parques y Jardines",
     "tags": [
       "Parque Huerta del Rey",
       "Remodelación",
@@ -1491,7 +1491,7 @@
   },
   {
     "code": "7699",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Árboles",
       "Sombras",
@@ -1503,7 +1503,7 @@
   },
   {
     "code": "7700",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Camino del Cabildo",
@@ -1527,7 +1527,7 @@
   },
   {
     "code": "7702",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Juegos grandes",
       "Adolescentes",
@@ -1539,7 +1539,7 @@
   },
   {
     "code": "7703",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Parque",
       "Biosaludables",
@@ -1551,7 +1551,7 @@
   },
   {
     "code": "7704",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Sanidad",
       "Calle Trabajo",
@@ -1563,7 +1563,7 @@
   },
   {
     "code": "7705",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Calefacción",
       "Centro Cívico Vicente Escudero",
@@ -1575,7 +1575,7 @@
   },
   {
     "code": "7706",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Limpieza",
       "Parcelas",
@@ -1587,7 +1587,7 @@
   },
   {
     "code": "7709",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Peatonalización",
       "Espacio público",
@@ -1599,7 +1599,7 @@
   },
   {
     "code": "7710",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Aparcamiento",
       "Rondilla",
@@ -1611,7 +1611,7 @@
   },
   {
     "code": "7712",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Columpios",
@@ -1623,7 +1623,7 @@
   },
   {
     "code": "7713",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Ocio",
       "Juventud",
@@ -1635,7 +1635,7 @@
   },
   {
     "code": "7715",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Seguridad",
@@ -1647,7 +1647,7 @@
   },
   {
     "code": "7716",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Plaza Alberto Fernández",
       "Sombras",
@@ -1659,7 +1659,7 @@
   },
   {
     "code": "7717",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Amadeo Arias",
@@ -1671,7 +1671,7 @@
   },
   {
     "code": "7719",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Parque intergeneracional",
       "Arcas Reales",
@@ -1683,7 +1683,7 @@
   },
   {
     "code": "7721",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Pasarela Corte Inglés",
       "Resbalones",
@@ -1707,7 +1707,7 @@
   },
   {
     "code": "7727",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Asfaltado",
       "Juan Carlos I",
@@ -1719,7 +1719,7 @@
   },
   {
     "code": "7734",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Aceras",
       "Pavimento",
@@ -1731,7 +1731,7 @@
   },
   {
     "code": "7735",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Escaleras",
       "Residencia Ballesol",
@@ -1743,7 +1743,7 @@
   },
   {
     "code": "7741",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Información",
       "Autobús",
@@ -1755,7 +1755,7 @@
   },
   {
     "code": "7742",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Contenedores",
       "Soterramiento",
@@ -1767,7 +1767,7 @@
   },
   {
     "code": "7745",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Ping-Pong",
       "Ocio",
@@ -1779,7 +1779,7 @@
   },
   {
     "code": "7747",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Aceras",
       "Calle de la Vía",
@@ -1791,7 +1791,7 @@
   },
   {
     "code": "7749",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Cubierta",
       "Deporte",
@@ -1803,7 +1803,7 @@
   },
   {
     "code": "7750",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Reparación",
@@ -1815,7 +1815,7 @@
   },
   {
     "code": "7751",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Cultura",
       "Patrimonio",
@@ -1827,7 +1827,7 @@
   },
   {
     "code": "7752",
-    "category": "🌿 Medio Ambiente",
+    "category": "Medio Ambiente",
     "tags": [
       "Poda",
       "Arbolado",
@@ -1839,7 +1839,7 @@
   },
   {
     "code": "7753",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "AUVASA",
       "Marquesina",
@@ -1851,7 +1851,7 @@
   },
   {
     "code": "7755",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Poda",
       "Árboles",
@@ -1863,7 +1863,7 @@
   },
   {
     "code": "7756",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Limpieza",
       "Excrementos caninos",
@@ -1875,7 +1875,7 @@
   },
   {
     "code": "7758",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Piscina Canterac",
       "Vestuarios",
@@ -1887,7 +1887,7 @@
   },
   {
     "code": "7759",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Cuidadores",
       "Tercera edad",
@@ -1899,7 +1899,7 @@
   },
   {
     "code": "7761",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Semáforos",
       "Pulsador",
@@ -1911,7 +1911,7 @@
   },
   {
     "code": "7762",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Rotonda",
       "Colegio Jesuitinas",
@@ -1935,7 +1935,7 @@
   },
   {
     "code": "7765",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Zona Galera",
@@ -1947,7 +1947,7 @@
   },
   {
     "code": "7766",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Arte urbano",
       "Viaducto",
@@ -1959,7 +1959,7 @@
   },
   {
     "code": "7767",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Ferroviario",
       "Accesibilidad",
@@ -1971,7 +1971,7 @@
   },
   {
     "code": "7769",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Limpieza",
       "Jardinería",
@@ -1983,7 +1983,7 @@
   },
   {
     "code": "7773",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Bancos",
       "Mobiliario",
@@ -1995,7 +1995,7 @@
   },
   {
     "code": "7775",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Comercio local",
       "Bonos",
@@ -2007,7 +2007,7 @@
   },
   {
     "code": "7776",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Menores 3 años",
@@ -2019,7 +2019,7 @@
   },
   {
     "code": "7777",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Paso de cebra",
       "Biblioteca",
@@ -2031,7 +2031,7 @@
   },
   {
     "code": "7778",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Climatización",
       "Centro Cívico",
@@ -2043,7 +2043,7 @@
   },
   {
     "code": "7779",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Centro Vida Activa",
       "Sombra",
@@ -2055,7 +2055,7 @@
   },
   {
     "code": "7780",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Ferroviario",
       "Accesibilidad",
@@ -2067,7 +2067,7 @@
   },
   {
     "code": "7784",
-    "category": "🏫 Educación y Colegios",
+    "category": "Educación y Colegios",
     "tags": [
       "IES Julián Marías",
       "Red balones",
@@ -2079,7 +2079,7 @@
   },
   {
     "code": "7786",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Parques",
       "Mantenimiento",
@@ -2091,7 +2091,7 @@
   },
   {
     "code": "7787",
-    "category": "🏫 Educación y Colegios",
+    "category": "Educación y Colegios",
     "tags": [
       "Comedor escolar",
       "Infantil",
@@ -2103,7 +2103,7 @@
   },
   {
     "code": "7788",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Centro Cívico Luelmo",
       "Cocina",
@@ -2115,7 +2115,7 @@
   },
   {
     "code": "7789",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Palomas",
       "Salud",
@@ -2127,7 +2127,7 @@
   },
   {
     "code": "7789_pal",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Palomas",
       "Salud",
@@ -2139,7 +2139,7 @@
   },
   {
     "code": "7790",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Centro Cívico Rondilla",
       "Teatro",
@@ -2151,7 +2151,7 @@
   },
   {
     "code": "7791",
-    "category": "🚲 Movilidad Ciclista",
+    "category": "Movilidad Ciclista",
     "tags": [
       "Carril Bici",
       "Carretera Renedo",
@@ -2163,7 +2163,7 @@
   },
   {
     "code": "7792",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Limpieza",
       "Deterioro",
@@ -2175,7 +2175,7 @@
   },
   {
     "code": "7793",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Accesibilidad",
       "Movilidad reducida",
@@ -2187,7 +2187,7 @@
   },
   {
     "code": "7797",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Acceso peatonal",
       "Seguridad vial",
@@ -2199,7 +2199,7 @@
   },
   {
     "code": "7799",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Cubierta",
       "Pista deportiva",
@@ -2211,7 +2211,7 @@
   },
   {
     "code": "7800",
-    "category": "🌳 Parques y Jardines",
+    "category": "Parques y Jardines",
     "tags": [
       "Parque Infantil",
       "Plaza Vadillos",
@@ -2223,7 +2223,7 @@
   },
   {
     "code": "7801",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Animales",
       "Piscina canina",
@@ -2235,7 +2235,7 @@
   },
   {
     "code": "7803",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Peatonalización",
       "Calle Embajadores",
@@ -2247,7 +2247,7 @@
   },
   {
     "code": "7805",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Tirolina",
       "Parque Alameda",
@@ -2259,7 +2259,7 @@
   },
   {
     "code": "7806",
-    "category": "🌳 Parques y Jardines",
+    "category": "Parques y Jardines",
     "tags": [
       "Plaza Vadillos",
       "Ampliación",
@@ -2271,7 +2271,7 @@
   },
   {
     "code": "7807",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Asfaltado",
       "Aceras",
@@ -2283,7 +2283,7 @@
   },
   {
     "code": "7808",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Porterías",
       "Pajarillos",
@@ -2295,7 +2295,7 @@
   },
   {
     "code": "7810",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Fuentes",
       "Parque canino",
@@ -2307,7 +2307,7 @@
   },
   {
     "code": "7811",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Semáforos",
       "Regulación",
@@ -2319,7 +2319,7 @@
   },
   {
     "code": "7812",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Pavimento",
       "Raíces",
@@ -2331,7 +2331,7 @@
   },
   {
     "code": "7813",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Árboles",
       "Sombra",
@@ -2343,7 +2343,7 @@
   },
   {
     "code": "7815",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Centro Cívico",
       "Piscina",
@@ -2355,7 +2355,7 @@
   },
   {
     "code": "7815_camp",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Centro Cívico",
       "Piscina",
@@ -2367,7 +2367,7 @@
   },
   {
     "code": "7816",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Urbanismo",
       "Estética",
@@ -2379,7 +2379,7 @@
   },
   {
     "code": "7816_fac",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Urbanismo",
       "Estética",
@@ -2391,7 +2391,7 @@
   },
   {
     "code": "7817",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Tenis",
       "Grietas",
@@ -2403,7 +2403,7 @@
   },
   {
     "code": "7818",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Autobús",
       "Línea directa",
@@ -2415,7 +2415,7 @@
   },
   {
     "code": "7820",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Aparcamiento",
       "Pintura vial",
@@ -2427,7 +2427,7 @@
   },
   {
     "code": "7821",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Urbanización",
       "Seguridad vial",
@@ -2439,7 +2439,7 @@
   },
   {
     "code": "7823",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Autobús",
       "El Peral",
@@ -2451,7 +2451,7 @@
   },
   {
     "code": "7827",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Iluminación",
       "Sensores",
@@ -2463,7 +2463,7 @@
   },
   {
     "code": "7828",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Iluminación",
       "LED",
@@ -2475,7 +2475,7 @@
   },
   {
     "code": "7829",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Centro de Vida Activa",
       "Biblioteca",
@@ -2487,7 +2487,7 @@
   },
   {
     "code": "7830",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Animales",
       "Gatos",
@@ -2499,7 +2499,7 @@
   },
   {
     "code": "7831",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Refugio térmico",
       "Sombra",
@@ -2511,7 +2511,7 @@
   },
   {
     "code": "7833",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Seguridad vial",
       "Paso de cebra",
@@ -2523,7 +2523,7 @@
   },
   {
     "code": "7834_ens",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Peatonalización",
       "Seguridad vial",
@@ -2535,7 +2535,7 @@
   },
   {
     "code": "7836",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Urbanización",
       "Cuesta del Tomillo",
@@ -2547,7 +2547,7 @@
   },
   {
     "code": "7838",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Murales",
       "Cuadros eléctricos",
@@ -2559,7 +2559,7 @@
   },
   {
     "code": "7840",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Asfaltado",
       "Barro",
@@ -2571,7 +2571,7 @@
   },
   {
     "code": "7841",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Movilidad",
       "Doble sentido",
@@ -2583,7 +2583,7 @@
   },
   {
     "code": "7842",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Deterioro",
@@ -2595,7 +2595,7 @@
   },
   {
     "code": "7843",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Asfaltado",
       "Hormigón",
@@ -2607,7 +2607,7 @@
   },
   {
     "code": "7844",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Iluminación",
       "Deporte nocturno",
@@ -2619,7 +2619,7 @@
   },
   {
     "code": "7845",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Autobús",
       "Universidad",
@@ -2631,7 +2631,7 @@
   },
   {
     "code": "7847",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Seguridad vial",
       "Paso de cebra",
@@ -2643,7 +2643,7 @@
   },
   {
     "code": "7848",
-    "category": "🏫 Educación y Colegios",
+    "category": "Educación y Colegios",
     "tags": [
       "Colegio Allué Morer",
       "Acceso",
@@ -2655,7 +2655,7 @@
   },
   {
     "code": "7850",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Seguridad vial",
       "Paso de cebra",
@@ -2667,7 +2667,7 @@
   },
   {
     "code": "7851",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Raíces",
       "Deterioro",
@@ -2691,7 +2691,7 @@
   },
   {
     "code": "7855",
-    "category": "🚲 Movilidad Ciclista",
+    "category": "Movilidad Ciclista",
     "tags": [
       "Carril Bici",
       "Seguridad Vial",
@@ -2703,7 +2703,7 @@
   },
   {
     "code": "7857",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Ferroviario",
       "Calle Panaderos",
@@ -2715,7 +2715,7 @@
   },
   {
     "code": "7859",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Parque de la J",
       "Reforma integral",
@@ -2727,7 +2727,7 @@
   },
   {
     "code": "7860",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "AUVASA",
       "Línea H",
@@ -2739,7 +2739,7 @@
   },
   {
     "code": "7861",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "AUVASA",
       "Línea 9",
@@ -2751,7 +2751,7 @@
   },
   {
     "code": "7862",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Puente Duero",
@@ -2763,7 +2763,7 @@
   },
   {
     "code": "7863",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Gimnasio",
       "Musculación",
@@ -2775,7 +2775,7 @@
   },
   {
     "code": "7864",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Deterioro",
@@ -2787,7 +2787,7 @@
   },
   {
     "code": "7865",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Aparcamiento",
       "Motos",
@@ -2799,7 +2799,7 @@
   },
   {
     "code": "7867",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Plaza",
       "Deterioro",
@@ -2811,7 +2811,7 @@
   },
   {
     "code": "7870",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Aceras",
       "Seguridad Vial",
@@ -2823,7 +2823,7 @@
   },
   {
     "code": "7871",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Parque canino",
       "Rodríguez Bolaños",
@@ -2835,7 +2835,7 @@
   },
   {
     "code": "7872",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Paso de Peatones",
       "Calle Estación",
@@ -2847,7 +2847,7 @@
   },
   {
     "code": "7874",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Parque canino",
       "Parque Alameda",
@@ -2859,7 +2859,7 @@
   },
   {
     "code": "7877_mus",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Cultura",
       "Museo",
@@ -2871,7 +2871,7 @@
   },
   {
     "code": "7879",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Autobús",
       "Sanidad",
@@ -2883,7 +2883,7 @@
   },
   {
     "code": "7880",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Piscina de verano",
       "Ocio",
@@ -2895,7 +2895,7 @@
   },
   {
     "code": "7883",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Seguridad vial",
@@ -2907,7 +2907,7 @@
   },
   {
     "code": "7885",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Accesibilidad",
       "Urbanismo",
@@ -2918,7 +2918,7 @@
   },
   {
     "code": "7887",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Iluminación color",
       "Turismo",
@@ -2930,7 +2930,7 @@
   },
   {
     "code": "7889",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Iluminación",
       "Seguridad vial",
@@ -2942,7 +2942,7 @@
   },
   {
     "code": "7892",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Discapacidad",
       "Accesibilidad",
@@ -2954,7 +2954,7 @@
   },
   {
     "code": "7893",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Bici",
       "Aparcamiento",
@@ -2966,7 +2966,7 @@
   },
   {
     "code": "7893_bic",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Bici",
       "Aparcamiento",
@@ -2978,7 +2978,7 @@
   },
   {
     "code": "7894",
-    "category": "🏫 Educación y Colegios",
+    "category": "Educación y Colegios",
     "tags": [
       "Colegio Tierno Galván",
       "Cubierta",
@@ -2990,7 +2990,7 @@
   },
   {
     "code": "7895",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carga eléctrica",
       "Coche compartido",
@@ -3002,7 +3002,7 @@
   },
   {
     "code": "7898",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Estadio José Zorrilla",
       "Baños",
@@ -3014,7 +3014,7 @@
   },
   {
     "code": "7900",
-    "category": "🌿 Medio Ambiente",
+    "category": "Medio Ambiente",
     "tags": [
       "Limpieza",
       "Residuos",
@@ -3026,7 +3026,7 @@
   },
   {
     "code": "7901",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Ferroviario",
       "Polígono Argales",
@@ -3039,7 +3039,7 @@
   },
   {
     "code": "7903",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Calle Gerona",
       "Accesibilidad",
@@ -3051,7 +3051,7 @@
   },
   {
     "code": "7904",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Aparcamiento",
       "Residentes",
@@ -3063,7 +3063,7 @@
   },
   {
     "code": "7908",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Tráfico",
       "Flujo vial",
@@ -3075,7 +3075,7 @@
   },
   {
     "code": "7909",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Acera",
       "Visibilidad",
@@ -3087,7 +3087,7 @@
   },
   {
     "code": "7910_pon",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Aparcamiento",
       "Residentes",
@@ -3099,7 +3099,7 @@
   },
   {
     "code": "7911",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Biblioteca",
       "Infancia",
@@ -3111,7 +3111,7 @@
   },
   {
     "code": "7915",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Higiene",
       "Vallado",
@@ -3123,7 +3123,7 @@
   },
   {
     "code": "7919",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Centro Cívico Delicias",
       "Sombras",
@@ -3135,7 +3135,7 @@
   },
   {
     "code": "7920",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Paso de Peatones",
       "Avenida Santander",
@@ -3147,7 +3147,7 @@
   },
   {
     "code": "7921",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Acera",
       "Seguridad Vial",
@@ -3159,7 +3159,7 @@
   },
   {
     "code": "7922",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Ruido",
       "Barrera acústica",
@@ -3172,7 +3172,7 @@
   },
   {
     "code": "7924",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Parque infantil",
       "Calistenia",
@@ -3184,7 +3184,7 @@
   },
   {
     "code": "7926",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Plaza Millán Santos",
       "Sombras",
@@ -3196,7 +3196,7 @@
   },
   {
     "code": "7927",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Parque de la Paz",
       "Cultura",
@@ -3208,7 +3208,7 @@
   },
   {
     "code": "7928",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Espacio joven",
       "Colegio Calderón",
@@ -3220,7 +3220,7 @@
   },
   {
     "code": "7929",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Toboganes",
       "Parque",
@@ -3232,7 +3232,7 @@
   },
   {
     "code": "7930",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Local social",
       "Asociación vecinos",
@@ -3244,7 +3244,7 @@
   },
   {
     "code": "7932",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Parque de la Paz",
       "Baños",
@@ -3256,7 +3256,7 @@
   },
   {
     "code": "7940",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Paseo del Cid",
       "Calistenia",
@@ -3268,7 +3268,7 @@
   },
   {
     "code": "7941",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Iluminación",
       "Seguridad",
@@ -3280,7 +3280,7 @@
   },
   {
     "code": "7943",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Tráfico",
       "Semáforo",
@@ -3292,7 +3292,7 @@
   },
   {
     "code": "7945",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Biki",
       "Bicicleta pública",
@@ -3304,7 +3304,7 @@
   },
   {
     "code": "7948",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Campo Grande",
       "Perros",
@@ -3316,7 +3316,7 @@
   },
   {
     "code": "7948_camp",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Campo Grande",
       "Perros",
@@ -3328,7 +3328,7 @@
   },
   {
     "code": "7949",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Reurbanización",
       "Deterioro",
@@ -3340,7 +3340,7 @@
   },
   {
     "code": "7950",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Reurbanización",
       "Accesibilidad",
@@ -3352,7 +3352,7 @@
   },
   {
     "code": "7951",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Reurbanización",
       "Esteban Jordán",
@@ -3364,7 +3364,7 @@
   },
   {
     "code": "7952",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Reurbanización",
       "Aceras",
@@ -3376,7 +3376,7 @@
   },
   {
     "code": "7953",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Juan de Austria",
@@ -3388,7 +3388,7 @@
   },
   {
     "code": "7954",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Fuente ornamental",
       "Estética",
@@ -3400,7 +3400,7 @@
   },
   {
     "code": "7955",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Centro cívico",
       "Pinar de Jalón",
@@ -3412,7 +3412,7 @@
   },
   {
     "code": "7958",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Aceras",
       "Calzada",
@@ -3424,7 +3424,7 @@
   },
   {
     "code": "7959",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Brea",
@@ -3436,7 +3436,7 @@
   },
   {
     "code": "7960",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Mediana ajardinada",
       "Arbolado",
@@ -3448,7 +3448,7 @@
   },
   {
     "code": "7960_hab",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Mediana ajardinada",
       "Arbolado",
@@ -3460,7 +3460,7 @@
   },
   {
     "code": "7961",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Pasarela",
       "Pisuerga",
@@ -3472,7 +3472,7 @@
   },
   {
     "code": "7962",
-    "category": "🏫 Educación y Colegios",
+    "category": "Educación y Colegios",
     "tags": [
       "Pistas cubiertas",
       "Bienestar",
@@ -3484,7 +3484,7 @@
   },
   {
     "code": "7964",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Seguridad Vial",
       "Visibilidad",
@@ -3496,7 +3496,7 @@
   },
   {
     "code": "7965",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Espacio cultural",
       "Juventud",
@@ -3508,7 +3508,7 @@
   },
   {
     "code": "7966",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Pinar de Jalón",
       "Calle Kilimanjaro",
@@ -3520,7 +3520,7 @@
   },
   {
     "code": "7969",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Plaza Profesionales Sanitarios",
       "Zonas verdes",
@@ -3532,7 +3532,7 @@
   },
   {
     "code": "7970",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Arribes del Duero",
@@ -3544,7 +3544,7 @@
   },
   {
     "code": "7972",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Árboles",
       "Estética",
@@ -3556,7 +3556,7 @@
   },
   {
     "code": "7973",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carga eléctrica",
       "Coche eléctrico",
@@ -3568,7 +3568,7 @@
   },
   {
     "code": "7974",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Centro Deportivo",
       "Gimnasio",
@@ -3580,7 +3580,7 @@
   },
   {
     "code": "7976",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Autobús",
       "Auvasa",
@@ -3592,7 +3592,7 @@
   },
   {
     "code": "7977",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Farmacia",
       "Sanidad",
@@ -3604,7 +3604,7 @@
   },
   {
     "code": "7979",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Parque de las Norias",
       "Cultura",
@@ -3616,7 +3616,7 @@
   },
   {
     "code": "7980",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Cubierta",
       "Tenis",
@@ -3628,7 +3628,7 @@
   },
   {
     "code": "7981",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Árboles",
       "Calidad aire",
@@ -3640,7 +3640,7 @@
   },
   {
     "code": "7983",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Petanca",
       "Pilarica",
@@ -3652,7 +3652,7 @@
   },
   {
     "code": "7988",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Seguridad vial",
       "Velocidad",
@@ -3664,7 +3664,7 @@
   },
   {
     "code": "7990",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Atletismo",
       "Kilometrín",
@@ -3676,7 +3676,7 @@
   },
   {
     "code": "7991",
-    "category": "🌳 Parques y Jardines",
+    "category": "Parques y Jardines",
     "tags": [
       "Columpios",
       "Barrio España",
@@ -3688,7 +3688,7 @@
   },
   {
     "code": "7993",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Accesibilidad",
       "Puertas automáticas",
@@ -3700,7 +3700,7 @@
   },
   {
     "code": "7996",
-    "category": "🌿 Medio Ambiente",
+    "category": "Medio Ambiente",
     "tags": [
       "Placas Solares",
       "Energía",
@@ -3712,7 +3712,7 @@
   },
   {
     "code": "7998",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Accesibilidad",
       "Discapacidad",
@@ -3724,7 +3724,7 @@
   },
   {
     "code": "8000",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Acequia",
       "Limpieza",
@@ -3736,7 +3736,7 @@
   },
   {
     "code": "8002",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Zonas verdes",
       "Estanque",
@@ -3748,7 +3748,7 @@
   },
   {
     "code": "8003",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Calle Málaga",
       "Aceras",
@@ -3760,7 +3760,7 @@
   },
   {
     "code": "8005",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Gatos",
       "Refugio",
@@ -3772,7 +3772,7 @@
   },
   {
     "code": "8007",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Pista deportiva",
       "Parque infantil",
@@ -3784,7 +3784,7 @@
   },
   {
     "code": "8010",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Iluminación",
       "Parque",
@@ -3796,7 +3796,7 @@
   },
   {
     "code": "8011",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Bancos",
       "Ergonomía",
@@ -3808,7 +3808,7 @@
   },
   {
     "code": "8012",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Poda",
       "Árboles",
@@ -3820,7 +3820,7 @@
   },
   {
     "code": "8013",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Paso de cebra",
       "Seguridad vial",
@@ -3832,7 +3832,7 @@
   },
   {
     "code": "8014",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Urbanización",
       "Aceras",
@@ -3845,7 +3845,7 @@
   },
   {
     "code": "8016",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Huerto urbano",
       "Pinar de Jalón",
@@ -3857,7 +3857,7 @@
   },
   {
     "code": "8018",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "AUVASA",
       "Línea Búho",
@@ -3869,7 +3869,7 @@
   },
   {
     "code": "8019",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Grafitis",
       "Limpieza",
@@ -3881,7 +3881,7 @@
   },
   {
     "code": "8019_graf",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Grafitis",
       "Limpieza",
@@ -3893,7 +3893,7 @@
   },
   {
     "code": "8022",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Merenderos",
       "Socialización",
@@ -3905,7 +3905,7 @@
   },
   {
     "code": "8024",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Asoveco",
       "Local social",
@@ -3917,7 +3917,7 @@
   },
   {
     "code": "8026",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceñas",
       "Patrimonio",
@@ -3929,7 +3929,7 @@
   },
   {
     "code": "8026_mor",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceñas",
       "Patrimonio",
@@ -3941,7 +3941,7 @@
   },
   {
     "code": "8029",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Parque naturalizado",
       "Merendero",
@@ -3953,7 +3953,7 @@
   },
   {
     "code": "8030",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Rotonda",
       "Seguridad vial",
@@ -3965,7 +3965,7 @@
   },
   {
     "code": "8031",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Pérgola solar",
       "Sombra",
@@ -3977,7 +3977,7 @@
   },
   {
     "code": "8036",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Escaleras",
       "Abandono",
@@ -3989,7 +3989,7 @@
   },
   {
     "code": "8037",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Autobús",
       "Estaciones",
@@ -4001,7 +4001,7 @@
   },
   {
     "code": "8041",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Seguridad vial",
       "Paso de cebra",
@@ -4013,7 +4013,7 @@
   },
   {
     "code": "8042",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Seguridad vial",
       "Pintura vial",
@@ -4025,7 +4025,7 @@
   },
   {
     "code": "8043",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Semáforo",
       "Seguridad Vial",
@@ -4037,7 +4037,7 @@
   },
   {
     "code": "8044",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Merendero cubierto",
       "Sombra",
@@ -4049,7 +4049,7 @@
   },
   {
     "code": "8048_bolardos",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Giros indebidos",
       "Bolardos",
@@ -4061,7 +4061,7 @@
   },
   {
     "code": "8048_fuentes",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Fuentes",
       "Bancos",
@@ -4073,7 +4073,7 @@
   },
   {
     "code": "8049",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Mobiliario",
       "Columpios",
@@ -4085,7 +4085,7 @@
   },
   {
     "code": "8050",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Puente Duero",
       "Polideportivo escolar",
@@ -4097,7 +4097,7 @@
   },
   {
     "code": "8050_p",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Puente Duero",
       "Polideportivo escolar",
@@ -4109,7 +4109,7 @@
   },
   {
     "code": "8051",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Aceras",
       "Huerta del Rey",
@@ -4121,7 +4121,7 @@
   },
   {
     "code": "8053",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Residencial",
       "Aparcamiento",
@@ -4133,7 +4133,7 @@
   },
   {
     "code": "8053_pab",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Residencial",
       "Aparcamiento",
@@ -4145,7 +4145,7 @@
   },
   {
     "code": "8056",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Biosaludables",
       "San Pedro Regalado",
@@ -4157,7 +4157,7 @@
   },
   {
     "code": "8057",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Local vecinal",
       "Covaresa",
@@ -4169,7 +4169,7 @@
   },
   {
     "code": "8060",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Plaza de la Cebada",
       "Accesibilidad",
@@ -4181,7 +4181,7 @@
   },
   {
     "code": "8062",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Aparcamiento",
       "Pintura vial",
@@ -4193,7 +4193,7 @@
   },
   {
     "code": "8064",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Patrimonio",
       "Campo Grande",
@@ -4205,7 +4205,7 @@
   },
   {
     "code": "8067_val",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Plaza del Val",
       "Accesibilidad",
@@ -4217,7 +4217,7 @@
   },
   {
     "code": "8069",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Ferroviario",
       "Ascensores",
@@ -4230,7 +4230,7 @@
   },
   {
     "code": "8070",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Mayores",
       "Parque intergeneracional",
@@ -4242,7 +4242,7 @@
   },
   {
     "code": "8070_santa",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Mayores",
       "Parque intergeneracional",
@@ -4254,7 +4254,7 @@
   },
   {
     "code": "8071",
-    "category": "🌿 Medio Ambiente",
+    "category": "Medio Ambiente",
     "tags": [
       "Río Esgueva",
       "Limpieza",
@@ -4266,7 +4266,7 @@
   },
   {
     "code": "8073",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Pumptrack",
       "Tirolina",
@@ -4278,7 +4278,7 @@
   },
   {
     "code": "8074",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Centro Cívico Luelmo",
       "Cultura",
@@ -4290,7 +4290,7 @@
   },
   {
     "code": "8075",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Pantalla acústica",
       "Tren",
@@ -4302,7 +4302,7 @@
   },
   {
     "code": "8077",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Estadio José Zorrilla",
       "Baños",
@@ -4314,7 +4314,7 @@
   },
   {
     "code": "8081",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Deterioro",
@@ -4326,7 +4326,7 @@
   },
   {
     "code": "8083",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Estadio José Zorrilla",
       "Baños",
@@ -4338,7 +4338,7 @@
   },
   {
     "code": "8084",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Adoquinado",
       "Hundimiento",
@@ -4350,7 +4350,7 @@
   },
   {
     "code": "8087",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Semáforo",
       "Seguridad Vial",
@@ -4362,7 +4362,7 @@
   },
   {
     "code": "8090",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Colegio El Peral",
       "Columpios",
@@ -4374,7 +4374,7 @@
   },
   {
     "code": "8090_parque",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Colegio El Peral",
       "Columpios",
@@ -4386,7 +4386,7 @@
   },
   {
     "code": "8091",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Parque",
       "Extensión",
@@ -4398,7 +4398,7 @@
   },
   {
     "code": "8092",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Conexión",
@@ -4410,7 +4410,7 @@
   },
   {
     "code": "8094",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Paseo Zorrilla",
@@ -4422,7 +4422,7 @@
   },
   {
     "code": "8095",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Baches",
       "Seguridad vial",
@@ -4434,7 +4434,7 @@
   },
   {
     "code": "8096",
-    "category": "🚲 Movilidad Ciclista",
+    "category": "Movilidad Ciclista",
     "tags": [
       "Ciclistas",
       "VMP",
@@ -4447,7 +4447,7 @@
   },
   {
     "code": "8097",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Peatonalización",
       "Paseo del Cauce",
@@ -4459,7 +4459,7 @@
   },
   {
     "code": "8098",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Parque",
       "VA-30",
@@ -4471,7 +4471,7 @@
   },
   {
     "code": "8100",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Puentes",
       "Sombras",
@@ -4483,7 +4483,7 @@
   },
   {
     "code": "8101",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Avenida Salamanca",
       "Humanización",
@@ -4495,7 +4495,7 @@
   },
   {
     "code": "8102",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Curva peligrosa",
       "Atropellos",
@@ -4507,7 +4507,7 @@
   },
   {
     "code": "8102_imp",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Curva peligrosa",
       "Atropellos",
@@ -4519,7 +4519,7 @@
   },
   {
     "code": "8104",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Contenedores soterrados",
       "Calle Esquila",
@@ -4531,7 +4531,7 @@
   },
   {
     "code": "8105",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Estadio José Zorrilla",
       "Baños",
@@ -4543,7 +4543,7 @@
   },
   {
     "code": "8107",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Plaza de la Cebada",
       "Mobiliario",
@@ -4555,7 +4555,7 @@
   },
   {
     "code": "8110",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Biki",
       "Movilidad sostenible",
@@ -4567,7 +4567,7 @@
   },
   {
     "code": "8111",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Pista Deportiva",
       "Huerta del Rey",
@@ -4579,7 +4579,7 @@
   },
   {
     "code": "8112",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Césped artificial",
       "Fútbol",
@@ -4591,7 +4591,7 @@
   },
   {
     "code": "8114",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Semáforos",
       "Ámbar",
@@ -4603,7 +4603,7 @@
   },
   {
     "code": "8116",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Ladera Sur",
       "Erosión",
@@ -4615,7 +4615,7 @@
   },
   {
     "code": "8117",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Plaza Gutiérrez Semprún",
       "Peatonalización",
@@ -4627,7 +4627,7 @@
   },
   {
     "code": "8119",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Ferroviario",
       "Calle Lille",
@@ -4640,7 +4640,7 @@
   },
   {
     "code": "8121",
-    "category": "🌳 Parques y Jardines",
+    "category": "Parques y Jardines",
     "tags": [
       "Sombra",
       "Plaza de la Lonja",
@@ -4652,7 +4652,7 @@
   },
   {
     "code": "8122",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Sombras textiles",
       "Calor",
@@ -4664,7 +4664,7 @@
   },
   {
     "code": "8122_som",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Sombras textiles",
       "Calor",
@@ -4676,7 +4676,7 @@
   },
   {
     "code": "8124",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Sombras",
@@ -4700,7 +4700,7 @@
   },
   {
     "code": "8128",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Reciclaje",
       "Solidaridad",
@@ -4712,7 +4712,7 @@
   },
   {
     "code": "8129",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Aparcamiento",
       "Sombras",
@@ -4724,7 +4724,7 @@
   },
   {
     "code": "8130",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Béisbol",
       "Sófbol",
@@ -4736,7 +4736,7 @@
   },
   {
     "code": "8131",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Conexión",
@@ -4748,7 +4748,7 @@
   },
   {
     "code": "8133_caucho",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Caucho",
       "Higiene",
@@ -4760,7 +4760,7 @@
   },
   {
     "code": "8133_gral",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Caucho",
       "Higiene",
@@ -4772,7 +4772,7 @@
   },
   {
     "code": "8135",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Patrimonio",
       "Palacio de la Ribera",
@@ -4784,7 +4784,7 @@
   },
   {
     "code": "8136",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Centro joven",
       "Colegio Olmedo",
@@ -4796,7 +4796,7 @@
   },
   {
     "code": "8137",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Bancos",
       "Mobiliario",
@@ -4808,7 +4808,7 @@
   },
   {
     "code": "8139",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Parque",
       "Comunidad",
@@ -4820,7 +4820,7 @@
   },
   {
     "code": "8139_retal",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Parque",
       "Comunidad",
@@ -4832,7 +4832,7 @@
   },
   {
     "code": "8141",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Parque de las Norias",
       "Mantenimiento",
@@ -4844,7 +4844,7 @@
   },
   {
     "code": "8142",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Parque",
       "Ciudad de la Comunicación",
@@ -4856,7 +4856,7 @@
   },
   {
     "code": "8146",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Parque Canterac",
       "Sendero",
@@ -4868,7 +4868,7 @@
   },
   {
     "code": "8147",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Calle Arca Real",
       "Aceras",
@@ -4880,7 +4880,7 @@
   },
   {
     "code": "8148",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Colegio El Peral",
       "Pista cubierta",
@@ -4892,7 +4892,7 @@
   },
   {
     "code": "8149",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Curtidores",
       "Rampa verde",
@@ -4904,7 +4904,7 @@
   },
   {
     "code": "8152",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Deterioro",
@@ -4916,7 +4916,7 @@
   },
   {
     "code": "8153",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Carril bici",
       "Calle Estación",
@@ -4928,7 +4928,7 @@
   },
   {
     "code": "8153_san",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Carril bici",
       "Calle Estación",
@@ -4940,7 +4940,7 @@
   },
   {
     "code": "8154",
-    "category": "🌳 Parques y Jardines",
+    "category": "Parques y Jardines",
     "tags": [
       "Bancos",
       "Plaza Andarrios",
@@ -4952,7 +4952,7 @@
   },
   {
     "code": "8155",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Parque Canino",
       "Canterac",
@@ -4964,7 +4964,7 @@
   },
   {
     "code": "8156",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Jardines",
       "Pulmón verde",
@@ -4976,7 +4976,7 @@
   },
   {
     "code": "8157",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Ferroviario",
       "Carril bici",
@@ -4989,7 +4989,7 @@
   },
   {
     "code": "8158",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Paisajismo",
       "Imagen urbana",
@@ -5001,7 +5001,7 @@
   },
   {
     "code": "8159_sal",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Plaza Salvador",
@@ -5013,7 +5013,7 @@
   },
   {
     "code": "8160",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Polideportivo Pisuerga",
       "Reforma",
@@ -5025,7 +5025,7 @@
   },
   {
     "code": "8161",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Diseño Urbano",
       "Plazas",
@@ -5037,7 +5037,7 @@
   },
   {
     "code": "8162",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Ocio",
@@ -5049,7 +5049,7 @@
   },
   {
     "code": "8164",
-    "category": "🌳 Parques y Jardines",
+    "category": "Parques y Jardines",
     "tags": [
       "Juegos Infantiles",
       "Plaza Circular",
@@ -5061,7 +5061,7 @@
   },
   {
     "code": "8165",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Corte tráfico",
       "Tráfico de paso",
@@ -5073,7 +5073,7 @@
   },
   {
     "code": "8166",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Polideportivo Canterac",
       "Gimnasio",
@@ -5085,7 +5085,7 @@
   },
   {
     "code": "8167",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "AUVASA",
       "Marquesina",
@@ -5097,7 +5097,7 @@
   },
   {
     "code": "8168",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Mayores 7 años",
@@ -5109,7 +5109,7 @@
   },
   {
     "code": "8169",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Polideportivo Pisuerga",
       "Baños",
@@ -5121,7 +5121,7 @@
   },
   {
     "code": "8170",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Polideportivo Pisuerga",
       "Goteras",
@@ -5133,7 +5133,7 @@
   },
   {
     "code": "8173",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Columpios",
       "Antigüedad",
@@ -5145,7 +5145,7 @@
   },
   {
     "code": "8174",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Iluminación",
       "Seguridad",
@@ -5157,7 +5157,7 @@
   },
   {
     "code": "8175",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Alcantarillado",
       "Calle Cigüeña",
@@ -5169,7 +5169,7 @@
   },
   {
     "code": "8176",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Piscina Municipal",
       "Gimnasio",
@@ -5181,7 +5181,7 @@
   },
   {
     "code": "8177",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Brea",
@@ -5193,7 +5193,7 @@
   },
   {
     "code": "8178",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Ferroviario",
       "Avenida Madrid",
@@ -5206,7 +5206,7 @@
   },
   {
     "code": "8180",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Techeras",
       "Confort térmico",
@@ -5218,7 +5218,7 @@
   },
   {
     "code": "8181",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Baloncesto",
       "Calistenia",
@@ -5242,7 +5242,7 @@
   },
   {
     "code": "8185",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Pista Deportiva",
       "Cubierta",
@@ -5254,7 +5254,7 @@
   },
   {
     "code": "8186",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Pista deportiva",
       "Redes",
@@ -5266,7 +5266,7 @@
   },
   {
     "code": "8188",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Publicidad",
       "Limpieza visual",
@@ -5278,7 +5278,7 @@
   },
   {
     "code": "8190",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Pinar de Jalón",
       "Cubierta",
@@ -5290,7 +5290,7 @@
   },
   {
     "code": "8191",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Pinar de Antequera",
       "Ocio",
@@ -5302,7 +5302,7 @@
   },
   {
     "code": "8192_alameda",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Drenaje",
       "Mobiliario",
@@ -5314,7 +5314,7 @@
   },
   {
     "code": "8192_skate",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Skatepark",
       "Patinaje",
@@ -5326,7 +5326,7 @@
   },
   {
     "code": "8194",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Peatonalización",
       "Eje central",
@@ -5338,7 +5338,7 @@
   },
   {
     "code": "8194_pea",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Peatonalización",
       "Eje central",
@@ -5350,7 +5350,7 @@
   },
   {
     "code": "8199",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Bancos",
       "Reposabrazos",
@@ -5362,7 +5362,7 @@
   },
   {
     "code": "8200",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Centro de Día",
       "Mayores",
@@ -5374,7 +5374,7 @@
   },
   {
     "code": "8202",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Iluminación",
       "Seguridad vial",
@@ -5386,7 +5386,7 @@
   },
   {
     "code": "8203",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Bio-saludables",
       "Personas mayores",
@@ -5398,7 +5398,7 @@
   },
   {
     "code": "8204",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Tablones Informativos",
       "La Victoria",
@@ -5410,7 +5410,7 @@
   },
   {
     "code": "8205",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Baloncesto",
       "Torreón",
@@ -5422,7 +5422,7 @@
   },
   {
     "code": "8206",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Cjón Alcoholera",
@@ -5446,7 +5446,7 @@
   },
   {
     "code": "8209",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Ferroviario",
       "Túnel Panaderos",
@@ -5458,7 +5458,7 @@
   },
   {
     "code": "8211",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Bancos",
       "Ergonomía",
@@ -5470,7 +5470,7 @@
   },
   {
     "code": "8214",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Paso de cebra",
       "Peatones",
@@ -5482,7 +5482,7 @@
   },
   {
     "code": "8217",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Yoga",
       "Suelo",
@@ -5494,7 +5494,7 @@
   },
   {
     "code": "8218",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Yoga",
       "Suelo",
@@ -5506,7 +5506,7 @@
   },
   {
     "code": "8219",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Asfaltado",
       "Baches",
@@ -5518,7 +5518,7 @@
   },
   {
     "code": "8220",
-    "category": "🌳 Parques y Jardines",
+    "category": "Parques y Jardines",
     "tags": [
       "Parques Infantiles",
       "Plaza Circular",
@@ -5530,7 +5530,7 @@
   },
   {
     "code": "8221",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Escaleras mecánicas",
       "Ascensor",
@@ -5542,7 +5542,7 @@
   },
   {
     "code": "8223",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Yoga",
       "Centro Cívico",
@@ -5554,7 +5554,7 @@
   },
   {
     "code": "8224",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Bancos",
       "Mobiliario",
@@ -5566,7 +5566,7 @@
   },
   {
     "code": "8225",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Patinaje",
       "Seguridad deportiva",
@@ -5578,7 +5578,7 @@
   },
   {
     "code": "8226",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Juventud",
       "Espacio Joven",
@@ -5590,7 +5590,7 @@
   },
   {
     "code": "8227",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Bancos",
       "Mayores",
@@ -5602,7 +5602,7 @@
   },
   {
     "code": "8228",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Yoga",
       "Centro Cívico",
@@ -5614,7 +5614,7 @@
   },
   {
     "code": "8229",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Mayores",
       "Aislamiento",
@@ -5626,7 +5626,7 @@
   },
   {
     "code": "8230",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Urinarios caninos",
       "Higiene",
@@ -5638,7 +5638,7 @@
   },
   {
     "code": "8231",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Paso de cebra",
       "Seguridad vial",
@@ -5650,7 +5650,7 @@
   },
   {
     "code": "8233",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Escaleras",
       "Parque",
@@ -5662,7 +5662,7 @@
   },
   {
     "code": "8234",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Bancos",
       "Árboles",
@@ -5674,7 +5674,7 @@
   },
   {
     "code": "8235",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Petanca",
       "Sombra",
@@ -5698,7 +5698,7 @@
   },
   {
     "code": "8237",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Baches",
       "Aceras",
@@ -5710,7 +5710,7 @@
   },
   {
     "code": "8238",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Iluminación",
@@ -5722,7 +5722,7 @@
   },
   {
     "code": "8239",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Brea",
@@ -5735,7 +5735,7 @@
   },
   {
     "code": "8240",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Fachadas",
       "Rehabilitación",
@@ -5747,7 +5747,7 @@
   },
   {
     "code": "8242",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Conexión",
@@ -5759,7 +5759,7 @@
   },
   {
     "code": "8243",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Adoquinado",
       "Ruido",
@@ -5771,7 +5771,7 @@
   },
   {
     "code": "8244",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Urbanismo",
       "Deterioro",
@@ -5783,7 +5783,7 @@
   },
   {
     "code": "8246",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Césped artificial",
       "Fútbol",
@@ -5795,7 +5795,7 @@
   },
   {
     "code": "8247",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Plaza",
       "Puente Duero",
@@ -5807,7 +5807,7 @@
   },
   {
     "code": "8250",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Plaza Alberto Fernández",
       "Deterioro",
@@ -5819,7 +5819,7 @@
   },
   {
     "code": "8251",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Raíces",
@@ -5831,7 +5831,7 @@
   },
   {
     "code": "8252",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Techado",
       "Cancha",
@@ -5843,7 +5843,7 @@
   },
   {
     "code": "8255",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "AUVASA",
       "Línea 24",
@@ -5855,7 +5855,7 @@
   },
   {
     "code": "8256",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Pasos de cebra",
       "Visibilidad",
@@ -5867,7 +5867,7 @@
   },
   {
     "code": "8256_cañada",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Pasos de cebra",
       "Visibilidad",
@@ -5879,7 +5879,7 @@
   },
   {
     "code": "8258",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Iluminación",
       "Seguridad vial",
@@ -5891,7 +5891,7 @@
   },
   {
     "code": "8259",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Arcas Reales",
@@ -5903,7 +5903,7 @@
   },
   {
     "code": "8260",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Calle Andalucía",
@@ -5915,7 +5915,7 @@
   },
   {
     "code": "8263",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Teatro",
       "Accesibilidad",
@@ -5927,7 +5927,7 @@
   },
   {
     "code": "8264",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Arena",
@@ -5939,7 +5939,7 @@
   },
   {
     "code": "8267_ rueda",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Seguridad",
       "Mantenimiento",
@@ -5951,7 +5951,7 @@
   },
   {
     "code": "8267_rue",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Seguridad",
       "Mantenimiento",
@@ -5963,7 +5963,7 @@
   },
   {
     "code": "8268",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Yoga",
       "Suelo",
@@ -5975,7 +5975,7 @@
   },
   {
     "code": "8273",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Rueda peligrosa",
       "Andrés de la Orden",
@@ -5987,7 +5987,7 @@
   },
   {
     "code": "8273_and",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Rueda peligrosa",
       "Andrés de la Orden",
@@ -5999,7 +5999,7 @@
   },
   {
     "code": "8274",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Aparcamiento",
       "Huerta del Rey",
@@ -6011,7 +6011,7 @@
   },
   {
     "code": "8275",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Mayores",
       "Participación",
@@ -6023,7 +6023,7 @@
   },
   {
     "code": "8279",
-    "category": "🌿 Medio Ambiente",
+    "category": "Medio Ambiente",
     "tags": [
       "Limpieza",
       "Calle Renedo",
@@ -6035,7 +6035,7 @@
   },
   {
     "code": "8280",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Badenes",
       "Velocidad",
@@ -6047,7 +6047,7 @@
   },
   {
     "code": "8282",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Pistas Deportivas",
       "Santos Pilarica",
@@ -6059,7 +6059,7 @@
   },
   {
     "code": "8283",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Contenedores",
       "Aparcamiento",
@@ -6071,7 +6071,7 @@
   },
   {
     "code": "8283_rec",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Contenedores",
       "Aparcamiento",
@@ -6083,7 +6083,7 @@
   },
   {
     "code": "8284",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Kilometrín",
       "Pinar de Jalón",
@@ -6095,7 +6095,7 @@
   },
   {
     "code": "8285",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Seguridad vial",
       "Badenes",
@@ -6107,7 +6107,7 @@
   },
   {
     "code": "8286",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Plaza San Juan",
       "Prohibición",
@@ -6119,7 +6119,7 @@
   },
   {
     "code": "8288",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Calle Zapadores",
       "Aceras",
@@ -6131,7 +6131,7 @@
   },
   {
     "code": "8289",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Baches",
@@ -6143,7 +6143,7 @@
   },
   {
     "code": "8290",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Iluminación",
       "Plaza San Juan",
@@ -6155,7 +6155,7 @@
   },
   {
     "code": "8291",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Autobús",
       "Frecuencia",
@@ -6167,7 +6167,7 @@
   },
   {
     "code": "8295",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Bancos",
       "Centro Cívico Delicias",
@@ -6179,7 +6179,7 @@
   },
   {
     "code": "8296",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Autobús",
       "Marquesina",
@@ -6191,7 +6191,7 @@
   },
   {
     "code": "8297",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Sanidad",
       "Ambulatorio",
@@ -6203,7 +6203,7 @@
   },
   {
     "code": "8298",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Accidentes",
       "Tráfico",
@@ -6215,7 +6215,7 @@
   },
   {
     "code": "8298_rotonda",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Accidentes",
       "Tráfico",
@@ -6227,7 +6227,7 @@
   },
   {
     "code": "8300",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Seguridad",
       "Vía férrea",
@@ -6239,7 +6239,7 @@
   },
   {
     "code": "8306",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Accesibilidad",
       "Discapacidad",
@@ -6251,7 +6251,7 @@
   },
   {
     "code": "8307",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Scouts",
       "Parque Las Norias",
@@ -6263,7 +6263,7 @@
   },
   {
     "code": "8308",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Plaza Activa",
       "Puente Jardín",
@@ -6275,7 +6275,7 @@
   },
   {
     "code": "8309",
-    "category": "🌳 Parques y Jardines",
+    "category": "Parques y Jardines",
     "tags": [
       "Arbustos",
       "Pilarica",
@@ -6287,7 +6287,7 @@
   },
   {
     "code": "8310",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Arte urbano",
       "Centro",
@@ -6299,7 +6299,7 @@
   },
   {
     "code": "8310_mural",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Arte urbano",
       "Centro",
@@ -6311,7 +6311,7 @@
   },
   {
     "code": "8311",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Tablones de Anuncios",
       "Información",
@@ -6323,7 +6323,7 @@
   },
   {
     "code": "8313",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Pádel",
       "Deporte",
@@ -6335,7 +6335,7 @@
   },
   {
     "code": "8314",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Pista deportiva",
       "Fútbol sala",
@@ -6347,7 +6347,7 @@
   },
   {
     "code": "8316",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Conexión",
@@ -6359,7 +6359,7 @@
   },
   {
     "code": "8318",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Plaza San Juan",
       "Reforma integral",
@@ -6371,7 +6371,7 @@
   },
   {
     "code": "8319",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Asfaltado",
       "Baches",
@@ -6383,7 +6383,7 @@
   },
   {
     "code": "8322",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Semáforo peligroso",
       "Visibilidad",
@@ -6395,7 +6395,7 @@
   },
   {
     "code": "8322_sem",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Semáforo peligroso",
       "Visibilidad",
@@ -6407,7 +6407,7 @@
   },
   {
     "code": "8323",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Autobús",
       "Auvasa",
@@ -6419,7 +6419,7 @@
   },
   {
     "code": "8326",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Sombras",
       "Calistenia",
@@ -6431,7 +6431,7 @@
   },
   {
     "code": "8327",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Motos",
       "Calle Estación",
@@ -6443,7 +6443,7 @@
   },
   {
     "code": "8327_mot",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Motos",
       "Calle Estación",
@@ -6455,7 +6455,7 @@
   },
   {
     "code": "8328",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Accesibilidad",
       "Discapacidad",
@@ -6467,7 +6467,7 @@
   },
   {
     "code": "8329",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Bancos",
       "Camino verde",
@@ -6479,7 +6479,7 @@
   },
   {
     "code": "8331",
-    "category": "🌳 Parques y Jardines",
+    "category": "Parques y Jardines",
     "tags": [
       "Parque del Desierto",
       "La Overuela",
@@ -6491,7 +6491,7 @@
   },
   {
     "code": "8332",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Pumptrack",
       "Calistenia",
@@ -6503,7 +6503,7 @@
   },
   {
     "code": "8334",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Cubierta",
       "Pista deportiva",
@@ -6515,7 +6515,7 @@
   },
   {
     "code": "8335",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Calistenia",
       "Plaza Circular",
@@ -6527,7 +6527,7 @@
   },
   {
     "code": "8336",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Picnic",
       "Ping-pong",
@@ -6539,7 +6539,7 @@
   },
   {
     "code": "8341",
-    "category": "🏫 Educación y Colegios",
+    "category": "Educación y Colegios",
     "tags": [
       "IES Pinar",
       "CEIP Alonso Berruguete",
@@ -6551,7 +6551,7 @@
   },
   {
     "code": "8342",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Patinetes",
       "Espacio Joven Norte",
@@ -6563,7 +6563,7 @@
   },
   {
     "code": "8343",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Autobús",
       "Marquesina",
@@ -6575,7 +6575,7 @@
   },
   {
     "code": "8344_lac",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Deporte centro",
       "Parcela municipal",
@@ -6587,7 +6587,7 @@
   },
   {
     "code": "8345",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Cubierta",
       "Cancha deportiva",
@@ -6599,7 +6599,7 @@
   },
   {
     "code": "8346",
-    "category": "🏫 Educación y Colegios",
+    "category": "Educación y Colegios",
     "tags": [
       "Colegio Martín Baró",
       "Bicicletas",
@@ -6611,7 +6611,7 @@
   },
   {
     "code": "8350",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Patinetes",
       "Espacio Joven Norte",
@@ -6623,7 +6623,7 @@
   },
   {
     "code": "8351",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Conexión",
@@ -6635,7 +6635,7 @@
   },
   {
     "code": "8353",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Mediación",
       "Paz social",
@@ -6647,7 +6647,7 @@
   },
   {
     "code": "8353_med",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Mediación",
       "Paz social",
@@ -6659,7 +6659,7 @@
   },
   {
     "code": "8354",
-    "category": "🏫 Educación y Colegios",
+    "category": "Educación y Colegios",
     "tags": [
       "Colegio Martín Baró",
       "Columpios",
@@ -6683,7 +6683,7 @@
   },
   {
     "code": "8358",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Limpieza",
       "Suciedad",
@@ -6695,7 +6695,7 @@
   },
   {
     "code": "8359",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Cubierta Polivalente",
       "Santos Pilarica",
@@ -6707,7 +6707,7 @@
   },
   {
     "code": "8360",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Ferroviario",
       "Centro cívico",
@@ -6720,7 +6720,7 @@
   },
   {
     "code": "8361",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Puente Duero",
       "Lagunas",
@@ -6732,7 +6732,7 @@
   },
   {
     "code": "8364",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Alcantarillado",
       "Olores",
@@ -6744,7 +6744,7 @@
   },
   {
     "code": "8365",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Pinar de Jalón",
@@ -6756,7 +6756,7 @@
   },
   {
     "code": "8366",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Conexión",
@@ -6768,7 +6768,7 @@
   },
   {
     "code": "8367",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Aparcamiento residentes",
       "Limpieza",
@@ -6780,7 +6780,7 @@
   },
   {
     "code": "8372",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Piscina de verano",
       "Polideportivo aire libre",
@@ -6792,7 +6792,7 @@
   },
   {
     "code": "8373",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Interculturalidad",
       "Casa de las Culturas",
@@ -6804,7 +6804,7 @@
   },
   {
     "code": "8376",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Mirador de aves",
       "Mantenimiento",
@@ -6816,7 +6816,7 @@
   },
   {
     "code": "8378",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Peatonalización",
       "Contaminación",
@@ -6828,7 +6828,7 @@
   },
   {
     "code": "8379",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Aceras",
       "Calle Verbena",
@@ -6840,7 +6840,7 @@
   },
   {
     "code": "8381",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Jardines",
       "Teresa de Calcuta",
@@ -6852,7 +6852,7 @@
   },
   {
     "code": "8382",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Biosaludables",
       "Girón",
@@ -6864,7 +6864,7 @@
   },
   {
     "code": "8383",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Gimnasio aire libre",
       "Parque Las Lavanderas",
@@ -6876,7 +6876,7 @@
   },
   {
     "code": "8384",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Rocódromo",
       "Taller bici",
@@ -6888,7 +6888,7 @@
   },
   {
     "code": "8386",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Plaza Everest",
       "Pérgola",
@@ -6900,7 +6900,7 @@
   },
   {
     "code": "8387",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Pacificacion",
       "Contaminación",
@@ -6912,7 +6912,7 @@
   },
   {
     "code": "8387_ang",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Pacificacion",
       "Contaminación",
@@ -6924,7 +6924,7 @@
   },
   {
     "code": "8388",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Pinar de Jalón",
@@ -6936,7 +6936,7 @@
   },
   {
     "code": "8389",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Zona escolar",
       "Badenes",
@@ -6948,7 +6948,7 @@
   },
   {
     "code": "8391",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Mayores",
       "Gimnasia",
@@ -6960,7 +6960,7 @@
   },
   {
     "code": "8392",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Polideportivo",
       "Climatización",
@@ -6972,7 +6972,7 @@
   },
   {
     "code": "8394",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Mural",
       "IES Arca Real",
@@ -6984,7 +6984,7 @@
   },
   {
     "code": "8397",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Caucho",
       "Higiene",
@@ -6996,7 +6996,7 @@
   },
   {
     "code": "8397_cau",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Caucho",
       "Higiene",
@@ -7008,7 +7008,7 @@
   },
   {
     "code": "8398",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Pinar de Jalón",
@@ -7020,7 +7020,7 @@
   },
   {
     "code": "8399",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Béisbol",
       "Softbol",
@@ -7032,7 +7032,7 @@
   },
   {
     "code": "8401",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Centro cívico",
       "Biblioteca",
@@ -7044,7 +7044,7 @@
   },
   {
     "code": "8402",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Vóley",
       "Arena",
@@ -7056,7 +7056,7 @@
   },
   {
     "code": "8403",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Biki",
       "Puente Jardín",
@@ -7068,7 +7068,7 @@
   },
   {
     "code": "8404",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Poda",
       "Árboles",
@@ -7080,7 +7080,7 @@
   },
   {
     "code": "8405",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Seguridad vial",
       "Espejo",
@@ -7092,7 +7092,7 @@
   },
   {
     "code": "8407",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Mayores",
       "Marquesina",
@@ -7104,7 +7104,7 @@
   },
   {
     "code": "8407_mar",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Mayores",
       "Marquesina",
@@ -7116,7 +7116,7 @@
   },
   {
     "code": "8408",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Centro Cívico Vicente Escudero",
       "Climatización",
@@ -7127,7 +7127,7 @@
   },
   {
     "code": "8409",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Pista Deportiva",
       "Los Viveros",
@@ -7139,7 +7139,7 @@
   },
   {
     "code": "8410",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Seguridad vial",
       "Motos",
@@ -7151,7 +7151,7 @@
   },
   {
     "code": "8411",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Cubierta",
@@ -7163,7 +7163,7 @@
   },
   {
     "code": "8414",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Acceso autovía",
       "Tráfico",
@@ -7175,7 +7175,7 @@
   },
   {
     "code": "8415",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Asfaltado",
       "Aceras",
@@ -7199,7 +7199,7 @@
   },
   {
     "code": "8418",
-    "category": "🌿 Medio Ambiente",
+    "category": "Medio Ambiente",
     "tags": [
       "Río Esgueva",
       "Sendero Ecológico",
@@ -7223,7 +7223,7 @@
   },
   {
     "code": "8420",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Juventud",
       "Espacio multiusos",
@@ -7235,7 +7235,7 @@
   },
   {
     "code": "8420_p",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Juventud",
       "Espacio multiusos",
@@ -7247,7 +7247,7 @@
   },
   {
     "code": "8422",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Aparcamiento",
       "Pajarillos",
@@ -7271,7 +7271,7 @@
   },
   {
     "code": "8428",
-    "category": "🏫 Educación y Colegios",
+    "category": "Educación y Colegios",
     "tags": [
       "Primera infancia",
       "Cultura",
@@ -7283,7 +7283,7 @@
   },
   {
     "code": "8428_bib",
-    "category": "🏫 Educación y Colegios",
+    "category": "Educación y Colegios",
     "tags": [
       "Primera infancia",
       "Cultura",
@@ -7295,7 +7295,7 @@
   },
   {
     "code": "8429",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Motricidad",
       "Centro de Día",
@@ -7307,7 +7307,7 @@
   },
   {
     "code": "8430",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Huerto urbano",
       "Delicias",
@@ -7319,7 +7319,7 @@
   },
   {
     "code": "8431",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Alcorques",
       "Drenaje",
@@ -7331,7 +7331,7 @@
   },
   {
     "code": "8431_mur",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Alcorques",
       "Drenaje",
@@ -7343,7 +7343,7 @@
   },
   {
     "code": "8432",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Patinetes",
       "Centro Cívico",
@@ -7355,7 +7355,7 @@
   },
   {
     "code": "8433",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Asfaltado",
       "Calle La Vía",
@@ -7367,7 +7367,7 @@
   },
   {
     "code": "8436",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Accesibilidad",
       "Rampas",
@@ -7379,7 +7379,7 @@
   },
   {
     "code": "8439",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Tráfico",
       "Colapso",
@@ -7391,7 +7391,7 @@
   },
   {
     "code": "8440",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Asfaltado",
       "Calle de la Vía",
@@ -7403,7 +7403,7 @@
   },
   {
     "code": "8441",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Centro Cívico Delicias",
       "Mantenimiento",
@@ -7415,7 +7415,7 @@
   },
   {
     "code": "8442",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Seguridad vial",
       "Semáforo",
@@ -7427,7 +7427,7 @@
   },
   {
     "code": "8443",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Seguridad Vial",
       "Paso de Peatones",
@@ -7439,7 +7439,7 @@
   },
   {
     "code": "8444",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Espacio peatonal",
       "Humanización",
@@ -7451,7 +7451,7 @@
   },
   {
     "code": "8446",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Escultura",
       "Mural",
@@ -7463,7 +7463,7 @@
   },
   {
     "code": "8448",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Soterramiento",
       "Contenedores",
@@ -7475,7 +7475,7 @@
   },
   {
     "code": "8450",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Espacio Joven Sur",
       "Suelo auditorio",
@@ -7487,7 +7487,7 @@
   },
   {
     "code": "8451",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Romojaro",
@@ -7499,7 +7499,7 @@
   },
   {
     "code": "8452",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Plaza Andarríos",
       "Calistenia",
@@ -7511,7 +7511,7 @@
   },
   {
     "code": "8453_cam",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Control tráfico",
       "Peatonalización",
@@ -7523,7 +7523,7 @@
   },
   {
     "code": "8454",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "CIC Santiago López",
       "Limpieza",
@@ -7535,7 +7535,7 @@
   },
   {
     "code": "8456",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Pista Deportiva",
       "Las Flores",
@@ -7547,7 +7547,7 @@
   },
   {
     "code": "8459",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Rotonda",
       "Tráfico",
@@ -7560,7 +7560,7 @@
   },
   {
     "code": "8460",
-    "category": "🚲 Movilidad Ciclista",
+    "category": "Movilidad Ciclista",
     "tags": [
       "Carril Bici",
       "Gloria Fuertes",
@@ -7572,7 +7572,7 @@
   },
   {
     "code": "8461",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Calles",
       "Mantenimiento",
@@ -7584,7 +7584,7 @@
   },
   {
     "code": "8462",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Fuentes",
       "Agua",
@@ -7596,7 +7596,7 @@
   },
   {
     "code": "8466",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Pavimento color",
       "Caídas",
@@ -7608,7 +7608,7 @@
   },
   {
     "code": "8466_pav",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Pavimento color",
       "Caídas",
@@ -7620,7 +7620,7 @@
   },
   {
     "code": "8467",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Parque de la Paz",
       "Valla",
@@ -7633,7 +7633,7 @@
   },
   {
     "code": "8468_mot",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Motos",
       "ZBE",
@@ -7645,7 +7645,7 @@
   },
   {
     "code": "8469",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Suelo caucho",
@@ -7657,7 +7657,7 @@
   },
   {
     "code": "8471",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Menores 5 años",
@@ -7669,7 +7669,7 @@
   },
   {
     "code": "8474",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Pacificación",
       "Carril bici",
@@ -7681,7 +7681,7 @@
   },
   {
     "code": "8476",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Raíces",
@@ -7693,7 +7693,7 @@
   },
   {
     "code": "8478",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Suelo caucho",
@@ -7705,7 +7705,7 @@
   },
   {
     "code": "8480",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Setos",
       "Vegetación",
@@ -7717,7 +7717,7 @@
   },
   {
     "code": "8483",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Prado de la Magdalena",
@@ -7729,7 +7729,7 @@
   },
   {
     "code": "8484",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Piscina Canterac",
       "Vestuarios",
@@ -7741,7 +7741,7 @@
   },
   {
     "code": "8486",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Piscina Canterac",
       "Vestuarios",
@@ -7753,7 +7753,7 @@
   },
   {
     "code": "8487",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Raíces",
@@ -7765,7 +7765,7 @@
   },
   {
     "code": "8488",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Ping-Pong",
       "CIC Segundo Montes",
@@ -7777,7 +7777,7 @@
   },
   {
     "code": "8489_mur",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Mercado Campillo",
@@ -7789,7 +7789,7 @@
   },
   {
     "code": "8489_muro",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Mercado Campillo",
@@ -7801,7 +7801,7 @@
   },
   {
     "code": "8490",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Parque deportivo",
       "Calle Pingüino",
@@ -7813,7 +7813,7 @@
   },
   {
     "code": "8491_mar",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Accesibilidad",
       "Discapacidad",
@@ -7825,7 +7825,7 @@
   },
   {
     "code": "8492",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Tráfico",
       "Acceso vial",
@@ -7837,7 +7837,7 @@
   },
   {
     "code": "8493",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Gimnasia",
       "Parque Patricia",
@@ -7849,7 +7849,7 @@
   },
   {
     "code": "8495",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "CIC Segundo Montes",
       "Limpieza",
@@ -7861,7 +7861,7 @@
   },
   {
     "code": "8496",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Limpieza",
       "Jardinería",
@@ -7885,7 +7885,7 @@
   },
   {
     "code": "8499",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Conexión",
@@ -7897,7 +7897,7 @@
   },
   {
     "code": "8500",
-    "category": "🌿 Medio Ambiente",
+    "category": "Medio Ambiente",
     "tags": [
       "Vía Verde",
       "Tren Burra",
@@ -7909,7 +7909,7 @@
   },
   {
     "code": "8501",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Seguridad vial",
       "Paso de cebra",
@@ -7921,7 +7921,7 @@
   },
   {
     "code": "8504",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Asfaltado",
       "Acceso",
@@ -7933,7 +7933,7 @@
   },
   {
     "code": "8505",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Autobús",
       "Microbús",
@@ -7945,7 +7945,7 @@
   },
   {
     "code": "8507",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Limpieza",
       "Bares",
@@ -7957,7 +7957,7 @@
   },
   {
     "code": "8509",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Grietas",
@@ -7969,7 +7969,7 @@
   },
   {
     "code": "8510",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Bio-saludables",
       "Parque",
@@ -7981,7 +7981,7 @@
   },
   {
     "code": "8512",
-    "category": "🌳 Parques y Jardines",
+    "category": "Parques y Jardines",
     "tags": [
       "Solar",
       "Parque",
@@ -7993,7 +7993,7 @@
   },
   {
     "code": "8513",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Pavimentación",
       "Deterioro",
@@ -8005,7 +8005,7 @@
   },
   {
     "code": "8514",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Autobús",
       "Río Shopping",
@@ -8017,7 +8017,7 @@
   },
   {
     "code": "8515",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Nuevo Hospital",
@@ -8041,7 +8041,7 @@
   },
   {
     "code": "8517_bici",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Cardenal Mendoza",
@@ -8053,7 +8053,7 @@
   },
   {
     "code": "8517_men",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Carril bici",
       "Cardenal Mendoza",
@@ -8065,7 +8065,7 @@
   },
   {
     "code": "8518",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Aparcabicis",
       "Salud mental",
@@ -8077,7 +8077,7 @@
   },
   {
     "code": "8521",
-    "category": "🚲 Movilidad Ciclista",
+    "category": "Movilidad Ciclista",
     "tags": [
       "BIKI",
       "Valle de Arán",
@@ -8089,7 +8089,7 @@
   },
   {
     "code": "8522",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Ascensor",
       "Parque Patricia",
@@ -8101,7 +8101,7 @@
   },
   {
     "code": "8523",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Información",
       "Tablones",
@@ -8113,7 +8113,7 @@
   },
   {
     "code": "8523_paneles",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Información",
       "Tablones",
@@ -8125,7 +8125,7 @@
   },
   {
     "code": "8524",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Avenida Palencia",
@@ -8137,7 +8137,7 @@
   },
   {
     "code": "8525",
-    "category": "🌳 Parques y Jardines",
+    "category": "Parques y Jardines",
     "tags": [
       "Parque",
       "Zona Deportiva",
@@ -8149,7 +8149,7 @@
   },
   {
     "code": "8527",
-    "category": "🌳 Parques y Jardines",
+    "category": "Parques y Jardines",
     "tags": [
       "Parque Infantil",
       "Santos Pilarica",
@@ -8161,7 +8161,7 @@
   },
   {
     "code": "8529",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Raíces",
@@ -8173,7 +8173,7 @@
   },
   {
     "code": "8530_bus",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Parada autobús",
       "Cañada Real",
@@ -8185,7 +8185,7 @@
   },
   {
     "code": "8530_cañada",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Parada autobús",
       "Cañada Real",
@@ -8197,7 +8197,7 @@
   },
   {
     "code": "8530_skate",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Skatepark",
       "Vallado",
@@ -8209,7 +8209,7 @@
   },
   {
     "code": "8531",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Renovación",
@@ -8221,7 +8221,7 @@
   },
   {
     "code": "8533",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Iluminación",
       "Parque Las Lavanderas",
@@ -8233,7 +8233,7 @@
   },
   {
     "code": "8535",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Badenes",
       "Velocidad",
@@ -8245,7 +8245,7 @@
   },
   {
     "code": "8536",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Árboles",
@@ -8257,7 +8257,7 @@
   },
   {
     "code": "8537",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Deterioro",
@@ -8269,7 +8269,7 @@
   },
   {
     "code": "8538",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Calistenia",
       "Canal de Castilla",
@@ -8281,7 +8281,7 @@
   },
   {
     "code": "8539",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Peatonalización",
       "Mercado Campillo",
@@ -8293,7 +8293,7 @@
   },
   {
     "code": "8539_cam",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Peatonalización",
       "Mercado Campillo",
@@ -8305,7 +8305,7 @@
   },
   {
     "code": "8541",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Bancos",
       "Pistas deportivas",
@@ -8317,7 +8317,7 @@
   },
   {
     "code": "8542",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Suelo caucho",
@@ -8329,7 +8329,7 @@
   },
   {
     "code": "8544",
-    "category": "🌿 Medio Ambiente",
+    "category": "Medio Ambiente",
     "tags": [
       "Aseos Portátiles",
       "Río Esgueva",
@@ -8341,7 +8341,7 @@
   },
   {
     "code": "8546",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Brea",
@@ -8353,7 +8353,7 @@
   },
   {
     "code": "8547",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Columpios",
@@ -8365,7 +8365,7 @@
   },
   {
     "code": "8548",
-    "category": "💡 Mobiliario e Iluminación",
+    "category": "Mobiliario e Iluminación",
     "tags": [
       "Iluminación",
       "Seguridad",
@@ -8377,7 +8377,7 @@
   },
   {
     "code": "8550",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Mayores",
       "Cañada Real",
@@ -8389,7 +8389,7 @@
   },
   {
     "code": "8551",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
       "Menores 5 años",
@@ -8401,7 +8401,7 @@
   },
   {
     "code": "8552",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Ocio juvenil",
       "Calistenia",
@@ -8413,7 +8413,7 @@
   },
   {
     "code": "8553",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Ninja Warrior",
       "Jóvenes",
@@ -8425,7 +8425,7 @@
   },
   {
     "code": "8555",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Autobús",
       "Cobertura",
@@ -8437,7 +8437,7 @@
   },
   {
     "code": "8556",
-    "category": "⚽ Instalaciones Deportivas",
+    "category": "Instalaciones Deportivas",
     "tags": [
       "Hockey",
       "Canterac",
@@ -8449,7 +8449,7 @@
   },
   {
     "code": "8560",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Aceras",
       "Árboles",
@@ -8461,7 +8461,7 @@
   },
   {
     "code": "8561",
-    "category": "🧸 Infancia y Juegos",
+    "category": "Infancia y Juegos",
     "tags": [
       "Parque Mediodía",
       "Renovación",
@@ -8473,7 +8473,7 @@
   },
   {
     "code": "8563",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Paso de cebra",
       "Poda",
@@ -8486,7 +8486,7 @@
   },
   {
     "code": "8564",
-    "category": "🚲 Movilidad Activa",
+    "category": "Movilidad Activa",
     "tags": [
       "Coche eléctrico",
       "Sostenibilidad",
@@ -8498,7 +8498,7 @@
   },
   {
     "code": "8565",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Aparcamiento",
       "Seguridad vial",
@@ -8510,7 +8510,7 @@
   },
   {
     "code": "8566",
-    "category": "🧹 Limpieza y Residuos",
+    "category": "Limpieza y Residuos",
     "tags": [
       "Limpieza",
       "Perros",
@@ -8522,7 +8522,7 @@
   },
   {
     "code": "8568",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Asfaltado",
       "La Overuela",
@@ -8534,7 +8534,7 @@
   },
   {
     "code": "8569",
-    "category": "👵 Social y Equipamientos",
+    "category": "Social y Equipamientos",
     "tags": [
       "Cubierta",
       "Centro Cívico",
@@ -8546,7 +8546,7 @@
   },
   {
     "code": "8570",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Seguridad Vial",
       "Bordillo",
@@ -8558,7 +8558,7 @@
   },
   {
     "code": "8571",
-    "category": "🚧 Pavimentación y Aceras",
+    "category": "Pavimentación y Aceras",
     "tags": [
       "Asfaltado",
       "Accesibilidad",
@@ -8571,7 +8571,7 @@
   },
   {
     "code": "8572",
-    "category": "👮 Seguridad y Convivencia",
+    "category": "Seguridad y Convivencia",
     "tags": [
       "Seguridad vial",
       "Semáforo",
@@ -8583,7 +8583,7 @@
   },
   {
     "code": "8575",
-    "category": "🚌 Transporte y Tráfico",
+    "category": "Transporte y Tráfico",
     "tags": [
       "Aparcamiento",
       "Batería a línea",
@@ -8595,7 +8595,7 @@
   },
   {
     "code": "8577",
-    "category": "🌳 Parques y Naturaleza",
+    "category": "Parques y Naturaleza",
     "tags": [
       "Innovación",
       "Tokenización",
@@ -8608,7 +8608,7 @@
   },
   {
     "code": "8578",
-    "category": "🏗️ Grandes Infraestructuras",
+    "category": "Grandes Infraestructuras",
     "tags": [
       "Calle coexistencia",
       "Accesibilidad",
@@ -8620,7 +8620,7 @@
   },
   {
     "code": "8579",
-    "category": "🏢 Urbanismo",
+    "category": "Urbanismo",
     "tags": [
       "Escaleras",
       "Girón",
@@ -8632,7 +8632,7 @@
   },
   {
     "code": "8606",
-    "category": "🏫 Educación y Colegios",
+    "category": "Educación y Colegios",
     "tags": [
       "Colegio Martín Baró",
       "Cubierta",

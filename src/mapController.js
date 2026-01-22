@@ -81,42 +81,42 @@ export class MapController {
 
     getCategoryIcon(category) {
         const icons = {
-            '🌳 Parques y Naturaleza': 'fa-solid fa-tree',
-            '⚽ Instalaciones Deportivas': 'fa-solid fa-futbol',
-            '🚲 Movilidad Ciclista': 'fa-solid fa-bicycle',
-            '🏢 Urbanismo': 'fa-solid fa-building',
-            '🚲 Movilidad Activa': 'fa-solid fa-person-biking',
-            '🧹 Limpieza y Residuos': 'fa-solid fa-broom',
-            '🚧 Pavimentación y Aceras': 'fa-solid fa-road',
-            '🚌 Transporte y Tráfico': 'fa-solid fa-bus',
-            '🧸 Infancia y Juegos': 'fa-solid fa-child',
-            '👵 Social y Equipamientos': 'fa-solid fa-users',
-            '🏫 Educación y Colegios': 'fa-solid fa-school',
-            '👮 Seguridad y Convivencia': 'fa-solid fa-shield-halved',
-            '🌿 Medio Ambiente': 'fa-solid fa-leaf',
-            '🏗️ Grandes Infraestructuras': 'fa-solid fa-hammer',
-            '💡 Mobiliario e Iluminación': 'fa-solid fa-lightbulb'
+            'Parques y Naturaleza': 'fa-solid fa-tree',
+            'Instalaciones Deportivas': 'fa-solid fa-futbol',
+            'Movilidad Ciclista': 'fa-solid fa-bicycle',
+            'Urbanismo': 'fa-solid fa-building',
+            'Movilidad Activa': 'fa-solid fa-person-biking',
+            'Limpieza y Residuos': 'fa-solid fa-broom',
+            'Pavimentación y Aceras': 'fa-solid fa-road',
+            'Transporte y Tráfico': 'fa-solid fa-bus',
+            'Infancia y Juegos': 'fa-solid fa-child',
+            'Social y Equipamientos': 'fa-solid fa-users',
+            'Educación y Colegios': 'fa-solid fa-school',
+            'Seguridad y Convivencia': 'fa-solid fa-shield-halved',
+            'Medio Ambiente': 'fa-solid fa-leaf',
+            'Grandes Infraestructuras': 'fa-solid fa-hammer',
+            'Mobiliario e Iluminación': 'fa-solid fa-lightbulb'
         };
         return icons[category] || 'fa-solid fa-location-dot';
     }
 
     getCategoryColor(category) {
         const colors = {
-            '🌳 Parques y Naturaleza': '#22c55e',
-            '⚽ Instalaciones Deportivas': '#f59e0b',
-            '🚲 Movilidad Ciclista': '#3b82f6',
-            '🏢 Urbanismo': '#64748b',
-            '🚲 Movilidad Activa': '#06b6d4',
-            '🧹 Limpieza y Residuos': '#78350f',
-            '🚧 Pavimentación y Aceras': '#f97316',
-            '🚌 Transporte y Tráfico': '#ef4444',
-            '🧸 Infancia y Juegos': '#ec4899',
-            '👵 Social y Equipamientos': '#8b5cf6',
-            '🏫 Educación y Colegios': '#3b82f6',
-            '👮 Seguridad y Convivencia': '#1e293b',
-            '🌿 Medio Ambiente': '#10b981',
-            '🏗️ Grandes Infraestructuras': '#475569',
-            '💡 Mobiliario e Iluminación': '#eab308'
+            'Parques y Naturaleza': '#22c55e',
+            'Instalaciones Deportivas': '#f59e0b',
+            'Movilidad Ciclista': '#3b82f6',
+            'Urbanismo': '#64748b',
+            'Movilidad Activa': '#06b6d4',
+            'Limpieza y Residuos': '#78350f',
+            'Pavimentación y Aceras': '#f97316',
+            'Transporte y Tráfico': '#ef4444',
+            'Infancia y Juegos': '#ec4899',
+            'Social y Equipamientos': '#8b5cf6',
+            'Educación y Colegios': '#3b82f6',
+            'Seguridad y Convivencia': '#1e293b',
+            'Medio Ambiente': '#10b981',
+            'Grandes Infraestructuras': '#475569',
+            'Mobiliario e Iluminación': '#eab308'
         };
         return colors[category] || '#94a3b8';
     }
