@@ -203,7 +203,8 @@ export class MapController {
             'Seguridad y Convivencia': 'fa-solid fa-shield-halved',
             'Medio Ambiente': 'fa-solid fa-leaf',
             'Grandes Infraestructuras': 'fa-solid fa-hammer',
-            'Mobiliario e Iluminación': 'fa-solid fa-lightbulb'
+            'Mobiliario e Iluminación': 'fa-solid fa-lightbulb',
+            'Zona Vías': 'fa-solid fa-train'
         };
         return icons[category] || 'fa-solid fa-location-dot';
     }
@@ -224,7 +225,8 @@ export class MapController {
             'Seguridad y Convivencia': '#1e293b',
             'Medio Ambiente': '#10b981',
             'Grandes Infraestructuras': '#475569',
-            'Mobiliario e Iluminación': '#eab308'
+            'Mobiliario e Iluminación': '#eab308',
+            'Zona Vías': '#374151'
         };
         return colors[category] || '#94a3b8';
     }
