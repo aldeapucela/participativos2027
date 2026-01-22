@@ -135,7 +135,7 @@ export class MapController {
                         <div style="display: flex; align-items: center; gap: 8px; padding-top: 10px; border-top: 1px solid #e5e7eb;">
                             <i class="${categoryIcon}" style="color: ${categoryColor}; font-size: 15px;"></i>
                             <span style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #4f46e5; letter-spacing: 0.5px;">
-                                ${proposal.category}
+                                ${this.cleanCategoryName(proposal.category)}
                             </span>
                         </div>
                     </div>
@@ -187,6 +187,11 @@ export class MapController {
         }
     }
 
+    cleanCategoryName(category) {
+        // Remove emojis and special characters from category name
+        return category.replace(/[^\w\sáéíóúÁÉÍÓÚñÑüÜ-]/g, '').trim();
+    }
+
     getCategoryIcon(category) {
         const icons = {
             'Parques y Naturaleza': 'fa-solid fa-tree',
@@ -203,13 +208,16 @@ export class MapController {
             'Social y Equipamientos': 'fa-solid fa-users',
             'Educación y Colegios': 'fa-solid fa-school',
             'Seguridad y Convivencia': 'fa-solid fa-shield-halved',
+            'Seguridad Vial': 'fa-solid fa-car',
             'Medio Ambiente': 'fa-solid fa-leaf',
             'Grandes Infraestructuras': 'fa-solid fa-hammer',
             'Mobiliario e Iluminación': 'fa-solid fa-lightbulb',
             'Zona Vías': 'fa-solid fa-train',
+            'Zonas Caninas': 'fa-solid fa-dog',
             'Accesibilidad': 'fa-solid fa-wheelchair',
             'Alumbrado Público': 'fa-solid fa-lightbulb',
             'Cultura y Juventud': 'fa-solid fa-masks-theater',
+            'Cultura y Patrimonio': 'fa-solid fa-landmark',
             '♿ Accesibilidad': 'fa-solid fa-wheelchair',
             '💡 Alumbrado Público': 'fa-solid fa-lightbulb',
             '🎭 Cultura y Juventud': 'fa-solid fa-masks-theater',
@@ -234,13 +242,16 @@ export class MapController {
             'Social y Equipamientos': '#8b5cf6',
             'Educación y Colegios': '#3b82f6',
             'Seguridad y Convivencia': '#1e293b',
+            'Seguridad Vial': '#dc2626',
             'Medio Ambiente': '#10b981',
             'Grandes Infraestructuras': '#475569',
             'Mobiliario e Iluminación': '#eab308',
             'Zona Vías': '#374151',
+            'Zonas Caninas': '#a16207',
             'Accesibilidad': '#0891b2',
             'Alumbrado Público': '#eab308',
             'Cultura y Juventud': '#c026d3',
+            'Cultura y Patrimonio': '#9333ea',
             '♿ Accesibilidad': '#0891b2',
             '💡 Alumbrado Público': '#eab308',
             '🎭 Cultura y Juventud': '#c026d3',
