@@ -19,6 +19,8 @@
 /**
  * Controller to handle DOM rendering for list and filters
  */
+import { escapeHtml } from './utils.js';
+
 export class UIController {
     constructor() {
         this.listElement = document.getElementById('proposals-list');
@@ -29,11 +31,14 @@ export class UIController {
         this.activeTagsContainer = document.getElementById('active-tags-container');
         this.activeTagsElement = document.getElementById('active-tags');
         this.popularTagsElement = document.getElementById('popular-tags');
+        this.shareSearchBtn = document.getElementById('share-search-btn');
+        this.shareFiltersBtn = document.getElementById('share-filters-btn');
 
         this.activeCategory = 'Todas';
-        this.activeZone = 'Todas zonas';
+        this.activeZone = 0;
         this.activeTags = new Set();
         this.showAllTags = false;
+        this.urlManager = null; // Will be set from main.js
 
         // Setup toggle for popular tags section
         const toggleBtn = document.getElementById('toggle-tags');
@@ -45,6 +50,58 @@ export class UIController {
                     : 'fa-solid fa-chevron-down';
             });
         }
+    }
+
+    setURLManager(urlManager) {
+        this.urlManager = urlManager;
+        this.setupShareButtons();
+    }
+
+    setupShareButtons() {
+        // Share search button
+        if (this.shareSearchBtn) {
+            this.shareSearchBtn.addEventListener('click', async () => {
+                const url = this.urlManager.generateShareableURL(
+                    this.searchInput.value,
+                    this.activeCategory,
+                    this.activeZone,
+                    Array.from(this.activeTags)
+                );
+                
+                const success = await this.urlManager.copyToClipboard(url);
+                if (success) {
+                    this.showCopyFeedback(this.shareSearchBtn);
+                }
+            });
+        }
+
+        // Share filters button
+        if (this.shareFiltersBtn) {
+            this.shareFiltersBtn.addEventListener('click', async () => {
+                const url = this.urlManager.generateShareableURL(
+                    this.searchInput.value,
+                    this.activeCategory,
+                    this.activeZone,
+                    Array.from(this.activeTags)
+                );
+                
+                const success = await this.urlManager.copyToClipboard(url);
+                if (success) {
+                    this.showCopyFeedback(this.shareFiltersBtn);
+                }
+            });
+        }
+    }
+
+    showCopyFeedback(button) {
+        const originalHTML = button.innerHTML;
+        button.innerHTML = '<i class="fa-solid fa-check mr-1"></i>¡Copiado!';
+        button.classList.add('text-green-600');
+        
+        setTimeout(() => {
+            button.innerHTML = originalHTML;
+            button.classList.remove('text-green-600');
+        }, 2000);
     }
 
     renderFilters(categories, allProposals, onFilterClick) {
@@ -166,8 +223,8 @@ export class UIController {
             <div class="relative w-full md:w-auto">
                 <select id="zone-select" class="w-full md:w-64 px-4 py-2 pr-10 border border-gray-300 rounded-lg bg-white text-sm font-medium text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 appearance-none cursor-pointer truncate overflow-hidden whitespace-nowrap text-ellipsis">
                     ${allZones.map(zone => `
-                        <option value="${zone.name}" ${this.activeZone === zone.name ? 'selected' : ''}>
-                            ${zone.name === 'Todas zonas' ? zone.name + ` (${allProposals.length})` : `${zone.name} (${counts[zone.name]})`}
+                        <option value="${zone.id}" ${this.activeZone === zone.id ? 'selected' : ''}>
+                            ${zone.id === 0 ? zone.name + ` (${allProposals.length})` : `${zone.name} (${counts[zone.name]})`}
                         </option>
                     `).join('')}
                 </select>
@@ -179,7 +236,8 @@ export class UIController {
 
         // Add event listener
         document.getElementById('zone-select').addEventListener('change', (e) => {
-            this.activeZone = e.target.value;
+            const nextZoneId = parseInt(e.target.value);
+            this.activeZone = Number.isFinite(nextZoneId) ? nextZoneId : 0;
             onZoneFilterClick(this.activeZone);
         });
     }
@@ -205,8 +263,8 @@ export class UIController {
                 <button class="popular-tag text-[11px] px-2 py-1 rounded-md border transition-colors cursor-pointer ${isActive
                     ? 'bg-indigo-100 text-indigo-700 border-indigo-300 font-semibold'
                     : 'bg-gray-50 text-gray-600 border-gray-200 hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-200'
-                }" data-tag="${tag}">
-                    ${tag} <span class="text-[9px] opacity-70">(${count})</span>
+                }" data-tag="${encodeURIComponent(tag)}">
+                    ${escapeHtml(tag)} <span class="text-[9px] opacity-70">(${count})</span>
                 </button>
             `;
         }).join('');
@@ -235,7 +293,7 @@ export class UIController {
         // Add click handlers to tag buttons
         this.popularTagsElement.querySelectorAll('.popular-tag').forEach(btn => {
             btn.addEventListener('click', () => {
-                const tag = btn.getAttribute('data-tag');
+                const tag = decodeURIComponent(btn.getAttribute('data-tag') || '');
                 onTagClick(tag);
             });
         });
@@ -254,8 +312,8 @@ export class UIController {
             const chip = document.createElement('div');
             chip.className = 'flex items-center gap-1 bg-indigo-100 text-indigo-700 px-2 py-1 rounded-md text-xs font-medium border border-indigo-300';
             chip.innerHTML = `
-                <span>${tag}</span>
-                <button class="hover:bg-indigo-200 rounded-full p-0.5 transition-colors" data-tag="${tag}">
+                <span>${escapeHtml(tag)}</span>
+                <button class="hover:bg-indigo-200 rounded-full p-0.5 transition-colors" data-tag="${encodeURIComponent(tag)}">
                     <i class="fa-solid fa-xmark text-[10px]"></i>
                 </button>
             `;
@@ -373,15 +431,15 @@ export class UIController {
                 <div class="flex justify-between items-start mb-2">
                     <span class="text-[10px] font-bold uppercase tracking-wider text-white px-2 py-0.5 rounded flex items-center gap-1" style="background-color: ${this.getCategoryColor(proposal.category)};">
                         <i class="${this.getCategoryIcon(proposal.category)}"></i>
-                        ${proposal.category}
+                        ${escapeHtml(proposal.category)}
                     </span>
                     ${proposal.urgent ? '<i class="fa-solid fa-triangle-exclamation text-red-500 animate-pulse-fast" title="Urgente"></i>' : ''}
                 </div>
                 
                 <h3 class="text-gray-900 font-bold leading-tight mb-1 text-base">
-                    <a href="${proposal.external_url}" target="_blank" class="hover:text-indigo-600 transition-colors">${proposal.title}</a>
+                    <a href="${proposal.external_url}" target="_blank" class="hover:text-indigo-600 transition-colors">${escapeHtml(proposal.title)}</a>
                 </h3>
-                <p class="text-gray-600 text-sm line-clamp-2 mb-3">${proposal.summary}</p>
+                <p class="text-gray-600 text-sm line-clamp-2 mb-3">${escapeHtml(proposal.summary)}</p>
                 
                 <div class="flex flex-wrap gap-1.5 mb-3" data-tags>
                     ${proposal.tags.slice(0, 4).map(tag => {
@@ -390,18 +448,18 @@ export class UIController {
                             <button class="tag-btn text-[10px] px-2 py-0.5 rounded-md border transition-colors cursor-pointer ${isActive
                         ? 'bg-indigo-100 text-indigo-700 border-indigo-300 font-semibold'
                         : 'bg-gray-100 text-gray-600 border-gray-200 hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-200'
-                    }" data-tag="${tag}">
-                                ${tag}
+                    }" data-tag="${encodeURIComponent(tag)}">
+                                ${escapeHtml(tag)}
                             </button>
                         `;
             }).join('')}
-                    ${proposal.tags.length > 4 ? `<span class="text-[10px] text-gray-400 px-1" title="${proposal.tags.slice(4).join(', ')}">+${proposal.tags.length - 4}</span>` : ''}
+                    ${proposal.tags.length > 4 ? `<span class="text-[10px] text-gray-400 px-1" title="${escapeHtml(proposal.tags.slice(4).join(', '))}">+${proposal.tags.length - 4}</span>` : ''}
                 </div>
                 
                 <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-50">
                     <div class="flex items-center text-gray-500 text-xs">
                         <i class="fa-solid fa-location-dot mr-1"></i>
-                        <span class="truncate max-w-[180px]">${proposal.zone || 'Varias zonas'}</span>
+                        <span class="truncate max-w-[180px]">${escapeHtml(proposal.zone || 'Varias zonas')}</span>
                     </div>
                     <div class="flex items-center gap-3">
                         ${proposal.lat && proposal.lng ? `
@@ -421,7 +479,7 @@ export class UIController {
             tagButtons.forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     e.stopPropagation();
-                    const tag = btn.getAttribute('data-tag');
+                    const tag = decodeURIComponent(btn.getAttribute('data-tag') || '');
                     onTagClick(tag);
                 });
             });
