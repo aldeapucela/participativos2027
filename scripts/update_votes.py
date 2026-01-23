@@ -10,6 +10,7 @@ import time
 import os
 import random
 import logging
+import re
 from datetime import datetime
 from tqdm import tqdm
 import shutil
@@ -163,7 +164,6 @@ class VoteUpdater:
                         return 0
                     
                     # Extraer número del texto "X apoyos"
-                    import re
                     numbers = re.findall(r'\d+', text)
                     if numbers:
                         return int(numbers[0])
