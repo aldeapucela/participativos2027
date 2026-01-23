@@ -19,8 +19,8 @@
 /**
  * Filter proposals based on category, zone, tags, and search query
  */
-export function filterData(proposals, category, zone, query, activeTags = new Set()) {
-    return proposals.filter(p => {
+export function filterData(proposals, category, zone, query, activeTags = new Set(), sortByVotes = 'desc') {
+    let filtered = proposals.filter(p => {
         // Special Category: Zona Vías (Ferroviario tag)
         const isZonaVias = category === 'Zona Vías';
         const categoryMatch = !category || category === 'Todas' || p.category === category || (isZonaVias && p.tags.includes('Ferroviario'));
@@ -57,6 +57,15 @@ export function filterData(proposals, category, zone, query, activeTags = new Se
 
         return categoryMatch && zoneMatch && tagMatch && searchMatch;
     });
+
+    // Sort by votes (always active)
+    if (sortByVotes === 'desc') {
+        filtered.sort((a, b) => (b.votes || 0) - (a.votes || 0));
+    } else {
+        filtered.sort((a, b) => (a.votes || 0) - (b.votes || 0));
+    }
+
+    return filtered;
 }
 
 /**

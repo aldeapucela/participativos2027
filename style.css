@@ -92,6 +92,32 @@ html, body {
         position: absolute !important;
         z-index: 1000 !important;
     }
+
+    /* Footer mobile adjustments */
+    footer {
+        padding: 0.5rem 1rem !important;
+    }
+    
+    footer .max-w-7xl {
+        padding: 0 !important;
+    }
+    
+    footer .flex-col {
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 0.75rem !important;
+    }
+    
+    footer .flex-wrap {
+        flex-wrap: nowrap !important;
+        gap: 0.5rem !important;
+    }
+    
+    footer a {
+        font-size: 0.625rem !important; /* 10px */
+        white-space: nowrap !important;
+    }
 }
 
 /* Layout adjustments */

@@ -154,7 +154,8 @@ export class URLManager {
             cat: this.params.get('cat'),
             z: this.params.get('z'),
             zone: this.params.get('zone'),
-            tags: this.params.get('tags')
+            tags: this.params.get('tags'),
+            sort: this.params.get('sort')
         };
         
         // Detect potential threats
@@ -181,18 +182,22 @@ export class URLManager {
             ? this.sanitizeArray(tagsParam.split(',').map(t => t.trim()))
             : [];
 
+        // Handle sort parameter
+        const sortByVotes = rawParams.sort === 'votes_asc' ? 'asc' : 'desc';
+
         return {
             search,
             category,
             zone,
-            tags
+            tags,
+            sort: sortByVotes
         };
     }
 
     /**
      * Update URL with current filter state
      */
-    updateURL(search, category, zone, tags) {
+    updateURL(search, category, zone, tags, sortByVotes = 'desc') {
         const newParams = new URLSearchParams();
         
         // Only add non-default parameters
@@ -215,6 +220,12 @@ export class URLManager {
             }
         }
 
+        // Only add sort parameter if not default (desc)
+        if (sortByVotes === 'asc') {
+            newParams.set('sort', 'votes_asc');
+        }
+        // Don't add sort parameter for 'desc' (default state)
+
         // Update URL without page reload - URLSearchParams handles encoding automatically
         const newURL = newParams.toString() 
             ? `${window.location.pathname}?${newParams.toString()}`
@@ -227,7 +238,7 @@ export class URLManager {
     /**
      * Generate shareable URL
      */
-    generateShareableURL(search, category, zone, tags) {
+    generateShareableURL(search, category, zone, tags, sortByVotes = 'desc') {
         const params = new URLSearchParams();
         
         if (search && search.trim()) {
@@ -248,6 +259,12 @@ export class URLManager {
                 params.set('tags', sanitizedTags.join(','));
             }
         }
+
+        // Only add sort parameter if not default (desc)
+        if (sortByVotes === 'asc') {
+            params.set('sort', 'votes_asc');
+        }
+        // Don't add sort parameter for 'desc' (default state)
 
         const baseURL = `${window.location.origin}${window.location.pathname}`;
         return params.toString() ? `${baseURL}?${params.toString()}` : baseURL;

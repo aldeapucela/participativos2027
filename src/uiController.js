@@ -38,17 +38,32 @@ export class UIController {
         this.activeZone = 0;
         this.activeTags = new Set();
         this.showAllTags = false;
+        this.sortByVotes = 'desc'; // 'desc': más votadas, 'asc': menos votadas
         this.urlManager = null; // Will be set from main.js
 
-        // Setup toggle for popular tags section
+        // Setup toggle for popular tags section - start collapsed
         const toggleBtn = document.getElementById('toggle-tags');
-        if (toggleBtn) {
-            toggleBtn.addEventListener('click', () => {
+        const toggleTitle = document.querySelector('#popular-tags-section h3');
+        if (toggleBtn && toggleTitle) {
+            // Start collapsed
+            this.popularTagsElement.classList.add('hidden');
+            toggleBtn.querySelector('i').className = 'fa-solid fa-chevron-right';
+            
+            const toggleTags = () => {
                 this.popularTagsElement.classList.toggle('hidden');
-                toggleBtn.querySelector('i').className = this.popularTagsElement.classList.contains('hidden')
+                const isHidden = this.popularTagsElement.classList.contains('hidden');
+                toggleBtn.querySelector('i').className = isHidden
                     ? 'fa-solid fa-chevron-right'
                     : 'fa-solid fa-chevron-down';
-            });
+            };
+            
+            // Add click listener to button
+            toggleBtn.addEventListener('click', toggleTags);
+            
+            // Add click listener to title text
+            toggleTitle.addEventListener('click', toggleTags);
+            toggleTitle.style.cursor = 'pointer';
+            toggleTitle.classList.add('hover:text-indigo-800', 'transition-colors');
         }
     }
 
@@ -65,7 +80,8 @@ export class UIController {
                     this.searchInput.value,
                     this.activeCategory,
                     this.activeZone,
-                    Array.from(this.activeTags)
+                    Array.from(this.activeTags),
+                    this.sortByVotes
                 );
                 
                 const success = await this.urlManager.copyToClipboard(url);
@@ -82,7 +98,8 @@ export class UIController {
                     this.searchInput.value,
                     this.activeCategory,
                     this.activeZone,
-                    Array.from(this.activeTags)
+                    Array.from(this.activeTags),
+                    this.sortByVotes
                 );
                 
                 const success = await this.urlManager.copyToClipboard(url);
@@ -424,7 +441,20 @@ export class UIController {
 
     renderList(proposals, onTagClick) {
         this.listElement.innerHTML = '';
-        this.countElement.textContent = `${proposals.length} propuestas`;
+        
+        // Create count container with sort button
+        const currentArrowIcon = this.sortByVotes === 'asc' ? 'fa-solid fa-arrow-up' : 'fa-solid fa-arrow-down';
+        const currentTooltip = this.sortByVotes === 'asc' ? 'Menos votadas primero' : 'Más votadas primero';
+        
+        this.countElement.innerHTML = `
+            <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500 font-medium uppercase tracking-wider">${proposals.length} propuestas</span>
+                <button id="sort-votes-btn" class="flex items-center gap-1 text-xs text-red-500 transition-colors font-medium px-2 py-1 rounded-md hover:bg-gray-50" title="${currentTooltip}">
+                    <i class="fa-solid fa-heart"></i>
+                    <i id="sort-arrow" class="${currentArrowIcon} text-[10px]"></i>
+                </button>
+            </div>
+        `;
 
         if (proposals.length === 0) {
             this.listElement.innerHTML = `
@@ -507,6 +537,26 @@ export class UIController {
 
             this.listElement.appendChild(card);
         });
+
+        // Add click handler to sort button
+        const sortBtn = document.getElementById('sort-votes-btn');
+        const sortArrow = document.getElementById('sort-arrow');
+        if (sortBtn && sortArrow) {
+            sortBtn.addEventListener('click', () => {
+                // Toggle between 'desc' and 'asc'
+                if (this.sortByVotes === 'desc') {
+                    this.sortByVotes = 'asc';
+                    sortArrow.className = 'fa-solid fa-arrow-up text-[10px]';
+                    sortBtn.title = 'Menos votadas primero';
+                } else {
+                    this.sortByVotes = 'desc';
+                    sortArrow.className = 'fa-solid fa-arrow-down text-[10px]';
+                    sortBtn.title = 'Más votadas primero';
+                }
+                // Trigger re-render with new sort state
+                this.onSortChange?.();
+            });
+        }
     }
 
     scrollToCard(id) {
