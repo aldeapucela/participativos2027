@@ -68,12 +68,12 @@ jobs:
             COMMIT_MSG="Auto-update votes $(date '+%Y-%m-%d %H:%M UTC')"
             
             if [ -n "$REPORT_FILE" ]; then
-              # Extraer estadísticas del reporte
-              PROCESSED=$(grep "Propuestas procesadas:" "$REPORT_FILE" | awk '{print $3}')
-              UPDATED=$(grep "Propuestas actualizadas:" "$REPORT_FILE" | awk '{print $3}')
-              ERRORS=$(grep "Errores:" "$REPORT_FILE" | awk '{print $2}')
+              # Extraer estadísticas del reporte (usar líneas específicas para evitar confusiones)
+              PROCESSED=$(grep "Propuestas procesadas:" "$REPORT_FILE" | head -1 | awk '{print $3}')
+              UPDATED=$(grep "Propuestas actualizadas:" "$REPORT_FILE" | head -1 | awk '{print $3}')
+              ERRORS=$(grep "Propuestas procesadas:" "$REPORT_FILE" | head -1 | awk '{print $5}')
               
-              COMMIT_MSG="$COMMIT_MSG | $PROCESAS procesadas, $UPDATED actualizadas, $ERRORS errores"
+              COMMIT_MSG="$COMMIT_MSG | $PROCESSED procesadas, $UPDATED actualizadas, $ERRORS errores"
             fi
             
             git commit -m "$COMMIT_MSG"
@@ -121,19 +121,26 @@ jobs:
           REPORT_FILE=$(ls -t data/vote_update_report_*.txt 2>/dev/null | head -n1)
           
           if [ -n "$REPORT_FILE" ]; then
-            ERROR_COUNT=$(grep "Errores:" "$REPORT_FILE" | awk '{print $2}')
+            ERROR_COUNT=$(grep "Errores:" "$REPORT_FILE" | awk '{print $2}' | head -1)
             
-            if [ -n "$ERROR_COUNT" ] && [ "$ERROR_COUNT" -gt 0 ]; then
-              echo "Se detectaron $ERROR_COUNT errores. Ejecutando script de reintento..."
-              python3 scripts/retry_failed_proposals.py
-              
-              # Hacer commit de los reintentos si hay cambios
-              if ! git diff --quiet data/proposals_data.json; then
-                git add data/proposals_data.json
-                git commit -m "Auto-retry failed votes $(date '+%Y-%m-%d %H:%M UTC')"
-                git push
+            # Verificar que ERROR_COUNT sea un número válido
+            if [[ -n "$ERROR_COUNT" && "$ERROR_COUNT" =~ ^[0-9]+$ ]]; then
+              if [ "$ERROR_COUNT" -gt 0 ]; then
+                echo "Se detectaron $ERROR_COUNT errores. Ejecutando script de reintento..."
+                python3 scripts/retry_failed_proposals.py
+                
+                # Hacer commit de los reintentos si hay cambios
+                if ! git diff --quiet data/proposals_data.json; then
+                  git add data/proposals_data.json
+                  git commit -m "Auto-retry failed votes $(date '+%Y-%m-%d %H:%M UTC')"
+                  git push
+                fi
+              else
+                echo "No se detectaron errores ($ERROR_COUNT). Omitiendo script de reintento."
               fi
             else
-              echo "No se detectaron errores. Omitiendo script de reintento."
+              echo "No se pudo determinar el número de errores. Omitiendo script de reintento."
             fi
+          else
+            echo "No se encontró archivo de reporte. Omitiendo script de reintento."
           fi
