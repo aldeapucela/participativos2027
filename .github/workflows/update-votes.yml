@@ -73,7 +73,7 @@ jobs:
               UPDATED=$(grep "Propuestas actualizadas:" "$REPORT_FILE" | awk '{print $3}')
               ERRORS=$(grep "Errores:" "$REPORT_FILE" | awk '{print $2}')
               
-              COMMIT_MSG="$COMMIT_MSG | $PROCESSED procesadas, $UPDATED actualizadas, $ERRORS errores"
+              COMMIT_MSG="$COMMIT_MSG | $PROCESAS procesadas, $UPDATED actualizadas, $ERRORS errores"
             fi
             
             git commit -m "$COMMIT_MSG"
@@ -116,8 +116,6 @@ jobs:
           
       - name: Run retry script if there were errors
         if: steps.verify-changed-files.outputs.changed == 'true'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Verificar si hay errores en el último reporte
           REPORT_FILE=$(ls -t data/vote_update_report_*.txt 2>/dev/null | head -n1)
