@@ -209,3 +209,24 @@ grep "Propuestas procesadas" logs/vote_update.log
 | Speedup | 1x | **19.8x** |
 
 La versión actual mantiene toda la robustez de la original pero es **20 veces más rápida** con control inteligente de tiempo.
+
+## 🤖 Automatización con GitHub Actions
+
+El sistema ahora incluye **automatización completa** mediante GitHub Actions:
+
+### **Características:**
+- **Ejecución automática**: Todos los días a las 2:00 AM UTC
+- **Ejecución manual**: Disponible desde GitHub UI
+- **Detección inteligente**: Solo hace commit si hay cambios
+- **Reintentos automáticos**: Ejecuta script de retry si hay errores
+- **Reportes detallados**: Summary con estadísticas y logs en GitHub
+
+### **Monitoreo:**
+- Verificar ejecuciones en: GitHub → Actions → "Actualizar Votos Diarios"
+- Historial completo de logs y resultados
+- Estadísticas de cada actualización
+
+### **Control Manual:**
+Para ejecutar manualmente:
+1. GitHub → Actions → "Actualizar Votos Diarios"
+2. Click en "Run workflow" → "Run workflow"
