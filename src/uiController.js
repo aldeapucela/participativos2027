@@ -506,14 +506,25 @@ export class UIController {
     scrollToCard(id) {
         const element = document.getElementById(`proposal-${id}`);
         if (element) {
-            // On both mobile and desktop, scroll within the list container to keep map visible
+            // On mobile, do NOT scroll when clicking a map marker to keep map/popup visible
+            const isMobile = window.innerWidth < 768;
+            if (isMobile) {
+                // Just highlight the card without scrolling
+                element.classList.add('ring-2', 'ring-indigo-500', 'ring-opacity-50');
+                setTimeout(() => {
+                    element.classList.remove('ring-2', 'ring-indigo-500', 'ring-opacity-50');
+                }, 2000);
+                return;
+            }
+
+            // On desktop, scroll within the list container to keep map visible
             const listContainer = document.getElementById('proposals-list-container');
             const elementRect = element.getBoundingClientRect();
             const containerRect = listContainer.getBoundingClientRect();
             
             // Calculate scroll position relative to container
             // On desktop, position card higher to be more visible
-            const offset = window.innerWidth < 768 ? 100 : 50;
+            const offset = 50;
             const scrollPosition = elementRect.top - containerRect.top + listContainer.scrollTop - offset;
             
             listContainer.scrollTo({

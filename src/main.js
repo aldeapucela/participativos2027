@@ -22,6 +22,54 @@ import { MapController } from './mapController.js';
 import { filterData, debounce } from './utils.js';
 import { URLManager } from './urlManager.js';
 
+function setupMobileMapAutoCollapse(mapController) {
+    const listContainer = document.getElementById('proposals-list-container');
+    const showMapBtn = document.getElementById('show-map-btn');
+    if (!listContainer || !showMapBtn) return;
+
+    const isMobile = () => window.innerWidth < 768;
+    const setCollapsed = (collapsed) => {
+        if (!isMobile()) return;
+        document.body.classList.toggle('map-collapsed', collapsed);
+        showMapBtn.classList.toggle('hidden', !collapsed);
+
+        if (!collapsed) {
+            window.setTimeout(() => {
+                try {
+                    mapController?.map?.invalidateSize?.(true);
+                } catch (e) {
+                }
+            }, 220);
+        }
+    };
+
+    let ticking = false;
+    const thresholdPx = 40;
+    const onScroll = () => {
+        if (!isMobile()) return;
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(() => {
+            const shouldCollapse = listContainer.scrollTop > thresholdPx;
+            setCollapsed(shouldCollapse);
+            ticking = false;
+        });
+    };
+
+    listContainer.addEventListener('scroll', onScroll, { passive: true });
+    showMapBtn.addEventListener('click', () => {
+        setCollapsed(false);
+        listContainer.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.addEventListener('resize', () => {
+        if (!isMobile()) {
+            document.body.classList.remove('map-collapsed');
+            showMapBtn.classList.add('hidden');
+        }
+    }, { passive: true });
+}
+
 /**
  * Application Entry Point
  */
@@ -114,6 +162,8 @@ async function init() {
     ui.searchInput.addEventListener('input', debounce((e) => {
         handleFilterChange(ui.activeCategory, ui.activeZone, e.target.value);
     }, 300));
+
+    setupMobileMapAutoCollapse(map);
 }
 
 // Wait for DOM to be ready before initializing
@@ -129,6 +179,25 @@ window.init = init;
 
 // Expose map centering function globally
 window.centerMapOnProposal = (lat, lng) => {
+    // On mobile, ensure map is visible and scroll to top before centering
+    const isMobile = window.innerWidth < 768;
+    if (isMobile) {
+        document.body.classList.remove('map-collapsed');
+        document.getElementById('show-map-btn')?.classList.add('hidden');
+        // Invalidate map size after a brief delay to allow layout update
+        window.setTimeout(() => {
+            try {
+                window.mapController?.map?.invalidateSize?.(true);
+                // Then center on the proposal
+                window.mapController?.centerOnProposal?.(lat, lng);
+            } catch (e) {}
+        }, 220);
+        // Scroll the list container to top so the map is visible
+        document.getElementById('proposals-list-container')?.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+    }
+
+    // Desktop: just center as before
     if (window.mapController) {
         window.mapController.centerOnProposal(lat, lng);
     }
