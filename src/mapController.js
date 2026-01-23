@@ -132,11 +132,17 @@ export class MapController {
                         <p style="margin: 0 0 12px 0; font-size: 13px; color: #6b7280; line-height: 1.5;">
                             ${proposal.summary}
                         </p>
-                        <div style="display: flex; align-items: center; gap: 8px; padding-top: 10px; border-top: 1px solid #e5e7eb;">
-                            <i class="${categoryIcon}" style="color: ${categoryColor}; font-size: 15px;"></i>
-                            <span style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #4f46e5; letter-spacing: 0.5px;">
-                                ${this.cleanCategoryName(proposal.category)}
-                            </span>
+                        <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 10px; border-top: 1px solid #e5e7eb;">
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <i class="${categoryIcon}" style="color: ${categoryColor}; font-size: 15px;"></i>
+                                <span style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #4f46e5; letter-spacing: 0.5px;">
+                                    ${this.cleanCategoryName(proposal.category)}
+                                </span>
+                            </div>
+                            <div style="display: flex; align-items: center; color: #9ca3af; font-size: 10px; font-weight: 500;">
+                                <i class="fa-solid fa-heart" style="margin-right: 2px;"></i>
+                                ${proposal.votes || 0}
+                            </div>
                         </div>
                     </div>
                 `, {

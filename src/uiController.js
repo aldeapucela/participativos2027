@@ -448,7 +448,13 @@ export class UIController {
                         <i class="${this.getCategoryIcon(proposal.category)}"></i>
                         ${escapeHtml(this.cleanCategoryName(proposal.category))}
                     </span>
-                    ${proposal.urgent ? '<i class="fa-solid fa-triangle-exclamation text-red-500 animate-pulse-fast" title="Urgente"></i>' : ''}
+                    <div class="flex items-center gap-2">
+                        <div class="flex items-center text-gray-400 hover:text-red-500 transition-colors" title="Votos recibidos">
+                            <i class="fa-solid fa-heart text-[11px]"></i>
+                            <span class="text-[10px] font-medium ml-1">${proposal.votes || 0}</span>
+                        </div>
+                        ${proposal.urgent ? '<i class="fa-solid fa-triangle-exclamation text-red-500 animate-pulse-fast" title="Urgente"></i>' : ''}
+                    </div>
                 </div>
                 
                 <h3 class="text-gray-900 font-bold leading-tight mb-1 text-base">

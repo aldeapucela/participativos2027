@@ -56,6 +56,7 @@ export async function fetchData() {
                 category: category,
                 tags: meta.tags || [],
                 urgent: meta.urgent || false,
+                votes: proposal.votes || 0,
                 lat: proposal.latitude ? parseFloat(proposal.latitude) : null,
                 lng: proposal.longitude ? parseFloat(proposal.longitude) : null,
                 zone: proposal.zone,
