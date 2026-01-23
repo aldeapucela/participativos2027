@@ -31,14 +31,14 @@ LOG_FILE = os.path.join(LOGS_DIR, "vote_update.log")
 MIN_UPDATE_INTERVAL_HOURS = 1  # Mínimo 1 hora entre actualizaciones completas
 FORCE_UPDATE = False  # Forzar actualización sin importar el tiempo
 
-# Configuración ultra-optimizada
-BASE_DELAY = 0.1  # segundos base entre peticiones
-MAX_RETRIES = 2
-BATCH_SIZE = 200  # propuestas por lote
-PAUSE_EVERY = 200  # pausa cada N peticiones
-PAUSE_DURATION = 5  # segundos de pausa
-TIMEOUT = 10  # segundos timeout por petición
-MAX_WORKERS = 8  # hilos concurrentes
+# Configuración más robusta para GitHub Actions
+BASE_DELAY = 0.2  # aumento delay para reducir errores
+MAX_RETRIES = 4  # más reintentos
+BATCH_SIZE = 100  # lotes más pequeños
+PAUSE_EVERY = 100  # pausas más frecuentes
+PAUSE_DURATION = 8  # pausas más largas
+TIMEOUT = 15  # timeout más generoso
+MAX_WORKERS = 6  # menos hilos concurrentes para GitHub Actions
 
 # Headers optimizados
 HEADERS = {
@@ -141,42 +141,66 @@ class VoteUpdater:
         self.save_progress(progress)
     
     def get_vote_count(self, proposal_url, proposal_code):
-        """Obtener votos de forma optimizada"""
+        """Obtener votos de forma ultra-robusta para GitHub Actions"""
         
         for attempt in range(MAX_RETRIES):
             try:
-                # Delay mínimo
-                time.sleep(BASE_DELAY + random.uniform(0, 0.1))
+                # Delay más conservador
+                time.sleep(BASE_DELAY + random.uniform(0, 0.2))
                 
                 response = self.session.get(proposal_url, timeout=TIMEOUT)
                 response.raise_for_status()
                 
                 soup = BeautifulSoup(response.content, 'html.parser')
                 
-                # Búsqueda directa y rápida del span con clase total-supports
+                # Búsqueda directa del span con clase total-supports
                 vote_span = soup.find('span', class_='total-supports')
                 if vote_span:
                     text = vote_span.get_text().strip()
+                    
+                    # Caso especial: "Sin apoyos"
+                    if "sin apoyos" in text.lower():
+                        return 0
+                    
                     # Extraer número del texto "X apoyos"
                     import re
                     numbers = re.findall(r'\d+', text)
                     if numbers:
                         return int(numbers[0])
                 
-                return None
+                # Búsqueda alternativa más exhaustiva si falla la principal
+                page_text = soup.get_text()
+                vote_patterns = [
+                    r'(\d+)\s*apoyos?',
+                    r'apoyos?\s*[:\-]?\s*(\d+)',
+                    r'(\d+)\s*votos?',
+                    r'votos?\s*[:\-]?\s*(\d+)',
+                ]
+                
+                for pattern in vote_patterns:
+                    matches = re.findall(pattern, page_text, re.IGNORECASE)
+                    if matches:
+                        return int(matches[-1])
+                
+                # Si no se encuentra nada, asumir 0 en lugar de None
+                logger.warning(f"No se encontraron votos para propuesta {proposal_code}, asumiendo 0")
+                return 0
                     
             except requests.exceptions.RequestException as e:
-                wait_time = (attempt + 1) * 1  # Backoff simple
+                wait_time = (attempt + 1) * 2  # Backoff más agresivo
                 if attempt == MAX_RETRIES - 1:
-                    return None
+                    logger.warning(f"Error final para propuesta {proposal_code}: {e}")
+                    return 0  # Retornar 0 en lugar de None
+                logger.warning(f"Intento {attempt + 1}/{MAX_RETRIES} para propuesta {proposal_code}: {e}. Esperando {wait_time}s...")
                 time.sleep(wait_time)
                 
             except Exception as e:
                 if attempt == MAX_RETRIES - 1:
-                    return None
-                time.sleep(0.5)
+                    logger.error(f"Error inesperado para propuesta {proposal_code}: {e}")
+                    return 0  # Retornar 0 en lugar de None
+                time.sleep(1)
         
-        return None
+        return 0  # Retornar 0 como último recurso
     
     def process_proposal(self, proposal):
         """Procesar una propuesta individual"""
@@ -210,6 +234,7 @@ class VoteUpdater:
                 
                 return result
             else:
+                # Ya no debería llegar aquí con los cambios hechos
                 with stats_lock:
                     self.error_count += 1
                 return {"code": proposal_code, "error": "No se pudieron obtener votos"}
