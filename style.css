@@ -31,35 +31,63 @@ html, body {
     body {
         overflow-x: hidden;
     }
-    
-    main {
-        min-height: calc(100vh - 200px); /* Ensure content is scrollable */
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid #e5e7eb;
     }
-    
+
+    main {
+        flex: 1;
+        min-height: 0;
+    }
+
     #map {
-        height: 40vh !important; /* Force fixed height on mobile */
+        height: 40vh !important;
         min-height: 40vh;
         max-height: 40vh;
         position: relative;
         z-index: 1;
+        transition: height 180ms ease;
     }
-    
+
     #proposals-list-container {
-        height: 60vh !important; /* Force fixed height on mobile */
-        min-height: 60vh;
-        max-height: 60vh;
+        height: auto !important;
+        min-height: 0;
+        max-height: none;
+        flex: 1;
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
         position: relative;
         z-index: 2;
     }
-    
-    /* Prevent map from affecting page scroll */
+
+    body.map-collapsed #map {
+        height: 0 !important;
+        min-height: 0;
+        max-height: 0;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    #show-map-btn {
+        position: fixed;
+        right: 12px;
+        bottom: 12px;
+        z-index: 60;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
     .leaflet-container {
         height: 100% !important;
         width: 100% !important;
     }
-    
-    /* Ensure popups don't break layout */
+
     .leaflet-popup {
         position: absolute !important;
         z-index: 1000 !important;
