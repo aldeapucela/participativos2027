@@ -1,0 +1,133 @@
+name: Actualizar Votos Diarios
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Todos los días a las 2:00 AM UTC
+  workflow_dispatch:  # Permitir ejecución manual
+
+jobs:
+  update-votes:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+          
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 tqdm
+          
+      - name: Create logs directory
+        run: |
+          mkdir -p logs
+          
+      - name: Update votes
+        run: |
+          echo "=== INICIANDO ACTUALIZACIÓN AUTOMÁTICA DE VOTOS ==="
+          python3 scripts/update_votes.py
+          
+      - name: Check for changes
+        id: verify-changed-files
+        run: |
+          if [ -f "data/proposals_data.json" ]; then
+            if git diff --quiet data/proposals_data.json; then
+              echo "changed=false" >> $GITHUB_OUTPUT
+              echo "No hay cambios en los datos de votos"
+            else
+              echo "changed=true" >> $GITHUB_OUTPUT
+              echo "Se detectaron cambios en los datos de votos"
+            fi
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No se encontró el archivo de datos"
+          fi
+          
+      - name: Commit and push changes
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action - Vote Updater"
+          git add data/proposals_data.json
+          
+          # Verificar si hay cambios para commitear
+          if git diff --staged --quiet; then
+            echo "No hay cambios para commitear"
+          else
+            # Obtener estadísticas del reporte más reciente
+            REPORT_FILE=$(ls -t data/vote_update_report_*.txt 2>/dev/null | head -n1)
+            COMMIT_MSG="Auto-update votes $(date '+%Y-%m-%d %H:%M UTC')"
+            
+            if [ -n "$REPORT_FILE" ]; then
+              # Extraer estadísticas del reporte
+              PROCESSED=$(grep "Propuestas procesadas:" "$REPORT_FILE" | awk '{print $3}')
+              UPDATED=$(grep "Propuestas actualizadas:" "$REPORT_FILE" | awk '{print $3}')
+              ERRORS=$(grep "Errores:" "$REPORT_FILE" | awk '{print $2}')
+              
+              COMMIT_MSG="$COMMIT_MSG | $PROCESSED procesadas, $UPDATED actualizadas, $ERRORS errores"
+            fi
+            
+            git commit -m "$COMMIT_MSG"
+            git push
+          fi
+          
+      - name: Create summary
+        run: |
+          echo "## 📊 Resumen de Actualización Automática" >> $GITHUB_STEP_SUMMARY
+          echo "**Fecha:** $(date '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ "${{ steps.verify-changed-files.outputs.changed }}" == "true" ]; then
+            echo "✅ **Estado:** Actualización completada con cambios" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "ℹ️ **Estado:** Sin cambios en los datos" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 📋 Archivos generados:" >> $GITHUB_STEP_SUMMARY
+          
+          # Listar archivos de reporte si existen
+          if ls data/vote_update_report_*.txt 1> /dev/null 2>&1; then
+            echo "- Reporte de actualización: \`data/vote_update_report_*.txt\`" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          if ls data/backups/proposals_data_backup_*.json 1> /dev/null 2>&1; then
+            BACKUP_COUNT=$(ls data/backups/proposals_data_backup_*.json | wc -l)
+            echo "- Backups automáticos: \`$BACKUP_COUNT\` archivos en \`data/backups/\`" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          # Mostrar últimas líneas del log si existe
+          if [ -f "logs/vote_update.log" ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### 📝 Últimas líneas del log:" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            tail -10 logs/vote_update.log >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+          fi
+          
+      - name: Run retry script if there were errors
+        if: steps.verify-changed-files.outputs.changed == 'true'
+        run: |
+          # Verificar si hay errores en el último reporte
+          REPORT_FILE=$(ls -t data/vote_update_report_*.txt 2>/dev/null | head -n1)
+          
+          if [ -n "$REPORT_FILE" ]; then
+            ERROR_COUNT=$(grep "Errores:" "$REPORT_FILE" | awk '{print $2}')
+            
+            if [ -n "$ERROR_COUNT" ] && [ "$ERROR_COUNT" -gt 0 ]; then
+              echo "Se detectaron $ERROR_COUNT errores. Ejecutando script de reintento..."
+              python3 scripts/retry_failed_proposals.py
+              
+              # Hacer commit de los reintentos si hay cambios
+              if ! git diff --quiet data/proposals_data.json; then
+                git add data/proposals_data.json
+                git commit -m "Auto-retry failed votes $(date '+%Y-%m-%d %H:%M UTC')"
+                git push
+              fi
+            else
+              echo "No se detectaron errores. Omitiendo script de reintento."
+            fi
+          fi
