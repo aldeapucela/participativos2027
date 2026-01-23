@@ -186,10 +186,65 @@ html, body {
 /* Card hover effect */
 .proposal-card {
     transition: all 0.2s ease-in-out;
+    min-height: 200px;
 }
 .proposal-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Ensure consistent card heights in grid */
+#proposals-list {
+    align-items: stretch;
+}
+
+#proposals-list .proposal-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+/* Mobile image height */
+@media (max-width: 767px) {
+    .proposal-card .proposal-image {
+        height: 96px !important;
+    }
+}
+
+/* Image container styles */
+.proposal-card img {
+    transition: opacity 0.3s ease;
+}
+
+.proposal-card img:hover {
+    opacity: 0.9;
+}
+
+/* Lazy loading placeholder styles */
+.proposal-card .placeholder {
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    transition: all 0.3s ease;
+}
+
+.proposal-card .placeholder i {
+    opacity: 0.5;
+}
+
+/* Skeleton animation for loading state */
+@keyframes shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: calc(200px + 100%) 0;
+    }
+}
+
+.proposal-card .animate-pulse {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200px 100%;
+    animation: shimmer 1.5s infinite;
 }
 
 /* Leaflet Popup Overrides */
