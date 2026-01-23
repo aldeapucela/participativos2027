@@ -61,7 +61,8 @@ export async function fetchData() {
                 lng: proposal.longitude ? parseFloat(proposal.longitude) : null,
                 zone: proposal.zone,
                 zone_id: proposal.zone_id,
-                external_url: proposal.url || '#'
+                external_url: proposal.url || '#',
+                image_url: proposal.image_url
             };
         });
 

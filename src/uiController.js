@@ -470,57 +470,76 @@ export class UIController {
         proposals.forEach(proposal => {
             const card = document.createElement('div');
             card.id = `proposal-${proposal.id}`;
-            card.className = 'proposal-card bg-white p-4 rounded-xl shadow-sm border border-gray-100';
+            const hasImage = proposal.image_url && proposal.image_url !== null && proposal.image_url.trim() !== '';
+            card.className = `proposal-card bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden ${hasImage ? 'has-image' : ''}`;
 
             card.innerHTML = `
-                <div class="flex justify-between items-start mb-2">
-                    <span class="text-[10px] font-bold uppercase tracking-wider text-white px-2 py-0.5 rounded flex items-center gap-1" style="background-color: ${this.getCategoryColor(proposal.category)};">
-                        <i class="${this.getCategoryIcon(proposal.category)}"></i>
-                        ${escapeHtml(this.cleanCategoryName(proposal.category))}
-                    </span>
-                    <div class="flex items-center gap-2">
-                        <div class="flex items-center text-gray-400 hover:text-red-500 transition-colors" title="Votos recibidos">
-                            <i class="fa-solid fa-heart text-[11px]"></i>
-                            <span class="text-[10px] font-medium ml-1">${proposal.votes || 0}</span>
-                        </div>
-                        ${proposal.urgent ? '<i class="fa-solid fa-triangle-exclamation text-red-500 animate-pulse-fast" title="Urgente"></i>' : ''}
-                    </div>
-                </div>
-                
-                <h3 class="text-gray-900 font-bold leading-tight mb-1 text-base">
-                    <a href="${proposal.external_url}" target="_blank" class="hover:text-indigo-600 transition-colors">${escapeHtml(proposal.title)}</a>
-                </h3>
-                <p class="text-gray-600 text-sm line-clamp-2 mb-3">${escapeHtml(proposal.summary)}</p>
-                
-                <div class="flex flex-wrap gap-1.5 mb-3" data-tags>
-                    ${proposal.tags.slice(0, 4).map(tag => {
-                const isActive = this.activeTags.has(tag);
-                return `
-                            <button class="tag-btn text-[10px] px-2 py-0.5 rounded-md border transition-colors cursor-pointer ${isActive
-                        ? 'bg-indigo-100 text-indigo-700 border-indigo-300 font-semibold'
-                        : 'bg-gray-100 text-gray-600 border-gray-200 hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-200'
-                    }" data-tag="${encodeURIComponent(tag)}">
-                                ${escapeHtml(tag)}
-                            </button>
-                        `;
-            }).join('')}
-                    ${proposal.tags.length > 4 ? `<span class="text-[10px] text-gray-400 px-1" title="${escapeHtml(proposal.tags.slice(4).join(', '))}">+${proposal.tags.length - 4}</span>` : ''}
-                </div>
-                
-                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-50">
-                    <div class="flex items-center text-gray-500 text-xs">
-                        <i class="fa-solid fa-location-dot mr-1"></i>
-                        <span class="truncate max-w-[180px]">${escapeHtml(proposal.zone || 'Varias zonas')}</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        ${proposal.lat && proposal.lng ? `
-                        <button class="text-indigo-600 hover:text-indigo-800 text-sm font-semibold transition-colors p-1" title="Centrar en mapa" onclick="window.centerMapOnProposal(${proposal.lat}, ${proposal.lng})">
-                            <i class="fa-solid fa-map-location-dot"></i>
-                        </button>
-                        ` : ''}
-                        <a href="${proposal.external_url}" target="_blank" class="text-indigo-600 hover:text-indigo-800 text-sm font-semibold transition-colors p-1" title="Ver original">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <div class="proposal-card-inner h-full flex flex-col">
+                    ${hasImage ? `
+                    <div class="proposal-image relative bg-gray-100 overflow-hidden flex-shrink-0 h-32 w-full">
+                        <a href="${proposal.external_url}" target="_blank" class="block w-full h-full group">
+                            <img data-src="${proposal.image_url}" alt="${escapeHtml(proposal.title)}" 
+                                 class="proposal-img w-full h-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-90">
+                            <div class="placeholder absolute inset-0 flex items-center justify-center bg-gray-100">
+                                <i class="fa-solid fa-image text-gray-400 text-2xl"></i>
+                            </div>
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-200 flex items-center justify-center">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm"></i>
+                            </div>
                         </a>
+                    </div>
+                    ` : ''}
+                    <div class="proposal-content p-4 flex flex-col w-full">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-white px-2 py-0.5 rounded flex items-center gap-1" style="background-color: ${this.getCategoryColor(proposal.category)};">
+                                <i class="${this.getCategoryIcon(proposal.category)}"></i>
+                                ${escapeHtml(this.cleanCategoryName(proposal.category))}
+                            </span>
+                            <div class="flex items-center gap-2">
+                                <div class="flex items-center text-gray-400 hover:text-red-500 transition-colors" title="Votos recibidos">
+                                    <i class="fa-solid fa-heart text-[11px]"></i>
+                                    <span class="text-[10px] font-medium ml-1">${proposal.votes || 0}</span>
+                                </div>
+                                ${proposal.urgent ? '<i class="fa-solid fa-triangle-exclamation text-red-500 animate-pulse-fast" title="Urgente"></i>' : ''}
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-gray-900 font-bold leading-tight mb-1 text-base">
+                            <a href="${proposal.external_url}" target="_blank" class="hover:text-indigo-600 transition-colors">${escapeHtml(proposal.title)}</a>
+                        </h3>
+                        <p class="text-gray-600 text-sm line-clamp-2 mb-3">${escapeHtml(proposal.summary)}</p>
+                        
+                        <div class="flex flex-wrap gap-1.5 mb-3" data-tags>
+                            ${proposal.tags.slice(0, 4).map(tag => {
+                        const isActive = this.activeTags.has(tag);
+                        return `
+                                <button class="tag-btn text-[10px] px-2 py-0.5 rounded-md border transition-colors cursor-pointer ${isActive
+                            ? 'bg-indigo-100 text-indigo-700 border-indigo-300 font-semibold'
+                            : 'bg-gray-100 text-gray-600 border-gray-200 hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-200'
+                        }" data-tag="${encodeURIComponent(tag)}">
+                                    ${escapeHtml(tag)}
+                                </button>
+                            `;
+                }).join('')}
+                            ${proposal.tags.length > 4 ? `<span class="text-[10px] text-gray-400 px-1" title="${escapeHtml(proposal.tags.slice(4).join(', '))}">+${proposal.tags.length - 4}</span>` : ''}
+                        </div>
+                        
+                        <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-50">
+                            <div class="flex items-center text-gray-500 text-xs">
+                                <i class="fa-solid fa-location-dot mr-1"></i>
+                                <span class="truncate max-w-[180px]">${escapeHtml(proposal.zone || 'Varias zonas')}</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                ${proposal.lat && proposal.lng ? `
+                                <button class="text-indigo-600 hover:text-indigo-800 text-sm font-semibold transition-colors p-1" title="Centrar en mapa" onclick="window.centerMapOnProposal(${proposal.lat}, ${proposal.lng})">
+                                    <i class="fa-solid fa-map-location-dot"></i>
+                                </button>
+                                ` : ''}
+                                <a href="${proposal.external_url}" target="_blank" class="text-indigo-600 hover:text-indigo-800 text-sm font-semibold transition-colors p-1" title="Ver original">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             `;
@@ -537,6 +556,9 @@ export class UIController {
 
             this.listElement.appendChild(card);
         });
+
+        // Setup lazy loading for newly added images
+        this.setupLazyLoading();
 
         // Add click handler to sort button
         const sortBtn = document.getElementById('sort-votes-btn');
@@ -557,6 +579,61 @@ export class UIController {
                 this.onSortChange?.();
             });
         }
+    }
+
+    setupLazyLoading() {
+        const images = document.querySelectorAll('.proposal-img[data-src]');
+        if (images.length === 0) return;
+
+        const onLoad = (img) => {
+            img.dataset.loaded = '1';
+            img.style.opacity = '1';
+            const placeholder = img.parentElement?.querySelector?.('.placeholder');
+            if (placeholder) placeholder.style.display = 'none';
+        };
+
+        const onError = (img) => {
+            if (img.dataset.loaded === '1') return;
+            const placeholder = img.parentElement?.querySelector?.('.placeholder');
+            if (placeholder) {
+                placeholder.style.display = 'flex';
+                placeholder.innerHTML = '<i class="fa-solid fa-image-slash text-gray-400 text-2xl"></i>';
+            }
+        };
+
+        // Attach handlers once
+        images.forEach(img => {
+            if (img.dataset.handlersAttached === '1') return;
+            img.dataset.handlersAttached = '1';
+            img.addEventListener('load', () => onLoad(img));
+            img.addEventListener('error', () => onError(img));
+        });
+
+        const loadImg = (img) => {
+            const src = img.dataset.src;
+            if (!src) return;
+            img.src = src;
+            delete img.dataset.src;
+        };
+
+        if (!('IntersectionObserver' in window)) {
+            images.forEach(loadImg);
+            return;
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                const img = entry.target;
+                loadImg(img);
+                observer.unobserve(img);
+            });
+        }, {
+            rootMargin: '200px 0px',
+            threshold: 0.01
+        });
+
+        images.forEach(img => observer.observe(img));
     }
 
     scrollToCard(id) {
