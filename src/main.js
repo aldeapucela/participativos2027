@@ -119,10 +119,11 @@ async function init() {
     ui.activeCategory = urlParams.category;
     ui.activeZone = urlParams.zone;
     urlParams.tags.forEach(tag => ui.activeTags.add(tag));
+    ui.sortByVotes = urlParams.sort || 'desc';
 
     // Set URL manager in UI controller for share functionality
     ui.setURLManager(urlManager);
-
+    
     // 5. Define handlers first
     const handleTagClick = (tag) => {
         // Toggle tag in active filters
@@ -134,17 +135,35 @@ async function init() {
         handleFilterChange(ui.activeCategory, ui.activeZone, ui.searchInput.value);
     };
 
-    const handleFilterChange = (category, zone, query) => {
-        currentProposals = filterData(proposals, category, zone, query, ui.activeTags);
+    const handleFilterChange = (category, zone, query, updateMap = true) => {
+        currentProposals = filterData(proposals, category, zone, query, ui.activeTags, ui.sortByVotes);
 
         // Update URL with current filter state
-        urlManager.updateURL(query, category, zone, Array.from(ui.activeTags));
+        urlManager.updateURL(query, category, zone, Array.from(ui.activeTags), ui.sortByVotes);
 
         ui.renderPopularTags(proposals, handleTagClick);
         ui.renderActiveTags(() => handleFilterChange(ui.activeCategory, ui.activeZone, ui.searchInput.value));
         ui.renderList(currentProposals, handleTagClick);
-        map.renderMarkers(currentProposals, (id) => ui.scrollToCard(id));
+        
+        // Only update map when filters change, not when sorting changes
+        if (updateMap) {
+            map.renderMarkers(currentProposals, (id) => ui.scrollToCard(id));
+        }
     };
+
+    const handleSortChange = () => {
+        // Re-filter with new sort order but don't update map
+        currentProposals = filterData(proposals, ui.activeCategory, ui.activeZone, ui.searchInput.value, ui.activeTags, ui.sortByVotes);
+        
+        // Update URL with new sort state
+        urlManager.updateURL(ui.searchInput.value, ui.activeCategory, ui.activeZone, Array.from(ui.activeTags), ui.sortByVotes);
+        
+        // Only re-render list, not map
+        ui.renderList(currentProposals, handleTagClick);
+    };
+    
+    // Set sort change callback
+    ui.onSortChange = handleSortChange;
 
     // 6. Initial Render
     ui.renderFilters(categories, proposals, (category) => {
