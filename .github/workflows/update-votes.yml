@@ -4,6 +4,10 @@ on:
     - cron: '0 2 * * *'  # Todos los días a las 2:00 AM UTC
   workflow_dispatch:  # Permitir ejecución manual
 
+permissions:
+  contents: write
+  actions: read
+
 jobs:
   update-votes:
     runs-on: ubuntu-latest
@@ -48,6 +52,8 @@ jobs:
           
       - name: Commit and push changes
         if: steps.verify-changed-files.outputs.changed == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action - Vote Updater"
@@ -110,6 +116,8 @@ jobs:
           
       - name: Run retry script if there were errors
         if: steps.verify-changed-files.outputs.changed == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Verificar si hay errores en el último reporte
           REPORT_FILE=$(ls -t data/vote_update_report_*.txt 2>/dev/null | head -n1)
