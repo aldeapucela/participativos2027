@@ -18982,7 +18982,7 @@
       "Av Gijón"
     ],
     "urgent": false,
-      "summary": "Recuperación del tramo municipal de la via verde tren burra con poda y acondicionamiento"
+    "summary": "Recuperación del tramo municipal de la via verde tren burra con poda y acondicionamiento"
   },
   {
     "code": "8501",
@@ -19866,5 +19866,618 @@
     ],
     "urgent": true,
     "summary": "Inundación zona Antigua Facultad de Ciencias por acumulación agua en calles bajas y daños portales"
+  },
+  {
+    "code": "7599",
+    "category": null,
+    "tags": [],
+    "urgent": false,
+    "summary": "Un parque para poder soltar a los perros sin que nos multen",
+    "title": "Parque de perros",
+    "description": "Un parque para poder soltar a los perros sin que nos multen"
+  },
+  {
+    "code": "7570",
+    "category": "Transportes y movilidad",
+    "tags": [
+      "Transportes y movilidad",
+      "Seguridad y emergencias"
+    ],
+    "urgent": false,
+    "summary": "Crear un nuevo paso para peatones con un semáforo en la calle José Acosta, intermedio entre los actu...",
+    "title": "Nuevo semáforo en Calle del Padre José Acosta",
+    "description": "Crear un nuevo paso para peatones con un semáforo en la calle José Acosta, intermedio entre los actuales ya situados en la esquina con la calle Mieses y el que está a la altura del instituto Vega del Prado (Ver mapa) Mejoraría la accesibilidad entre Huerta del Rey y Villa del Prado, y evitaría el cruce de peatones por lugares no señalizados. Entre los semáforos actuales hay una distancia de 400 metros, cuando lo habitual entre semáforos son los 200 metros."
+  },
+  {
+    "code": "7574",
+    "category": "Seguridad y emergencias",
+    "tags": [
+      "Seguridad y emergencias"
+    ],
+    "urgent": true,
+    "summary": "Estimados señores, tengo una gran preocupación como madre y me gustaría quedestinaran una parte impo...",
+    "title": "Partida presupuestaria destinada a seguridad (Inadmitida)",
+    "description": "Estimados señores, tengo una gran preocupación como madre y me gustaría quedestinaran una parte importante del presupuesto para reforzar nuestra SEGURIDAD en la ciudad. Cada vez más se están viendo la llegada de inmigrantes y bandas latinas peligrosas. Sus peleas son más frecuentes y violentas, en especial en la plaza San Juan Bautista de la Salle y alrededores del Paseo de Zorrilla."
+  },
+  {
+    "code": "8292",
+    "category": "Servicios Sociales",
+    "tags": [
+      "Centro de mayores",
+      "Vida activa",
+      "Delicias",
+      "Mercadona",
+      "Urbanismo"
+    ],
+    "urgent": false,
+    "summary": "Crear un centro de Vida Activa para mayores, en la antigua Seat de Delicias"
+  },
+  {
+    "code": "8465",
+    "category": "Urbanismo",
+    "tags": [
+      "Calle Fasa",
+      "Aceras",
+      "Calzada",
+      "Baldosas",
+      "Raíces",
+      "Parque",
+      "Seguridad peatonal"
+    ],
+    "urgent": true,
+    "summary": "Arreglo integral de calzada y aceras en calle Fasa, especialmente baldosas levantadas por raíces"
+  },
+  {
+    "code": "7599",
+    "category": "Parques y Naturaleza",
+    "tags": [
+      "Parque para perros",
+      "Animales",
+      "Mascotas",
+      "Espacio canino",
+      "Convivencia"
+    ],
+    "urgent": false,
+    "summary": "Crear un parque para poder soltar a los perros sin que nos multen"
+  },
+  {
+    "code": "7968",
+    "category": "Transportes y movilidad",
+    "tags": [
+      "Acceso peatonal",
+      "Nuevo Hospital",
+      "Parque Canterac",
+      "Aceras",
+      "Seguridad",
+      "Pendiente",
+      "Bolardos",
+      "Mercadillo"
+    ],
+    "urgent": true,
+    "summary": "Mejoras en acceso peatonal a Nuevo Hospital por parque Canterac: ensanchamiento de acera, reducción de pendiente y prohibición de vehículos"
+  },
+  {
+    "code": "7891",
+    "category": "Parques y Naturaleza",
+    "tags": [
+      "Parque San Francisco de Asís",
+      "Baldosas",
+      "Bancos",
+      "Papeleras",
+      "Setos",
+      "Marquesina",
+      "Zona infantil",
+      "Césped",
+      "Mantenimiento"
+    ],
+    "urgent": true,
+    "summary": "Arreglo integral del parque de Plaza San Francisco de Asís: baldosas levantadas, bancos rotos, setos secos, zona infantil oxidada"
+  },
+  {
+    "code": "8249",
+    "category": "Instalaciones Deportivas",
+    "tags": [
+      "Máquinas de musculación",
+      "Ejercicio físico",
+      "Zona deportiva",
+      "Cancha de fútbol",
+      "Baloncesto",
+      "Ocio",
+      "Salud"
+    ],
+    "urgent": false,
+    "summary": "Implantar zona de máquinas estáticas de musculación al lado de canchas de fútbol y baloncesto en la Ronda"
+  },
+  {
+    "code": "8558",
+    "category": "Urbanismo",
+    "tags": [
+      "Túneles peatonales",
+      "San Isidro",
+      "Villabañez",
+      "Limpieza",
+      "Saneamiento",
+      "Pintura",
+      "Mantenimiento",
+      "Seguridad"
+    ],
+    "urgent": true,
+    "summary": "Limpiar, sanear y pintar túneles peatonales de San Isidro y Villabañez, completamente abandonados y necesitados de reparación"
+  },
+  {
+    "code": "7664",
+    "category": "Urbanismo",
+    "tags": [
+      "Terreno urbano",
+      "Abejaruco",
+      "Curruca",
+      "Jilguero",
+      "Juegos infantiles",
+      "Aparcamiento",
+      "Parque",
+      "Carril bici"
+    ],
+    "urgent": false,
+    "summary": "Aprovechamiento terreno entre calles Abejaruco, Curruca y Jilguero: juegos infantiles y aparcamientos"
+  },
+  {
+    "code": "7862",
+    "category": "Urbanismo",
+    "tags": [
+      "Alcantarillado",
+      "Aguas residuales",
+      "Río Esgueva",
+      "Contaminación",
+      "Medio ambiente",
+      "Salud pública"
+    ],
+    "urgent": true,
+    "summary": "Desviar alcantarillado para evitar vertido de aguas residuales al río Esgueva"
+  },
+  {
+    "code": "7624",
+    "category": "Instalaciones Deportivas",
+    "tags": [
+      "Piscina",
+      "Cubierta",
+      "Reparación",
+      "Mantenimiento",
+      "Instalaciones deportivas",
+      "Climatización"
+    ],
+    "urgent": false,
+    "summary": "Reparación de la cubierta de la piscina cubierta para mejorar las instalaciones"
+  },
+  {
+    "code": "8503",
+    "category": "Urbanismo",
+    "tags": [
+      "Aparcamiento",
+      "Rotonda",
+      "Accesibilidad",
+      "Seguridad",
+      "Movilidad",
+      "Infraestructura"
+    ],
+    "urgent": false,
+    "summary": "Construcción de aparcamiento subterráneo en rotonda de acceso a urbanización"
+  },
+  {
+    "code": "8281",
+    "category": "Urbanismo",
+    "tags": [
+      "Alcantarillado",
+      "Aguas pluviales",
+      "Inundaciones",
+      "Drenaje",
+      "Infraestructura",
+      "Seguridad"
+    ],
+    "urgent": true,
+    "summary": "Red de alcantarillado para aguas pluviales en zona sin conexión a red general"
+  },
+  {
+    "code": "8032",
+    "category": "Transportes y movilidad",
+    "tags": [
+      "Aparcamiento",
+      "Residentes",
+      "Zona verde",
+      "Señalización",
+      "Pintura",
+      "Contenedores",
+      "Delicias"
+    ],
+    "urgent": false,
+    "summary": "Delimitar aparcamiento zona verde/blanca para residentes en calles Alta y Pajarillos"
+  },
+  {
+    "code": "8475",
+    "category": "Urbanismo",
+    "tags": [
+      "Calle Amor de Dios",
+      "Aceras",
+      "Reparación",
+      "Seguridad peatonal",
+      "Mantenimiento"
+    ],
+    "urgent": true,
+    "summary": "Arreglo de aceras en calle Amor de Dios por estar en muy malas condiciones"
+  },
+  {
+    "code": "7618",
+    "category": "Educación",
+    "tags": [
+      "Espacio de estudio",
+      "Biblioteca",
+      "Jóvenes",
+      "Cultura",
+      "Educación",
+      "Recursos"
+    ],
+    "urgent": false,
+    "summary": "Creación de un espacio de estudio para jóvenes y estudiantes"
+  },
+  {
+    "code": "7994",
+    "category": "Urbanismo",
+    "tags": [
+      "Accesibilidad",
+      "Movilidad reducida",
+      "Barandilla",
+      "Centro Cívico",
+      "Rondilla",
+      "Seguridad"
+    ],
+    "urgent": true,
+    "summary": "Instalación de barandilla en Centro Cívico Rondilla para facilitar acceso a personas con movilidad reducida"
+  },
+  {
+    "code": "8540",
+    "category": "Urbanismo",
+    "tags": [
+      "Aceras",
+      "Arreglo",
+      "Seguridad",
+      "Mantenimiento",
+      "Infraestructura",
+      "Peatones"
+    ],
+    "urgent": true,
+    "summary": "Mejora integral de aceras en mal estado para garantizar seguridad peatonal"
+  },
+  {
+    "code": "8470",
+    "category": "Urbanismo",
+    "tags": [
+      "Aceras",
+      "Prado de la Magdalena",
+      "Arreglo",
+      "Seguridad peatonal",
+      "Mantenimiento"
+    ],
+    "urgent": true,
+    "summary": "Arreglo de aceras derechas en Prado de la Magdalena por estado lamentable"
+  },
+  {
+    "code": "8126",
+    "category": "Participación ciudadana - Asociaciones",
+    "tags": [
+      "Mejora",
+      "Acondicionamiento",
+      "Ajardinado",
+      "Zonas comunes",
+      "Asociaciones",
+      "Comunidad"
+    ],
+    "urgent": false,
+    "summary": "Mejora, acondicionamiento y ajardinado de zonas comunes para asociaciones"
+  },
+  {
+    "code": "8262",
+    "category": "Medio Ambiente - Limpieza",
+    "tags": [
+      "Bancos",
+      "Gabriel y Galán",
+      "Mantenimiento",
+      "Mobiliario urbano",
+      "Espacio público"
+    ],
+    "urgent": false,
+    "summary": "Cambio de bancos en calle Gabriel y Galán por ser demasiado bajos"
+  },
+  {
+    "code": "7617",
+    "category": "Urbanismo",
+    "tags": [
+      "Asfalto",
+      "Calles",
+      "Reparación",
+      "Loma",
+      "Otero",
+      "Ribazo",
+      "Infraestructura"
+    ],
+    "urgent": true,
+    "summary": "Reparación de asfalto en calles Loma, Otero y Ribazo por estar en mal estado"
+  },
+  {
+    "code": "8140",
+    "category": "Urbanismo",
+    "tags": [
+      "Aceras",
+      "Instituto",
+      "Continuación",
+      "Seguridad peatonal",
+      "Infraestructura"
+    ],
+    "urgent": false,
+    "summary": "Continuar acera lateral izquierda del Instituto para mejorar acceso peatonal"
+  },
+  {
+    "code": "7570",
+    "category": "Transportes y movilidad",
+    "tags": [
+      "Semáforo",
+      "Paso de peatones",
+      "Calle Padre José Acosta",
+      "Seguridad",
+      "Huerta del Rey",
+      "Villa del Prado"
+    ],
+    "urgent": true,
+    "summary": "Nuevo semáforo en calle Padre José Acosta para mejorar accesibilidad entre Huerta del Rey y Villa del Prado"
+  },
+  {
+    "code": "8099",
+    "category": "Transportes y movilidad",
+    "tags": [
+      "Marquesina",
+      "Parada autobús",
+      "Línea C1",
+      "Calle Mieses",
+      "Monasterio Santa María Retuerta",
+      "Auvasa",
+      "Protección"
+    ],
+    "urgent": false,
+    "summary": "Instalación de marquesina en parada de línea C1 en calle Mieses para proteger usuarios de inclemencias"
+  },
+  {
+    "code": "7896",
+    "category": "Parques y Naturaleza",
+    "tags": [
+      "Escaleras",
+      "Parque Ladera Sur",
+      "Reparación",
+      "Seguridad",
+      "Tierra",
+      "Pendiente"
+    ],
+    "urgent": true,
+    "summary": "Arreglar escaleras del parque Ladera Sur con pendientes pronunciadas por erosión del terreno"
+  },
+  {
+    "code": "7897",
+    "category": "Urbanismo",
+    "tags": [
+      "Iluminación",
+      "Biblioteca",
+      "Seguridad",
+      "Farolas",
+      "Calle Ciudad de la Habana",
+      "Vandalismo"
+    ],
+    "urgent": true,
+    "summary": "Mejorar iluminación exterior de biblioteca para evitar actos vandálicos y mejorar seguridad"
+  },
+  {
+    "code": "8187",
+    "category": "Instalaciones Deportivas",
+    "tags": [
+      "Instalaciones deportivas",
+      "José Luis Saso",
+      "Césped",
+      "Edificio modular",
+      "Pista polideportiva",
+      "Minusválidos",
+      "Gas"
+    ],
+    "urgent": false,
+    "summary": "Renovación completa de instalaciones deportivas José Luis Saso: césped, edificio, pistas y accesibilidad"
+  },
+  {
+    "code": "8118",
+    "category": "Medio Ambiente - Limpieza",
+    "tags": [
+      "Especies invasoras",
+      "Ailantos",
+      "Control",
+      "Erradicación",
+      "Parques",
+      "Parquesol",
+      "Árboles"
+    ],
+    "urgent": true,
+    "summary": "Campaña de control y erradicación de ailantos en parques de Parquesol"
+  },
+  {
+    "code": "8027",
+    "category": "Urbanismo",
+    "tags": [
+      "Infraestructura",
+      "Mejoras",
+      "Servicios",
+      "Equipamiento"
+    ],
+    "urgent": false,
+    "summary": "Mejoras en infraestructura y equipamiento urbano"
+  },
+  {
+    "code": "7913",
+    "category": "Transportes y movilidad",
+    "tags": [
+      "Vigilancia",
+      "Cámaras",
+      "Paso Central",
+      "Campo Grande",
+      "Seguridad",
+      "Horario ampliado",
+      "Pulsadores de pánico"
+    ],
+    "urgent": true,
+    "summary": "Sistema de vigilancia en Paso Central del Campo Grande para ampliar horario nocturno"
+  },
+  {
+    "code": "7574",
+    "category": "Seguridad y emergencias",
+    "tags": [
+      "Seguridad",
+      "Presupuesto",
+      "Inmigrantes",
+      "Bandas latinas",
+      "Plaza San Juan Bautista",
+      "Paseo de Zorrilla"
+    ],
+    "urgent": true,
+    "summary": "Partida presupuestaria para reforzar seguridad en la ciudad por aumento de bandas latinas peligrosas"
+  },
+  {
+    "code": "7609",
+    "category": "Transportes y movilidad",
+    "tags": [
+      "Estación de tren",
+      "Acceso",
+      "Infraestructura",
+      "Transporte",
+      "Conexión"
+    ],
+    "urgent": false,
+    "summary": "Instalación de nueva estación de tren para mejorar conexiones"
+  },
+  {
+    "code": "8390",
+    "category": "Participación ciudadana - Asociaciones",
+    "tags": [
+      "Biblioteca",
+      "Ampliación",
+      "Horarios",
+      "Cultura",
+      "Vacaciones",
+      "Recursos"
+    ],
+    "urgent": false,
+    "summary": "Ampliar biblioteca por ser demasiado pequeña y ampliar horarios especialmente en vacaciones"
+  },
+  {
+    "code": "8347",
+    "category": "Urbanismo - Transportes y movilidad",
+    "tags": [
+      "Carril bici",
+      "Barrio del Pinar",
+      "Avenida Zamora",
+      "Carretera Arcas Reales",
+      "Movilidad sostenible",
+      "Seguridad ciclista"
+    ],
+    "urgent": false,
+    "summary": "Carril bici desde barrio del Pinar a Avenida Zamora por carretera Arcas Reales"
+  },
+  {
+    "code": "8265",
+    "category": "Servicios sociales",
+    "tags": [
+      "Centro cívico",
+      "Biblioteca",
+      "Servicios",
+      "Comunidad",
+      "Equipamiento"
+    ],
+    "urgent": false,
+    "summary": "Centro cívico que incluya biblioteca y servicios para la comunidad"
+  },
+  {
+    "code": "7814",
+    "category": "Transportes y movilidad",
+    "tags": [
+      "Árboles",
+      "Calle Somosierra",
+      "Retirada",
+      "Seguridad",
+      "Mantenimiento",
+      "Vegetación"
+    ],
+    "urgent": false,
+    "summary": "Retirar árboles de calle Somosierra por problemas de seguridad y mantenimiento"
+  },
+  {
+    "code": "8508",
+    "category": "Participación ciudadana - Asociaciones",
+    "tags": [
+      "Zona azul",
+      "Aparcamiento",
+      "Reducción",
+      "Residentes",
+      "Comercio",
+      "Movilidad"
+    ],
+    "urgent": false,
+    "summary": "Disminuir zona azul para facilitar aparcamiento a residentes y comerciantes"
+  },
+  {
+    "code": "8305",
+    "category": "Transportes y movilidad",
+    "tags": [
+      "Señalización",
+      "Rotonda",
+      "Acceso VA-30",
+      "CL-600",
+      "Semáforos",
+      "Bandas sonoras",
+      "Paso de cebra",
+      "Seguridad"
+    ],
+    "urgent": true,
+    "summary": "Mejorar señalización y seguridad en rotonda de acceso VA-30 con CL-600 para urbanización"
+  },
+  {
+    "code": "8068",
+    "category": "Urbanismo",
+    "tags": [
+      "Plaza",
+      "Damian Tascon Prieto",
+      "Renovación",
+      "Espacio público",
+      "Mejora"
+    ],
+    "urgent": false,
+    "summary": "Renovación y mejora de Plaza Damian Tascon Prieto"
+  },
+  {
+    "code": "7935",
+    "category": "Educación",
+    "tags": [
+      "Educación",
+      "Cambio",
+      "Sostenibilidad",
+      "Medio ambiente",
+      "Conciencia"
+    ],
+    "urgent": false,
+    "summary": "Proyecto educativo para promover cambio y conciencia sobre sostenibilidad"
+  },
+  {
+    "code": "8320",
+    "category": "Urbanismo",
+    "tags": [
+      "Bancos",
+      "Calle Muro",
+      "Movilidad reducida",
+      "Personas mayores",
+      "Accesibilidad",
+      "Mobiliario urbano"
+    ],
+    "urgent": true,
+    "summary": "Cambio de bancos en calle Muro por ser demasiado bajos para personas mayores"
   }
 ]
