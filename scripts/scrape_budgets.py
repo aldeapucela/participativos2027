@@ -195,7 +195,18 @@ def get_zones():
                 else:
                     name = f"Zona ID {z_id}"
             
-            full_url = BASE_URL + href if href.startswith('/') else href
+            # Construir URL con orden consistente para evitar aleatoriedad
+            # Asegurarse de usar budget 6 y orden confidence_score
+            if 'budgets/' in href:
+                # Reemplazar cualquier parámetro order existente y añadir order=confidence_score
+                clean_href = re.sub(r'&?order=[^&]*', '', href)
+                if '?' in clean_href:
+                    full_url = BASE_URL + clean_href + '&order=confidence_score'
+                else:
+                    full_url = BASE_URL + clean_href + '?order=confidence_score'
+            else:
+                full_url = BASE_URL + href if href.startswith('/') else href
+            
             zones.append({
                 'id': z_id,
                 'name': name,
