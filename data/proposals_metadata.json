@@ -597,7 +597,8 @@
       "Aparcamiento",
       "Asfaltado",
       "Piscina Puente Duero",
-      "Polvo/Barro"
+      "Polvo/Barro",
+      "Error"
     ],
     "urgent": true,
     "summary": "Asfaltado y acondicionamiento de la explanada de la piscina de Puente Duero"
@@ -1197,7 +1198,8 @@
       "Accesibilidad",
       "Rampa",
       "Girón",
-      "Movilidad"
+      "Movilidad",
+      "Error"
     ],
     "urgent": false,
     "summary": "Ampliación y mejora de rampa en calle La Vida 6"
@@ -1353,7 +1355,8 @@
       "Plaza de Mayo",
       "Mobiliario",
       "Barras",
-      "Las Flores"
+      "Las Flores",
+      "Error"
     ],
     "urgent": false,
     "summary": "Reposición de barras y mobiliario en la Plaza de Mayo"
@@ -1365,7 +1368,8 @@
       "Material deportivo",
       "Calle Azucena",
       "Las Flores",
-      "Equipamiento"
+      "Equipamiento",
+      "Error"
     ],
     "urgent": false,
     "summary": "Dotación de material deportivo en centro de calle Azucena"
@@ -1377,7 +1381,8 @@
       "Autobús",
       "Las Flores",
       "Calle Hornillo",
-      "Movilidad"
+      "Movilidad",
+      "Error"
     ],
     "urgent": false,
     "summary": "Nueva parada de autobús en la calle Hornillo"
@@ -1653,7 +1658,8 @@
       "Plaza Alberto Fernández",
       "Sombras",
       "Jardines verticales",
-      "Hundimientos"
+      "Hundimientos",
+      "Error"
     ],
     "urgent": true,
     "summary": "Reforma integral, sombras y jardinería en Plaza Alberto Fernández"
@@ -1725,7 +1731,8 @@
       "Aceras",
       "Pavimento",
       "Calle Verbena",
-      "Reparación"
+      "Reparación",
+      "Error"
     ],
     "urgent": false,
     "summary": "Cambio de azulejos por otros de mayor tamaño en calle Verbena"
@@ -1870,7 +1877,8 @@
       "Limpieza",
       "Excrementos caninos",
       "ADN canino",
-      "Sanciones"
+      "Sanciones",
+      "Error"
     ],
     "urgent": false,
     "summary": "Implantación de sistema de identificación genética de perros"
@@ -2086,7 +2094,8 @@
       "Parques",
       "Mantenimiento",
       "Costes vecinos",
-      "Servicio público"
+      "Servicio público",
+      "Error"
     ],
     "urgent": false,
     "summary": "Asunción municipal del mantenimiento de jardines comunitarios"
@@ -3263,7 +3272,8 @@
       "Paseo del Cid",
       "Calistenia",
       "Mobiliario",
-      "Ocio"
+      "Ocio",
+      "Error"
     ],
     "urgent": false,
     "summary": "Mejora de zona estancial en Paseo del Cid con calistenia y mesas"
@@ -3707,7 +3717,8 @@
       "Placas Solares",
       "Energía",
       "Educación",
-      "Comunidad Energética"
+      "Comunidad Energética",
+      "Error"
     ],
     "urgent": false,
     "summary": "Instalación de placas solares en el IES La Merced para autoconsumo y educación"
@@ -3960,7 +3971,8 @@
       "Rotonda",
       "Seguridad vial",
       "Cruces",
-      "Arturo Eyries"
+      "Arturo Eyries",
+      "Error"
     ],
     "urgent": true,
     "summary": "Mejora de la seguridad vial mediante rotonda o semaforización en Plaza de Cuba"
@@ -4357,7 +4369,8 @@
       "Semáforo",
       "Seguridad Vial",
       "Avenida Santander",
-      "Viveros"
+      "Viveros",
+      "Error"
     ],
     "urgent": true,
     "summary": "Instalación de semáforo en cruce Avda. Santander con calle Serena"
@@ -5982,7 +5995,8 @@
       "Rueda peligrosa",
       "Andrés de la Orden",
       "Mantenimiento",
-      "Seguridad"
+      "Seguridad",
+      "Error"
     ],
     "urgent": true,
     "summary": "Reparación del parque Andrés de la Orden y eliminación de rueda peligrosa"
@@ -6030,7 +6044,8 @@
       "Limpieza",
       "Calle Renedo",
       "Pajarillos",
-      "Mantenimiento"
+      "Mantenimiento",
+      "Error"
     ],
     "urgent": false,
     "summary": "Refuerzo de limpieza en la calle Renedo"
@@ -6102,7 +6117,8 @@
       "Seguridad vial",
       "Badenes",
       "Exceso velocidad",
-      "Pajarillos"
+      "Pajarillos",
+      "Error"
     ],
     "urgent": true,
     "summary": "Instalación de badenes en carretera Santa María de la Cabeza"
@@ -6559,7 +6575,8 @@
       "Patinetes",
       "Espacio Joven Norte",
       "Mantenimiento",
-      "Sostenibilidad"
+      "Sostenibilidad",
+      "Error"
     ],
     "urgent": false,
     "summary": "Reparación de la estación de patinetes del Espacio Joven Norte"
@@ -7076,7 +7093,8 @@
       "Poda",
       "Árboles",
       "Parque del Reloj",
-      "Sombras"
+      "Sombras",
+      "Error"
     ],
     "urgent": false,
     "summary": "Poda de árboles en el Parque del Reloj"
@@ -7279,7 +7297,8 @@
       "Primera infancia",
       "Cultura",
       "Lectura",
-      "Actividades"
+      "Actividades",
+      "Error"
     ],
     "urgent": false,
     "summary": "Actividades para bebés (0-3 años) en Biblioteca San Nicolás"
@@ -7460,7 +7479,8 @@
       "Escultura",
       "Mural",
       "Biólogo Valverde",
-      "Pajarillos"
+      "Pajarillos",
+      "Error"
     ],
     "urgent": false,
     "summary": "Homenaje al biólogo J.A. Valverde: escultura y mural"
@@ -7593,7 +7613,8 @@
       "Fuentes",
       "Agua",
       "Carril bici",
-      "Sostenibilidad"
+      "Sostenibilidad",
+      "Error"
     ],
     "urgent": false,
     "summary": "Instalación de fuentes de agua potable a lo largo del carril bici"
@@ -7774,7 +7795,8 @@
       "Ping-Pong",
       "CIC Segundo Montes",
       "Ocio",
-      "Infancia"
+      "Infancia",
+      "Error"
     ],
     "urgent": false,
     "summary": "Instalación de mesas de ping-pong junto a Segundo Montes"
@@ -7858,7 +7880,8 @@
       "CIC Segundo Montes",
       "Limpieza",
       "Fachada",
-      "Pintadas"
+      "Pintadas",
+      "Error"
     ],
     "urgent": false,
     "summary": "Limpieza de fachada y porche del CIC Segundo Montes"
@@ -8892,7 +8915,8 @@
       "Aceras",
       "Baldosas",
       "Seguridad peatones",
-      "Mantenimiento"
+      "Mantenimiento",
+      "Error"
     ],
     "urgent": true,
     "summary": "Reparación de baldosas en calles Nuñez de Arce, Santuario, Montero Calvo, San Felipe, Castelar"
@@ -9228,7 +9252,8 @@
       "Piscina municipal",
       "Explanada",
       "Pavimentación",
-      "Acondicionamiento"
+      "Acondicionamiento",
+      "Error"
     ],
     "urgent": false,
     "summary": "Explanada de la piscina"
@@ -9902,7 +9927,8 @@
       "Rampa",
       "Calle La Vida",
       "Accesibilidad",
-      "Mejora"
+      "Mejora",
+      "Error"
     ],
     "urgent": false,
     "summary": "Alargar mini rampa en calle La Vida 6 por ser demasiado pequeña y empinada"
@@ -10102,7 +10128,8 @@
       "Asfalto",
       "Calle Familia",
       "Ratas",
-      "Salud"
+      "Salud",
+      "Error"
     ],
     "urgent": true,
     "summary": "Asfaltar explanada de calle Familia para eliminar ratas y excrementos"
@@ -10157,7 +10184,8 @@
       "Reposicion",
       "Mobiliario",
       "Barras",
-      "Plaza"
+      "Plaza",
+      "Error"
     ],
     "urgent": false,
     "summary": "Reposicion de mobiliario"
@@ -10170,7 +10198,8 @@
       "Deportivo",
       "Necesitamos",
       "Nuevo",
-      "Centro"
+      "Centro",
+      "Error"
     ],
     "urgent": false,
     "summary": "Material deportivo"
@@ -10181,7 +10210,8 @@
     "tags": [
       "Parada de autobús",
       "Calle Hornillo",
-      "Las Flores"
+      "Las Flores",
+      "Error"
     ],
     "urgent": false,
     "summary": "Parada de bus en calle Hornillo (Inadmitida)"
@@ -10525,7 +10555,8 @@
       "Plaza Alberto Fernández",
       "Reforma integral",
       "Toldo",
-      "Plantas verticales"
+      "Plantas verticales",
+      "Error"
     ],
     "urgent": false,
     "summary": "Reforma integral de plaza Alberto Fernández con toldo y plantas verticales"
@@ -10713,7 +10744,8 @@
       "Centro de Vida Activa",
       "Ventanas",
       "Iluminación",
-      "Bar"
+      "Bar",
+      "Error"
     ],
     "urgent": false,
     "summary": "Añadir más ventanas y ampliar zona del bar en Centro de vida Activa"
@@ -10736,7 +10768,8 @@
       "Azulejos",
       "Calle Verbena",
       "Viandantes",
-      "Facilidad"
+      "Facilidad",
+      "Error"
     ],
     "urgent": false,
     "summary": "Cambiar azulejos de la calle Verbena por unos más grandes para facilitar viandantes"
@@ -10840,7 +10873,8 @@
     "tags": [
       "Vigilancia",
       "Seguridad",
-      "Noche"
+      "Noche",
+      "Error"
     ],
     "urgent": false,
     "summary": "Más vigilancia en las calles por la noche (Inadmitida)"
@@ -10992,7 +11026,8 @@
       "ADN canino",
       "Perros",
       "Excrementos",
-      "Sanciones"
+      "Sanciones",
+      "Error"
     ],
     "urgent": false,
     "summary": "Censos caminos basados en ADN para identificar perros y sancionar excrementos"
@@ -11352,7 +11387,8 @@
     "code": "7786",
     "category": "Inadmitidas",
     "tags": [
-      "Inadmitida"
+      "Inadmitida",
+      "Error"
     ],
     "urgent": false,
     "summary": "Que el Ayuntamiento se haga cargo de todos los gastos que tengan que ver con zonas ajardinadas y parques, que hasta ahora corren a cargo de los vecinos y vecinas."
@@ -12847,7 +12883,8 @@
       "Plazas residentes",
       "Parking público",
       "Paseo Isabel la Católica",
-      "Residentes"
+      "Residentes",
+      "Error"
     ],
     "urgent": false,
     "summary": "Ampliación plazas residentes parking público paseo de Isabel la Católica"
@@ -13208,7 +13245,8 @@
       "Zona verde",
       "Paseo del Cid",
       "Mesas juegos",
-      "Calistenia"
+      "Calistenia",
+      "Error"
     ],
     "urgent": false,
     "summary": "Mejorar la zona verde del paseo del Cid con juegos y elementos calistenia"
@@ -13891,7 +13929,8 @@
       "Comunidad energética",
       "Placas solares",
       "IES La Merced",
-      "Autoabastecimiento"
+      "Autoabastecimiento",
+      "Error"
     ],
     "urgent": false,
     "summary": "Comunidad Energética: instalación placas solares en IES La Merced"
@@ -14037,7 +14076,8 @@
       "Mobiliario urbano",
       "Jardineras",
       "Iglesia Antigua",
-      "Tercera edad"
+      "Tercera edad",
+      "Error"
     ],
     "urgent": false,
     "summary": "Acondicionamiento mediante mobiliario urbano y jardineras en entorno Antigua"
@@ -14302,7 +14342,8 @@
       "Rotonda",
       "Colombia",
       "Cuba",
-      "Barlovento"
+      "Barlovento",
+      "Error"
     ],
     "urgent": false,
     "summary": "Rotonda en cruce entre Calle Colombia y Pl Cuba con Barlovento"
@@ -15011,7 +15052,8 @@
       "Semaforo",
       "Jardines",
       "Alhambra",
-      "Urge"
+      "Urge",
+      "Error"
     ],
     "urgent": false,
     "summary": "semaforo calle serena: Urge un semaforo que regule el cruce Avda"
@@ -16551,7 +16593,8 @@
       "Iluminación",
       "Plaza Portugalete",
       "Limpieza",
-      "Perros"
+      "Perros",
+      "Error"
     ],
     "urgent": false,
     "summary": "Mejorar la iluminación de plaza Portugalete y limpieza de calles con control perros"
@@ -17096,7 +17139,8 @@
       "Ampliación",
       "IdeVa",
       "Emprendedores",
-      "Espacio físico"
+      "Espacio físico",
+      "Error"
     ],
     "urgent": false,
     "summary": "Ampliación espacio IdeVa para nuevos proyectos y empresas emprendedoras"
@@ -17219,7 +17263,8 @@
       "Parque Andrés de la Orden",
       "Rueda peligrosa",
       "Seguridad",
-      "Niños"
+      "Niños",
+      "Error"
     ],
     "urgent": true,
     "summary": "Rueda peligrosa: arreglar parque Andrés de la Orden y quitar rueda por seguridad"
@@ -17288,7 +17333,8 @@
       "Parque peligroso",
       "Andrés de la Orden",
       "Rueda",
-      "Seguridad"
+      "Seguridad",
+      "Error"
     ],
     "urgent": true,
     "summary": "Parque peligroso: arreglar parque Andrés de la Orden y quitar rueda peligrosa"
@@ -17324,7 +17370,8 @@
       "Valla",
       "Zona verde",
       "Centro Cívico Bailarín",
-      "Perros"
+      "Perros",
+      "Error"
     ],
     "urgent": false,
     "summary": "Valla zona verde Centro Cívico Bailarín Vicente Escudero para evitar perros"
@@ -17358,7 +17405,8 @@
     "tags": [
       "Limpieza",
       "Calle Renedo",
-      "Mantenimiento"
+      "Mantenimiento",
+      "Error"
     ],
     "urgent": false,
     "summary": "Limpieza Calle Renedo (Inadmitida)"
@@ -17428,7 +17476,8 @@
       "Badenes",
       "Calle Santa María la Cabeza",
       "Velocidad",
-      "Parque niños"
+      "Parque niños",
+      "Error"
     ],
     "urgent": true,
     "summary": "Badenes C/ Santa María la Cabeza por velocidad excesiva y seguridad peatones"
@@ -18068,7 +18117,8 @@
       "Terraza",
       "Espacio joven norte",
       "Suelo deteriorado",
-      "Seguridad"
+      "Seguridad",
+      "Error"
     ],
     "urgent": false,
     "summary": "Arreglar la terraza del espacio joven norte por suelo deteriorado y seguridad usuarios"
@@ -18118,7 +18168,8 @@
       "Aparcapatinetes",
       "Joven",
       "Norte",
-      "Está"
+      "Está",
+      "Error"
     ],
     "urgent": false,
     "summary": "Arreglar aparcapatinetes del espacio joven Norte"
@@ -18882,7 +18933,8 @@
     "code": "8404",
     "category": "Inadmitidas",
     "tags": [
-      "Inadmitida"
+      "Inadmitida",
+      "Error"
     ],
     "urgent": false,
     "summary": "podar y quitar arboles c, cada vez son mas altos, cuando hace aire  y con sus hojas llegan casi hasta las viviendas,  y nos quita ademas  el sol del parque del reloj, se meten en la parcela que esta..."
@@ -19173,7 +19225,8 @@
       "Actividades bebés",
       "Biblioteca San Nicolás",
       "Más actividades",
-      "Infancia"
+      "Infancia",
+      "Error"
     ],
     "urgent": false,
     "summary": "Actividades bebés Biblioteca San Nicolás (Inadmitida): más actividades para bebés"
@@ -19395,7 +19448,8 @@
       "Mural",
       "Biólogo",
       "Podría",
-      "Antonio"
+      "Antonio",
+      "Error"
     ],
     "urgent": false,
     "summary": "Escultura y mural sobre el biólogo Jose Antonio Valverde"
@@ -19591,7 +19645,8 @@
       "Calistenia",
       "Cerca",
       "Campos",
-      "Rugby"
+      "Rugby",
+      "Error"
     ],
     "urgent": false,
     "summary": "Pista calistenia cerca campos de Rugby y Atletismo  de complejo Ciudad Valladoli"
@@ -19908,7 +19963,8 @@
       "Mesas Ping-Pong",
       "Plaza",
       "CIC Segundo Montes",
-      "Instalación"
+      "Instalación",
+      "Error"
     ],
     "urgent": false,
     "summary": "Mesas de Ping-Pong en la plaza junto al CIC Segundo Montes para ocio comunitario"
@@ -19992,7 +20048,8 @@
       "Mejora exterior",
       "CIC Segundo Montes",
       "Pintadas fachada",
-      "Limpieza porche"
+      "Limpieza porche",
+      "Error"
     ],
     "urgent": false,
     "summary": "Mejora del exterior del CIC Segundo Montes limpiando porche y pintando fachadas"
@@ -20076,7 +20133,8 @@
       "Limpieza",
       "Calle Penitencia",
       "Suciedad",
-      "Palomas"
+      "Palomas",
+      "Error"
     ],
     "urgent": false,
     "summary": "Más limpieza en la zona de la calle Penitencia (Inadmitida) por suciedad y aves"
@@ -21065,7 +21123,8 @@
     "code": "7574",
     "category": "Seguridad y emergencias",
     "tags": [
-      "Seguridad y emergencias"
+      "Seguridad y emergencias",
+      "Error"
     ],
     "urgent": true,
     "summary": "Estimados señores, tengo una gran preocupación como madre y me gustaría quedestinaran una parte impo...",
@@ -21510,7 +21569,8 @@
       "Inmigrantes",
       "Bandas latinas",
       "Plaza San Juan Bautista",
-      "Paseo de Zorrilla"
+      "Paseo de Zorrilla",
+      "Error"
     ],
     "urgent": true,
     "summary": "Partida presupuestaria para reforzar seguridad en la ciudad por aumento de bandas latinas peligrosas"
