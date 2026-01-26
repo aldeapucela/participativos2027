@@ -135,9 +135,9 @@
     "code": "7566",
     "category": "Transporte y Tráfico",
     "tags": [
-      "Autobús",
-      "Río Hortega",
-      "Centro",
+      "Línea de autobús",
+      "Hospital Río Hortega",
+      "Conexión centro",
       "Parquesol"
     ],
     "urgent": false,
@@ -171,8 +171,8 @@
     "code": "7569",
     "category": "Limpieza y Residuos",
     "tags": [
-      "Contaminación",
-      "Salud",
+      "Contaminación electromagnética",
+      "Salud ambiental",
       "Mediciones",
       "CEM"
     ],
@@ -533,9 +533,9 @@
     "code": "7598",
     "category": "Educación y Colegios",
     "tags": [
-      "Colegio Marina Escobar",
-      "Cubierta",
-      "Deporte",
+      "CEIP Marina Escobar",
+      "Pistas cubiertas",
+      "Instalaciones deportivas",
       "Seguridad"
     ],
     "urgent": false,
@@ -702,10 +702,10 @@
     "code": "7618",
     "category": "Mobiliario e Iluminación",
     "tags": [
-      "Iluminación",
-      "Ctra. Rueda",
-      "Seguridad",
-      "LED"
+      "Sala de estudio",
+      "24 horas",
+      "Espacio educativo",
+      "Acceso controlado"
     ],
     "urgent": true,
     "summary": "Mejora de la iluminación en la Carretera de Rueda"
@@ -943,9 +943,9 @@
     "category": "Instalaciones Deportivas",
     "tags": [
       "Pádel",
-      "Cubierta",
-      "Huerta del Rey",
-      "Deporte"
+      "Pistas cubiertas",
+      "Polideportivo Huerta del Rey",
+      "Deportes"
     ],
     "urgent": false,
     "summary": "Instalación de cubiertas en las pistas de pádel de Huerta del Rey"
@@ -1158,10 +1158,10 @@
     "code": "7658",
     "category": "Instalaciones Deportivas",
     "tags": [
-      "Cubierta",
+      "Pista deportiva cubierta",
       "Calle Azalea",
       "Las Flores",
-      "Deporte"
+      "Instalaciones"
     ],
     "urgent": false,
     "summary": "Cubrimiento de la pista deportiva de la calle Azalea"
@@ -1386,10 +1386,10 @@
     "code": "7687",
     "category": "Instalaciones Deportivas",
     "tags": [
-      "Cancha",
-      "Azalea",
-      "Cubierta",
-      "Las Flores"
+      "Pista de pádel cubierta",
+      "Calle Azalea",
+      "Las Flores",
+      "Deportes"
     ],
     "urgent": false,
     "summary": "Techado de la pista deportiva en la calle Azalea"
@@ -1795,8 +1795,8 @@
     "code": "7749",
     "category": "Instalaciones Deportivas",
     "tags": [
-      "Cubierta",
-      "Deporte",
+      "Pistas deportivas cubiertas",
+      "Instalaciones",
       "Parque Almendros",
       "Mantenimiento"
     ],
@@ -2203,10 +2203,10 @@
     "code": "7799",
     "category": "Instalaciones Deportivas",
     "tags": [
-      "Cubierta",
-      "Pista deportiva",
-      "Parque Almendros",
-      "Suelo"
+      "Pistas deportivas cubiertas",
+      "Parque de los Almendros",
+      "Instalaciones",
+      "Acondicionamiento"
     ],
     "urgent": false,
     "summary": "Reparación de suelo y cubrimiento de pistas en Parque Almendros"
@@ -2215,10 +2215,10 @@
     "code": "7800",
     "category": "Parques y Jardines",
     "tags": [
-      "Parque Infantil",
+      "Parque infantil cubierto",
       "Plaza Vadillos",
-      "Cubierta",
-      "Sombra"
+      "Protección solar",
+      "Sombras"
     ],
     "urgent": false,
     "summary": "Acondicionamiento y techado del parque infantil de Plaza Vadillos"
@@ -2299,10 +2299,10 @@
     "code": "7810",
     "category": "Mobiliario e Iluminación",
     "tags": [
-      "Fuentes",
+      "Fuentes públicas",
       "Parque canino",
-      "Sed",
-      "Animales"
+      "Abrevaderos",
+      "Parquesol"
     ],
     "urgent": true,
     "summary": "Instalación de fuentes de agua en el parque canino de Parquesol"
@@ -2467,7 +2467,7 @@
     "code": "7828",
     "category": "Mobiliario e Iluminación",
     "tags": [
-      "Iluminación",
+      "Alumbrado público",
       "LED",
       "Luz blanca",
       "Antonio Machado"
@@ -3909,9 +3909,9 @@
     "code": "8024",
     "category": "Social y Equipamientos",
     "tags": [
-      "Asoveco",
+      "Asociación de vecinos",
       "Local social",
-      "Actividades",
+      "Asoveco",
       "Covaresa"
     ],
     "urgent": false,
@@ -4440,9 +4440,9 @@
     "tags": [
       "Ciclistas",
       "VMP",
-      "Canaletas",
+      "Rampas para bicicletas",
       "Escaleras",
-      "Accesibilidad"
+      "Accesibilidad universal"
     ],
     "urgent": false,
     "summary": "Instalación de canaletas para bicis y VMP en escaleras públicas y pasos inferiores"
@@ -4681,8 +4681,8 @@
     "category": "Infancia y Juegos",
     "tags": [
       "Parque infantil",
+      "Áreas de juego",
       "Sombras",
-      "Luz",
       "Parquesol"
     ],
     "urgent": true,
@@ -5149,10 +5149,10 @@
     "code": "8174",
     "category": "Mobiliario e Iluminación",
     "tags": [
-      "Iluminación",
-      "Seguridad",
-      "LED",
-      "Centro"
+      "Porterías",
+      "Fútbol sala",
+      "Pistas deportivas",
+      "Parque Alameda"
     ],
     "urgent": false,
     "summary": "Mejora de iluminación LED en calles secundarias del centro"
@@ -7264,10 +7264,10 @@
     "code": "8425",
     "category": "👶 Infancia y Educación",
     "tags": [
-      "Bebés",
+      "Actividades para bebés",
       "Centro Cívico",
       "Vicente Escudero",
-      "Actividades"
+      "0-3 años"
     ],
     "urgent": false,
     "summary": "Actividades para bebés (0-3 años) en C.C. Bailarín Vicente Escudero"
@@ -7282,7 +7282,7 @@
       "Actividades"
     ],
     "urgent": false,
-    "summary": "Ampliación de oferta de actividades lúdico-culturales para bebés en bibliotecas"
+    "summary": "Actividades para bebés (0-3 años) en Biblioteca San Nicolás"
   },
   {
     "code": "8428_bib",
@@ -7447,8 +7447,8 @@
     "tags": [
       "Espacio peatonal",
       "Humanización",
-      "Luz",
-      "Doctor Barraquer"
+      "Doctor Barraquer",
+      "Mobiliario urbano"
     ],
     "urgent": false,
     "summary": "Mejora, humanización e iluminación de calle peatonal Dr. Barraquer"
@@ -8035,10 +8035,10 @@
     "code": "8516",
     "category": "👶 Infancia y Educación",
     "tags": [
-      "Bebés",
-      "Actividades",
+      "Actividades para bebés",
+      "0-3 años",
       "Infancia",
-      "0-3 años"
+      "Ocio infantil"
     ],
     "urgent": false,
     "summary": "Programa de actividades para bebés de 0 a 3 años"
@@ -9177,109 +9177,109 @@
     "code": "7601",
     "category": "Instalaciones Deportivas",
     "tags": [
-      "Pista multideportiva",
-      "Covaresa",
-      "Cubierta",
-      "Luz"
+      "Zonas verdes",
+      "VA-30",
+      "Espacios naturales",
+      "Limpieza urbana"
     ],
     "urgent": false,
-    "summary": "Pista multideportiva cubierta con luz en Covaresa"
+    "summary": "Adecuación de laterales de VA-30 como zona verde"
   },
   {
     "code": "7602",
     "category": "Instalaciones Deportivas",
     "tags": [
-      "Pista multideportiva",
-      "Covaresa",
-      "Cubierta",
-      "Luz"
+      "Gimnasio callejero",
+      "Máquinas de ejercicio",
+      "Zonas deportivas",
+      "Salud pública"
     ],
     "urgent": false,
-    "summary": "Pista multideportiva cubierta con luz en Covaresa"
+    "summary": "Creación y modernización de zonas públicas de actividad física"
   },
   {
     "code": "7603",
-    "category": "Instalaciones Deportivas",
+    "category": "Urbanismo",
     "tags": [
-      "Pista multideportiva",
-      "Covaresa",
-      "Cubierta",
-      "Luz"
+      "Puente vehicular",
+      "Canal de Castilla",
+      "Accesos",
+      "Fuensaldaña"
     ],
     "urgent": false,
-    "summary": "Pista multideportiva cubierta con luz en Covaresa"
+    "summary": "Mejora Accesos de Puente Jardín"
   },
   {
     "code": "7604",
-    "category": "Instalaciones Deportivas",
+    "category": "Educación y Colegios",
     "tags": [
-      "Pista multideportiva",
-      "Covaresa",
-      "Cubierta",
-      "Luz"
+      "Columpios",
+      "CEIP Marina Escobar",
+      "Equipamiento escolar",
+      "Infancia"
     ],
     "urgent": false,
-    "summary": "Pista multideportiva cubierta con luz en Covaresa"
+    "summary": "COLUMPIOS CEIP MARINA ESCOBAR"
   },
   {
     "code": "7605",
-    "category": "Instalaciones Deportivas",
+    "category": "Urbanismo",
     "tags": [
-      "Pista multideportiva",
-      "Covaresa",
-      "Cubierta",
-      "Luz"
+      "Piscina municipal",
+      "Explanada",
+      "Pavimentación",
+      "Acondicionamiento"
     ],
     "urgent": false,
-    "summary": "Pista multideportiva cubierta con luz en Covaresa"
+    "summary": "Explanada de la piscina"
   },
   {
     "code": "7606",
-    "category": "Instalaciones Deportivas",
+    "category": "Urbanismo",
     "tags": [
-      "Pista multideportiva",
-      "Covaresa",
-      "Cubierta",
-      "Luz"
+      "Paso de peatones",
+      "Plaza Cosmos",
+      "Calle San Sebastián",
+      "Seguridad vial"
     ],
     "urgent": false,
-    "summary": "Pista multideportiva cubierta con luz en Covaresa"
+    "summary": "PASO DE PEATONES PLAZA COSMOS ESQUINA CALLE SAN SEBASTIAN 4"
   },
   {
     "code": "7607",
-    "category": "Instalaciones Deportivas",
+    "category": "Medio Ambiente",
     "tags": [
-      "Pista multideportiva",
-      "Covaresa",
-      "Cubierta",
-      "Luz"
+      "Reducción de ruido",
+      "Maquinaria de jardinería",
+      "Contaminación acústica",
+      "Equipamiento eléctrico"
     ],
     "urgent": false,
-    "summary": "Pista multideportiva cubierta con luz en Covaresa"
+    "summary": "Reducción de niveles de ruido por uso de maquinaria de jardinería"
   },
   {
     "code": "7608",
-    "category": "Instalaciones Deportivas",
+    "category": "Transporte y Tráfico",
     "tags": [
-      "Pista multideportiva",
-      "Covaresa",
-      "Cubierta",
-      "Luz"
+      "Badenes",
+      "Villa Prado",
+      "Señalización",
+      "Espejos de tráfico"
     ],
     "urgent": false,
-    "summary": "Pista multideportiva cubierta con luz en Covaresa"
+    "summary": "badenes villa prado y señal espejo"
   },
   {
     "code": "7609",
-    "category": "Instalaciones Deportivas",
+    "category": "Movilidad Activa",
     "tags": [
-      "Pista multideportiva",
-      "Covaresa",
-      "Cubierta",
-      "Luz"
+      "Parada BIKI",
+      "El Pinar",
+      "Movilidad sostenible",
+      "Bicicleta pública"
     ],
     "urgent": false,
-    "summary": "Pista multideportiva cubierta con luz en Covaresa"
+    "summary": "Nueva parada BIKI en El Pinar: movilidad sostenible para todos los barrios"
   },
   {
     "code": "7610",
@@ -9367,21 +9367,29 @@
   },
   {
     "code": "7617",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Parque",
+      "Loma",
+      "Ribazo",
+      "Otero",
+      "Canino"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Asfaltado de las calles Loma ,Ribazo y Otero y Parque canino"
   },
   {
     "code": "7618",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Estudio",
+      "Horas",
+      "Sala",
+      "Similar",
+      "Puedan"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Sala de Estudio 24h"
   },
   {
     "code": "7619",
@@ -9409,12 +9417,16 @@
   },
   {
     "code": "7621",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Acera",
+      "Raíces",
+      "Árboles",
+      "Arreglo",
+      "Treviño"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Arreglo acera calle Treviño, del lado de la tapia de la via"
   },
   {
     "code": "7622",
@@ -9427,12 +9439,16 @@
   },
   {
     "code": "7623",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Velocidad",
+      "Aceleran",
+      "Pasos",
+      "Peatones",
+      "Semaforo"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Regulación de velocidad"
   },
   {
     "code": "7624",
@@ -9457,21 +9473,29 @@
   },
   {
     "code": "7626",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Acera",
+      "Colegio",
+      "Ampliar",
+      "Piílarica",
+      "Agrupada"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Ampliar acera calle Piílarica (agrupada con 7625)"
   },
   {
     "code": "7627",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Carril",
+      "Bici",
+      "Cesped",
+      "Gloria",
+      "Fuertes"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "CARRIL BICI CALLE GLORIA FUERTES"
   },
   {
     "code": "7628",
@@ -9564,9 +9588,9 @@
     "code": "7636",
     "category": "Parques y Naturaleza",
     "tags": [
-      "Plantación árboles",
+      "Plantación de árboles",
       "Huerta del Rey",
-      "Río",
+      "Río Pisuerga",
       "Avenida Salamanca"
     ],
     "urgent": false,
@@ -9622,21 +9646,29 @@
   },
   {
     "code": "7641",
-    "category": "Inadmitidas",
+    "category": "Seguridad y Emergencias",
     "tags": [
-      "Inadmitida"
+      "Alumbrado",
+      "Urbana",
+      "Acondicionamiento",
+      "Seguridad",
+      "Camino"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Acondicionamiento y alumbrado de vía urbana"
   },
   {
     "code": "7642",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Barro",
+      "Árboles",
+      "Hormigas",
+      "Están",
+      "Portales"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Accesibilidad a los domicilios sin barro, sanear árboles, plagas de hormigas"
   },
   {
     "code": "7643",
@@ -9889,12 +9921,16 @@
   },
   {
     "code": "7664",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Terreno",
+      "Aprovechamiento",
+      "Propongo",
+      "Parque",
+      "Estacionamientos"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Aprovechamiento terreno urbano entre calles Abejaruco, Curruca y Jilguero."
   },
   {
     "code": "7665",
@@ -10102,30 +10138,42 @@
   },
   {
     "code": "7683",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Establecer",
+      "Conexión",
+      "Carreteras",
+      "Arca",
+      "Real"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "ESTABLECER CONEXIÓN DE CARRETERAS ENTRE ARCA REAL Y CALLE CAMINO DE LA TRAVIESA"
   },
   {
     "code": "7684",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Reponer",
+      "Reposicion",
+      "Mobiliario",
+      "Barras",
+      "Plaza"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Reposicion de mobiliario"
   },
   {
     "code": "7685",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Material",
+      "Deportivo",
+      "Necesitamos",
+      "Nuevo",
+      "Centro"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Material deportivo"
   },
   {
     "code": "7686",
@@ -10532,12 +10580,16 @@
   },
   {
     "code": "7721",
-    "category": "Inadmitidas",
+    "category": "Movilidad Ciclista",
     "tags": [
-      "Inadmitida"
+      "Pues",
+      "Pasarela",
+      "Además",
+      "Mejora",
+      "Acceso"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mejora acceso por puentes"
   },
   {
     "code": "7722",
@@ -10658,7 +10710,7 @@
     "code": "7732",
     "category": "Social y Equipamientos",
     "tags": [
-      "Centro de vida Activa",
+      "Centro de Vida Activa",
       "Ventanas",
       "Iluminación",
       "Bar"
@@ -10937,7 +10989,7 @@
     "code": "7756",
     "category": "Limpieza y Residuos",
     "tags": [
-      "ADN",
+      "ADN canino",
       "Perros",
       "Excrementos",
       "Sanciones"
@@ -10995,12 +11047,16 @@
   },
   {
     "code": "7761",
-    "category": "Inadmitidas",
+    "category": "Medio Ambiente",
     "tags": [
-      "Inadmitida"
+      "Semáforos",
+      "Pulsador",
+      "Peatones",
+      "Tráfico",
+      "Paseo"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Semáforos con pulsador"
   },
   {
     "code": "7762",
@@ -11229,48 +11285,68 @@
   },
   {
     "code": "7781",
-    "category": "Inadmitidas",
+    "category": "Accesibilidad",
     "tags": [
-      "Inadmitida"
+      "Plataforma",
+      "Subir",
+      "Bajar",
+      "Rampa",
+      "Silla"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Plataforma para poder subir y bajar la rampa en silla de ruedas en tunel (7767)"
   },
   {
     "code": "7782",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Arreglo",
+      "Atenas",
+      "Santa",
+      "Principal",
+      "Urbanización"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Arreglo calle ATENAS"
   },
   {
     "code": "7783",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Terreno",
+      "Doctor",
+      "Moreno",
+      "Plaza",
+      "Lado"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "URBANIZAR EL TERRENO ENTRE DOCTOR MORENO Y LA PLAZA AL LADO DE LA C. MAESTRANZA"
   },
   {
     "code": "7784",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Julian",
+      "Marías",
+      "Instituto",
+      "Altura",
+      "Colegio"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "IES Julian Marías: Una red fuera del perimetro, elevando la altura del vallado"
   },
   {
     "code": "7785",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Césped",
+      "Juan",
+      "Parque",
+      "Debido",
+      "Estado"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mejoras en la Zona de la Plaza San Juan"
   },
   {
     "code": "7786",
@@ -11605,12 +11681,16 @@
   },
   {
     "code": "7814",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Facilitar",
+      "Aparcamiento",
+      "Arboles",
+      "Retirar",
+      "Somosierra"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Facilitar aparcamiento"
   },
   {
     "code": "7815",
@@ -11686,21 +11766,28 @@
   },
   {
     "code": "7821",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Fuente El Sol",
+      "Reforma urbana",
+      "Mejora de calle",
+      "Accesibilidad"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Subida a la Fuente El Sol: una calle que necesita una reforma urgente"
   },
   {
     "code": "7822",
-    "category": "Inadmitidas",
+    "category": "Movilidad Ciclista",
     "tags": [
-      "Inadmitida"
+      "Gran",
+      "Instalaciones",
+      "Deportivas",
+      "Valladolid",
+      "Cantidad"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "MEJORA ACCESIBILIDAD INSTALACIONES DEPORTIVAS VA-140"
   },
   {
     "code": "7823",
@@ -11713,48 +11800,68 @@
   },
   {
     "code": "7824",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Aceras",
+      "Aspecto",
+      "Limpieza",
+      "Eliminacion",
+      "Hierbajos"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "LIMPIEZA DE ACERAS  Y ELIMINACION DE LOS \"HIERBAJOS\""
   },
   {
     "code": "7825",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Carril",
+      "Bici",
+      "Lado",
+      "Continuación",
+      "Podría"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Continuación carril bici"
   },
   {
     "code": "7826",
-    "category": "Inadmitidas",
+    "category": "Seguridad y Emergencias",
     "tags": [
-      "Inadmitida"
+      "Barandilla",
+      "Panaderos",
+      "Instalación",
+      "Túnel",
+      "Accesibilidad"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "BARANDILLA - NUEVO TUNEL DE PANADEROS"
   },
   {
     "code": "7827",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Pasos",
+      "Cebra",
+      "Farolas",
+      "Movimiento",
+      "Tienen"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Farolas con sensor de movimiento en los pasos de cebra"
   },
   {
     "code": "7828",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Blanca",
+      "Mejora",
+      "Alumbrado",
+      "Antonio",
+      "Machado"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mejora del alumbrado público en la calle Antonio Machado"
   },
   {
     "code": "7829",
@@ -11896,39 +12003,55 @@
   },
   {
     "code": "7841",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Recuperar",
+      "Sentido",
+      "Circulación",
+      "Vehículos",
+      "Alcoholera"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Recuperar doble sentido de circulación de vehículos en Cjón de la Alcoholera"
   },
   {
     "code": "7842",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Baldosas",
+      "Arreglar",
+      "Aceras",
+      "Santiago",
+      "Alba"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Arreglar las aceras de la Calle Santiago Alba y del Paseo Lorenzo Arrazola"
   },
   {
     "code": "7843",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Mesón",
+      "Asfaltado",
+      "Alfa",
+      "Omega",
+      "Calzada"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Asfaltado calle Alfa, calle Omega y calle Mesón"
   },
   {
     "code": "7844",
-    "category": "Inadmitidas",
+    "category": "Iluminación",
     "tags": [
-      "Inadmitida"
+      "Iluminación",
+      "Pumptrack",
+      "Circuito",
+      "Puede",
+      "Usar"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Pumptrack Covaresa: Iluminación para circuito patinaje"
   },
   {
     "code": "7845",
@@ -11941,57 +12064,81 @@
   },
   {
     "code": "7846",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Afluente",
+      "Hace",
+      "Mantenimiento",
+      "Adrián",
+      "Estado"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mantenimiento Calle Afluente y aledaños (San Adrián)"
   },
   {
     "code": "7847",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Paso",
+      "Cebra",
+      "Cole",
+      "Transición",
+      "Trata"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Paso de cebra para el cole!: Quiero participar en la mesa de zona de mi propuesta"
   },
   {
     "code": "7848",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Puerta",
+      "Entrada",
+      "Cole",
+      "Delantera",
+      "Patio"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Puerta de entrada al cole"
   },
   {
     "code": "7849",
-    "category": "Inadmitidas",
+    "category": "Movilidad Ciclista",
     "tags": [
-      "Inadmitida"
+      "Estación",
+      "Biki",
+      "Expansión",
+      "Puente",
+      "Jardín"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Estación Biki Expansión Puente Jardín: Quiero participar en la mesa de zona de mi propuesta"
   },
   {
     "code": "7850",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Paso",
+      "Peatones",
+      "Velocidad",
+      "Baden",
+      "José"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Baden y paso de peatones iluminado en C/José Garrote Tebar"
   },
   {
     "code": "7851",
-    "category": "Inadmitidas",
+    "category": "Movilidad Ciclista",
     "tags": [
-      "Inadmitida"
+      "Carriles",
+      "Rubia",
+      "Covaresa",
+      "Mejorar",
+      "Bici"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "MEJORAR LOS CARRILES BICI DE LA RUBIA A COVARESA"
   },
   {
     "code": "7852",
@@ -12112,66 +12259,94 @@
   },
   {
     "code": "7862",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Aceras",
+      "Pelícano",
+      "Baldosas",
+      "Levantaron",
+      "Árboles"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Aceras calle Pelícano"
   },
   {
     "code": "7863",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Sala",
+      "Musculación",
+      "Solicitar",
+      "Victoria",
+      "Residentes"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "sala de musculación: Muchas gracias\n\nQuiero participar en la mesa de zona de mi propuesta"
   },
   {
     "code": "7864",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Renovación",
+      "Tramo",
+      "Carril",
+      "Bici",
+      "Tirso"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Renovación del tramo de carril bici en Tirso de Molina: Es necesaria su renovación"
   },
   {
     "code": "7865",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Motos",
+      "Aparcamientos",
+      "Plazas",
+      "Aparcamiento",
+      "Ayudaría"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Aparcamientos motos"
   },
   {
     "code": "7866",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Iluminación",
+      "Parque",
+      "Canterac",
+      "Mayor",
+      "Subida"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mayor iluminación parque Canterac"
   },
   {
     "code": "7867",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Tajo",
+      "Guadiana",
+      "Arreglar",
+      "Plaza",
+      "Totalmente"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Arreglar la plaza entre calles Tajo y Guadiana"
   },
   {
     "code": "7868",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Propuesta",
+      "Iluminación",
+      "Kilometrín",
+      "Corredores",
+      "Respeto"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "ILUMINACIÓN PARQUE KILOMETRÍN CALLE OLIMPIADAS"
   },
   {
     "code": "7869",
@@ -12316,48 +12491,64 @@
   },
   {
     "code": "7881",
-    "category": "Inadmitidas",
+    "category": "Iluminación",
     "tags": [
-      "Inadmitida"
+      "Farolas",
+      "Sustitución",
+      "Peral",
+      "Villas",
+      "Covaresa"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Sustitución farolas"
   },
   {
     "code": "7882",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Carril",
+      "Bici",
+      "Zorrilla",
+      "Fragmentos",
+      "Diferenciado"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Carril bici diferenciado y uniforme entre Juan de Austria y Plaza Zorrilla"
   },
   {
     "code": "7883",
-    "category": "Inadmitidas",
+    "category": "Movilidad Ciclista",
     "tags": [
-      "Inadmitida"
+      "Pasos",
+      "Creación",
+      "Ciclistas",
+      "Zorrilla",
+      "Parque"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Creación de pasos ciclistas en Pso. Zorrilla (Parque Alameda)."
   },
   {
     "code": "7884",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Pista",
+      "Roja",
+      "Adecentar",
+      "Boneka",
+      "Ambalabu"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Adecentar Pista Roja Boneka Ambalabu"
   },
   {
     "code": "7885",
-    "category": "Inadmitidas",
+    "category": "Accesibilidad",
     "tags": [
-      "Inadmitida"
+      "Accesibilidad"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Accesibilidad"
   },
   {
     "code": "7886",
@@ -12370,12 +12561,16 @@
   },
   {
     "code": "7887",
-    "category": "Inadmitidas",
+    "category": "Cultura",
     "tags": [
-      "Inadmitida"
+      "Puente",
+      "Podría",
+      "Iluminación",
+      "Turismo",
+      "Mejora"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mejora del Puente de la Hispanidad"
   },
   {
     "code": "7888",
@@ -12388,12 +12583,16 @@
   },
   {
     "code": "7889",
-    "category": "Inadmitidas",
+    "category": "Movilidad Ciclista",
     "tags": [
-      "Inadmitida"
+      "Carril",
+      "Iluminación",
+      "Bici",
+      "Carretera",
+      "Rueda"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Iluminación del carril bici de carretera de Rueda que va al Pinar de Antequera"
   },
   {
     "code": "7890",
@@ -12406,21 +12605,29 @@
   },
   {
     "code": "7891",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Parque",
+      "Propuesta",
+      "Francisco",
+      "Asís",
+      "Quiero"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Arreglo parque San Francisco de Asís"
   },
   {
     "code": "7892",
-    "category": "Inadmitidas",
+    "category": "Seguridad y Emergencias",
     "tags": [
-      "Inadmitida"
+      "Entrada",
+      "Escolar",
+      "Centro",
+      "Garantizar",
+      "Alumnado"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Reparación entrada del Colegio  y del Centro de Recursos Autismo Valladolid"
   },
   {
     "code": "7893",
@@ -12460,21 +12667,29 @@
   },
   {
     "code": "7896",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Escaleras",
+      "Arreglar",
+      "Parque",
+      "Ladera",
+      "Debido"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Arreglar las escaleras de todo el parque de la Ladera Sur"
   },
   {
     "code": "7897",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Iluminación",
+      "Biblioteca",
+      "Mejorar",
+      "Exterior",
+      "Evitar"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Iluminación exterior de la biblioteca"
   },
   {
     "code": "7898",
@@ -12514,57 +12729,80 @@
   },
   {
     "code": "7901",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Mobiliario urbano",
+      "Calle Miraber",
+      "Parque",
+      "Personas mayores"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mejoras del poligono ya"
   },
   {
     "code": "7902",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Aparcamiento",
+      "Valladolid",
+      "Creo",
+      "Aparcan",
+      "Mejora"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mejora en el difícil aparcamiento de Valladolid"
   },
   {
     "code": "7903",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Gerona",
+      "Está",
+      "Arreglo",
+      "Portales",
+      "Tramo"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "ARREGLO CALLE GERONA portales 1 y 3"
   },
   {
     "code": "7904",
-    "category": "Inadmitidas",
+    "category": "Transportes y Movilidad",
     "tags": [
-      "Inadmitida"
+      "Vecinos",
+      "Hospital",
+      "Aparcamiento",
+      "Propone",
+      "Crear"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Aparcamiento vecinos zona hospital"
   },
   {
     "code": "7905",
-    "category": "Inadmitidas",
+    "category": "Servicios Sociales",
     "tags": [
-      "Inadmitida"
+      "Baños",
+      "Estadio",
+      "Agua",
+      "Reducción",
+      "Impacto"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "REMODELACION Y MODERNIZACION DE LOS BAÑOS DEL ESTADIO JOSE ZORRILLA (Agrup 7898)"
   },
   {
     "code": "7906",
-    "category": "Inadmitidas",
+    "category": "Servicios Sociales",
     "tags": [
-      "Inadmitida"
+      "Baños",
+      "Estadio",
+      "Agua",
+      "Reducción",
+      "Impacto"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "REMODELACION Y MODERNIZACION DE LOS BAÑOS DEL ESTADIO JOSÉ ZORRILLA (Agrup 7898)"
   },
   {
     "code": "7907",
@@ -12640,12 +12878,16 @@
   },
   {
     "code": "7913",
-    "category": "Inadmitidas",
+    "category": "Seguridad y Emergencias",
     "tags": [
-      "Inadmitida"
+      "Central",
+      "Campo",
+      "Grande",
+      "Sistema",
+      "Vigilancia"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Sistema de vigilancia en el Paso Central del Campo Grande para ampliar horario."
   },
   {
     "code": "7914",
@@ -12694,12 +12936,16 @@
   },
   {
     "code": "7918",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Plaza",
+      "Lola",
+      "Herrera",
+      "Acondicionar",
+      "Plantar"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mejora de la Plaza Lola Herrera"
   },
   {
     "code": "7919",
@@ -12727,21 +12973,29 @@
   },
   {
     "code": "7921",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Acera",
+      "Fútbol",
+      "Crear",
+      "Valladolid",
+      "Universidad"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Crear acera en c. cta. del tomilo apead valladolid.universidad y calle universo"
   },
   {
     "code": "7922",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Barrera",
+      "Especialmente",
+      "Plantación",
+      "Junto",
+      "Jalón"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Barrera natural acústica de arbolado en perimetro Pinar del Jalón"
   },
   {
     "code": "7923",
@@ -12754,21 +13008,29 @@
   },
   {
     "code": "7924",
-    "category": "Inadmitidas",
+    "category": "Movilidad Ciclista",
     "tags": [
-      "Inadmitida"
+      "Deportivas",
+      "Parques",
+      "Crear",
+      "Parque",
+      "Infantil"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Parques"
   },
   {
     "code": "7925",
-    "category": "Inadmitidas",
+    "category": "Servicios Sociales",
     "tags": [
-      "Inadmitida"
+      "Plaza",
+      "Carmen",
+      "Reforma",
+      "Integral",
+      "Nueva"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Reforma integral de la Plaza del Carmen."
   },
   {
     "code": "7926",
@@ -12880,12 +13142,16 @@
   },
   {
     "code": "7935",
-    "category": "Inadmitidas",
+    "category": "Transportes y Movilidad",
     "tags": [
-      "Inadmitida"
+      "Ciudadanía",
+      "Acciones",
+      "Sociedad",
+      "Ciudadano",
+      "Construyendo"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Construyendo Ciudadanía"
   },
   {
     "code": "7936",
@@ -12949,39 +13215,55 @@
   },
   {
     "code": "7941",
-    "category": "Inadmitidas",
+    "category": "Seguridad y Emergencias",
     "tags": [
-      "Inadmitida"
+      "Plaza",
+      "Iluminación",
+      "Toros",
+      "Debería",
+      "Entorno"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mayor y mejor iluminación en la Plaza de Toros vallisoletana"
   },
   {
     "code": "7942",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Hace",
+      "Peatonalización",
+      "Plutón",
+      "Pavimento",
+      "Hormigón"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Reurbanización y peatonalización de C/Plutón: que ponen en riesgo el tránsito peatonal"
   },
   {
     "code": "7943",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Carretera",
+      "Semáforo",
+      "Puente",
+      "Condesa",
+      "Eylo"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Cambio semáforo"
   },
   {
     "code": "7944",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Parque",
+      "Parkour",
+      "Elementos",
+      "Instalara",
+      "Permita"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "PARQUE DE PARKOUR EN COVARESA AL LADO DEL CDO: Quiero participar en la mesa de zona de mi propuesta"
   },
   {
     "code": "7945",
@@ -13175,48 +13457,68 @@
   },
   {
     "code": "7961",
-    "category": "Inadmitidas",
+    "category": "Movilidad Ciclista",
     "tags": [
-      "Inadmitida"
+      "Pasarela",
+      "Peatonal",
+      "Ciclista",
+      "Santa",
+      "Vega"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Pasarela peatonal y ciclista Santa Ana-La Vega"
   },
   {
     "code": "7962",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Exteriores",
+      "Pinar",
+      "Acondicionamiento",
+      "Rubia",
+      "Ceip"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Acondicionamiento y mejora de zonas exteriores IES Pinar de la Rubia/CEIP Alonso"
   },
   {
     "code": "7963",
-    "category": "Inadmitidas",
+    "category": "Movilidad Ciclista",
     "tags": [
-      "Inadmitida"
+      "Valladolid",
+      "Estaciones",
+      "Biki",
+      "Factoria",
+      "Bicis"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Estaciones Biki Valladolid en Horse y Renault"
   },
   {
     "code": "7964",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Abubilla",
+      "Avutarda",
+      "Carretera",
+      "Villabáñez",
+      "Salida"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Calles abubilla y Avutarda hacia Carretera Villabáñez"
   },
   {
     "code": "7965",
-    "category": "Inadmitidas",
+    "category": "Cultura",
     "tags": [
-      "Inadmitida"
+      "Edificios",
+      "Cultural",
+      "Polivalente",
+      "Caballería",
+      "Acondicionar"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Edificios de Caballería: espacio cultural polivalente"
   },
   {
     "code": "7966",
@@ -13241,12 +13543,15 @@
   },
   {
     "code": "7968",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Acceso peatonal",
+      "Nuevo Hospital",
+      "Parque Canterac",
+      "Seguridad"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "MEJORAS EN EL ACCESO PEATONAL A NUEVO HOSPITAL POR PARQUE CANTERAC: Las necesidades son:\n1"
   },
   {
     "code": "7969",
@@ -13393,66 +13698,94 @@
   },
   {
     "code": "7981",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Plantación",
+      "Arbolado",
+      "Carretera",
+      "Esperanza",
+      "Calidad"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "PLANTACIÓN DE ARBOLADO EN CARRETERA DE LA ESPERANZA"
   },
   {
     "code": "7982",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Pavimentos urbanos",
+      "Brea",
+      "Valladolid",
+      "Calidad vial",
+      "Renovación"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Renovación de Pavimentos Urbanos: Adiós a la Brea en los Barrios de Valladolid"
   },
   {
     "code": "7983",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Sombra",
+      "Iluminación",
+      "Alcantara",
+      "Carece",
+      "Petanca"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "zona de sombra e iluminación en la petanca de la C/ Alcantara"
   },
   {
     "code": "7984",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Columpios",
+      "Plaza",
+      "Ventura",
+      "Alonso",
+      "Suelo"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Columpios de la Plaza de ventura Alonso"
   },
   {
     "code": "7985",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Estado",
+      "Ellos",
+      "Arboles",
+      "Adecentamiento",
+      "Plaza"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Adecentamiento de la plaza de la C/ Alcantara ( Madre Amadora)"
   },
   {
     "code": "7986",
-    "category": "Inadmitidas",
+    "category": "Servicios Sociales",
     "tags": [
-      "Inadmitida"
+      "Suelo",
+      "Centro",
+      "Cívico",
+      "Pilarica",
+      "Sala"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "7986-Suelo en centro cívico Pilarica"
   },
   {
     "code": "7987",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Parques",
+      "Plaza",
+      "Danza",
+      "Vadillos",
+      "Quiero"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Parques plaza de la danza y vadillos: Quiero participar en la mesa de zona de mi propuesta"
   },
   {
     "code": "7988",
@@ -13528,12 +13861,16 @@
   },
   {
     "code": "7994",
-    "category": "Inadmitidas",
+    "category": "Servicios Sociales",
     "tags": [
-      "Inadmitida"
+      "Barandilla",
+      "Entrada",
+      "Izquierda",
+      "Centro",
+      "Cívico"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "BARANDILLA EN LA ZONA DE ENTRADA, A LA IZQUIERDA, EN CENTRO CÍVICO RONDILLA"
   },
   {
     "code": "7995",
@@ -13609,30 +13946,42 @@
   },
   {
     "code": "8001",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Mejora",
+      "Accesos",
+      "Ladera",
+      "Parquesol",
+      "Necesario"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "LIMPIEZA Y MEJORA DE ACCESOS LADERA SUR"
   },
   {
     "code": "8002",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Estanque",
+      "Pistas",
+      "Padel",
+      "Brezo",
+      "Frambuesa"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Ajardinar, estanque Y pistas de padel  zona calle brezo , frambuesa , obregom"
   },
   {
     "code": "8003",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Acera",
+      "Málaga",
+      "Ensanchar",
+      "Urbanizar",
+      "Gustaría"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Ensanchar acera y urbanizar calle Málaga"
   },
   {
     "code": "8004",
@@ -13848,57 +14197,80 @@
   },
   {
     "code": "8022",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Parque",
+      "Mesas",
+      "Bancos",
+      "Covaresa",
+      "Instalar"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Instalar mesas y bancos merenderos en el parque de Covaresa"
   },
   {
     "code": "8023",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Parque",
+      "Infantil",
+      "Pinar",
+      "Deportivas",
+      "Jalón"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mejora de instalaciones deportivas y parque infantil en Pinar de Jalón."
   },
   {
     "code": "8024",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Asociación",
+      "Vecinos",
+      "Covaresa",
+      "Agrupada",
+      "Invertir"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Local para la Asociación de Vecinos de Covaresa (agrupada con 7930)"
   },
   {
     "code": "8025",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Pasos",
+      "Velocidad",
+      "Peatones",
+      "Elevados",
+      "Reductores"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Pasos de peatones elevados y reductores de velocidad entorno EL PERAL"
   },
   {
     "code": "8026",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Paseo",
+      "Aceñas",
+      "Cavó",
+      "Cuidar",
+      "Piedra"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Arreglo paseo de las Aceñas, paseo Moreras"
   },
   {
     "code": "8027",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Remodelación",
+      "Plaza",
+      "Juan",
+      "Austria"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Remodelación de la Plaza Juan de Austria."
   },
   {
     "code": "8028",
@@ -13911,57 +14283,81 @@
   },
   {
     "code": "8029",
-    "category": "Inadmitidas",
+    "category": "Movilidad Ciclista",
     "tags": [
-      "Inadmitida"
+      "Parque",
+      "Naturalizado",
+      "Tipo",
+      "Merendero",
+      "Pump"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Creación de un gran parque naturalizado con merendero, zona infantil, pump truck"
   },
   {
     "code": "8030",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Cruce",
+      "Rotonda",
+      "Colombia",
+      "Cuba",
+      "Barlovento"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Rotonda en cruce entre Calle Colombia y Pl Cuba con Barlovento"
   },
   {
     "code": "8031",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Verdes",
+      "Sombra",
+      "Aparcamiento",
+      "Lado",
+      "Cepa"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Zonas verdes y sombra en aparcamiento al lado del CEPA Felipe II"
   },
   {
     "code": "8032",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Aparcamiento",
+      "Residentes",
+      "Plazas",
+      "Pajarillos",
+      "Aparcar"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Zona de aparcamiento solo para residentes"
   },
   {
     "code": "8033",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Residentes",
+      "Universitarios",
+      "Aparcamientos",
+      "Resulta",
+      "Cada"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Aparcamientos para Residentes y Universitarios"
   },
   {
     "code": "8034",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Cruce",
+      "Visibilidad",
+      "Seguridad",
+      "Vial",
+      "Esperanza"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "PROPUESTA DE MEJORA DE VISIBILIDAD Y SEGURIDAD VIAL EN CRTA ESPERANZA"
   },
   {
     "code": "8035",
@@ -14037,93 +14433,133 @@
   },
   {
     "code": "8041",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Paso",
+      "Cebra",
+      "Movilidad",
+      "Hospital",
+      "Ramon"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Paso de cebra: Quiero participar en la mesa de zona de mi propuesta"
   },
   {
     "code": "8042",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Pintar",
+      "Líneas",
+      "Pasos",
+      "Cebra",
+      "Inmediaciones"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Pintar líneas y pasos de cebra en inmediaciones de Polideportivo Pajarillos"
   },
   {
     "code": "8043",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Luis",
+      "Peatones",
+      "Garaje",
+      "Acibelas",
+      "Cruce"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Nuevo semáforo en calle San Luis"
   },
   {
     "code": "8044",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Creación",
+      "Podría",
+      "Exteriores",
+      "Cubiertos",
+      "Llueve"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Creación de espacios exteriores cubiertos"
   },
   {
     "code": "8045",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Velocidad",
+      "Victoria",
+      "Paseo",
+      "Fuente",
+      "Pasos"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "EVITEMOS ATROPELLOS, SALVEMOS VIDAS"
   },
   {
     "code": "8046",
-    "category": "Inadmitidas",
+    "category": "Servicios Sociales",
     "tags": [
-      "Inadmitida"
+      "Campo",
+      "Instalaciones",
+      "Mejora",
+      "Instalación",
+      "Paneles"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Instalación de paneles acústicos"
   },
   {
     "code": "8047",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Plaza",
+      "Vecinos",
+      "Vehículos",
+      "Disfrute",
+      "Verano"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Adecuación calles Marte y San Sebastián, así como Plaza Cosmos"
   },
   {
     "code": "8048",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Doble",
+      "Continua",
+      "Camino",
+      "Viejo",
+      "Simancas"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Instalacion bolardos en doble linea continua Camino Viejo Simancas 12-24"
   },
   {
     "code": "8049",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Bancos",
+      "Columpios",
+      "Plaza",
+      "Doctor",
+      "Quemada"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "8049-Nuevos bancos y columpios en la Plaza Doctor Quemada"
   },
   {
     "code": "8050",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Polideportivo",
+      "Colegio",
+      "Duero",
+      "Acceso",
+      "Ubicado"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "ACCESO AL POLIDEPORTIVO UBICADO DENTRO DEL RECINTO DEL COLEGIO NS.SEÑ. DEL DUERO"
   },
   {
     "code": "8051",
@@ -14248,48 +14684,66 @@
   },
   {
     "code": "8061",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Mesas de ping pong",
+      "Barrio España",
+      "Equipamiento deportivo",
+      "Ocio urbano"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mesas de Ping Pong en Barrio España"
   },
   {
     "code": "8062",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Plazas de aparcamiento",
+      "Señalización horizontal",
+      "Organización vial",
+      "Optimización"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Aumento de plazas de aparcamiento mediante pintado de señalización horizontal"
   },
   {
     "code": "8063",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Integral",
+      "Isidro",
+      "Arreglo",
+      "Debería",
+      "Llamarse"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Arreglo integral de la Calle San Isidro"
   },
   {
     "code": "8064",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Gruta",
+      "Campo",
+      "Grande",
+      "Dentro",
+      "Algunos"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Gruta Campo Grande"
   },
   {
     "code": "8065",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Puente",
+      "Colgante",
+      "Bici",
+      "Peatonalización",
+      "Estado"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Carril bici y peatonalización del Puente Colgante: Avda Salamanca-Pº Zorrilla"
   },
   {
     "code": "8066",
@@ -14302,39 +14756,55 @@
   },
   {
     "code": "8067",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Eliminacion",
+      "Reparacion",
+      "Fuente",
+      "Plaza",
+      "Barreras"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Eliminacion barreras arquitectonicas y reparacion o siutitucion fuente"
   },
   {
     "code": "8068",
-    "category": "Inadmitidas",
+    "category": "Servicios Sociales",
     "tags": [
-      "Inadmitida"
+      "Plaza",
+      "Prieto",
+      "Cambio",
+      "Contenedores",
+      "Actualmente"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Remodelación Plaza Damián Tascón Prieto Y cambio de contenedores en el barrio"
   },
   {
     "code": "8069",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Ascensores",
+      "Túnel",
+      "Melilla",
+      "Padre",
+      "Claret"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Ascensores en túnel Melilla-Padre Claret"
   },
   {
     "code": "8070",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Mejora",
+      "Mayores",
+      "Santa",
+      "Dinamización",
+      "Equipamiento"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "SANTA ANA- Dinamización y mejora zona de juegos, iluminación y zona biosaludable"
   },
   {
     "code": "8071",
@@ -14458,120 +14928,171 @@
   },
   {
     "code": "8081",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Mejoras",
+      "Polideportivo",
+      "Pisuerga",
+      "Agrupada",
+      "Fachada"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mejoras polideportivo Pisuerga (Agrupada con 8080)"
   },
   {
     "code": "8082",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Covaresa",
+      "Largo",
+      "Vegetación",
+      "Paseo",
+      "Lorenzo"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "RESTAURACIÓN VEGETACIÓN JUNTO A LA VIA A LO LARGO DEL PASEO LORENZO ARRAZOLA"
   },
   {
     "code": "8083",
-    "category": "Inadmitidas",
+    "category": "Servicios Sociales",
     "tags": [
-      "Inadmitida"
+      "Baños",
+      "Estadio",
+      "Agua",
+      "Reducción",
+      "Impacto"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "REMODELACIÓN Y MODERNIZACIÓN BAÑOS ESTADIO JOSE ZORRILLA  (agrupada con 7898)"
   },
   {
     "code": "8084",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Adoquinado",
+      "Paseo",
+      "Almendros",
+      "Mejora",
+      "Afectadas"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mejora adoquinado Paseo de los Almendros"
   },
   {
     "code": "8085",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Reforma urbana",
+      "Calle Madre de Dios",
+      "Aceras",
+      "Desniveles"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Reforma Madre de Dios (agrupada con 7771)"
   },
   {
     "code": "8086",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Ciclobarrio",
+      "Movilidad",
+      "Plaza",
+      "Implantación",
+      "Actuaciones"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "CREAR UN CICLOBARRIO EN LA FAROLA - PLAZA DE TOROS"
   },
   {
     "code": "8087",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Serena",
+      "Semaforo",
+      "Jardines",
+      "Alhambra",
+      "Urge"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "semaforo calle serena: Urge un semaforo que regule el cruce Avda"
   },
   {
     "code": "8088",
-    "category": "Inadmitidas",
+    "category": "Movilidad Ciclista",
     "tags": [
-      "Inadmitida"
+      "Avenida",
+      "Carril",
+      "Bici",
+      "Paseo",
+      "Zorrilla"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Carril bici en Paseo de Zorrilla y Avenida Salamanca por Avda. Medina del Campo"
   },
   {
     "code": "8089",
-    "category": "Inadmitidas",
+    "category": "Movilidad Ciclista",
     "tags": [
-      "Inadmitida"
+      "Senda",
+      "Puente",
+      "Hierro",
+      "Paseo",
+      "Adoquinado"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "MEJORA VISIBILIDAD Y PAVIMENTACIÓN SENDA RÍO ZONA PARROQUIA SAGRADA FAMILIA"
   },
   {
     "code": "8090",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Parque",
+      "Enfrente",
+      "Ceip",
+      "Peral",
+      "Niños"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Parque y espacio deportivo enfrente del CEIP El Peral"
   },
   {
     "code": "8091",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Transformar",
+      "Retal",
+      "Activo",
+      "Relación",
+      "Social"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Transformar un retal en un activo de relación social y desarrollo sostenible"
   },
   {
     "code": "8092",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Bici",
+      "Vinos",
+      "Rueda",
+      "Carril",
+      "Carriles"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Carriles bici en Calle de los Vinos de Rueda y Calle de los Vinos de Cigales"
   },
   {
     "code": "8093",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Delicias",
+      "Aparcabicis",
+      "Propuesta",
+      "Necesitamos",
+      "Invertida"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Aparcabicis para los barrios, y para nuestra delicia (Delicias)"
   },
   {
     "code": "8094",
@@ -14635,132 +15156,184 @@
   },
   {
     "code": "8099",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Mieses",
+      "Parada",
+      "Autobús",
+      "Línea",
+      "Esquina"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Solicitud de marquesina línea C1 en C/.Mieses esquina Monasterio Sta Mª Retuerta"
   },
   {
     "code": "8100",
     "category": "Urbanismo",
     "tags": [
-      "Puentes",
-      "Protección",
+      "Puentes peatonales",
+      "Protección climática",
       "Lluvia",
-      "Sol"
+      "Sol",
+      "Acceso centro"
     ],
     "urgent": false,
     "summary": "Puentes de acceso al centro ciudad sin protección de lluvia o sol"
   },
   {
     "code": "8101",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Avenida",
+      "Salamanca",
+      "Peatones",
+      "Acera",
+      "Fuertes"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "RECUPERACIÓN PARA EL PEATÓN DE LA AVENIDA DE SALAMANCA ENTRE G.FUERTES Y P. J. A"
   },
   {
     "code": "8102",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Peatones",
+      "Seguridad",
+      "Velocidad",
+      "Paso",
+      "Peatonal"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Seguridad peatonal: En la calle Imperial 5 existe un riesgo real y constante de atropello"
   },
   {
     "code": "8103",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Avenida",
+      "Hortega",
+      "Nuevo",
+      "Miguel",
+      "Cada"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "RENOVACIÓN DE LA CALLE PIO DEL RÍO HORTEGA PARA SU TRANSFORMACIÓN EN AVENIDA"
   },
   {
     "code": "8104",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Contenedores",
+      "Esquila",
+      "Aspecto",
+      "Además",
+      "Centro"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Contenedores en calle Esquila"
   },
   {
     "code": "8105",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Baño",
+      "José",
+      "Zorrilla",
+      "Agrupada",
+      "Remodelación"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Baño José Zorrilla (agrupada con 7898)"
   },
   {
     "code": "8106",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Contenedores",
+      "Urbanos",
+      "Huerta",
+      "Impacto",
+      "Soterramiento"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "SOTERRAR CONTENEDORES DE RESIDUO URBANOS EN HUERTA DEL REY"
   },
   {
     "code": "8107",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Plaza",
+      "Arreglo",
+      "Propuesta",
+      "Juegos",
+      "Cebada"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "COMPLETAR Y MEJORAR DOTACIONES EN PLAZA DE LA CEBADA: , y rehabilitacion de la fuente"
   },
   {
     "code": "8108",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Asfalto",
+      "Paso",
+      "Ruido",
+      "Mejora",
+      "Tramo"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "mejora asfalto tramo VA-30 paso por Covaresa"
   },
   {
     "code": "8109",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Rotonda",
+      "Semáforos",
+      "Raqueta",
+      "Cruce",
+      "Mieses"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "SUPRESION RAQUETA CRUCE MIESES CON GLORIA FUERTES SUSTITUYENDOSE ROTONDA SIN SEM"
   },
   {
     "code": "8110",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Acceso",
+      "Avenida",
+      "Gijón",
+      "Cementerio",
+      "Contiendas"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Parada bikis avenida Gijón"
   },
   {
     "code": "8111",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Pista",
+      "Deportiva",
+      "Parque",
+      "Barbecho",
+      "Mieses"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Actualizar pista deportiva en Parque  entre Barbecho, Mieses y Padre José Acosta"
   },
   {
     "code": "8112",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Campo de fútbol",
+      "Complejo Don Bosco",
+      "Césped artificial",
+      "Renovación"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Renovación del césped del campo de fútbol principal complejo Don Bosco"
   },
   {
     "code": "8113",
@@ -14857,21 +15430,29 @@
   },
   {
     "code": "8121",
-    "category": "Inadmitidas",
+    "category": "Servicios Sociales",
     "tags": [
-      "Inadmitida"
+      "Sombra",
+      "Instalación",
+      "Plaza",
+      "Lonja",
+      "Forma"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Instalación de zonas de sombra en la Plaza de la Lonja"
   },
   {
     "code": "8122",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Plaza",
+      "Sombra",
+      "Plazas",
+      "Verano",
+      "Movilidad"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Sombra en calles y plazas en verano para movilidad de población vulnerable"
   },
   {
     "code": "8123",
@@ -14884,57 +15465,81 @@
   },
   {
     "code": "8124",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Parque",
+      "Columpios",
+      "Parquesol",
+      "Arreglar",
+      "Arena"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Parque alto de parquesol"
   },
   {
     "code": "8125",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Velocidad",
+      "Asfaltado",
+      "Avenida",
+      "Contiendas",
+      "Esto"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Asfaltado y reducción velocidad en Avenida Contiendas"
   },
   {
     "code": "8126",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Cementerio",
+      "Carmen",
+      "Proyecto",
+      "Integración",
+      "Avenida"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Proyecto de integración entre la V20/ Avenida Santander-VA113 y Cementerio"
   },
   {
     "code": "8127",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Plaza",
+      "Rincón",
+      "Iluminación",
+      "Porticada",
+      "Noche"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Iluminación Plaza Porticada: En la Plaza Porticadafalta iluminación"
   },
   {
     "code": "8128",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Tapones",
+      "Contenedor",
+      "Conenedor",
+      "Plaza",
+      "Everest"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "CONTENEDOR TAPONES"
   },
   {
     "code": "8129",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Sombreado",
+      "Aparcamiento",
+      "Juan",
+      "Herrera",
+      "Sombra"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Sombreado del aparcamiento de la calle Juan de Herrera"
   },
   {
     "code": "8130",
@@ -15058,120 +15663,170 @@
   },
   {
     "code": "8140",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Prado",
+      "Paseo",
+      "Villa",
+      "Huerta",
+      "Acera"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "SENDA PEATONAL ENTRE VILLA DE PRADO Y HUERTA DEL REY"
   },
   {
     "code": "8141",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Parque",
+      "Norias",
+      "Mejora",
+      "Recuperación"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Parque de las Norias.: Mejora y recuperación de la zona del Parque de las Norias"
   },
   {
     "code": "8142",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Comunicación",
+      "Mejora",
+      "Ampliación",
+      "Parques"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Ciudad de la Comunicación.: Mejora y ampliación de los parques de la Ciudad de la Comunicación"
   },
   {
     "code": "8143",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Sisón",
+      "Propuesta",
+      "Vecinos",
+      "Árboles",
+      "Puede"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Transformación calle Sisón"
   },
   {
     "code": "8144",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Cerro",
+      "Contiendas",
+      "Baja",
+      "Monasterio",
+      "Santa"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Cerro de las contiendas: parte baja en linea con C/ Monasterio de Santa Espina"
   },
   {
     "code": "8145",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Aparcamiento",
+      "Disuasorio",
+      "Parcela",
+      "Creación",
+      "Municipal"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "CREACIÓN DE APARCAMIENTO DISUASORIO EN PARCELA MUNICIPAL"
   },
   {
     "code": "8146",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Sendero",
+      "Ensolado",
+      "Parque",
+      "Canterac",
+      "Viandantes"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Ensolado sendero Parque Canterac"
   },
   {
     "code": "8147",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Arca",
+      "Real",
+      "Estan",
+      "Acondicionamiento",
+      "Tramo"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Acondicionamiento tramo de Calle Arca Real."
   },
   {
     "code": "8148",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Asfaltado",
+      "Aceras",
+      "Realizar",
+      "Avenida",
+      "Santander"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Asfaltado de calles y realizar aceras"
   },
   {
     "code": "8149",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Verde",
+      "Curtidores",
+      "Propuesta",
+      "Acceso",
+      "Totalmente"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "JARDINES DE CURTIDORES: El espacio será de uso público y acceso libre"
   },
   {
     "code": "8150",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Voleibol",
+      "Practicar",
+      "Canchas",
+      "Otra",
+      "Semicubiertas"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "VOLEIBOL–canchas semicubiertas para practicar y jugar voleibol-redes permanentes"
   },
   {
     "code": "8151",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Aparatos",
+      "Instalación",
+      "Gimnasia",
+      "Propuesta",
+      "Aire"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Instalación de aparatos de gimnasia al aire libre para todo tipo de personas."
   },
   {
     "code": "8152",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Sementera",
+      "Aceras",
+      "Mieses",
+      "Pavimentado",
+      "Propone"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Pavimentado de aceras en calle Mieses y Sementera"
   },
   {
     "code": "8153",
@@ -15271,12 +15926,16 @@
   },
   {
     "code": "8161",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Plaza",
+      "Plazas",
+      "Diseñadas",
+      "Lonja",
+      "Enfrente"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "plazas mal diseñadas"
   },
   {
     "code": "8162",
@@ -15289,57 +15948,81 @@
   },
   {
     "code": "8163",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Polideportivo",
+      "Pisuerga",
+      "Agrupada",
+      "Modernización",
+      "Infraestructura"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Polideportivo Pisuerga (Agrupada con 8080)"
   },
   {
     "code": "8164",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Plaza",
+      "Circular",
+      "Juegos",
+      "Debido",
+      "Mejora"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mejora Plaza Circular: Renovación de juegos infantiles en la Plaza Circular"
   },
   {
     "code": "8165",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Tráfico",
+      "Sentido",
+      "Propuesta",
+      "Viario",
+      "Circulación"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Limitación de la circulación de Carretera de la Esperanza"
   },
   {
     "code": "8166",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Está",
+      "Sala",
+      "Musculación",
+      "Sería",
+      "Cada"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Reforma integral polideportivo canterac"
   },
   {
     "code": "8167",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Marquesina",
+      "Parada",
+      "Auvasa",
+      "Quiero",
+      "Línea"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "MARQUESINA EN LA PARADA DE AUVASA 976. LÍNEA 3"
   },
   {
     "code": "8168",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Niños",
+      "Juego",
+      "Parque",
+      "Mayores",
+      "Pisuerga"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Más juego, menos pantallas: parque para niños mayores en Pisuerga 1"
   },
   {
     "code": "8169",
@@ -15487,30 +16170,42 @@
   },
   {
     "code": "8181",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Arcas",
+      "Reales",
+      "Pistas",
+      "Baloncesto",
+      "Calistenia"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Arcas Reales Pistas Baloncesto y Calistenia ya aprobadas"
   },
   {
     "code": "8182",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Alcoholera",
+      "Ajardinamiento",
+      "Callejon",
+      "Nueva",
+      "Callejón"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Ajardinamiento Callejon de la Alcoholera entre 17-19"
   },
   {
     "code": "8183",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Parque",
+      "Narciso",
+      "Alonso",
+      "Cortés",
+      "Iluminación"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Iluminación Parque Colegio Narciso Alonso Cortés"
   },
   {
     "code": "8184",
@@ -15523,39 +16218,55 @@
   },
   {
     "code": "8185",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Pista",
+      "Deportiva",
+      "Cubierta",
+      "Pinar",
+      "Jalón"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Cubierta pista deportiva Pinar de Jalón"
   },
   {
     "code": "8186",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Patio",
+      "Deportiva",
+      "Familia",
+      "Redes",
+      "Balones"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Pista deportiva calle Familia"
   },
   {
     "code": "8187",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Campo",
+      "Edificio",
+      "Instalaciones",
+      "Deportivas",
+      "Jose"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Instalaciones deportivas Jose Luis Saso: 3) Pista polideportiva, hacer nuevo campo de f7"
   },
   {
     "code": "8188",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Publicidad",
+      "Eliminación",
+      "Valladolid",
+      "Están",
+      "Repletas"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Eliminación de publicidad en la ciudad"
   },
   {
     "code": "8189",
@@ -15568,12 +16279,16 @@
   },
   {
     "code": "8190",
-    "category": "Inadmitidas",
+    "category": "Movilidad Ciclista",
     "tags": [
-      "Inadmitida"
+      "Pinar",
+      "Jalón",
+      "Propuesta",
+      "Vecinal",
+      "Práctica"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "INSTALACIONES DEPORTIVAS PINAR DE JALÓN: Se completaría la zona con 4 bancos más y alguna papelera"
   },
   {
     "code": "8191",
@@ -15675,10 +16390,10 @@
     "code": "8199",
     "category": "Urbanismo",
     "tags": [
-      "Mejora bancos",
-      "Calle Arzobispo Jose Delicado",
+      "Mejora de bancos",
+      "Calle Arzobispo José Delicado",
       "Cruz Roja",
-      "Río"
+      "Río Pisuerga"
     ],
     "urgent": false,
     "summary": "Mejora de bancos deteriorados con reposabrazos para personas mayores"
@@ -15697,57 +16412,74 @@
   },
   {
     "code": "8201",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Reformar",
+      "Parque",
+      "Flores",
+      "Está",
+      "Petunia"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Reformar parque en Barrio Las Flores"
   },
   {
     "code": "8202",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Iluminación",
+      "Mejorar",
+      "Ultramar",
+      "Estadio",
+      "Paso"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mejorar iluminación del paso de peatones de la calle Ultramar con calle Estadio"
   },
   {
     "code": "8203",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Vías saludables",
+      "Calle Miraber",
+      "Parque",
+      "Personas mayores"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "poner viosaludables calle miraber"
   },
   {
     "code": "8204",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Fuente de beber",
+      "Calle Miraber",
+      "Parque",
+      "Personas mayores"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "10 Tablones informativos: Podrían instalarse en:\n1"
   },
   {
     "code": "8205",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Cancha de baloncesto",
+      "Calle Miraber",
+      "Parque",
+      "Personas mayores"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Cancha de baloncesto junto al torreón de Ctra Rueda"
   },
   {
     "code": "8206",
     "category": "Infancia y Juegos",
     "tags": [
-      "Callejón Alcoholera",
       "Parque infantil",
-      "Población joven",
-      "Deteriorado"
+      "Callejón Alcoholera",
+      "Niños",
+      "Seguridad"
     ],
     "urgent": false,
     "summary": "Callejón Alcoholera parque infantil para nueva población con mucho deterioro"
@@ -15923,12 +16655,16 @@
   },
   {
     "code": "8221",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Escaleras",
+      "Mecanicas",
+      "Ascensor",
+      "Ladera",
+      "Suroeste"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "hacer escaleras mecanicas y ascensor en la ladera suroeste de parquesol"
   },
   {
     "code": "8222",
@@ -15941,39 +16677,55 @@
   },
   {
     "code": "8223",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Suelo",
+      "Diferente",
+      "Aisle",
+      "Actividades",
+      "Yoga"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "SUELO DIFERENTE QUE AISLE PARA LAS ACTIVIDADES DE YOGA (agrupada con 7986)"
   },
   {
     "code": "8224",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Cambiar",
+      "Bancos",
+      "Columpios",
+      "Plaza",
+      "Doctor"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Cambiar los bancos y columpios de la plaza doctor quemada (Agrup. 8049)"
   },
   {
     "code": "8225",
-    "category": "Inadmitidas",
+    "category": "Movilidad Ciclista",
     "tags": [
-      "Inadmitida"
+      "Pista",
+      "Patinaje",
+      "Velocidad",
+      "Victoria",
+      "Puente"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mejora de la pista de patinaje de velocidad La Victoria – Puente Jardín"
   },
   {
     "code": "8226",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Joven",
+      "Parquesol",
+      "Agrupada",
+      "Cuenta",
+      "Importante"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "ESPACIO JOVEN PARQUESOL (Agrupada con 8134)"
   },
   {
     "code": "8227",
@@ -16145,39 +16897,55 @@
   },
   {
     "code": "8241",
-    "category": "Inadmitidas",
+    "category": "Accesibilidad",
     "tags": [
-      "Inadmitida"
+      "Mejora",
+      "Sostenible",
+      "Accesibilidad",
+      "Deportivas",
+      "Ctra"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mejora sostenible de la accesibilidad de las zonas deportivas Ctra VA-140"
   },
   {
     "code": "8242",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Carril",
+      "Bici",
+      "Valladolid",
+      "Ciclista",
+      "Ciclistas"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "MEJORA CALLE SAN ISIDRO: Conexión carril bici Valladolid - La Cistérniga"
   },
   {
     "code": "8243",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Reurbanización",
+      "Corta",
+      "Propuesta",
+      "Proceda",
+      "Integral"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Reurbanización calle Corta"
   },
   {
     "code": "8244",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Situación",
+      "Villas",
+      "Están",
+      "Mejora",
+      "Pesar"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mejora de la situación de las calles de Las Villas: Por favor, mejorad la situación de las calles"
   },
   {
     "code": "8245",
@@ -16190,21 +16958,29 @@
   },
   {
     "code": "8246",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Sustitución",
+      "Futbol",
+      "Remodelación",
+      "Césped",
+      "Artificial"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Remodelación y sustitución del césped artificial F11 y F7."
   },
   {
     "code": "8247",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Plaza",
+      "Duero",
+      "Mejora",
+      "Iglesia",
+      "Puente"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mejora de la plaza de la iglesia de Puente Duero"
   },
   {
     "code": "8248",
@@ -16217,21 +16993,29 @@
   },
   {
     "code": "8249",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Máquinas",
+      "Musculación",
+      "Forma",
+      "Puesta",
+      "Planteo"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Máquinas de musculación y puesta en forma: Quiero participar en la mesa de zona de mi propuesta"
   },
   {
     "code": "8250",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Plaza",
+      "Alberto",
+      "Fernández",
+      "Arreglo",
+      "Calzada"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Arreglo de la plaza Alberto Fernández"
   },
   {
     "code": "8251",
@@ -16355,30 +17139,42 @@
   },
   {
     "code": "8261",
-    "category": "Inadmitidas",
+    "category": "Movilidad Ciclista",
     "tags": [
-      "Inadmitida"
+      "Iluminación",
+      "Túnel",
+      "Seguridad",
+      "Andrómeda",
+      "Movilidad"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mejora integral de la iluminación y de la visual del Túnel de Andrómeda"
   },
   {
     "code": "8262",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Bancos",
+      "Gabriel",
+      "Galan",
+      "Paseo",
+      "Cauce"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "CAMBIOS DE BANCOS EN GABRIEL Y GALAN Y PASEO DEL CAUCE"
   },
   {
     "code": "8263",
-    "category": "Inadmitidas",
+    "category": "Cultura",
     "tags": [
-      "Inadmitida"
+      "Teatro",
+      "Euros",
+      "Centro",
+      "Civico",
+      "Delicias"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "MEJORA LUZ Y ACCESIBILIDAD TEATRO CENTRO CIVICO DELICIAS"
   },
   {
     "code": "8264",
@@ -16394,12 +17190,15 @@
   },
   {
     "code": "8265",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Mobiliario urbano",
+      "Calle Miraber",
+      "Parque",
+      "Personas mayores"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Centro de vida Activa en Parque Alameda"
   },
   {
     "code": "8266",
@@ -16587,21 +17386,28 @@
   },
   {
     "code": "8282",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Pistas",
+      "Deportivas",
+      "Santos",
+      "Pilarica"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Pistas deportivas Santos Pilarica"
   },
   {
     "code": "8283",
-    "category": "Inadmitidas",
+    "category": "Transportes y Movilidad",
     "tags": [
-      "Inadmitida"
+      "Contenedores",
+      "Aparcamiento",
+      "Ubicación",
+      "Propuesta",
+      "Reciclaje"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Propuesta: Ubicación de contenedores de reciclaje"
   },
   {
     "code": "8284",
@@ -16701,12 +17507,16 @@
   },
   {
     "code": "8292",
-    "category": "Inadmitidas",
+    "category": "Servicios Sociales",
     "tags": [
-      "Inadmitida"
+      "Centro",
+      "Mayores",
+      "Mercadona",
+      "Delicias",
+      "Crear"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Centro de Mayores (Mercadona Delicias)"
   },
   {
     "code": "8293",
@@ -16806,66 +17616,94 @@
   },
   {
     "code": "8301",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Aceras",
+      "Joaquin",
+      "Rodrigo",
+      "Arreglar",
+      "Marzo"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "ARREGLAR ACERAS EN CALLE JOAQUIN RODRIGO"
   },
   {
     "code": "8302",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Marquesina",
+      "Público",
+      "Instalación",
+      "Accesible",
+      "Andrómeda"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Instalación de marquesina accesible en la calle Andrómeda"
   },
   {
     "code": "8303",
-    "category": "Inadmitidas",
+    "category": "Seguridad y Emergencias",
     "tags": [
-      "Inadmitida"
+      "Plaza",
+      "Juegos",
+      "Infantiles",
+      "Habilitar",
+      "Juan"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Habilitar en la plaza Juan Pablo II de Villa del Prado zona de juegos infantiles"
   },
   {
     "code": "8304",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Aceras",
+      "Madre",
+      "Dios",
+      "Pavimento",
+      "Agrupada"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Pavimento de aceras calle Madre de Dios (agrupada con 7771)"
   },
   {
     "code": "8305",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Rotonda",
+      "Acceso",
+      "Urbanización",
+      "Vehículos",
+      "Independiente"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "SEÑALIZACION ROTONDA ACCESO VA-30 CON CL-600 Y ACCESO INDEPENDIENTE A URBANIZ."
   },
   {
     "code": "8306",
-    "category": "Inadmitidas",
+    "category": "Accesibilidad",
     "tags": [
-      "Inadmitida"
+      "Instalar",
+      "Puertas",
+      "Entrada",
+      "Automaticas",
+      "Centro"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "INSTALAR PUERTAS ENTRADA  AUTOMATICAS CENTRO CIVICO RONDILLA (agrupada 7993)"
   },
   {
     "code": "8307",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Scout",
+      "Municipal",
+      "Referencia",
+      "Parque",
+      "Norias"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Espacio de Referencia Scout"
   },
   {
     "code": "8308",
@@ -17010,39 +17848,54 @@
   },
   {
     "code": "8320",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Bancos",
+      "Muro",
+      "Cambio",
+      "Necesario",
+      "Cambiar"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "CAMBIO DE BANCOS EN LA CALLE MURO"
   },
   {
     "code": "8321",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Acera",
+      "Alumbrado",
+      "Tahonas",
+      "Propuesta",
+      "Números"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "ALUMBRADO CALLE TAHONAS: Mi propuesta nace de una necesidad"
   },
   {
     "code": "8322",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Semáforo",
+      "Estación",
+      "Peatones",
+      "Coches",
+      "Verde"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "SEMÁFOROS MUY PELIGROSOS: Soy Florencio Del Barrio García, con el DNI 12"
   },
   {
     "code": "8323",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Mobiliario urbano",
+      "Calle Miraber",
+      "Parque",
+      "Personas mayores"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mobiliario urbano en Miraber"
   },
   {
     "code": "8324",
@@ -17055,21 +17908,29 @@
   },
   {
     "code": "8325",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Reforma",
+      "Polideportivo",
+      "Pisuerga",
+      "Agrupada",
+      "Modernización"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Reforma Polideportivo Pisuerga (Agrupada con 8080)"
   },
   {
     "code": "8326",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Parque",
+      "Calistenia",
+      "Verano",
+      "Sombra",
+      "Árboles"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Árboles en parque calistenia Calle Peña Vieja (crear refugio climático)"
   },
   {
     "code": "8327",
@@ -17238,75 +18099,107 @@
   },
   {
     "code": "8341",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Exteriores",
+      "Alumnos",
+      "Bancos",
+      "Pinar",
+      "Actualmente"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Acondicionamiento y mejora de zonas exteriores IES Pinar de la Rubia/CEIP Alonso"
   },
   {
     "code": "8342",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Arreglar",
+      "Aparcapatinetes",
+      "Joven",
+      "Norte",
+      "Está"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Arreglar aparcapatinetes del espacio joven Norte"
   },
   {
     "code": "8343",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Cuatro",
+      "Marzo",
+      "Instalar",
+      "Marquesina",
+      "Plaza"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "CUATRO DE MARZO"
   },
   {
     "code": "8344",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Parcela",
+      "Libre",
+      "Pista",
+      "Polideportiva",
+      "Jose"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Pista polideportiva en Zona Centro: Calle Jose María Lacort (parcela Cáritas)"
   },
   {
     "code": "8345",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Techado",
+      "Cancha",
+      "Deportiva",
+      "Gradas",
+      "Overuela"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Techado cancha deportiva y gradas"
   },
   {
     "code": "8346",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Aparcamiento",
+      "Bicis",
+      "Patines",
+      "Ceip",
+      "Ignacio"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Aparcamiento bicis/patines CEIP Ignacio Martín BARÓ"
   },
   {
     "code": "8347",
-    "category": "Inadmitidas",
+    "category": "Movilidad Ciclista",
     "tags": [
-      "Inadmitida"
+      "Pinar",
+      "Carril",
+      "Bici",
+      "Carretera",
+      "Arcas"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Carril Bici del barrio del pinar a Avenida Zamora por carretera Arcas Reales"
   },
   {
     "code": "8348",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Carril",
+      "Bici",
+      "Acera",
+      "Pintar",
+      "Discurre"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "SEÑALIZAR, IDENTIFICAR Y  PINTAR, CARRIL BICI COMPARTIDO ."
   },
   {
     "code": "8349",
@@ -17454,30 +18347,42 @@
   },
   {
     "code": "8361",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Carretera",
+      "Tuberia",
+      "Agua",
+      "Asfaltado",
+      "Paralela"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Asfaltado Calle Paralela a la Carretera Villanueva e higienización.Puente Duero."
   },
   {
     "code": "8362",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Rehabilitación",
+      "Antigua",
+      "Biblioteca",
+      "Verano",
+      "Parque"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Rehabilitación de la antigua biblioteca de verano del parque Ribera de Castilla"
   },
   {
     "code": "8363",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Paseo",
+      "Zorrilla",
+      "Isabel",
+      "Católica",
+      "Peatonal"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Remodelación de la calle de San Ildefonso."
   },
   {
     "code": "8364",
@@ -17490,75 +18395,107 @@
   },
   {
     "code": "8365",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Parque",
+      "Acondicionamiento",
+      "Infantil",
+      "Pinar",
+      "Elementos"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "ACONDICIONAMIENTO PARQUE INFANTIL"
   },
   {
     "code": "8366",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Paseo",
+      "Cauce",
+      "Rabida",
+      "Reguero",
+      "Conexion"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Conexion carribici Paseo del cauce con calle Rabida por calle Reguero"
   },
   {
     "code": "8367",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Polideportivo",
+      "Aparcamiento",
+      "Empresa",
+      "Principalmente",
+      "Edificio"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mejoras de aparcamiento y limpieza en la calle Enrique Cubero."
   },
   {
     "code": "8368",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Calefacción",
+      "Bailarín",
+      "Arreglo",
+      "Sistema",
+      "Centro"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Arreglo del sistema de calefacción en Centro Cívico Bailarín V. Escudero"
   },
   {
     "code": "8369",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Mantenimiento",
+      "Mejora",
+      "Polideportivo",
+      "Pisuerga",
+      "Agrupada"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mantenimiento y Mejora Polideportivo Pisuerga (Agrupada con 8080): Que recupere su brillo"
   },
   {
     "code": "8370",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Polideportivo",
+      "Cubierta",
+      "Pistas",
+      "Pádel",
+      "Huerta"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "8370-Cubierta pistas de pádel polideportivo Huerta del Rey"
   },
   {
     "code": "8371",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Azul",
+      "Instalar",
+      "Batallas",
+      "Vecinos",
+      "Aparcar"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Instalar zona azul en zona Plaza Batallas"
   },
   {
     "code": "8372",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Parque",
+      "Viviendas",
+      "Parcela",
+      "Ayuntamiento",
+      "Vecinos"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Parque natural y deportivo + piscina de verano en vez de viviendas sociales"
   },
   {
     "code": "8373",
@@ -17659,57 +18596,81 @@
   },
   {
     "code": "8381",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Teresa",
+      "Calcuta",
+      "Bartolomé",
+      "Casas",
+      "Ajardinamiento"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "AJARDINAMIENTO ENTRE CALLE TERESA DE CALCUTA Y BARTOLOMÉ DE LAS CASAS"
   },
   {
     "code": "8382",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Parque",
+      "Personas",
+      "Girón",
+      "Mayores",
+      "Activo"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Punto activo Girón: Las zonas biosaludables más cercanas están en el parque de Las Contiendas"
   },
   {
     "code": "8383",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Gimnasio",
+      "Parque",
+      "Lavanderas",
+      "Creación",
+      "Aire"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Gimnasio en la calle para Parque de Las Lavanderas"
   },
   {
     "code": "8384",
-    "category": "Inadmitidas",
+    "category": "Movilidad Ciclista",
     "tags": [
-      "Inadmitida"
+      "Parcela",
+      "Libre",
+      "Instalaciones",
+      "Aire",
+      "Equipamiento"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Creación Instalaciones Deportivas al Aire Libre en parcela libre Villas Norte"
   },
   {
     "code": "8385",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Semáforo",
+      "Zamora",
+      "Mediante",
+      "Asfaltado",
+      "Ajardinamiento"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Continuidad de asfalto en salida de semáforo Av. Zamora Vallsur"
   },
   {
     "code": "8386",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Cubierta",
+      "Vegetal",
+      "Plaza",
+      "Everest",
+      "Pérgola"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "CUBIERTA VEGETAL PLAZA EVEREST"
   },
   {
     "code": "8387",
@@ -17722,12 +18683,16 @@
   },
   {
     "code": "8388",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Pinar",
+      "Jalón",
+      "Parque",
+      "Propuesta",
+      "Infantil"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Parque infantil pinar de jalón"
   },
   {
     "code": "8389",
@@ -17743,12 +18708,16 @@
   },
   {
     "code": "8390",
-    "category": "Inadmitidas",
+    "category": "Educación",
     "tags": [
-      "Inadmitida"
+      "Ampliar",
+      "Biblioteca",
+      "Pues",
+      "Pequeña",
+      "Horarios"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Ampliar la biblioteca: Ampliar la biblioteca, pues es muy pequeña"
   },
   {
     "code": "8391",
@@ -17872,30 +18841,42 @@
   },
   {
     "code": "8401",
-    "category": "Inadmitidas",
+    "category": "Servicios Sociales",
     "tags": [
-      "Inadmitida"
+      "Centro",
+      "Cívico",
+      "Biblioteca",
+      "Pinar",
+      "Jalón"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Centro Cívico – Biblioteca en el barrio Pinar de Jalón"
   },
   {
     "code": "8402",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Arena",
+      "Pistas",
+      "Existente",
+      "Parque",
+      "Vóley"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Echar arena y limpiar la existente en el Parque de pistas de vóley"
   },
   {
     "code": "8403",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Nueva",
+      "Estación",
+      "Biki",
+      "Nuevas",
+      "Promociones"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Nueva parada/estación BIKI cercana a nuevas promociones de Puente Jardín"
   },
   {
     "code": "8404",
@@ -17908,30 +18889,42 @@
   },
   {
     "code": "8405",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Espejo",
+      "Santos",
+      "Pilarica",
+      "Circulación",
+      "Láctea"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Espejo Santos Pilarica"
   },
   {
     "code": "8406",
-    "category": "Inadmitidas",
+    "category": "Servicios Sociales",
     "tags": [
-      "Inadmitida"
+      "Baños",
+      "Estadio",
+      "Agua",
+      "Reducción",
+      "Impacto"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "REMODELACIÓN Y MODERNIZACIÓN  DE LOS BAÑOS DEL EST. JOSÉ ZORRILLA (Agrup 7898)"
   },
   {
     "code": "8407",
-    "category": "Inadmitidas",
+    "category": "Servicios Sociales",
     "tags": [
-      "Inadmitida"
+      "Centro",
+      "Vida",
+      "Activa",
+      "Marquesina",
+      "Mayores"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Creación/adquisición Centro de vida Activa La Marquesina"
   },
   {
     "code": "8408",
@@ -18331,102 +19324,146 @@
   },
   {
     "code": "8441",
-    "category": "Inadmitidas",
+    "category": "Servicios Sociales",
     "tags": [
-      "Inadmitida"
+      "Cambiar",
+      "Butacas",
+      "Centro",
+      "Cívico",
+      "Delicias"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "cambiar butacas"
   },
   {
     "code": "8442",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Caamaño",
+      "Cruce",
+      "Benito",
+      "Menni",
+      "Semáforo"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "CRUCE CALLE CAAMAÑO CON BENITO MENNI: Un espejo tampoco vendría mal, además del semáforo"
   },
   {
     "code": "8443",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Paso",
+      "Peatones",
+      "Acceder",
+      "Tomillo",
+      "Color"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Paso de peatones para acceder al Tomillo"
   },
   {
     "code": "8444",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Peatonal",
+      "Humanización",
+      "Mejora",
+      "Doctor",
+      "Público"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Humanización y mejora del espacio peatonal en la Calle Doctor Barraquer"
   },
   {
     "code": "8445",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Acceso",
+      "Cabo",
+      "Noval",
+      "Gerona",
+      "Esquina"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "PASO PEATONES CON ACCESO PARA MINUSVÁLIDOS CALLE GERONA  ESQUINA CON CABO NOVAL"
   },
   {
     "code": "8446",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Escultura",
+      "Mural",
+      "Biólogo",
+      "Podría",
+      "Antonio"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Escultura y mural sobre el biólogo Jose Antonio Valverde"
   },
   {
     "code": "8447",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Personas",
+      "Marquesina",
+      "Autobús",
+      "Instalación",
+      "Mieses"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Instalación marquesina autobús linea C2 en Avd Mieses esquina Calle Barbecho"
   },
   {
     "code": "8448",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Soterramiento",
+      "Contenedores",
+      "Parquesol",
+      "Salubridad",
+      "Pública"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "SOTERRAMIENTO DE CONTENEDORES BARRIO PARQUESOL"
   },
   {
     "code": "8449",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Pista",
+      "Tenis",
+      "Almendros",
+      "Arreglar",
+      "Eusebio"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Arreglar pista de tenis los Almendros"
   },
   {
     "code": "8450",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Suelo",
+      "Auditorio",
+      "Joven",
+      "Lijado",
+      "Cambio"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Lijado o cambio urgente del suelo del auditorio del Espacio Joven Sur"
   },
   {
     "code": "8451",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Parque",
+      "Niños",
+      "Seguro",
+      "Cuidado",
+      "Infantil"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Parque infantil más limpio, seguro y mejor cuidado"
   },
   {
     "code": "8452",
@@ -18535,48 +19572,68 @@
   },
   {
     "code": "8461",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Pista",
+      "Colegio",
+      "Acceso",
+      "Infantil",
+      "Martín"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Colegio Martín Baró acceso pista principal desde infantil"
   },
   {
     "code": "8462",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Pista",
+      "Calistenia",
+      "Cerca",
+      "Campos",
+      "Rugby"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Pista calistenia cerca campos de Rugby y Atletismo  de complejo Ciudad Valladoli"
   },
   {
     "code": "8463",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Canchas",
+      "Baloncesto",
+      "Sería",
+      "Deportiva",
+      "Debido"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Zona deportiva canchas de Baloncesto"
   },
   {
     "code": "8464",
-    "category": "Inadmitidas",
+    "category": "Instalaciones Deportivas",
     "tags": [
-      "Inadmitida"
+      "Cancha",
+      "Deportiva",
+      "Plaza",
+      "Niños",
+      "Multideporte"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Cancha deportiva multideporte en la plaza junto al CIC Santiago López"
   },
   {
     "code": "8465",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Arreglo",
+      "Fasa",
+      "Necesita",
+      "Calzada",
+      "Aceras"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Arreglo Calle Fasa: La calle está sin arreglar a la altura del portal núm"
   },
   {
     "code": "8466",
@@ -18629,12 +19686,16 @@
   },
   {
     "code": "8470",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Arreglo",
+      "Acera",
+      "Derecha",
+      "Prado",
+      "Magdalena"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Arreglo de la acera derecha Prado de la Magdalena (agrupada con 8423)"
   },
   {
     "code": "8471",
@@ -18686,12 +19747,16 @@
   },
   {
     "code": "8475",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Arreglo",
+      "Dios",
+      "Amor",
+      "Propongo",
+      "Aceras"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Arreglo calle Amor de dios"
   },
   {
     "code": "8476",
@@ -18752,21 +19817,29 @@
   },
   {
     "code": "8481",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Cambio",
+      "Piso",
+      "Parque",
+      "Infantil",
+      "Avenida"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Parque infantil avenida Palencia (agrupada con 8424)"
   },
   {
     "code": "8482",
-    "category": "Inadmitidas",
+    "category": "Sanidad",
     "tags": [
-      "Inadmitida"
+      "Películas",
+      "Licencia",
+      "Proyección",
+      "Jóvenes",
+      "Somos"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "LICENCIA PROYECCIÓN PELÍCULAS"
   },
   {
     "code": "8483",
@@ -19010,12 +20083,16 @@
   },
   {
     "code": "8503",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Arreglo",
+      "Aceras",
+      "Salud",
+      "Numeros",
+      "Hace"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Arreglo de Aceras Calle Salud"
   },
   {
     "code": "8504",
@@ -19067,12 +20144,16 @@
   },
   {
     "code": "8508",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Azul",
+      "Rubia",
+      "Necesario",
+      "Disminuya",
+      "Plaza"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Zona azul en la zona de La Rubia"
   },
   {
     "code": "8509",
@@ -19220,30 +20301,42 @@
   },
   {
     "code": "8521",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Biki",
+      "Vivero",
+      "Empresas",
+      "Servicio",
+      "Valle"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Servicio BIKI en Calle Valle de Arán junto al Vivero de Empresas."
   },
   {
     "code": "8522",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Pajarillos",
+      "Ascensor",
+      "Arreglos",
+      "Parque",
+      "Patricia"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Arreglos en Pajarillos"
   },
   {
     "code": "8523",
-    "category": "Inadmitidas",
+    "category": "Cultura",
     "tags": [
-      "Inadmitida"
+      "Paneles",
+      "Carteles",
+      "Ciudadanos",
+      "Colocar",
+      "Informativos"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "paneles  para colocar carteles informativos por los ciudadanos en la ciudad"
   },
   {
     "code": "8524",
@@ -19439,84 +20532,120 @@
   },
   {
     "code": "8540",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Cambio",
+      "Piso",
+      "Parque",
+      "Infantil",
+      "Avenida"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "parque infantil avenida palencia (agrupada con 8424)"
   },
   {
     "code": "8541",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Gustaría",
+      "Cambios",
+      "Rondill",
+      "Añadieran",
+      "Bancos"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Cambios en la Rondill"
   },
   {
     "code": "8542",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Cambio",
+      "Piso",
+      "Parque",
+      "Infantil",
+      "Avenida"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "parque infantil avenida Palencia (agrupada con 8424)"
   },
   {
     "code": "8543",
-    "category": "Inadmitidas",
+    "category": "Seguridad y Emergencias",
     "tags": [
-      "Inadmitida"
+      "Tráfico",
+      "Cañada",
+      "Real",
+      "Excesiva",
+      "Semáforos"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Tráfico y seguridad en la Cañada Real"
   },
   {
     "code": "8544",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Aseos",
+      "Portátiles",
+      "Esgueva",
+      "Implantación",
+      "Implantacion"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Implantación de aseos portátiles en la zona del Esgueva"
   },
   {
     "code": "8545",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Columpios",
+      "Parque",
+      "Almendros",
+      "Jugar",
+      "Nuevos"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Columpios nuevos en el parque de los almendros"
   },
   {
     "code": "8546",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Madre",
+      "Dios",
+      "Acera",
+      "Arreglo",
+      "Agrupada"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Arreglo de la calle Madre de Dios (agrupada con 7771)"
   },
   {
     "code": "8547",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Parques",
+      "Columpios",
+      "Reparación",
+      "Arboles",
+      "Sombras"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Mas parques y columpios: Reparación de columpios y más parques con arboles y sombras"
   },
   {
     "code": "8548",
-    "category": "Inadmitidas",
+    "category": "Parques y Naturaleza",
     "tags": [
-      "Inadmitida"
+      "Iluminación",
+      "Cañada",
+      "Real",
+      "Problema",
+      "Largo"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Iluminación en Cañada Real"
   },
   {
     "code": "8549",
@@ -19628,12 +20757,16 @@
   },
   {
     "code": "8558",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Peatonales",
+      "Isidro",
+      "Villabañez",
+      "Túnel",
+      "Están"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Limpiar, sanear y pintar los túneles peatonales de San Isidro y Villabañez"
   },
   {
     "code": "8559",
@@ -19661,48 +20794,68 @@
   },
   {
     "code": "8561",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Parque",
+      "Infantil",
+      "Otros",
+      "Niños",
+      "Está"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Renovación y reparación del parque infantil del Parque del Mediodía"
   },
   {
     "code": "8562",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Acera",
+      "Avenida",
+      "Segovia",
+      "Nuevo",
+      "Tunel"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "CONEXION ACERA AVENIDA DE SEGOVIA CON NUEVO TUNEL"
   },
   {
     "code": "8563",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Trilla",
+      "Cebra",
+      "Bálago",
+      "Paso",
+      "Juan"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "C/Trilla - Bálago - Juan II de Castilla - Vendimia y su entorno"
   },
   {
     "code": "8564",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Vehículo",
+      "Recarga",
+      "Hibrido",
+      "Eléctrico",
+      "Carga"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Punto de carga para vehículos híbridos y eléctricos"
   },
   {
     "code": "8565",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Árboles",
+      "Acera",
+      "Metros",
+      "Arboles",
+      "Gran"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Renovación acceras Paseo Prado de la Magdalena"
   },
   {
     "code": "8566",
@@ -19715,48 +20868,68 @@
   },
   {
     "code": "8567",
-    "category": "Inadmitidas",
+    "category": "Transportes y Movilidad",
     "tags": [
-      "Inadmitida"
+      "Modificación",
+      "Vehículos",
+      "Adrián",
+      "Acceso",
+      "Valparaiso"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Modificación del acceso de vehículos en el barrio de San Adrián/Valparaiso"
   },
   {
     "code": "8568",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Asfaltar",
+      "Leyes",
+      "Overuela",
+      "Pública",
+      "Acceso"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Asfaltar calle de las Leyes en la Overuela"
   },
   {
     "code": "8569",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Tipo",
+      "Actividades",
+      "Cubierta",
+      "Cubrir",
+      "Patio"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "Cubrir patio del CIC El Empecinado: Es unpatio muy amplioy muy usado para todo tipo de actividades"
   },
   {
     "code": "8570",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Bordillo",
+      "Cortante",
+      "Estrecha",
+      "Acera",
+      "Vuelta"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "BORDILLO EN ACERA, CORTANTE ESTRECHA LA VUELTA"
   },
   {
     "code": "8571",
-    "category": "Inadmitidas",
+    "category": "Urbanismo",
     "tags": [
-      "Inadmitida"
+      "Personas",
+      "Accesibilidad",
+      "Ella",
+      "Sido",
+      "Arreglo"
     ],
     "urgent": false,
-    "summary": "Propuesta inadmitida"
+    "summary": "ARREGLO Y ACCESIBILIDAD CALLE LA VIA"
   },
   {
     "code": "8572",
