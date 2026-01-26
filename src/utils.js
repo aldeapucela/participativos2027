@@ -49,11 +49,15 @@ export function filterData(proposals, category, zone, query, activeTags = new Se
         // Tag Match: Proposal must have ALL active tags
         const tagMatch = activeTags.size === 0 || Array.from(activeTags).every(tag => p.tags.includes(tag));
 
-        // Search Match (Title, Summary, Tags)
-        const searchMatch = !query ||
-            p.title.toLowerCase().includes(query.toLowerCase()) ||
-            p.summary.toLowerCase().includes(query.toLowerCase()) ||
-            p.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()));
+        // Search Match (Title, Summary, Tags) - split query into individual words
+        const searchMatch = !query || (() => {
+            const searchTerms = query.toLowerCase().trim().split(/\s+/).filter(term => term.length > 0);
+            return searchTerms.every(term => 
+                p.title.toLowerCase().includes(term) ||
+                p.summary.toLowerCase().includes(term) ||
+                p.tags.some(tag => tag.toLowerCase().includes(term))
+            );
+        })();
 
         return categoryMatch && zoneMatch && tagMatch && searchMatch;
     });
