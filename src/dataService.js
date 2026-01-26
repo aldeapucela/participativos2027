@@ -37,9 +37,11 @@ export async function fetchData() {
         const mergedData = rawData.map(proposal => {
             const meta = metaData.find(m => String(m.code) === String(proposal.code)) || {};
             
-            // Check if title contains "Inadmitida" and assign special category
+            // Use metadata category if available, otherwise check title for "Inadmitida"
             let category = meta.category || 'Sin categoría';
-            if (proposal.title && proposal.title.toLowerCase().includes('inadmitida')) {
+            
+            // Only override category if metadata doesn't have "Inadmitidas" but title contains "inadmitida"
+            if (category !== 'Inadmitidas' && proposal.title && proposal.title.toLowerCase().includes('inadmitida')) {
                 category = 'Inadmitidas';
             }
             
