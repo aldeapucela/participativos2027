@@ -30,6 +30,7 @@ jobs:
           mkdir -p logs
           
       - name: Update votes
+        id: update-votes
         run: |
           echo "=== INICIANDO ACTUALIZACIÓN AUTOMÁTICA DE VOTOS ==="
           python3 scripts/update_votes.py
@@ -63,19 +64,32 @@ jobs:
           if git diff --staged --quiet; then
             echo "No hay cambios para commitear"
           else
-            # Obtener estadísticas del reporte más reciente
-            REPORT_FILE=$(ls -t data/vote_update_report_*.txt 2>/dev/null | head -n1)
+            # Obtener estadísticas de los outputs del paso anterior
+            PROCESSED="${{ steps.update-votes.outputs.processed }}"
+            UPDATED="${{ steps.update-votes.outputs.updated }}"
+            ERRORS="${{ steps.update-votes.outputs.errors }}"
+            
             COMMIT_MSG="Auto-update votes $(date '+%Y-%m-%d %H:%M UTC')"
             
-            if [ -n "$REPORT_FILE" ]; then
-              # Extraer estadísticas del reporte (usar líneas específicas para evitar confusiones)
-              PROCESSED=$(grep "Propuestas procesadas:" "$REPORT_FILE" | head -1 | awk '{print $3}')
-              UPDATED=$(grep "Propuestas actualizadas:" "$REPORT_FILE" | head -1 | awk '{print $3}')
-              ERRORS=$(grep "Propuestas procesadas:" "$REPORT_FILE" | head -1 | awk '{print $5}')
-              
+            # Usar outputs si están disponibles, sino intentar parsear el archivo como fallback
+            if [[ -n "$PROCESSED" && "$PROCESSED" != "" ]]; then
               COMMIT_MSG="$COMMIT_MSG | $PROCESSED procesadas, $UPDATED actualizadas, $ERRORS errores"
+              echo "Usando GitHub Actions outputs: $PROCESSED, $UPDATED, $ERRORS"
+            else
+              # Fallback: intentar parsear el reporte más reciente
+              REPORT_FILE=$(ls -t data/vote_update_report_*.txt 2>/dev/null | head -n1)
+              if [ -n "$REPORT_FILE" ]; then
+                echo "Fallback: parseando reporte $REPORT_FILE"
+                PROCESSED=$(grep "Propuestas procesadas:" "$REPORT_FILE" | head -1 | awk '{print $3}' || echo "0")
+                UPDATED=$(grep "Propuestas actualizadas:" "$REPORT_FILE" | head -1 | awk '{print $3}' || echo "0")
+                ERRORS=$(grep "Errores:" "$REPORT_FILE" | head -1 | awk '{print $2}' || echo "0")
+                COMMIT_MSG="$COMMIT_MSG | $PROCESSED procesadas, $UPDATED actualizadas, $ERRORS errores"
+              else
+                COMMIT_MSG="$COMMIT_MSG | estadísticas no disponibles"
+              fi
             fi
             
+            echo "Commit message: $COMMIT_MSG"
             git commit -m "$COMMIT_MSG"
             git push
           fi
@@ -117,30 +131,34 @@ jobs:
       - name: Run retry script if there were errors
         if: steps.verify-changed-files.outputs.changed == 'true'
         run: |
-          # Verificar si hay errores en el último reporte
-          REPORT_FILE=$(ls -t data/vote_update_report_*.txt 2>/dev/null | head -n1)
+          # Obtener número de errores de los outputs o fallback al reporte
+          ERROR_COUNT="${{ steps.update-votes.outputs.errors }}"
           
-          if [ -n "$REPORT_FILE" ]; then
-            ERROR_COUNT=$(grep "Errores:" "$REPORT_FILE" | awk '{print $2}' | head -1)
-            
-            # Verificar que ERROR_COUNT sea un número válido
-            if [[ -n "$ERROR_COUNT" && "$ERROR_COUNT" =~ ^[0-9]+$ ]]; then
-              if [ "$ERROR_COUNT" -gt 0 ]; then
-                echo "Se detectaron $ERROR_COUNT errores. Ejecutando script de reintento..."
-                python3 scripts/retry_failed_proposals.py
-                
-                # Hacer commit de los reintentos si hay cambios
-                if ! git diff --quiet data/proposals_data.json; then
-                  git add data/proposals_data.json
-                  git commit -m "Auto-retry failed votes $(date '+%Y-%m-%d %H:%M UTC')"
-                  git push
-                fi
-              else
-                echo "No se detectaron errores ($ERROR_COUNT). Omitiendo script de reintento."
+          if [[ -n "$ERROR_COUNT" && "$ERROR_COUNT" != "" ]]; then
+            echo "Usando GitHub Actions output: $ERROR_COUNT errores"
+          else
+            # Fallback: verificar si hay errores en el último reporte
+            REPORT_FILE=$(ls -t data/vote_update_report_*.txt 2>/dev/null | head -n1)
+            if [ -n "$REPORT_FILE" ]; then
+              ERROR_COUNT=$(grep "Errores:" "$REPORT_FILE" | awk '{print $2}' | head -1)
+            fi
+          fi
+          
+          # Verificar que ERROR_COUNT sea un número válido
+          if [[ -n "$ERROR_COUNT" && "$ERROR_COUNT" =~ ^[0-9]+$ ]]; then
+            if [ "$ERROR_COUNT" -gt 0 ]; then
+              echo "Se detectaron $ERROR_COUNT errores. Ejecutando script de reintento..."
+              python3 scripts/retry_failed_proposals.py
+              
+              # Hacer commit de los reintentos si hay cambios
+              if ! git diff --quiet data/proposals_data.json; then
+                git add data/proposals_data.json
+                git commit -m "Auto-retry failed votes $(date '+%Y-%m-%d %H:%M UTC')"
+                git push
               fi
             else
-              echo "No se pudo determinar el número de errores. Omitiendo script de reintento."
+              echo "No se detectaron errores ($ERROR_COUNT). Omitiendo script de reintento."
             fi
           else
-            echo "No se encontró archivo de reporte. Omitiendo script de reintento."
+            echo "No se pudo determinar el número de errores. Omitiendo script de reintento."
           fi
