@@ -339,6 +339,13 @@ Errores registrados: {len(progress.get('errors', []))}
         
         logger.info(report)
         
+        # Output GitHub Actions environment variables for persistence
+        if os.getenv('GITHUB_ACTIONS'):
+            print(f"::set-output name=processed::{self.processed_count}")
+            print(f"::set-output name=updated::{self.updated_count}")
+            print(f"::set-output name=errors::{self.error_count}")
+            logger.info(f"GitHub Actions outputs set: processed={self.processed_count}, updated={self.updated_count}, errors={self.error_count}")
+        
         # Guardar reporte
         report_file = os.path.join(DATA_DIR, f"vote_update_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt")
         try:
