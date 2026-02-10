@@ -182,25 +182,25 @@ class VoteUpdater:
                     if matches:
                         return int(matches[-1])
                 
-                # Si no se encuentra nada, asumir 0 en lugar de None
-                logger.warning(f"No se encontraron votos para propuesta {proposal_code}, asumiendo 0")
-                return 0
+                # Si no se encuentra nada, mantener valor existente en lugar de asumir 0
+                logger.warning(f"No se encontraron votos para propuesta {proposal_code}, manteniendo valor existente")
+                return None  # Señal para mantener valor existente
                     
             except requests.exceptions.RequestException as e:
                 wait_time = (attempt + 1) * 2  # Backoff más agresivo
                 if attempt == MAX_RETRIES - 1:
                     logger.warning(f"Error final para propuesta {proposal_code}: {e}")
-                    return 0  # Retornar 0 en lugar de None
+                    return None  # Mantener valor existente en caso de error
                 logger.warning(f"Intento {attempt + 1}/{MAX_RETRIES} para propuesta {proposal_code}: {e}. Esperando {wait_time}s...")
                 time.sleep(wait_time)
                 
             except Exception as e:
                 if attempt == MAX_RETRIES - 1:
                     logger.error(f"Error inesperado para propuesta {proposal_code}: {e}")
-                    return 0  # Retornar 0 en lugar de None
+                    return None  # Mantener valor existente en caso de error
                 time.sleep(1)
         
-        return 0  # Retornar 0 como último recurso
+        return None  # Mantener valor existente como último recurso
     
     def process_proposal(self, proposal):
         """Procesar una propuesta individual"""
@@ -234,10 +234,10 @@ class VoteUpdater:
                 
                 return result
             else:
-                # Ya no debería llegar aquí con los cambios hechos
+                # Mantener valor existente cuando hay error
                 with stats_lock:
                     self.error_count += 1
-                return {"code": proposal_code, "error": "No se pudieron obtener votos"}
+                return {"code": proposal_code, "error": "Manteniendo valor existente por error"}
                 
         except Exception as e:
             with stats_lock:
