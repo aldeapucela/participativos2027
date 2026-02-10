@@ -4,6 +4,8 @@ Script optimizado para actualizar votos rápidamente usando procesamiento concur
 """
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 from bs4 import BeautifulSoup
 import json
 import time
@@ -17,6 +19,8 @@ import shutil
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
+import ssl
+import certifi
 
 # Configuración
 BASE_URL = "https://www10.ava.es"
@@ -69,6 +73,10 @@ class VoteUpdater:
     def __init__(self):
         self.session = requests.Session()
         self.session.headers.update(HEADERS)
+        
+        # Configurar sesión con SSL robusto para GitHub Actions
+        self.setup_ssl_session()
+        
         self.start_time = time.time()
         self.processed_count = 0
         self.error_count = 0
@@ -77,6 +85,34 @@ class VoteUpdater:
         # Crear directorios
         os.makedirs(BACKUP_DIR, exist_ok=True)
         os.makedirs(LOGS_DIR, exist_ok=True)
+    
+    def setup_ssl_session(self):
+        """Configurar sesión SSL robusta para GitHub Actions"""
+        try:
+            # Usar certifi para certificados actualizados
+            self.session.verify = certifi.where()
+            
+            # Configurar retry strategy
+            retry_strategy = Retry(
+                total=3,
+                status_forcelist=[429, 500, 502, 503, 504],
+                method_whitelist=["HEAD", "GET", "OPTIONS"],
+                backoff_factor=1
+            )
+            
+            adapter = HTTPAdapter(max_retries=retry_strategy)
+            self.session.mount("http://", adapter)
+            self.session.mount("https://", adapter)
+            
+            logger.info("Configuración SSL robusta aplicada")
+            
+        except Exception as e:
+            logger.warning(f"Error configurando SSL robusto: {e}")
+            # Fallback: deshabilitar verificación SSL (último recurso)
+            self.session.verify = False
+            import urllib3
+            urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+            logger.warning("SSL verification deshabilitado (fallback)")
         
     def create_backup(self):
         """Crear backup del archivo de datos"""

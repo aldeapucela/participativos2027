@@ -23,7 +23,7 @@ jobs:
           
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4 tqdm
+          pip install requests beautifulsoup4 tqdm certifi urllib3
           
       - name: Create logs directory
         run: |
