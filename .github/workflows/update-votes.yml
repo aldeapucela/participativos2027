@@ -2,6 +2,7 @@ name: Actualizar Votos Diarios
 on:
   schedule:
     - cron: '5 2 * * *'  # Todos los días a las 2:05 AM UTC
+    - cron: '55 22 19 2 *' # ÚLTIMA ACTUALIZACIÓN: 19 de FEBRERO a las 23:55 CET (22:55 UTC)
   workflow_dispatch:  # Permitir ejecución manual
 
 permissions:
@@ -25,17 +26,39 @@ jobs:
         run: |
           pip install requests beautifulsoup4 tqdm certifi urllib3
           
+      - name: Check deadline
+        id: check-deadline
+        run: |
+          # Usar explícitamente la zona horaria de Madrid
+          export TZ="Europe/Madrid"
+          DEADLINE=$(date -d "2026-02-19 23:56:00" +%s)
+          NOW=$(date +%s)
+          
+          echo "Fecha actual (Madrid): $(date)"
+          echo "Deadline (Madrid):      2026-02-19 23:56:00"
+          
+          if [ "$NOW" -gt "$DEADLINE" ]; then
+            echo "La votación ha finalizado. No se actualizarán más votos."
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "Dentro del periodo de votación. Continuando..."
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Create logs directory
+        if: steps.check-deadline.outputs.skip != 'true'
         run: |
           mkdir -p logs
           
       - name: Update votes
+        if: steps.check-deadline.outputs.skip != 'true'
         id: update-votes
         run: |
           echo "=== INICIANDO ACTUALIZACIÓN AUTOMÁTICA DE VOTOS ==="
           python3 scripts/update_votes.py
           
       - name: Check for changes
+        if: steps.check-deadline.outputs.skip != 'true'
         id: verify-changed-files
         run: |
           if [ -f "data/proposals_data.json" ]; then
@@ -52,7 +75,7 @@ jobs:
           fi
           
       - name: Commit and push changes
-        if: steps.verify-changed-files.outputs.changed == 'true'
+        if: steps.check-deadline.outputs.skip != 'true' && steps.verify-changed-files.outputs.changed == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -95,6 +118,7 @@ jobs:
           fi
           
       - name: Create summary
+        if: always() && steps.check-deadline.outputs.skip != 'true'
         run: |
           echo "## 📊 Resumen de Actualización Automática" >> $GITHUB_STEP_SUMMARY
           echo "**Fecha:** $(date '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_STEP_SUMMARY
@@ -129,7 +153,7 @@ jobs:
           fi
           
       - name: Run retry script if there were errors
-        if: steps.verify-changed-files.outputs.changed == 'true'
+        if: steps.check-deadline.outputs.skip != 'true' && steps.verify-changed-files.outputs.changed == 'true'
         run: |
           # Obtener número de errores de los outputs o fallback al reporte
           ERROR_COUNT="${{ steps.update-votes.outputs.errors }}"
