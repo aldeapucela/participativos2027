@@ -1,8 +1,8 @@
 name: Actualizar Votos Diarios
 on:
-  schedule:
-    - cron: '5 2 * * *'  # Todos los días a las 2:05 AM UTC
-    - cron: '55 22 19 2 *' # ÚLTIMA ACTUALIZACIÓN: 19 de FEBRERO a las 23:55 CET (22:55 UTC)
+  # schedule:
+  #   - cron: '5 2 * * *'  # Todos los días a las 2:05 AM UTC
+  #   - cron: '55 22 19 2 *' # ÚLTIMA ACTUALIZACIÓN: 19 de FEBRERO a las 23:55 CET (22:55 UTC)
   workflow_dispatch:  # Permitir ejecución manual
 
 permissions:
