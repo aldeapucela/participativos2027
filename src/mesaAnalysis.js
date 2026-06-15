@@ -1,47 +1,47 @@
 import { escapeHtml } from './utils.js';
 
-const CSV_URL = 'data/cruce_mesa_vs_final_126_simplificado_2026-06-15.csv?v=20260615d';
+const CSV_URL = '../data/cruce_mesa_vs_final_126_simplificado_2026-06-15.csv?v=20260615e';
 
 const ACTA_BY_ZONE = {
     'Zona Centro': {
         label: 'Acta Zona Centro',
-        href: 'data/actas-mesa/acta-zona-centro.pdf',
+        href: '../data/actas-mesa/acta-zona-centro.pdf',
     },
     'Zona Esgueva 1': {
         label: 'Acta Zona Esgueva 1',
-        href: 'data/actas-mesa/acta-zona-esgueva-1.pdf',
+        href: '../data/actas-mesa/acta-zona-esgueva-1.pdf',
     },
     'Zona Esgueva 2': {
         label: 'Acta Zona Esgueva 2',
-        href: 'data/actas-mesa/acta-zona-esgueva-2.pdf',
+        href: '../data/actas-mesa/acta-zona-esgueva-2.pdf',
     },
     'Zona Este 1': {
         label: 'Acta Zona Este 1',
-        href: 'data/actas-mesa/acta-zona-este-1.pdf',
+        href: '../data/actas-mesa/acta-zona-este-1.pdf',
     },
     'Zona Este 2': {
         label: 'Acta Zona Este 2',
-        href: 'data/actas-mesa/acta-zona-este-2.pdf',
+        href: '../data/actas-mesa/acta-zona-este-2.pdf',
     },
     'Zona Parquesol': {
         label: 'Acta Zona Parquesol',
-        href: 'data/actas-mesa/acta-zona-parquesol.pdf',
+        href: '../data/actas-mesa/acta-zona-parquesol.pdf',
     },
     'Zona Pisuerga 1': {
         label: 'Acta Zona Pisuerga 1',
-        href: 'data/actas-mesa/acta-zona-pisuerga-1.pdf',
+        href: '../data/actas-mesa/acta-zona-pisuerga-1.pdf',
     },
     'Zona Pisuerga 2': {
         label: 'Acta Zona Pisuerga 2',
-        href: 'data/actas-mesa/acta-zona-pisuerga-2.pdf',
+        href: '../data/actas-mesa/acta-zona-pisuerga-2.pdf',
     },
     'Zona Sur 1': {
         label: 'Acta Zona Sur 1',
-        href: 'data/actas-mesa/acta-zona-sur-1.pdf',
+        href: '../data/actas-mesa/acta-zona-sur-1.pdf',
     },
     'Zona Sur 2': {
         label: 'Acta Zona Sur 2',
-        href: 'data/actas-mesa/acta-zona-sur-2.pdf',
+        href: '../data/actas-mesa/acta-zona-sur-2.pdf',
     },
 };
 
@@ -141,6 +141,46 @@ function normalize(value) {
         .toLowerCase();
 }
 
+// Known canonical categories from the platform.
+// Any token not in this list (after light cleaning) is discarded.
+const KNOWN_CATEGORIES = new Set([
+    'Asociaciones',
+    'Contaminación ambiental y acústica',
+    'Cultura',
+    'Cultura y Embellecimiento Urbano',
+    'Deporte',
+    'Deportes',
+    'Educación',
+    'Igualdad',
+    'Medio Ambiente',
+    'Medio Ambiente - Limpieza',
+    'Participación ciudadana',
+    'Participación ciudadana - Asociaciones',
+    'Patrimonio',
+    'Ruido - Contaminación acústica',
+    'Salud',
+    'Salud y consumo - Animales',
+    'Seguridad y emergencias',
+    'Servicios sociales',
+    'Transportes y movilidad',
+    'Turismo',
+    'Urbanismo',
+]);
+
+function normalizeCategories(raw) {
+    if (!raw) return '';
+    // Strip surrounding/internal quotes and semicolons, then split on |
+    const cleaned = raw
+        .replace(/"/g, '')
+        .replace(/;/g, '')
+        .trim();
+    const parts = cleaned.split('|').map(p => p.trim()).filter(Boolean);
+    // Keep only tokens that match a known canonical category
+    const valid = parts.filter(p => KNOWN_CATEGORIES.has(p));
+    // Deduplicate while preserving order
+    return [...new Set(valid)].join(' | ');
+}
+
 function parseRows(rows) {
     return rows.map(row => ({
         situacion: row.situacion,
@@ -149,7 +189,7 @@ function parseRows(rows) {
         titulo: row.titulo_propuesta,
         enlace: row.enlace,
         apoyos: Number.parseInt(row.apoyos, 10) || 0,
-        categoria: row.categoria || 'Sin categoria',
+        categoria: normalizeCategories(row.categoria) || 'Sin categoría',
         apareceEnMesa: row.aparece_en_mesa,
         ordenMesa: row.orden_detectado_en_mesa,
         apareceEnFinal: row.aparece_en_final_126,
@@ -162,7 +202,8 @@ function getFilteredRows() {
     return state.rows.filter(row => {
         const statusMatch = state.filters.status === 'Todas' || row.situacion === state.filters.status;
         const zoneMatch = state.filters.zone === 'Todas' || row.zona === state.filters.zone;
-        const categoryMatch = state.filters.category === 'Todas' || row.categoria === state.filters.category;
+        const rowCategories = row.categoria ? row.categoria.split('|').map(c => c.trim()).filter(Boolean) : [];
+        const categoryMatch = state.filters.category === 'Todas' || rowCategories.includes(state.filters.category);
         const supportMatch = row.apoyos >= state.filters.minSupport;
         const queryMatch = !query || normalize(`${row.titulo} ${row.zona} ${row.categoria} ${row.propuestaId}`).includes(query);
         return statusMatch && zoneMatch && categoryMatch && supportMatch && queryMatch;
@@ -219,7 +260,16 @@ function setupFilters() {
         if (b === 'Todas') return 1;
         return a.localeCompare(b, 'es', { numeric: true });
     });
-    const categories = ['Todas', ...new Set(state.rows.map(row => row.categoria).filter(Boolean))].sort((a, b) => {
+    const allCategories = new Set();
+    state.rows.forEach(row => {
+        if (row.categoria) {
+            row.categoria.split('|').forEach(cat => {
+                const trimmed = cat.trim();
+                if (trimmed) allCategories.add(trimmed);
+            });
+        }
+    });
+    const categories = ['Todas', ...Array.from(allCategories)].sort((a, b) => {
         if (a === 'Todas') return -1;
         if (b === 'Todas') return 1;
         return a.localeCompare(b, 'es');
@@ -344,7 +394,8 @@ function renderSummaryRail(rows) {
         const meta = STATUS_META[status];
         return `
             <div class="mesa-summary-segment ${meta.className}" style="width:${percent}%">
-                <span>${escapeHtml(meta.label)}</span>
+                <span class="mesa-segment-number">${value}</span>
+                <span class="mesa-segment-label">${escapeHtml(meta.label)}</span>
             </div>
         `;
     }).join('');
@@ -432,7 +483,11 @@ function renderTable(rows) {
                 <a href="${escapeHtml(row.enlace)}" target="_blank" rel="noopener noreferrer">${escapeHtml(row.titulo)}</a>
                 <span class="mesa-proposal-id">#${escapeHtml(row.propuestaId)}</span>
             </td>
-            <td data-label="Categoria">${escapeHtml(row.categoria)}</td>
+            <td data-label="Categoria">
+                <div class="mesa-categories-wrap">
+                    ${row.categoria ? row.categoria.split('|').map(cat => cat.trim()).filter(Boolean).map(cat => `<span class="mesa-category-pill">${escapeHtml(cat)}</span>`).join('') : ''}
+                </div>
+            </td>
         </tr>
     `).join('');
 }

@@ -282,6 +282,7 @@ html, body {
 }
 
 .mesa-header {
+    position: static;
     border-bottom: 1px solid #e5e7eb;
     background: rgba(255, 255, 255, 0.94);
     box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
@@ -417,26 +418,44 @@ html, body {
 .mesa-summary-rail {
     display: flex;
     overflow: hidden;
-    min-height: 64px;
+    min-height: 112px;
     border-radius: 18px;
     background: #edf1f4;
 }
 
 .mesa-summary-segment {
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     min-width: 0;
-    padding: 12px 14px;
+    padding: 14px 18px;
     color: #fff;
-    font-size: 12px;
+    box-sizing: border-box;
+    transition: filter 0.2s ease;
+}
+
+.mesa-summary-segment:hover {
+    filter: brightness(1.08);
+}
+
+.mesa-segment-number {
+    display: block;
+    font-size: 32px;
     font-weight: 800;
-    line-height: 1.35;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.mesa-segment-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.25;
 }
 
 .mesa-summary-metrics {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
+    display: none;
 }
 
 .mesa-summary-metric {
@@ -720,13 +739,36 @@ html, body {
 .mesa-pill {
     display: inline-flex;
     align-items: center;
-    min-height: 28px;
-    padding: 4px 10px;
+    justify-content: center;
+    text-align: center;
+    padding: 5px 14px;
     border-radius: 999px;
     color: #fff;
-    font-size: 12px;
-    font-weight: 800;
-    white-space: nowrap;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.4;
+    white-space: normal;
+    letter-spacing: 0.01em;
+}
+
+.mesa-categories-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.mesa-category-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 999px;
+    color: #475569;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.35;
 }
 
 .mesa-intro-band {
@@ -1076,6 +1118,7 @@ html, body {
     }
 
     .mesa-summary-metrics {
+        display: grid;
         grid-template-columns: 1fr;
         gap: 12px;
     }
