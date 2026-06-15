@@ -1022,6 +1022,20 @@ html, body {
         padding: 32px 0 40px;
     }
 
+    .mesa-hero h1 {
+        font-size: clamp(24px, 10vw, 42px);
+        line-height: 1.04;
+    }
+
+    .mesa-hero-copy,
+    .mesa-license-note,
+    .mesa-overview-insight,
+    .mesa-muted,
+    .mesa-method-note p {
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
     .mesa-summary-band,
     .mesa-top-list,
     .mesa-filters,
@@ -1029,22 +1043,90 @@ html, body {
         grid-template-columns: 1fr;
     }
 
+    .mesa-summary-band {
+        gap: 18px;
+    }
+
+    .mesa-summary-rail {
+        min-height: 18px;
+        border-radius: 999px;
+    }
+
+    .mesa-summary-segment {
+        min-height: 18px;
+        padding: 0;
+    }
+
+    .mesa-summary-segment span {
+        display: none;
+    }
+
     .mesa-quick-filters {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 8px;
     }
 
     .mesa-quick-chip {
         width: 100%;
+        min-height: 40px;
+        padding: 0 12px;
+        font-size: 12px;
         justify-content: center;
-    }
-
-    .mesa-summary-band {
-        gap: 18px;
     }
 
     .mesa-summary-metrics {
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 12px;
+    }
+
+    .mesa-summary-metric strong {
+        font-size: 30px;
+    }
+
+    .mesa-acta-links {
+        gap: 10px;
+    }
+
+    .mesa-acta-link-card {
+        min-height: 56px;
+        padding: 12px 14px;
+    }
+
+    .mesa-acta-link-card strong {
+        font-size: 13px;
+    }
+
+    .mesa-zone-bars {
+        gap: 14px;
+    }
+
+    .mesa-zone-heading {
+        align-items: baseline;
+        gap: 10px;
+        margin-bottom: 6px;
+        font-size: 12px;
+    }
+
+    .mesa-zone-heading span {
+        display: block;
+        max-width: 220px;
+        line-height: 1.35;
+    }
+
+    .mesa-stack {
+        height: 9px;
+    }
+
+    .mesa-top-item {
+        grid-template-columns: 30px 1fr;
+        gap: 10px;
+    }
+
+    .mesa-top-rank {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
     }
 
     .mesa-section-heading,
@@ -1073,16 +1155,16 @@ html, body {
     .mesa-table tr {
         margin-bottom: 12px;
         border: 1px solid var(--mesa-border);
-        border-radius: 10px;
+        border-radius: 14px;
         background: #fff;
         overflow: hidden;
     }
 
     .mesa-table td {
         display: grid;
-        grid-template-columns: 112px 1fr;
-        gap: 12px;
-        padding: 12px;
+        grid-template-columns: 92px 1fr;
+        gap: 10px;
+        padding: 11px 12px;
         border-bottom: 1px solid #edf1f4;
     }
 
@@ -1092,6 +1174,34 @@ html, body {
         font-size: 12px;
         font-weight: 800;
         text-transform: uppercase;
+    }
+
+    .mesa-table td[data-label="Propuesta"] {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    .mesa-table td[data-label="Propuesta"]::before {
+        content: none;
+    }
+
+    .mesa-table td[data-label="Propuesta"] a {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .mesa-table td[data-label="Apoyos"] strong,
+    .mesa-table td[data-label="Zona"],
+    .mesa-table td[data-label="Categoria"] {
+        font-size: 14px;
+        line-height: 1.45;
+    }
+
+    .mesa-pill {
+        white-space: normal;
+        line-height: 1.3;
     }
 
     .mesa-acta-modal {
