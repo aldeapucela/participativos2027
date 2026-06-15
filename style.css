@@ -1057,6 +1057,16 @@ html, body {
     border-top: 1px solid var(--mesa-border);
 }
 
+.mesa-source-note {
+    margin: 24px 0 0;
+    max-width: 880px;
+    color: var(--mesa-muted);
+    font-size: 15px;
+    line-height: 1.65;
+    padding-top: 18px;
+    border-top: 1px solid var(--mesa-border);
+}
+
 .mesa-acta-link-card {
     display: flex;
     align-items: center;

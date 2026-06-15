@@ -1,6 +1,6 @@
 import { escapeHtml } from './utils.js';
 
-const CSV_URL = '../data/cruce_mesa_vs_final_unificado_2026-06-15.csv?v=20260615f';
+const CSV_URL = '../data/mesa-final-unificado.csv?v=20260615g';
 
 const ACTA_BY_ZONE = {
     'Zona Centro': {
@@ -559,7 +559,10 @@ function renderZoneBars(rows) {
 
 function renderTopProposals() {
     const topRows = state.rows
-        .filter(row => row.situacion === 'Mesa pero no final')
+        .filter(row => (
+            row.situacion === 'Mesa pero no final'
+            && row.apareceDescartadaEnMesa !== 'SI'
+        ))
         .sort((a, b) => b.apoyos - a.apoyos)
         .slice(0, 5);
 
