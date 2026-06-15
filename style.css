@@ -623,7 +623,11 @@ html, body {
 
 .mesa-zone-bars {
     display: grid;
-    gap: 16px;
+    gap: 20px;
+}
+
+.mesa-zone-row {
+    padding: 4px 0 6px;
 }
 
 .mesa-zone-legend {
@@ -652,12 +656,13 @@ html, body {
 
 .mesa-zone-heading {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 12px;
-    margin-bottom: 8px;
+    margin-bottom: 14px;
     color: var(--mesa-muted);
     font-size: 13px;
     font-weight: 700;
+    line-height: 1.2;
 }
 
 .mesa-zone-heading strong {
@@ -673,10 +678,25 @@ html, body {
 
 .mesa-stack {
     display: flex;
+    height: 22px;
+    margin-bottom: 2px;
 }
 
 .mesa-stack span {
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.mesa-stack-value {
+    color: rgba(255, 255, 255, 0.96);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.18);
 }
 
 .status-mesa-no-final {
@@ -1377,14 +1397,15 @@ html, body {
     }
 
     .mesa-zone-bars {
-        gap: 14px;
+        gap: 18px;
     }
 
     .mesa-zone-heading {
-        align-items: baseline;
+        align-items: flex-start;
         gap: 10px;
-        margin-bottom: 6px;
+        margin-bottom: 10px;
         font-size: 12px;
+        line-height: 1.2;
     }
 
     .mesa-zone-heading span {
@@ -1394,7 +1415,12 @@ html, body {
     }
 
     .mesa-stack {
-        height: 9px;
+        height: 20px;
+        margin-bottom: 2px;
+    }
+
+    .mesa-stack-value {
+        font-size: 11px;
     }
 
     .mesa-top-item {

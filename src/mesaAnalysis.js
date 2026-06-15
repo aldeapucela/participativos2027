@@ -516,19 +516,41 @@ function renderZoneBars(rows) {
         const discardedFinalWidth = (entry.discardedFinal / total) * 100;
         const mesaFinalWidth = (entry.mesaFinal / total) * 100;
         const finalNoMesaWidth = Math.max(0, 100 - noFinalWidth - discardedFinalWidth - mesaFinalWidth);
+        const segments = [
+            {
+                className: 'status-mesa-no-final',
+                width: noFinalWidth,
+                count: entry.mesaNoFinal,
+            },
+            {
+                className: 'status-mesa-discarded-final',
+                width: discardedFinalWidth,
+                count: entry.discardedFinal,
+            },
+            {
+                className: 'status-mesa-final',
+                width: mesaFinalWidth,
+                count: entry.mesaFinal,
+            },
+            {
+                className: 'status-final-no-mesa',
+                width: finalNoMesaWidth,
+                count: entry.finalNoMesa,
+            },
+        ];
         return `
             <div class="mesa-zone-row">
                 <div class="mesa-zone-heading">
                     <div>
                         <span>${escapeHtml(zone)}</span>
                     </div>
-                    <strong>${entry.visibleTotal} propuestas</strong>
                 </div>
                 <div class="mesa-stack" aria-hidden="true">
-                    <span class="status-mesa-no-final" style="width:${noFinalWidth}%"></span>
-                    <span class="status-mesa-discarded-final" style="width:${discardedFinalWidth}%"></span>
-                    <span class="status-mesa-final" style="width:${mesaFinalWidth}%"></span>
-                    <span class="status-final-no-mesa" style="width:${finalNoMesaWidth}%"></span>
+                    ${segments.map(segment => `
+                        <span class="${segment.className}" style="width:${segment.width}%">
+                            ${segment.width >= 8 && segment.count > 0 ? `<span class="mesa-stack-value">${segment.count}</span>` : ''}
+                        </span>
+                    `).join('')}
                 </div>
             </div>
         `;
