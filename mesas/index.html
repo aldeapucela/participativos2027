@@ -33,7 +33,7 @@
     </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../style.css?v=20260615e">
+    <link rel="stylesheet" href="../style.css?v=20260615f">
     <link rel="icon" type="image/png" href="../favicon.png">
 </head>
 
@@ -66,20 +66,7 @@
             </div>
             <div class="mesa-summary-visual">
                 <div id="summary-rail" class="mesa-summary-rail"></div>
-                <div class="mesa-summary-metrics">
-                    <article class="mesa-summary-metric mesa-summary-metric-primary">
-                        <span class="mesa-metric-label">Elegidas por mesa y fuera de la final</span>
-                        <strong id="metric-mesa-no-final">0</strong>
-                    </article>
-                    <article class="mesa-summary-metric">
-                        <span class="mesa-metric-label">Elegidas por mesa y en la final</span>
-                        <strong id="metric-mesa-final">0</strong>
-                    </article>
-                    <article class="mesa-summary-metric">
-                        <span class="mesa-metric-label">En la final sin localizar claramente en acta</span>
-                        <strong id="metric-final-no-mesa">0</strong>
-                    </article>
-                </div>
+                <div id="summary-metrics" class="mesa-summary-metrics" aria-live="polite"></div>
             </div>
         </section>
 
@@ -105,21 +92,42 @@
             <p id="zone-insight" class="mesa-overview-insight">Cargando lectura por zonas...</p>
             <article class="mesa-panel">
                 <div id="zone-bars" class="mesa-zone-bars" aria-live="polite"></div>
+                <div class="mesa-zone-legend" aria-label="Leyenda del gráfico por zonas">
+                    <span><i class="mesa-legend-dot status-mesa-no-final"></i> Elegidas por mesa y fuera de la final</span>
+                    <span><i class="mesa-legend-dot status-mesa-discarded-final"></i> Descartadas por mesa y aun así en la final</span>
+                    <span><i class="mesa-legend-dot status-mesa-final"></i> Elegidas por mesa y en la final</span>
+                    <span><i class="mesa-legend-dot status-final-no-mesa"></i> En la final sin localizar claramente en acta</span>
+                </div>
             </article>
         </section>
 
-        <section class="mesa-section" aria-label="Propuestas destacadas">
+        <section class="mesa-section mesa-alert-section" aria-label="Casos a revisar">
             <div class="mesa-section-heading">
                 <div>
-                    <p class="mesa-kicker">Casos destacados</p>
-                    <h2>Propuestas muy apoyadas que se quedaron fuera</h2>
+                    <p class="mesa-kicker">Casos a revisar</p>
+                    <h2>Descartadas por la mesa, pero presentes en la final</h2>
                 </div>
-                <p class="mesa-muted">Cinco ejemplos que ayudan a entender qué tipo de corte se produjo entre las mesas y la lista final.</p>
+                <p id="discarded-final-count" class="mesa-muted">0 propuestas</p>
             </div>
-            <div id="top-proposals" class="mesa-top-list" aria-live="polite"></div>
+            <p class="mesa-muted">Aquí aparecen los casos en los que el acta recoge expresamente que la mesa propuso excluir o inadmitir una propuesta, pero esa propuesta sí figura en el listado final de 126.</p>
+            <div id="discarded-final-list" class="mesa-flagged-list" aria-live="polite"></div>
         </section>
 
-        <section class="mesa-section" aria-label="Explorador de datos">
+        <section class="mesa-section" aria-label="Propuestas destacadas">
+            <div class="mesa-section-heading mesa-section-heading-balanced">
+                <div>
+                    <p class="mesa-kicker">Casos destacados</p>
+                    <h2>Propuestas con muchos apoyos que la mesa sí eligió, pero no llegaron a la final</h2>
+                </div>
+                <p class="mesa-muted">Cinco casos en los que el acta refleja una propuesta elegida por la mesa y, aun así, esa propuesta no figura en el listado final.</p>
+            </div>
+            <div id="top-proposals" class="mesa-top-list" aria-live="polite"></div>
+            <div class="mesa-section-action">
+                <button id="view-all-mesa-no-final" class="mesa-link-action" type="button">Ver todas las propuestas de este tipo</button>
+            </div>
+        </section>
+
+        <section id="mesa-detail-section" class="mesa-section" aria-label="Explorador de datos">
             <div class="mesa-section-heading mesa-section-heading-stacked">
                 <div>
                     <p class="mesa-kicker">Consultar el detalle</p>
@@ -208,7 +216,7 @@
         </div>
     </dialog>
 
-    <script type="module" src="../src/mesaAnalysis.js?v=20260615e"></script>
+    <script type="module" src="../src/mesaAnalysis.js?v=20260615f"></script>
 </body>
 
 </html>

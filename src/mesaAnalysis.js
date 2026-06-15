@@ -1,6 +1,6 @@
 import { escapeHtml } from './utils.js';
 
-const CSV_URL = '../data/cruce_mesa_vs_final_126_simplificado_2026-06-15.csv?v=20260615e';
+const CSV_URL = '../data/cruce_mesa_vs_final_unificado_2026-06-15.csv?v=20260615f';
 
 const ACTA_BY_ZONE = {
     'Zona Centro': {
@@ -47,9 +47,15 @@ const ACTA_BY_ZONE = {
 
 const STATUS_ORDER = [
     'Mesa pero no final',
+    'Descartada por mesa y fuera de la final',
+    'Descartada por mesa y en la final',
     'Mesa y final',
     'Final pero no detectada en mesa',
 ];
+
+const TABLE_HIDDEN_STATUSES = new Set([
+    'Descartada por mesa y fuera de la final',
+]);
 
 const STATUS_META = {
     'Mesa pero no final': {
@@ -59,6 +65,14 @@ const STATUS_META = {
     'Mesa y final': {
         className: 'status-mesa-final',
         label: 'Elegidas por mesa y en la final',
+    },
+    'Descartada por mesa y fuera de la final': {
+        className: 'status-mesa-discarded',
+        label: 'Descartadas por mesa y fuera de la final',
+    },
+    'Descartada por mesa y en la final': {
+        className: 'status-mesa-discarded-final',
+        label: 'Descartadas por mesa y aun así en la final',
     },
     'Final pero no detectada en mesa': {
         className: 'status-final-no-mesa',
@@ -191,15 +205,19 @@ function parseRows(rows) {
         apoyos: Number.parseInt(row.apoyos, 10) || 0,
         categoria: normalizeCategories(row.categoria) || 'Sin categoría',
         apareceEnMesa: row.aparece_en_mesa,
+        apareceDescartadaEnMesa: row.aparece_descartada_en_mesa,
         ordenMesa: row.orden_detectado_en_mesa,
         apareceEnFinal: row.aparece_en_final_126,
+        decisionMesa: row.decision_mesa || '',
         fiabilidad: row.fiabilidad_lectura_mesa || 'no aplica',
+        extractoActa: row.extracto_acta || '',
     }));
 }
 
 function getFilteredRows() {
     const query = normalize(state.filters.search).trim();
     return state.rows.filter(row => {
+        if (TABLE_HIDDEN_STATUSES.has(row.situacion)) return false;
         const statusMatch = state.filters.status === 'Todas' || row.situacion === state.filters.status;
         const zoneMatch = state.filters.zone === 'Todas' || row.zona === state.filters.zone;
         const rowCategories = row.categoria ? row.categoria.split('|').map(c => c.trim()).filter(Boolean) : [];
@@ -274,7 +292,8 @@ function setupFilters() {
         if (b === 'Todas') return 1;
         return a.localeCompare(b, 'es');
     });
-    fillSelect('filter-status', ['Todas', ...STATUS_ORDER], state.filters.status);
+    const visibleStatuses = STATUS_ORDER.filter(status => !TABLE_HIDDEN_STATUSES.has(status));
+    fillSelect('filter-status', ['Todas', ...visibleStatuses], state.filters.status);
     fillSelect('filter-zone', zones, state.filters.zone);
     fillSelect('filter-category', categories, state.filters.category);
 
@@ -346,6 +365,30 @@ function updateQuickChipState() {
     });
 }
 
+function jumpToDetailedList() {
+    const detailSection = document.getElementById('mesa-detail-section');
+    if (!detailSection) return;
+    detailSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function focusDetailedStatus(status) {
+    state.filters.quick = 'all';
+    state.filters.status = status;
+    state.filters.minSupport = 0;
+    const statusSelect = document.getElementById('filter-status');
+    if (statusSelect) statusSelect.value = state.filters.status;
+    updateQuickChipState();
+    render();
+    jumpToDetailedList();
+}
+
+function setupSectionActions() {
+    document.getElementById('view-all-mesa-no-final')?.addEventListener('click', () => {
+        applyQuickFilter('mesa-no-final');
+        jumpToDetailedList();
+    });
+}
+
 function renderSortIndicators() {
     document.querySelectorAll('.mesa-sort-indicator').forEach(indicator => {
         const key = indicator.dataset.indicatorFor;
@@ -359,9 +402,34 @@ function renderSortIndicators() {
 
 function renderMetrics(rows) {
     const counts = countBy(rows, 'situacion');
-    document.getElementById('metric-mesa-no-final').textContent = counts['Mesa pero no final'] || 0;
-    document.getElementById('metric-mesa-final').textContent = counts['Mesa y final'] || 0;
-    document.getElementById('metric-final-no-mesa').textContent = counts['Final pero no detectada en mesa'] || 0;
+    const metricsContainer = document.getElementById('summary-metrics');
+    const summaryStatuses = [
+        'Mesa pero no final',
+        'Descartada por mesa y en la final',
+        'Mesa y final',
+        'Final pero no detectada en mesa',
+    ];
+    if (metricsContainer) {
+        metricsContainer.innerHTML = summaryStatuses.map(status => {
+            const meta = STATUS_META[status];
+            const value = counts[status] || 0;
+            return `
+                <article class="mesa-summary-metric mesa-summary-metric-actionable">
+                    <span class="mesa-metric-label">
+                        <span class="mesa-metric-dot ${meta.className}" aria-hidden="true"></span>
+                        ${escapeHtml(meta.label)}
+                    </span>
+                    <button type="button" class="mesa-summary-metric-button ${meta.className}" data-summary-status="${escapeHtml(status)}">${value}</button>
+                </article>
+            `;
+        }).join('');
+        metricsContainer.querySelectorAll('[data-summary-status]').forEach(button => {
+            button.addEventListener('click', () => {
+                const status = button.getAttribute('data-summary-status');
+                if (status) focusDetailedStatus(status);
+            });
+        });
+    }
     document.getElementById('filtered-count').textContent = `${rows.length} propuestas`;
 }
 
@@ -375,7 +443,7 @@ function renderOverviewInsight(rows) {
         }, {});
     const topZone = Object.entries(byZone).sort((a, b) => b[1] - a[1])[0];
     const text = topZone
-        ? `${counts['Mesa pero no final'] || 0} propuestas elegidas por las mesas no aparecen en la votación final. ${counts['Mesa y final'] || 0} sí llegaron, y ${counts['Final pero no detectada en mesa'] || 0} están en la final pero no las hemos localizado con claridad en las actas.`
+        ? `${counts['Mesa pero no final'] || 0} propuestas elegidas por las mesas no aparecen en la votación final. ${counts['Descartada por mesa y en la final'] || 0} fueron descartadas por la mesa y aun así sí aparecen en la final. ${counts['Mesa y final'] || 0} sí llegaron y ${counts['Final pero no detectada en mesa'] || 0} están en la final pero no las hemos localizado con claridad en las actas.`
         : `Mostrando ${rows.length} propuestas en esta vista.`;
     document.getElementById('overview-insight').textContent = text;
     document.getElementById('zone-insight').textContent = topZone
@@ -386,16 +454,26 @@ function renderOverviewInsight(rows) {
 function renderSummaryRail(rows) {
     const container = document.getElementById('summary-rail');
     const counts = countBy(rows, 'situacion');
-    const total = STATUS_ORDER.reduce((sum, status) => sum + (counts[status] || 0), 0) || 1;
+    const summaryStatuses = [
+        'Mesa pero no final',
+        'Descartada por mesa y en la final',
+        'Mesa y final',
+        'Final pero no detectada en mesa',
+    ];
+    const total = summaryStatuses.reduce((sum, status) => sum + (counts[status] || 0), 0) || 1;
 
-    container.innerHTML = STATUS_ORDER.map(status => {
+    container.innerHTML = summaryStatuses.map(status => {
         const value = counts[status] || 0;
         const percent = (value / total) * 100;
         const meta = STATUS_META[status];
         return `
-            <div class="mesa-summary-segment ${meta.className}" style="width:${percent}%">
-                <span class="mesa-segment-number">${value}</span>
-                <span class="mesa-segment-label">${escapeHtml(meta.label)}</span>
+            <div
+                class="mesa-summary-segment ${meta.className}"
+                style="width:${percent}%"
+                title="${escapeHtml(meta.label)}: ${value}"
+                aria-label="${escapeHtml(meta.label)}: ${value}"
+            >
+                <span class="mesa-summary-sr">${escapeHtml(meta.label)}: ${value}</span>
             </div>
         `;
     }).join('');
@@ -407,36 +485,48 @@ function renderZoneBars(rows) {
     rows.forEach(row => {
         if (!byZone.has(row.zona)) {
             byZone.set(row.zona, {
-                total: 0,
+                visibleTotal: 0,
                 mesaNoFinal: 0,
+                discardedFinal: 0,
                 mesaFinal: 0,
                 finalNoMesa: 0,
             });
         }
         const entry = byZone.get(row.zona);
-        entry.total += 1;
         if (row.situacion === 'Mesa pero no final') entry.mesaNoFinal += 1;
+        if (row.situacion === 'Descartada por mesa y en la final') entry.discardedFinal += 1;
         if (row.situacion === 'Mesa y final') entry.mesaFinal += 1;
         if (row.situacion === 'Final pero no detectada en mesa') entry.finalNoMesa += 1;
+        if ([
+            'Mesa pero no final',
+            'Descartada por mesa y en la final',
+            'Mesa y final',
+            'Final pero no detectada en mesa',
+        ].includes(row.situacion)) {
+            entry.visibleTotal += 1;
+        }
     });
 
     const zones = Array.from(byZone.entries())
-        .sort((a, b) => b[1].mesaNoFinal - a[1].mesaNoFinal || b[1].total - a[1].total);
+        .sort((a, b) => b[1].mesaNoFinal - a[1].mesaNoFinal || b[1].visibleTotal - a[1].visibleTotal);
 
     container.innerHTML = zones.map(([zone, entry]) => {
-        const noFinalWidth = entry.total ? (entry.mesaNoFinal / entry.total) * 100 : 0;
-        const mesaFinalWidth = entry.total ? (entry.mesaFinal / entry.total) * 100 : 0;
-        const finalNoMesaWidth = Math.max(0, 100 - noFinalWidth - mesaFinalWidth);
+        const total = entry.visibleTotal || 1;
+        const noFinalWidth = (entry.mesaNoFinal / total) * 100;
+        const discardedFinalWidth = (entry.discardedFinal / total) * 100;
+        const mesaFinalWidth = (entry.mesaFinal / total) * 100;
+        const finalNoMesaWidth = Math.max(0, 100 - noFinalWidth - discardedFinalWidth - mesaFinalWidth);
         return `
             <div class="mesa-zone-row">
                 <div class="mesa-zone-heading">
                     <div>
                         <span>${escapeHtml(zone)}</span>
                     </div>
-                    <strong>${entry.mesaNoFinal}/${entry.total}</strong>
+                    <strong>${entry.visibleTotal} propuestas</strong>
                 </div>
                 <div class="mesa-stack" aria-hidden="true">
                     <span class="status-mesa-no-final" style="width:${noFinalWidth}%"></span>
+                    <span class="status-mesa-discarded-final" style="width:${discardedFinalWidth}%"></span>
                     <span class="status-mesa-final" style="width:${mesaFinalWidth}%"></span>
                     <span class="status-final-no-mesa" style="width:${finalNoMesaWidth}%"></span>
                 </div>
@@ -458,6 +548,33 @@ function renderTopProposals() {
                 <a href="${escapeHtml(row.enlace)}" target="_blank" rel="noopener noreferrer">${escapeHtml(row.titulo)}</a>
                 <p>${escapeHtml(row.zona)} · ${row.apoyos} apoyos</p>
             </div>
+        </article>
+    `).join('');
+}
+
+function renderDiscardedFinalCases(rows) {
+    const flagged = rows
+        .filter(row => row.situacion === 'Descartada por mesa y en la final')
+        .sort((a, b) => b.apoyos - a.apoyos);
+    const container = document.getElementById('discarded-final-list');
+    const count = document.getElementById('discarded-final-count');
+    if (!container || !count) return;
+    count.textContent = `${flagged.length} propuestas`;
+    if (!flagged.length) {
+        container.innerHTML = '<p class="mesa-empty mesa-empty-inline">No hemos detectado casos en esta categoría.</p>';
+        return;
+    }
+    container.innerHTML = flagged.map(row => `
+        <article class="mesa-flagged-item">
+            <div class="mesa-flagged-head">
+                <a href="${escapeHtml(row.enlace)}" target="_blank" rel="noopener noreferrer">${escapeHtml(row.titulo)}</a>
+                <span class="mesa-pill status-mesa-discarded-final">En la final</span>
+            </div>
+            <p>${escapeHtml(row.zona)} · ${row.apoyos} apoyos</p>
+            <blockquote>
+                <span class="mesa-quote-label">Fragmento del acta</span>
+                <span class="mesa-quote-text">${escapeHtml(row.extractoActa)}</span>
+            </blockquote>
         </article>
     `).join('');
 }
@@ -572,10 +689,11 @@ function closeActaModal() {
 
 function render() {
     const rows = getFilteredRows();
-    renderMetrics(rows);
-    renderOverviewInsight(rows);
-    renderSummaryRail(rows);
-    renderZoneBars(rows);
+    renderMetrics(state.rows);
+    renderOverviewInsight(state.rows);
+    renderSummaryRail(state.rows);
+    renderZoneBars(state.rows);
+    renderDiscardedFinalCases(state.rows);
     renderSortIndicators();
     updateQuickChipState();
     renderTable(rows);
@@ -590,6 +708,7 @@ async function init() {
         renderActaLinks();
         setupActaModal();
         setupFilters();
+        setupSectionActions();
         renderTopProposals();
         render();
     } catch (error) {
