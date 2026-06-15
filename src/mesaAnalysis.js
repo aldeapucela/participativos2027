@@ -1,6 +1,49 @@
 import { escapeHtml } from './utils.js';
 
-const CSV_URL = 'data/cruce_mesa_vs_final_126_simplificado_2026-06-15.csv?v=20260615b';
+const CSV_URL = 'data/cruce_mesa_vs_final_126_simplificado_2026-06-15.csv?v=20260615d';
+
+const ACTA_BY_ZONE = {
+    'Zona Centro': {
+        label: 'Acta Zona Centro',
+        href: 'data/actas-mesa/acta-zona-centro.pdf',
+    },
+    'Zona Esgueva 1': {
+        label: 'Acta Zona Esgueva 1',
+        href: 'data/actas-mesa/acta-zona-esgueva-1.pdf',
+    },
+    'Zona Esgueva 2': {
+        label: 'Acta Zona Esgueva 2',
+        href: 'data/actas-mesa/acta-zona-esgueva-2.pdf',
+    },
+    'Zona Este 1': {
+        label: 'Acta Zona Este 1',
+        href: 'data/actas-mesa/acta-zona-este-1.pdf',
+    },
+    'Zona Este 2': {
+        label: 'Acta Zona Este 2',
+        href: 'data/actas-mesa/acta-zona-este-2.pdf',
+    },
+    'Zona Parquesol': {
+        label: 'Acta Zona Parquesol',
+        href: 'data/actas-mesa/acta-zona-parquesol.pdf',
+    },
+    'Zona Pisuerga 1': {
+        label: 'Acta Zona Pisuerga 1',
+        href: 'data/actas-mesa/acta-zona-pisuerga-1.pdf',
+    },
+    'Zona Pisuerga 2': {
+        label: 'Acta Zona Pisuerga 2',
+        href: 'data/actas-mesa/acta-zona-pisuerga-2.pdf',
+    },
+    'Zona Sur 1': {
+        label: 'Acta Zona Sur 1',
+        href: 'data/actas-mesa/acta-zona-sur-1.pdf',
+    },
+    'Zona Sur 2': {
+        label: 'Acta Zona Sur 2',
+        href: 'data/actas-mesa/acta-zona-sur-2.pdf',
+    },
+};
 
 const STATUS_ORDER = [
     'Mesa pero no final',
@@ -19,7 +62,7 @@ const STATUS_META = {
     },
     'Final pero no detectada en mesa': {
         className: 'status-final-no-mesa',
-        label: 'En la final sin localizar en acta',
+        label: 'En la final sin localizar claramente en acta',
     },
 };
 
@@ -30,8 +73,18 @@ const state = {
         zone: 'Todas',
         category: 'Todas',
         search: '',
+        minSupport: 0,
+        quick: 'all',
+    },
+    sort: {
+        key: 'default',
+        direction: 'desc',
     },
 };
+
+function getActaForZone(zone) {
+    return ACTA_BY_ZONE[zone] || null;
+}
 
 function parseCsv(text) {
     const rows = [];
@@ -110,17 +163,39 @@ function getFilteredRows() {
         const statusMatch = state.filters.status === 'Todas' || row.situacion === state.filters.status;
         const zoneMatch = state.filters.zone === 'Todas' || row.zona === state.filters.zone;
         const categoryMatch = state.filters.category === 'Todas' || row.categoria === state.filters.category;
+        const supportMatch = row.apoyos >= state.filters.minSupport;
         const queryMatch = !query || normalize(`${row.titulo} ${row.zona} ${row.categoria} ${row.propuestaId}`).includes(query);
-        return statusMatch && zoneMatch && categoryMatch && queryMatch;
+        return statusMatch && zoneMatch && categoryMatch && supportMatch && queryMatch;
     }).sort(compareRows);
 }
 
 function compareRows(a, b) {
+    if (state.sort.key !== 'default') {
+        return compareBySort(a, b);
+    }
     const statusA = STATUS_ORDER.indexOf(a.situacion);
     const statusB = STATUS_ORDER.indexOf(b.situacion);
     if (statusA !== statusB) return statusA - statusB;
     if (b.apoyos !== a.apoyos) return b.apoyos - a.apoyos;
     return a.zona.localeCompare(b.zona, 'es');
+}
+
+function compareBySort(a, b) {
+    const direction = state.sort.direction === 'asc' ? 1 : -1;
+    switch (state.sort.key) {
+        case 'situacion':
+            return direction * a.situacion.localeCompare(b.situacion, 'es');
+        case 'zona':
+            return direction * a.zona.localeCompare(b.zona, 'es', { numeric: true });
+        case 'apoyos':
+            return direction * (a.apoyos - b.apoyos);
+        case 'titulo':
+            return direction * a.titulo.localeCompare(b.titulo, 'es');
+        case 'categoria':
+            return direction * a.categoria.localeCompare(b.categoria, 'es');
+        default:
+            return 0;
+    }
 }
 
 function countBy(rows, key) {
@@ -168,6 +243,68 @@ function setupFilters() {
         state.filters.search = event.target.value;
         render();
     });
+
+    document.querySelectorAll('.mesa-quick-chip').forEach(button => {
+        button.addEventListener('click', () => {
+            applyQuickFilter(button.dataset.quick || 'all');
+        });
+    });
+
+    document.querySelectorAll('.mesa-sort-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const nextKey = button.dataset.sort;
+            if (!nextKey) return;
+            if (state.sort.key === nextKey) {
+                state.sort.direction = state.sort.direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                state.sort.key = nextKey;
+                state.sort.direction = nextKey === 'apoyos' ? 'desc' : 'asc';
+            }
+            render();
+        });
+    });
+}
+
+function applyQuickFilter(quick) {
+    state.filters.quick = quick;
+    if (quick === 'all') {
+        state.filters.status = 'Todas';
+        state.filters.minSupport = 0;
+    } else if (quick === 'mesa-no-final') {
+        state.filters.status = 'Mesa pero no final';
+        state.filters.minSupport = 0;
+    } else if (quick === 'mesa-final') {
+        state.filters.status = 'Mesa y final';
+        state.filters.minSupport = 0;
+    } else if (quick === '50plus') {
+        state.filters.status = 'Todas';
+        state.filters.minSupport = 50;
+    } else if (quick === '100plus') {
+        state.filters.status = 'Todas';
+        state.filters.minSupport = 100;
+    }
+
+    const statusSelect = document.getElementById('filter-status');
+    if (statusSelect) statusSelect.value = state.filters.status;
+    updateQuickChipState();
+    render();
+}
+
+function updateQuickChipState() {
+    document.querySelectorAll('.mesa-quick-chip').forEach(button => {
+        button.classList.toggle('is-active', button.dataset.quick === state.filters.quick);
+    });
+}
+
+function renderSortIndicators() {
+    document.querySelectorAll('.mesa-sort-indicator').forEach(indicator => {
+        const key = indicator.dataset.indicatorFor;
+        if (key !== state.sort.key) {
+            indicator.textContent = '';
+            return;
+        }
+        indicator.textContent = state.sort.direction === 'asc' ? '↑' : '↓';
+    });
 }
 
 function renderMetrics(rows) {
@@ -178,24 +315,36 @@ function renderMetrics(rows) {
     document.getElementById('filtered-count').textContent = `${rows.length} propuestas`;
 }
 
-function renderStatusBars(rows) {
-    const container = document.getElementById('status-bars');
+function renderOverviewInsight(rows) {
     const counts = countBy(rows, 'situacion');
-    const max = Math.max(...STATUS_ORDER.map(status => counts[status] || 0), 1);
+    const byZone = rows
+        .filter(row => row.situacion === 'Mesa pero no final')
+        .reduce((acc, row) => {
+            acc[row.zona] = (acc[row.zona] || 0) + 1;
+            return acc;
+        }, {});
+    const topZone = Object.entries(byZone).sort((a, b) => b[1] - a[1])[0];
+    const text = topZone
+        ? `${counts['Mesa pero no final'] || 0} propuestas elegidas por las mesas no aparecen en la votación final. ${counts['Mesa y final'] || 0} sí llegaron, y ${counts['Final pero no detectada en mesa'] || 0} están en la final pero no las hemos localizado con claridad en las actas.`
+        : `Mostrando ${rows.length} propuestas en esta vista.`;
+    document.getElementById('overview-insight').textContent = text;
+    document.getElementById('zone-insight').textContent = topZone
+        ? `No todas las zonas pierden el mismo número de propuestas entre la mesa y la final. En esta vista, ${topZone[0]} es la zona con más propuestas elegidas por mesa que no llegaron al listado final.`
+        : 'No hay suficientes datos para mostrar una lectura por zonas.';
+}
+
+function renderSummaryRail(rows) {
+    const container = document.getElementById('summary-rail');
+    const counts = countBy(rows, 'situacion');
+    const total = STATUS_ORDER.reduce((sum, status) => sum + (counts[status] || 0), 0) || 1;
 
     container.innerHTML = STATUS_ORDER.map(status => {
         const value = counts[status] || 0;
-        const percent = Math.round((value / max) * 100);
+        const percent = (value / total) * 100;
         const meta = STATUS_META[status];
         return `
-            <div class="mesa-bar-row">
-                <div class="mesa-bar-label">
-                    <span>${escapeHtml(meta.label)}</span>
-                    <strong>${value}</strong>
-                </div>
-                <div class="mesa-bar-track">
-                    <div class="mesa-bar-fill ${meta.className}" style="width: ${percent}%"></div>
-                </div>
+            <div class="mesa-summary-segment ${meta.className}" style="width:${percent}%">
+                <span>${escapeHtml(meta.label)}</span>
             </div>
         `;
     }).join('');
@@ -230,7 +379,9 @@ function renderZoneBars(rows) {
         return `
             <div class="mesa-zone-row">
                 <div class="mesa-zone-heading">
-                    <span>${escapeHtml(zone)}</span>
+                    <div>
+                        <span>${escapeHtml(zone)}</span>
+                    </div>
                     <strong>${entry.mesaNoFinal}/${entry.total}</strong>
                 </div>
                 <div class="mesa-stack" aria-hidden="true">
@@ -247,7 +398,7 @@ function renderTopProposals() {
     const topRows = state.rows
         .filter(row => row.situacion === 'Mesa pero no final')
         .sort((a, b) => b.apoyos - a.apoyos)
-        .slice(0, 10);
+        .slice(0, 5);
 
     document.getElementById('top-proposals').innerHTML = topRows.map((row, index) => `
         <article class="mesa-top-item">
@@ -286,11 +437,92 @@ function renderTable(rows) {
     `).join('');
 }
 
+function renderActaLinks() {
+    const container = document.getElementById('acta-links');
+    const entries = Object.entries(ACTA_BY_ZONE).sort((a, b) => a[0].localeCompare(b[0], 'es', { numeric: true }));
+    container.innerHTML = entries.map(([zone]) => `
+        <button type="button" class="mesa-acta-link-card" data-acta-zone="${escapeHtml(zone)}">
+            <strong>${escapeHtml(zone)}</strong>
+            <span class="mesa-acta-icon" aria-hidden="true"><i class="fa-regular fa-file-pdf"></i></span>
+        </button>
+    `).join('');
+}
+
+function setupActaModal() {
+    const modal = document.getElementById('acta-modal');
+    const closeButton = document.getElementById('acta-modal-close');
+    const frame = document.getElementById('acta-modal-frame');
+
+    document.addEventListener('click', event => {
+        const trigger = event.target.closest('[data-acta-zone]');
+        if (!trigger) return;
+        const zone = trigger.dataset.actaZone;
+        if (!zone) return;
+        openActaModal(zone);
+    });
+
+    closeButton?.addEventListener('click', () => {
+        closeActaModal();
+    });
+
+    modal?.addEventListener('click', event => {
+        if (event.target === modal) {
+            closeActaModal();
+        }
+    });
+
+    modal?.addEventListener('close', () => {
+        if (frame) frame.src = 'about:blank';
+        document.body.classList.remove('mesa-modal-open');
+    });
+
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && modal?.open) {
+            closeActaModal();
+        }
+    });
+}
+
+function openActaModal(zone) {
+    const acta = getActaForZone(zone);
+    const modal = document.getElementById('acta-modal');
+    const title = document.getElementById('acta-modal-title');
+    const frame = document.getElementById('acta-modal-frame');
+    const openLink = document.getElementById('acta-modal-open');
+    if (!acta || !modal || !title || !frame || !openLink) return;
+
+    title.textContent = acta.label;
+    frame.src = acta.href;
+    openLink.href = acta.href;
+    document.body.classList.add('mesa-modal-open');
+    if (typeof modal.showModal === 'function') {
+        modal.showModal();
+    } else {
+        modal.setAttribute('open', 'open');
+    }
+}
+
+function closeActaModal() {
+    const modal = document.getElementById('acta-modal');
+    if (!modal) return;
+    if (typeof modal.close === 'function') {
+        modal.close();
+    } else {
+        modal.removeAttribute('open');
+        document.body.classList.remove('mesa-modal-open');
+        const frame = document.getElementById('acta-modal-frame');
+        if (frame) frame.src = 'about:blank';
+    }
+}
+
 function render() {
     const rows = getFilteredRows();
     renderMetrics(rows);
-    renderStatusBars(rows);
+    renderOverviewInsight(rows);
+    renderSummaryRail(rows);
     renderZoneBars(rows);
+    renderSortIndicators();
+    updateQuickChipState();
     renderTable(rows);
 }
 
@@ -300,12 +532,14 @@ async function init() {
         if (!response.ok) throw new Error('No se pudo cargar el CSV');
         state.rows = parseRows(parseCsv(await response.text())).sort(compareRows);
         document.body.classList.add('mesa-ready');
+        renderActaLinks();
+        setupActaModal();
         setupFilters();
         renderTopProposals();
         render();
     } catch (error) {
         console.error(error);
-        document.getElementById('proposal-table').innerHTML = '<tr><td colspan="6" class="mesa-empty">No se han podido cargar los datos.</td></tr>';
+        document.getElementById('proposal-table').innerHTML = '<tr><td colspan="5" class="mesa-empty">No se han podido cargar los datos.</td></tr>';
     }
 }
 

@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mesas de zona vs listado final | Presupuestos Participativos 2027</title>
-    <meta name="description" content="Cruce entre actas de mesas de zona y listado final de propuestas de los Presupuestos Participativos de Valladolid.">
+    <title>Qué pasó con las propuestas de las mesas | Presupuestos Participativos 2027</title>
+    <meta name="description" content="Auditoría vecinal sobre qué propuestas recogieron las mesas de zona y cuáles llegaron a la votación final de los Presupuestos Participativos de Valladolid.">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://presupuestos.aldeapucela.org/mesas.html">
-    <meta property="og:title" content="Mesas de zona vs listado final | Presupuestos Participativos 2027">
-    <meta property="og:description" content="Cruce entre actas de mesa y listado final publicado de 126 propuestas.">
+    <meta property="og:title" content="Qué pasó con las propuestas de las mesas | Presupuestos Participativos 2027">
+    <meta property="og:description" content="Auditoría vecinal sobre qué eligieron las mesas y qué llegó a la votación final.">
     <meta property="og:image" content="https://presupuestos.aldeapucela.org/img/social.jpg">
     <meta property="og:site_name" content="Presupuestos Participativos 2027">
     <meta property="og:locale" content="es_ES">
@@ -33,7 +33,7 @@
     </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=20260615b">
+    <link rel="stylesheet" href="style.css?v=20260615d">
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 
@@ -49,65 +49,72 @@
             </nav>
 
             <section class="mesa-hero">
-                <p class="mesa-kicker">Presupuestos participativos 2027</p>
-                <h1>Propuestas de las mesas: cuáles llegaron a la final</h1>
-                <p class="mesa-hero-copy">Una lectura sencilla de las actas de zona y del listado final de 126 propuestas.</p>
+                <p class="mesa-kicker">Auditoría vecinal</p>
+                <h1>Qué pasó con las propuestas que las mesas eligieron</h1>
+                <p class="mesa-hero-copy">Esta página compara lo que aparece en las actas de zona con lo que finalmente quedó para votar, para ver qué propuestas siguieron adelante y cuáles se quedaron fuera.</p>
                 <p class="mesa-license-note">Contenido y datos publicados con licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank" rel="noopener noreferrer">Creative Commons BY-SA 4.0</a>. Al reutilizarlos, debe citarse <a href="https://aldeapucela.org" target="_blank" rel="noopener noreferrer">aldeapucela.org</a>.</p>
             </section>
         </div>
     </header>
 
     <main class="mesa-shell mesa-main">
-        <section class="mesa-metrics" aria-label="Resumen principal">
-            <article class="mesa-metric mesa-metric-primary">
-                <span class="mesa-metric-label">Elegidas por mesa y fuera de la final</span>
-                <strong id="metric-mesa-no-final">0</strong>
-                <span class="mesa-metric-note">La mesa las priorizó, pero no aparecen entre las 126</span>
-            </article>
-            <article class="mesa-metric">
-                <span class="mesa-metric-label">Elegidas por mesa y en la final</span>
-                <strong id="metric-mesa-final">0</strong>
-                <span class="mesa-metric-note">Aparecen en actas y también en la votación final</span>
-            </article>
-            <article class="mesa-metric">
-                <span class="mesa-metric-label">En la final sin localizar en acta</span>
-                <strong id="metric-final-no-mesa">0</strong>
-                <span class="mesa-metric-note">Están entre las 126, pero no las hemos localizado con claridad</span>
-            </article>
+        <section class="mesa-summary-band" aria-label="Resumen principal">
+            <div class="mesa-summary-copy">
+                <p class="mesa-kicker">Qué ha pasado</p>
+                <h2>La lectura rápida</h2>
+                <p id="overview-insight" class="mesa-overview-insight">Cargando lectura general...</p>
+            </div>
+            <div class="mesa-summary-visual">
+                <div id="summary-rail" class="mesa-summary-rail" aria-hidden="true"></div>
+                <div class="mesa-summary-metrics">
+                    <article class="mesa-summary-metric mesa-summary-metric-primary">
+                        <span class="mesa-metric-label">Elegidas por mesa y fuera de la final</span>
+                        <strong id="metric-mesa-no-final">0</strong>
+                    </article>
+                    <article class="mesa-summary-metric">
+                        <span class="mesa-metric-label">Elegidas por mesa y en la final</span>
+                        <strong id="metric-mesa-final">0</strong>
+                    </article>
+                    <article class="mesa-summary-metric">
+                        <span class="mesa-metric-label">En la final sin localizar claramente en acta</span>
+                        <strong id="metric-final-no-mesa">0</strong>
+                    </article>
+                </div>
+            </div>
         </section>
 
-        <section class="mesa-intro-band" aria-label="Contexto del análisis">
-            <p>Esta página compara lo que aparece en las actas de las mesas de zona con lo que finalmente se publicó para votar. La lectura principal está arriba y, más abajo, se puede entrar al detalle por zona, apoyos y propuesta.</p>
+        <section class="mesa-section mesa-sources" aria-label="Fuentes originales">
+            <div class="mesa-section-heading mesa-section-heading-stacked">
+                <div>
+                    <p class="mesa-kicker">Comprueba tu zona</p>
+                    <h2>Actas oficiales de las mesas</h2>
+                </div>
+                <p class="mesa-muted">Si quieres revisar la fuente original, aquí puedes abrir el acta completa de cada zona.</p>
+            </div>
+            <div id="acta-links" class="mesa-acta-links" aria-live="polite"></div>
         </section>
 
         <section class="mesa-section mesa-overview" aria-label="Graficos de resumen">
             <div class="mesa-section-heading">
                 <div>
-                    <p class="mesa-kicker">Vista general</p>
-                    <h2>Resumen rápido</h2>
+                    <p class="mesa-kicker">Dónde se nota más</p>
+                    <h2>Las diferencias por zona</h2>
                 </div>
                 <p id="filtered-count" class="mesa-muted">0 propuestas</p>
             </div>
-
-            <div class="mesa-chart-grid">
-                <article class="mesa-panel">
-                    <h3>Cómo quedan repartidas las propuestas</h3>
-                    <div id="status-bars" class="mesa-bars" aria-live="polite"></div>
-                </article>
-                <article class="mesa-panel">
-                    <h3>Zonas donde más propuestas elegidas por mesa no llegan a la final</h3>
-                    <div id="zone-bars" class="mesa-zone-bars" aria-live="polite"></div>
-                </article>
-            </div>
+            <p id="zone-insight" class="mesa-overview-insight">Cargando lectura por zonas...</p>
+            <article class="mesa-panel">
+                <div id="zone-bars" class="mesa-zone-bars" aria-live="polite"></div>
+            </article>
         </section>
 
         <section class="mesa-section" aria-label="Propuestas destacadas">
             <div class="mesa-section-heading">
                 <div>
                     <p class="mesa-kicker">Casos destacados</p>
-                    <h2>Las más apoyadas que se quedaron fuera</h2>
+                    <h2>Propuestas muy apoyadas que se quedaron fuera</h2>
                 </div>
-                <p class="mesa-muted">Las 10 con más apoyos dentro del grupo que la mesa eligió pero no aparece en la final.</p>
+                <p class="mesa-muted">Cinco ejemplos que ayudan a entender qué tipo de corte se produjo entre las mesas y la lista final.</p>
             </div>
             <div id="top-proposals" class="mesa-top-list" aria-live="polite"></div>
         </section>
@@ -115,10 +122,18 @@
         <section class="mesa-section" aria-label="Explorador de datos">
             <div class="mesa-section-heading mesa-section-heading-stacked">
                 <div>
-                    <p class="mesa-kicker">Explorar</p>
-                    <h2>Listado completo filtrable</h2>
+                    <p class="mesa-kicker">Consultar el detalle</p>
+                    <h2>Listado completo de propuestas</h2>
                 </div>
-                <p class="mesa-muted">Ordenado para ver primero las propuestas elegidas por mesa que no aparecen en la final.</p>
+                <p class="mesa-muted">Primero aparecen las propuestas elegidas por mesa que no figuran en la final, empezando por las que tenían más apoyos.</p>
+            </div>
+
+            <div class="mesa-quick-filters" aria-label="Atajos de filtro">
+                <button class="mesa-quick-chip is-active" type="button" data-quick="all">Todas</button>
+                <button class="mesa-quick-chip" type="button" data-quick="mesa-no-final">Solo fuera de la final</button>
+                <button class="mesa-quick-chip" type="button" data-quick="mesa-final">Solo en la final</button>
+                <button class="mesa-quick-chip" type="button" data-quick="50plus">50+ apoyos</button>
+                <button class="mesa-quick-chip" type="button" data-quick="100plus">100+ apoyos</button>
             </div>
 
             <div class="mesa-filters" aria-label="Filtros">
@@ -144,11 +159,11 @@
                 <table class="mesa-table">
                     <thead>
                         <tr>
-                            <th>Qué pasó</th>
-                            <th>Zona</th>
-                            <th>Apoyos</th>
-                            <th>Propuesta</th>
-                            <th>Categoria</th>
+                            <th><button type="button" class="mesa-sort-button" data-sort="situacion">Qué pasó <span class="mesa-sort-indicator" data-indicator-for="situacion"></span></button></th>
+                            <th><button type="button" class="mesa-sort-button" data-sort="zona">Zona <span class="mesa-sort-indicator" data-indicator-for="zona"></span></button></th>
+                            <th><button type="button" class="mesa-sort-button" data-sort="apoyos">Apoyos <span class="mesa-sort-indicator" data-indicator-for="apoyos"></span></button></th>
+                            <th><button type="button" class="mesa-sort-button" data-sort="titulo">Propuesta <span class="mesa-sort-indicator" data-indicator-for="titulo"></span></button></th>
+                            <th><button type="button" class="mesa-sort-button" data-sort="categoria">Categoría <span class="mesa-sort-indicator" data-indicator-for="categoria"></span></button></th>
                         </tr>
                     </thead>
                     <tbody id="proposal-table"></tbody>
@@ -158,8 +173,7 @@
 
         <section class="mesa-method-note" aria-label="Nota metodologica">
             <h2>Nota metodológica</h2>
-            <p><strong>En la final sin localizar en acta</strong> no significa automáticamente que una propuesta no pasara por mesa: significa que no se ha detectado con claridad en las actas escaneadas.</p>
-            <p>Las actas son documentos escaneados, así que hay casos que conviene revisar visualmente antes de sacar conclusiones fuertes.</p>
+            <p><strong>En la final sin localizar claramente en acta</strong> no significa necesariamente que una propuesta no pasara por mesa, sino que no la hemos podido identificar con claridad en los documentos publicados.</p>
         </section>
     </main>
 
@@ -176,7 +190,25 @@
         </div>
     </footer>
 
-    <script type="module" src="src/mesaAnalysis.js?v=20260615b"></script>
+    <dialog id="acta-modal" class="mesa-acta-modal">
+        <div class="mesa-acta-dialog">
+            <div class="mesa-acta-dialog-header">
+                <div>
+                    <p class="mesa-kicker">Fuente original</p>
+                    <h2 id="acta-modal-title">Acta de zona</h2>
+                </div>
+                <button id="acta-modal-close" class="mesa-acta-close" type="button" aria-label="Cerrar visor del acta">Cerrar</button>
+            </div>
+            <div class="mesa-acta-dialog-actions">
+                <a id="acta-modal-open" href="#" target="_blank" rel="noopener noreferrer">Abrir PDF en pestaña nueva</a>
+            </div>
+            <div class="mesa-acta-frame-wrap">
+                <iframe id="acta-modal-frame" title="Visor del acta de zona"></iframe>
+            </div>
+        </div>
+    </dialog>
+
+    <script type="module" src="src/mesaAnalysis.js?v=20260615d"></script>
 </body>
 
 </html>
