@@ -1,6 +1,6 @@
 import { escapeHtml } from './utils.js';
 
-const CSV_URL = 'data/cruce_mesa_vs_final_126_simplificado_2026-06-15.csv';
+const CSV_URL = 'data/cruce_mesa_vs_final_126_simplificado_2026-06-15.csv?v=20260615b';
 
 const STATUS_ORDER = [
     'Mesa pero no final',
