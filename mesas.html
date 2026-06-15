@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesas de zona vs listado final | Presupuestos Participativos 2027</title>
+    <meta name="description" content="Cruce entre actas de mesas de zona y listado final de propuestas de los Presupuestos Participativos de Valladolid.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://presupuestos.aldeapucela.org/mesas.html">
+    <meta property="og:title" content="Mesas de zona vs listado final | Presupuestos Participativos 2027">
+    <meta property="og:description" content="Cruce entre actas de mesa y listado final publicado de 126 propuestas.">
+    <meta property="og:image" content="https://presupuestos.aldeapucela.org/img/social.jpg">
+    <meta property="og:site_name" content="Presupuestos Participativos 2027">
+    <meta property="og:locale" content="es_ES">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body class="mesa-page min-h-screen text-slate-900">
+    <header class="mesa-header">
+        <div class="mesa-shell">
+            <nav class="mesa-nav" aria-label="Navegación principal">
+                <a href="index.html" class="mesa-brand">Presupuestos Participativos 2027</a>
+                <div class="mesa-nav-links">
+                    <a href="index.html">Visor de propuestas</a>
+                    <a href="https://aldeapucela.org" target="_blank" rel="noopener noreferrer">aldeapucela.org</a>
+                </div>
+            </nav>
+
+            <section class="mesa-hero">
+                <p class="mesa-kicker">Presupuestos participativos 2027</p>
+                <h1>Propuestas de las mesas: cuáles llegaron a la final</h1>
+                <p class="mesa-hero-copy">Una lectura sencilla de las actas de zona y del listado final de 126 propuestas.</p>
+                <p class="mesa-license-note">Contenido y datos publicados con licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank" rel="noopener noreferrer">Creative Commons BY-SA 4.0</a>. Al reutilizarlos, debe citarse <a href="https://aldeapucela.org" target="_blank" rel="noopener noreferrer">aldeapucela.org</a>.</p>
+            </section>
+        </div>
+    </header>
+
+    <main class="mesa-shell mesa-main">
+        <section class="mesa-metrics" aria-label="Resumen principal">
+            <article class="mesa-metric mesa-metric-primary">
+                <span class="mesa-metric-label">Elegidas por mesa y fuera de la final</span>
+                <strong id="metric-mesa-no-final">0</strong>
+                <span class="mesa-metric-note">La mesa las priorizó, pero no aparecen entre las 126</span>
+            </article>
+            <article class="mesa-metric">
+                <span class="mesa-metric-label">Elegidas por mesa y en la final</span>
+                <strong id="metric-mesa-final">0</strong>
+                <span class="mesa-metric-note">Aparecen en actas y también en la votación final</span>
+            </article>
+            <article class="mesa-metric">
+                <span class="mesa-metric-label">En la final sin localizar en acta</span>
+                <strong id="metric-final-no-mesa">0</strong>
+                <span class="mesa-metric-note">Están entre las 126, pero no las hemos localizado con claridad</span>
+            </article>
+        </section>
+
+        <section class="mesa-intro-band" aria-label="Contexto del análisis">
+            <p>Esta página compara lo que aparece en las actas de las mesas de zona con lo que finalmente se publicó para votar. La lectura principal está arriba y, más abajo, se puede entrar al detalle por zona, apoyos y propuesta.</p>
+        </section>
+
+        <section class="mesa-section mesa-overview" aria-label="Graficos de resumen">
+            <div class="mesa-section-heading">
+                <div>
+                    <p class="mesa-kicker">Vista general</p>
+                    <h2>Resumen rápido</h2>
+                </div>
+                <p id="filtered-count" class="mesa-muted">0 propuestas</p>
+            </div>
+
+            <div class="mesa-chart-grid">
+                <article class="mesa-panel">
+                    <h3>Cómo quedan repartidas las propuestas</h3>
+                    <div id="status-bars" class="mesa-bars" aria-live="polite"></div>
+                </article>
+                <article class="mesa-panel">
+                    <h3>Zonas donde más propuestas elegidas por mesa no llegan a la final</h3>
+                    <div id="zone-bars" class="mesa-zone-bars" aria-live="polite"></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="mesa-section" aria-label="Propuestas destacadas">
+            <div class="mesa-section-heading">
+                <div>
+                    <p class="mesa-kicker">Casos destacados</p>
+                    <h2>Las más apoyadas que se quedaron fuera</h2>
+                </div>
+                <p class="mesa-muted">Las 10 con más apoyos dentro del grupo que la mesa eligió pero no aparece en la final.</p>
+            </div>
+            <div id="top-proposals" class="mesa-top-list" aria-live="polite"></div>
+        </section>
+
+        <section class="mesa-section" aria-label="Explorador de datos">
+            <div class="mesa-section-heading mesa-section-heading-stacked">
+                <div>
+                    <p class="mesa-kicker">Explorar</p>
+                    <h2>Listado completo filtrable</h2>
+                </div>
+                <p class="mesa-muted">Ordenado para ver primero las propuestas elegidas por mesa que no aparecen en la final.</p>
+            </div>
+
+            <div class="mesa-filters" aria-label="Filtros">
+                <label>
+                    <span>Qué pasó</span>
+                    <select id="filter-status"></select>
+                </label>
+                <label>
+                    <span>Zona</span>
+                    <select id="filter-zone"></select>
+                </label>
+                <label>
+                    <span>Categoria</span>
+                    <select id="filter-category"></select>
+                </label>
+                <label class="mesa-search">
+                    <span>Buscar</span>
+                    <input id="filter-search" type="search" placeholder="Titulo, zona, categoria...">
+                </label>
+            </div>
+
+            <div class="mesa-table-wrap">
+                <table class="mesa-table">
+                    <thead>
+                        <tr>
+                            <th>Qué pasó</th>
+                            <th>Zona</th>
+                            <th>Apoyos</th>
+                            <th>Propuesta</th>
+                            <th>Categoria</th>
+                        </tr>
+                    </thead>
+                    <tbody id="proposal-table"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="mesa-method-note" aria-label="Nota metodologica">
+            <h2>Nota metodológica</h2>
+            <p><strong>En la final sin localizar en acta</strong> no significa automáticamente que una propuesta no pasara por mesa: significa que no se ha detectado con claridad en las actas escaneadas.</p>
+            <p>Las actas son documentos escaneados, así que hay casos que conviene revisar visualmente antes de sacar conclusiones fuertes.</p>
+        </section>
+    </main>
+
+    <footer class="mesa-footer">
+        <div class="mesa-shell">
+            <div class="mesa-footer-copy">
+                <p>Contenido y datos bajo licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank" rel="noopener noreferrer">Creative Commons BY-SA 4.0</a>. Si se reutilizan, debe citarse <a href="https://aldeapucela.org" target="_blank" rel="noopener noreferrer">aldeapucela.org</a>.</p>
+                <div class="mesa-footer-links">
+                    <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank" rel="noopener noreferrer">Licencia del código</a>
+                    <a href="https://github.com/aldeapucela/participativos2027" target="_blank" rel="noopener noreferrer">Código</a>
+                </div>
+            </div>
+            <a href="https://aldeapucela.org" target="_blank" rel="noopener noreferrer">aldeapucela.org</a>
+        </div>
+    </footer>
+
+    <script type="module" src="src/mesaAnalysis.js"></script>
+</body>
+
+</html>
