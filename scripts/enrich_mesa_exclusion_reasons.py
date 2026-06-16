@@ -144,6 +144,30 @@ def classify_exclusion_reason(reason: str) -> str:
         return "Sin motivo suficiente"
 
     if any(phrase in lowered for phrase in (
+        "excede el millón",
+        "excede del millón",
+        "supera el millón",
+        "superior al presupuesto asignado",
+        "más de un millón",
+        "presupuesto sería más de un millón",
+        "presupuesto excedería del millón",
+        "inviable por espacio",
+        "elevado coste de mantenimiento",
+        "interferencias con otras infraestructuras",
+        "no es viable",
+        "inviable técnicamente",
+        "problemas que los provocados",
+        "reducción del número de plazas de aparcamiento",
+        "no permite el tránsito de los autobuses",
+        "falta de espacio",
+        "difícil de llevar a cabo",
+        "elevados costes de mantenimiento y gestión",
+        "obra arquitectónica de diseño",
+        "impide su derribo",
+    )):
+        return "Inviabilidad técnica o económica"
+
+    if any(phrase in lowered for phrase in (
         "no es competencia municipal",
         "no son titulares de la vía",
         "junta de castilla y león",
@@ -167,26 +191,6 @@ def classify_exclusion_reason(reason: str) -> str:
         "no se corresponde al marco",
     )):
         return "Competencia o encaje legal"
-
-    if any(phrase in lowered for phrase in (
-        "excede el millón",
-        "supera el millón",
-        "superior al presupuesto asignado",
-        "inviable por espacio",
-        "elevado coste de mantenimiento",
-        "interferencias con otras infraestructuras",
-        "no es viable",
-        "inviable técnicamente",
-        "problemas que los provocados",
-        "reducción del número de plazas de aparcamiento",
-        "no permite el tránsito de los autobuses",
-        "falta de espacio",
-        "difícil de llevar a cabo",
-        "elevados costes de mantenimiento y gestión",
-        "obra arquitectónica de diseño",
-        "impide su derribo",
-    )):
-        return "Inviabilidad técnica o económica"
 
     return "Competencia o encaje legal"
 

@@ -1,6 +1,6 @@
 import { escapeHtml } from './utils.js';
 
-const CSV_URL = '../data/mesa-final-unificado.csv?v=20260616a';
+const CSV_URL = '../data/mesa-final-unificado.csv?v=20260616c';
 
 const ACTA_BY_ZONE = {
     'Zona Centro': {
