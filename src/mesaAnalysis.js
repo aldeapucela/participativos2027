@@ -86,6 +86,7 @@ const state = {
         status: 'Todas',
         zone: 'Todas',
         category: 'Todas',
+        exclusionType: 'Todas',
         search: '',
         minSupport: 0,
         quick: 'all',
@@ -100,6 +101,7 @@ const DEFAULT_FILTERS = {
     status: 'Todas',
     zone: 'Todas',
     category: 'Todas',
+    exclusionType: 'Todas',
     search: '',
     minSupport: 0,
     quick: 'all',
@@ -109,6 +111,7 @@ const FILTER_QUERY_KEYS = {
     status: 'status',
     zone: 'zone',
     category: 'category',
+    exclusionType: 'exclusion_type',
     search: 'q',
     minSupport: 'min_support',
 };
@@ -118,6 +121,7 @@ function hasActiveFilters(filters = state.filters) {
         filters.status !== DEFAULT_FILTERS.status
         || filters.zone !== DEFAULT_FILTERS.zone
         || filters.category !== DEFAULT_FILTERS.category
+        || filters.exclusionType !== DEFAULT_FILTERS.exclusionType
         || filters.search.trim() !== DEFAULT_FILTERS.search
         || filters.minSupport !== DEFAULT_FILTERS.minSupport
     );
@@ -239,8 +243,43 @@ function parseRows(rows) {
         fiabilidad: row.fiabilidad_lectura_mesa || 'no aplica',
         extractoActa: row.extracto_acta || '',
         razonExclusion: row.razon_exclusion || '',
+        tipoRazonExclusion: row.tipo_razon_exclusion || '',
         informeInviabilidadUrl: row.informe_inviabilidad_url || '',
     }));
+}
+
+function getProposalLinkById(proposalId) {
+    const existingLink = state.rows.find(row => row.propuestaId === proposalId)?.enlace;
+    if (existingLink) return existingLink;
+    if (/^\d{4}$/.test(String(proposalId || ''))) {
+        return `https://www10.ava.es/presupuestosparticipativos/budgets/6/investments/${proposalId}`;
+    }
+    return '';
+}
+
+function renderReasonTextWithLinks(text) {
+    const source = String(text || '');
+    const pattern = /\b(propuesta\s+|ID\s*)(\d{4})\b/gi;
+    let lastIndex = 0;
+    let html = '';
+
+    source.replace(pattern, (match, prefix, proposalId, offset) => {
+        html += escapeHtml(source.slice(lastIndex, offset));
+        const localMatch = state.rows.some(row => row.propuestaId === proposalId);
+        const fallbackLink = getProposalLinkById(proposalId);
+        if (localMatch) {
+            html += `${escapeHtml(prefix)}<button type="button" class="mesa-inline-proposal-link" data-related-proposal-id="${escapeHtml(proposalId)}">${escapeHtml(proposalId)}</button>`;
+        } else if (fallbackLink) {
+            html += `${escapeHtml(prefix)}<a href="${escapeHtml(fallbackLink)}" target="_blank" rel="noopener noreferrer" class="mesa-inline-proposal-link">${escapeHtml(proposalId)}</a>`;
+        } else {
+            html += escapeHtml(match);
+        }
+        lastIndex = offset + match.length;
+        return match;
+    });
+
+    html += escapeHtml(source.slice(lastIndex));
+    return html;
 }
 
 function formatExclusionReason(row) {
@@ -253,13 +292,16 @@ function formatExclusionReason(row) {
     }
     return `
         <div class="mesa-exclusion-note">
-            <span class="mesa-exclusion-label">Razon de exclusion</span>
-            <p>${escapeHtml(row.razonExclusion)}</p>
+            <div class="mesa-exclusion-head">
+                <span class="mesa-exclusion-label">Razon de exclusion</span>
+                ${row.tipoRazonExclusion ? `<span class="mesa-exclusion-type-pill">${escapeHtml(row.tipoRazonExclusion)}</span>` : ''}
+            </div>
+            <p>${renderReasonTextWithLinks(row.razonExclusion)}</p>
         </div>
     `;
 }
 
-function getFilteredRows() {
+function getRowsMatchingBaseFilters() {
     const query = normalize(state.filters.search).trim();
     return state.rows.filter(row => {
         if (TABLE_HIDDEN_STATUSES.has(row.situacion)) return false;
@@ -270,7 +312,13 @@ function getFilteredRows() {
         const supportMatch = row.apoyos >= state.filters.minSupport;
         const queryMatch = !query || normalize(`${row.titulo} ${row.zona} ${row.categoria} ${row.propuestaId}`).includes(query);
         return statusMatch && zoneMatch && categoryMatch && supportMatch && queryMatch;
-    }).sort(compareRows);
+    });
+}
+
+function getFilteredRows() {
+    return getRowsMatchingBaseFilters()
+        .filter(row => state.filters.exclusionType === 'Todas' || row.tipoRazonExclusion === state.filters.exclusionType)
+        .sort(compareRows);
 }
 
 function compareRows(a, b) {
@@ -317,6 +365,27 @@ function fillSelect(id, values, currentValue) {
     )).join('');
 }
 
+function refreshExclusionTypeOptions() {
+    const exclusionTypeSelect = document.getElementById('filter-exclusion-type');
+    if (!exclusionTypeSelect) return;
+
+    const availableTypes = ['Todas', ...new Set(
+        getRowsMatchingBaseFilters()
+            .map(row => row.tipoRazonExclusion)
+            .filter(Boolean),
+    )].sort((a, b) => {
+        if (a === 'Todas') return -1;
+        if (b === 'Todas') return 1;
+        return a.localeCompare(b, 'es');
+    });
+
+    if (state.filters.exclusionType !== 'Todas' && !availableTypes.includes(state.filters.exclusionType)) {
+        state.filters.exclusionType = 'Todas';
+    }
+
+    fillSelect('filter-exclusion-type', availableTypes, state.filters.exclusionType);
+}
+
 function syncQuickFilterFromState() {
     if (state.filters.status === 'Mesa pero no final' && state.filters.minSupport === 0) {
         state.filters.quick = 'mesa-no-final';
@@ -347,6 +416,7 @@ function updateFilterControls() {
     if (zoneSelect) zoneSelect.value = state.filters.zone;
     if (categorySelect) categorySelect.value = state.filters.category;
     if (searchInput) searchInput.value = state.filters.search;
+    refreshExclusionTypeOptions();
 }
 
 function getShareableFilterParams() {
@@ -360,6 +430,9 @@ function getShareableFilterParams() {
     }
     if (state.filters.category !== DEFAULT_FILTERS.category) {
         params.set(FILTER_QUERY_KEYS.category, state.filters.category);
+    }
+    if (state.filters.exclusionType !== DEFAULT_FILTERS.exclusionType) {
+        params.set(FILTER_QUERY_KEYS.exclusionType, state.filters.exclusionType);
     }
     if (state.filters.search.trim()) {
         params.set(FILTER_QUERY_KEYS.search, state.filters.search.trim());
@@ -378,7 +451,7 @@ function updateUrlFromFilters() {
     window.history.replaceState({}, '', nextUrl);
 }
 
-function applyFiltersFromUrl({ zones = [], categories = [] } = {}) {
+function applyFiltersFromUrl({ zones = [], categories = [], exclusionTypes = [] } = {}) {
     const params = new URLSearchParams(window.location.search);
     const nextFilters = {
         ...DEFAULT_FILTERS,
@@ -387,6 +460,7 @@ function applyFiltersFromUrl({ zones = [], categories = [] } = {}) {
     const status = params.get(FILTER_QUERY_KEYS.status);
     const zone = params.get(FILTER_QUERY_KEYS.zone);
     const category = params.get(FILTER_QUERY_KEYS.category);
+    const exclusionType = params.get(FILTER_QUERY_KEYS.exclusionType);
     const search = params.get(FILTER_QUERY_KEYS.search);
     const minSupport = Number.parseInt(params.get(FILTER_QUERY_KEYS.minSupport) || '', 10);
 
@@ -398,6 +472,9 @@ function applyFiltersFromUrl({ zones = [], categories = [] } = {}) {
     }
     if (category && categories.includes(category)) {
         nextFilters.category = category;
+    }
+    if (exclusionType && exclusionTypes.includes(exclusionType)) {
+        nextFilters.exclusionType = exclusionType;
     }
     if (search) {
         nextFilters.search = search;
@@ -430,7 +507,12 @@ function setupFilters() {
         if (b === 'Todas') return 1;
         return a.localeCompare(b, 'es');
     });
-    applyFiltersFromUrl({ zones, categories });
+    const exclusionTypes = ['Todas', ...new Set(state.rows.map(row => row.tipoRazonExclusion).filter(Boolean))].sort((a, b) => {
+        if (a === 'Todas') return -1;
+        if (b === 'Todas') return 1;
+        return a.localeCompare(b, 'es');
+    });
+    applyFiltersFromUrl({ zones, categories, exclusionTypes });
     const visibleStatuses = STATUS_ORDER.filter(status => !TABLE_HIDDEN_STATUSES.has(status));
     fillSelect('filter-status', ['Todas', ...visibleStatuses], state.filters.status);
     fillSelect('filter-zone', zones, state.filters.zone);
@@ -441,6 +523,7 @@ function setupFilters() {
         ['filter-status', 'status'],
         ['filter-zone', 'zone'],
         ['filter-category', 'category'],
+        ['filter-exclusion-type', 'exclusionType'],
     ].forEach(([id, key]) => {
         document.getElementById(id)?.addEventListener('change', event => {
             state.filters[key] = event.target.value;
@@ -512,6 +595,27 @@ function jumpToDetailedList() {
     detailSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
+function focusProposalFromReference(proposalId) {
+    const normalizedId = String(proposalId || '').trim();
+    if (!normalizedId) return;
+    state.filters.status = 'Todas';
+    state.filters.zone = 'Todas';
+    state.filters.category = 'Todas';
+    state.filters.exclusionType = 'Todas';
+    state.filters.minSupport = 0;
+    state.filters.quick = 'all';
+    state.filters.search = normalizedId;
+    syncQuickFilterFromState();
+    updateFilterControls();
+    render();
+    const searchInput = document.getElementById('filter-search');
+    if (searchInput) {
+        searchInput.focus();
+        searchInput.setSelectionRange(normalizedId.length, normalizedId.length);
+    }
+    jumpToDetailedList();
+}
+
 function focusDetailedStatus(status) {
     state.filters.quick = 'all';
     state.filters.status = status;
@@ -526,6 +630,14 @@ function setupSectionActions() {
     document.getElementById('view-all-mesa-no-final')?.addEventListener('click', () => {
         applyQuickFilter('mesa-no-final');
         jumpToDetailedList();
+    });
+
+    document.addEventListener('click', event => {
+        const trigger = event.target.closest('[data-related-proposal-id]');
+        if (!trigger) return;
+        const proposalId = trigger.getAttribute('data-related-proposal-id');
+        if (!proposalId) return;
+        focusProposalFromReference(proposalId);
     });
 }
 

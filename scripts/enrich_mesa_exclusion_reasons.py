@@ -30,6 +30,10 @@ DEFAULT_PROPOSALS_JSON = ROOT / "data" / "proposals_data.json"
 REQUEST_DELAY_SECONDS = 0.2
 REQUEST_TIMEOUT_SECONDS = 20
 MAX_WORKERS = 8
+TARGET_STATUSES = {
+    "Mesa pero no final",
+    "Descartada por mesa y fuera de la final",
+}
 
 
 def normalize_text(value: Any) -> str:
@@ -86,6 +90,107 @@ def looks_like_acta_placeholder(text: str) -> bool:
     return any(marker in lowered for marker in markers)
 
 
+def classify_exclusion_reason(reason: str) -> str:
+    lowered = normalize_text(reason).lower()
+    if not lowered:
+        return ""
+
+    if any(phrase in lowered for phrase in (
+        "mantenimiento ordinario",
+        "actuación de mantenimiento",
+        "mantenimiento general",
+        "mantenimiento primario",
+        "debe estar incluida en los presupuestos generales ordinarios",
+        "parte del mantenimiento del ayuntamiento",
+        "no debe ser una inversión municipal",
+        "no una mejora para la ciudad",
+    )):
+        return "Mantenimiento ordinario"
+
+    if any(phrase in lowered for phrase in (
+        "ya se encuentra en funcionamiento",
+        "ya se encuentra en marcha",
+        "ya se ha realizado",
+        "ya se ejecuta",
+        "ya incluida en el proyecto",
+        "existe una reurbanización prevista",
+        "en ejecución en la actualidad",
+        "se va a instalar",
+        "ya cuenta con",
+        "ya existen",
+        "hay un proyecto",
+        "se está acometiendo",
+        "se va a ejecutar",
+        "ya no tiene repercusión",
+    )):
+        return "Ya previsto o en ejecución"
+
+    if any(phrase in lowered for phrase in (
+        "no se considera necesario",
+        "no considera necesaria",
+        "no se considera conveniente",
+        "hacen innecesaria la intervención",
+        "no debe llevarse a cabo ninguna actuación",
+        "no es prioridad",
+        "prioriza otras opciones",
+        "no se considera viable la intervención y prioriza otras opciones",
+        "no cree conveniente",
+        "no favorezca al común de la ciudadanía",
+        "no justifica la intervención",
+        "supone más peligrosidad que beneficio",
+        "el parque existente se puede usar perfectamente",
+        "se debe mantener como está",
+    )):
+        return "Sin motivo suficiente"
+
+    if any(phrase in lowered for phrase in (
+        "no es competencia municipal",
+        "no son titulares de la vía",
+        "junta de castilla y león",
+        "patrimonio no permite",
+        "debe ser el ayuntamiento quien",
+        "no se corresponde con competencias municipales",
+        "no corresponde al marco de presupuestos participativos",
+        "no admisible",
+        "no admisible, y con carácter previo",
+        "no es un proyecto de zona sino de ciudad",
+        "no es un proyecto de zona",
+        "inconcreción de la propuesta",
+        "sin descripción ni justificación",
+        "sin incorporar descripción ni justificación",
+        "no concreta el lugar",
+        "no da un lugar de actuación concreto",
+        "no permite identificar con claridad la actuación",
+        "no se encuentra suficientemente motivada",
+        "no atiende las necesidades del barrio-zona",
+        "fuera del ámbito",
+        "no se corresponde al marco",
+    )):
+        return "Competencia o encaje legal"
+
+    if any(phrase in lowered for phrase in (
+        "excede el millón",
+        "supera el millón",
+        "superior al presupuesto asignado",
+        "inviable por espacio",
+        "elevado coste de mantenimiento",
+        "interferencias con otras infraestructuras",
+        "no es viable",
+        "inviable técnicamente",
+        "problemas que los provocados",
+        "reducción del número de plazas de aparcamiento",
+        "no permite el tránsito de los autobuses",
+        "falta de espacio",
+        "difícil de llevar a cabo",
+        "elevados costes de mantenimiento y gestión",
+        "obra arquitectónica de diseño",
+        "impide su derribo",
+    )):
+        return "Inviabilidad técnica o económica"
+
+    return "Competencia o encaje legal"
+
+
 def load_proposals(path: Path) -> dict[str, dict[str, Any]]:
     proposals = json.loads(path.read_text(encoding="utf-8"))
     by_code: dict[str, dict[str, Any]] = {}
@@ -128,6 +233,8 @@ def fetch_inviability_reason(url: str) -> str:
 def enrich_rows(
     rows: list[dict[str, str]],
     proposals_by_code: dict[str, dict[str, Any]],
+    *,
+    skip_web: bool = False,
 ) -> tuple[list[dict[str, str]], int, dict[str, int]]:
     changed = 0
     fetched_reasons: dict[str, str] = {}
@@ -140,10 +247,7 @@ def enrich_rows(
 
     fetch_targets: dict[str, str] = {}
     for row in rows:
-        if row.get("situacion") not in {
-            "Mesa pero no final",
-            "Descartada por mesa y fuera de la final",
-        }:
+        if row.get("situacion") not in TARGET_STATUSES:
             continue
         stats["target_rows"] += 1
         proposal_id = normalize_text(row.get("propuesta_id"))
@@ -152,24 +256,22 @@ def enrich_rows(
         if source_url:
             fetch_targets[proposal_id] = source_url
 
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-        future_to_id = {
-            executor.submit(fetch_inviability_reason, source_url): proposal_id
-            for proposal_id, source_url in fetch_targets.items()
-        }
-        for future in as_completed(future_to_id):
-            proposal_id = future_to_id[future]
-            try:
-                fetched_reasons[proposal_id] = future.result()
-            except requests.RequestException:
-                fetched_reasons[proposal_id] = ""
-            time.sleep(REQUEST_DELAY_SECONDS)
+    if not skip_web:
+        with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+            future_to_id = {
+                executor.submit(fetch_inviability_reason, source_url): proposal_id
+                for proposal_id, source_url in fetch_targets.items()
+            }
+            for future in as_completed(future_to_id):
+                proposal_id = future_to_id[future]
+                try:
+                    fetched_reasons[proposal_id] = future.result()
+                except requests.RequestException:
+                    fetched_reasons[proposal_id] = ""
+                time.sleep(REQUEST_DELAY_SECONDS)
 
     for row in rows:
-        if row.get("situacion") not in {
-            "Mesa pero no final",
-            "Descartada por mesa y fuera de la final",
-        }:
+        if row.get("situacion") not in TARGET_STATUSES:
             continue
         proposal_id = normalize_text(row.get("propuesta_id"))
         proposal = proposals_by_code.get(proposal_id)
@@ -196,6 +298,7 @@ def enrich_rows(
         new_values = {
             "razon_exclusion": inferred_reason,
             "informe_inviabilidad_url": document_url,
+            "tipo_razon_exclusion": classify_exclusion_reason(inferred_reason),
         }
 
         row_changed = False
@@ -211,7 +314,7 @@ def enrich_rows(
 
 def write_csv(path: Path, rows: list[dict[str, str]]) -> None:
     base_headers = list(rows[0].keys()) if rows else []
-    for extra in ("razon_exclusion", "informe_inviabilidad_url"):
+    for extra in ("razon_exclusion", "informe_inviabilidad_url", "tipo_razon_exclusion"):
         if extra not in base_headers:
             base_headers.append(extra)
 
@@ -225,13 +328,14 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--mesa-csv", type=Path, default=DEFAULT_MESA_CSV)
     parser.add_argument("--proposals-json", type=Path, default=DEFAULT_PROPOSALS_JSON)
+    parser.add_argument("--skip-web", action="store_true")
     args = parser.parse_args()
 
     with args.mesa_csv.open(encoding="utf-8", newline="") as fh:
         rows = list(csv.DictReader(fh))
 
     proposals_by_code = load_proposals(args.proposals_json)
-    enriched_rows, changed, stats = enrich_rows(rows, proposals_by_code)
+    enriched_rows, changed, stats = enrich_rows(rows, proposals_by_code, skip_web=args.skip_web)
     write_csv(args.mesa_csv, enriched_rows)
 
     print(f"Filas procesadas: {len(enriched_rows)}")

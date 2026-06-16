@@ -81,6 +81,12 @@ Si el Ayuntamiento va publicando nuevos bloques de `Informe de inviabilidad` den
 python3 scripts/enrich_mesa_exclusion_reasons.py
 ```
 
+Si solo quieres recalcular la clasificación local de motivos ya guardados en el CSV, sin volver a leer la web municipal:
+
+```bash
+python3 scripts/enrich_mesa_exclusion_reasons.py --skip-web
+```
+
 El script:
 
 - relee las fichas públicas de propuestas `en mesa pero fuera de la final` y `descartadas por mesa y fuera de la final`;
