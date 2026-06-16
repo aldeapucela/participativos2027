@@ -1,6 +1,6 @@
 import { escapeHtml } from './utils.js';
 
-const CSV_URL = '../data/mesa-final-unificado.csv?v=20260615g';
+const CSV_URL = '../data/mesa-final-unificado.csv?v=20260616a';
 
 const ACTA_BY_ZONE = {
     'Zona Centro': {
@@ -94,6 +94,23 @@ const state = {
         key: 'default',
         direction: 'desc',
     },
+};
+
+const DEFAULT_FILTERS = {
+    status: 'Todas',
+    zone: 'Todas',
+    category: 'Todas',
+    search: '',
+    minSupport: 0,
+    quick: 'all',
+};
+
+const FILTER_QUERY_KEYS = {
+    status: 'status',
+    zone: 'zone',
+    category: 'category',
+    search: 'q',
+    minSupport: 'min_support',
 };
 
 function getActaForZone(zone) {
@@ -211,7 +228,25 @@ function parseRows(rows) {
         decisionMesa: row.decision_mesa || '',
         fiabilidad: row.fiabilidad_lectura_mesa || 'no aplica',
         extractoActa: row.extracto_acta || '',
+        razonExclusion: row.razon_exclusion || '',
+        informeInviabilidadUrl: row.informe_inviabilidad_url || '',
     }));
+}
+
+function formatExclusionReason(row) {
+    if (!row.razonExclusion) return '';
+    if (
+        row.situacion !== 'Mesa pero no final'
+        && row.situacion !== 'Descartada por mesa y fuera de la final'
+    ) {
+        return '';
+    }
+    return `
+        <div class="mesa-exclusion-note">
+            <span class="mesa-exclusion-label">Razon de exclusion</span>
+            <p>${escapeHtml(row.razonExclusion)}</p>
+        </div>
+    `;
 }
 
 function getFilteredRows() {
@@ -272,6 +307,99 @@ function fillSelect(id, values, currentValue) {
     )).join('');
 }
 
+function syncQuickFilterFromState() {
+    if (state.filters.status === 'Mesa pero no final' && state.filters.minSupport === 0) {
+        state.filters.quick = 'mesa-no-final';
+        return;
+    }
+    if (state.filters.status === 'Mesa y final' && state.filters.minSupport === 0) {
+        state.filters.quick = 'mesa-final';
+        return;
+    }
+    if (state.filters.status === 'Todas' && state.filters.minSupport === 50) {
+        state.filters.quick = '50plus';
+        return;
+    }
+    if (state.filters.status === 'Todas' && state.filters.minSupport === 100) {
+        state.filters.quick = '100plus';
+        return;
+    }
+    state.filters.quick = 'all';
+}
+
+function updateFilterControls() {
+    const statusSelect = document.getElementById('filter-status');
+    const zoneSelect = document.getElementById('filter-zone');
+    const categorySelect = document.getElementById('filter-category');
+    const searchInput = document.getElementById('filter-search');
+
+    if (statusSelect) statusSelect.value = state.filters.status;
+    if (zoneSelect) zoneSelect.value = state.filters.zone;
+    if (categorySelect) categorySelect.value = state.filters.category;
+    if (searchInput) searchInput.value = state.filters.search;
+}
+
+function getShareableFilterParams() {
+    const params = new URLSearchParams();
+
+    if (state.filters.status !== DEFAULT_FILTERS.status) {
+        params.set(FILTER_QUERY_KEYS.status, state.filters.status);
+    }
+    if (state.filters.zone !== DEFAULT_FILTERS.zone) {
+        params.set(FILTER_QUERY_KEYS.zone, state.filters.zone);
+    }
+    if (state.filters.category !== DEFAULT_FILTERS.category) {
+        params.set(FILTER_QUERY_KEYS.category, state.filters.category);
+    }
+    if (state.filters.search.trim()) {
+        params.set(FILTER_QUERY_KEYS.search, state.filters.search.trim());
+    }
+    if (state.filters.minSupport !== DEFAULT_FILTERS.minSupport) {
+        params.set(FILTER_QUERY_KEYS.minSupport, String(state.filters.minSupport));
+    }
+
+    return params;
+}
+
+function updateUrlFromFilters() {
+    const params = getShareableFilterParams();
+    const nextQuery = params.toString();
+    const nextUrl = `${window.location.pathname}${nextQuery ? `?${nextQuery}` : ''}${window.location.hash}`;
+    window.history.replaceState({}, '', nextUrl);
+}
+
+function applyFiltersFromUrl({ zones = [], categories = [] } = {}) {
+    const params = new URLSearchParams(window.location.search);
+    const nextFilters = {
+        ...DEFAULT_FILTERS,
+    };
+    const visibleStatuses = new Set(STATUS_ORDER.filter(status => !TABLE_HIDDEN_STATUSES.has(status)));
+    const status = params.get(FILTER_QUERY_KEYS.status);
+    const zone = params.get(FILTER_QUERY_KEYS.zone);
+    const category = params.get(FILTER_QUERY_KEYS.category);
+    const search = params.get(FILTER_QUERY_KEYS.search);
+    const minSupport = Number.parseInt(params.get(FILTER_QUERY_KEYS.minSupport) || '', 10);
+
+    if (status && visibleStatuses.has(status)) {
+        nextFilters.status = status;
+    }
+    if (zone && zones.includes(zone)) {
+        nextFilters.zone = zone;
+    }
+    if (category && categories.includes(category)) {
+        nextFilters.category = category;
+    }
+    if (search) {
+        nextFilters.search = search;
+    }
+    if (Number.isFinite(minSupport) && minSupport > 0) {
+        nextFilters.minSupport = minSupport;
+    }
+
+    state.filters = nextFilters;
+    syncQuickFilterFromState();
+}
+
 function setupFilters() {
     const zones = ['Todas', ...new Set(state.rows.map(row => row.zona).filter(Boolean))].sort((a, b) => {
         if (a === 'Todas') return -1;
@@ -292,10 +420,12 @@ function setupFilters() {
         if (b === 'Todas') return 1;
         return a.localeCompare(b, 'es');
     });
+    applyFiltersFromUrl({ zones, categories });
     const visibleStatuses = STATUS_ORDER.filter(status => !TABLE_HIDDEN_STATUSES.has(status));
     fillSelect('filter-status', ['Todas', ...visibleStatuses], state.filters.status);
     fillSelect('filter-zone', zones, state.filters.zone);
     fillSelect('filter-category', categories, state.filters.category);
+    updateFilterControls();
 
     [
         ['filter-status', 'status'],
@@ -304,12 +434,14 @@ function setupFilters() {
     ].forEach(([id, key]) => {
         document.getElementById(id)?.addEventListener('change', event => {
             state.filters[key] = event.target.value;
+            syncQuickFilterFromState();
             render();
         });
     });
 
     document.getElementById('filter-search')?.addEventListener('input', event => {
         state.filters.search = event.target.value;
+        syncQuickFilterFromState();
         render();
     });
 
@@ -353,8 +485,7 @@ function applyQuickFilter(quick) {
         state.filters.minSupport = 100;
     }
 
-    const statusSelect = document.getElementById('filter-status');
-    if (statusSelect) statusSelect.value = state.filters.status;
+    updateFilterControls();
     updateQuickChipState();
     render();
 }
@@ -375,8 +506,7 @@ function focusDetailedStatus(status) {
     state.filters.quick = 'all';
     state.filters.status = status;
     state.filters.minSupport = 0;
-    const statusSelect = document.getElementById('filter-status');
-    if (statusSelect) statusSelect.value = state.filters.status;
+    updateFilterControls();
     updateQuickChipState();
     render();
     jumpToDetailedList();
@@ -624,6 +754,7 @@ function renderTable(rows) {
             <td data-label="Propuesta">
                 <a href="${escapeHtml(row.enlace)}" target="_blank" rel="noopener noreferrer">${escapeHtml(row.titulo)}</a>
                 <span class="mesa-proposal-id">#${escapeHtml(row.propuestaId)}</span>
+                ${formatExclusionReason(row)}
             </td>
             <td data-label="Categoria">
                 <div class="mesa-categories-wrap">
@@ -714,6 +845,7 @@ function closeActaModal() {
 
 function render() {
     const rows = getFilteredRows();
+    updateUrlFromFilters();
     renderMetrics(state.rows);
     renderOverviewInsight(state.rows);
     renderSummaryRail(state.rows);

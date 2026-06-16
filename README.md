@@ -43,6 +43,16 @@ pip install requests beautifulsoup4 tqdm
 python3 scripts/scrape_budgets.py
 ```
 
+### Para comparar con el listado municipal actual
+
+Si deseas generar un snapshot externo y compararlo con el histórico interno:
+
+```bash
+python3 scripts/compare_current_listing.py --date 2026-06-12
+```
+
+Consulta [README_COMPARE_CURRENT_LISTING.md](README_COMPARE_CURRENT_LISTING.md) para el detalle del flujo y los artefactos generados.
+
 ## Licencia
 
 ### Código Fuente
@@ -60,6 +70,27 @@ Los datos han sido procesados, limpiados, geolocalizados y enriquecidos por Alde
 - `proposals_data.json`: Datos estructurados completos en formato JSON.
 - `proposals_data.csv`: Versión en CSV para abrir en Excel o herramientas de análisis.
 - `discovered_urls.json`: Registro de todas las propuestas detectadas para futuras actualizaciones rápidas.
+- `final_proposals_snapshot_YYYY-MM-DD.json`: Snapshot externo del listado municipal actual.
+- `mesa-final-unificado.csv`: Dataset comparado entre actas de mesa y listado final, enriquecible con razones de exclusión.
+
+## Refresco de razones de exclusion en mesas
+
+Si el Ayuntamiento va publicando nuevos bloques de `Informe de inviabilidad` dentro de las fichas de las propuestas, puedes refrescar el dataset de mesas con:
+
+```bash
+python3 scripts/enrich_mesa_exclusion_reasons.py
+```
+
+El script:
+
+- relee las fichas públicas de propuestas `en mesa pero fuera de la final` y `descartadas por mesa y fuera de la final`;
+- da prioridad al texto oficial de `Informe de inviabilidad` cuando exista;
+- conserva como fallback una razón resumida desde el acta cuando todavía no hay texto publicado en la ficha;
+- imprime un resumen final con cuántas filas tienen motivo web, cuántas siguen con fallback de acta y cuántas continúan sin motivo.
+- `proposals_comparison_YYYY-MM-DD.json`: Comparativa completa en JSON.
+- `proposals_comparison_YYYY-MM-DD.csv`: Comparativa completa en CSV.
+- `proposals_comparison_summary_YYYY-MM-DD.json`: Resumen por zona.
+- `proposals_comparison_report_YYYY-MM-DD.md`: Informe narrativo de la comparativa.
 
 ## Estructura del Proyecto
 

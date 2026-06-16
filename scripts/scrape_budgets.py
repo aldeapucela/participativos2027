@@ -517,6 +517,20 @@ def scrape_proposal_details(url, zone_name, zone_id):
     # 3. Categorías / Tags
     tags = soup.select('.tags a')
     data['categories'] = [tag.get_text(strip=True) for tag in tags]
+
+    inviability_heading = soup.find(
+        lambda tag: tag.name in ['h1', 'h2', 'h3']
+        and 'informe de inviabilidad' in tag.get_text(" ", strip=True).lower()
+    )
+    data['inviability_report'] = ''
+    if inviability_heading:
+        for sibling in inviability_heading.find_next_siblings():
+            if sibling.name in ['h1', 'h2', 'h3']:
+                break
+            report_text = sibling.get_text(" ", strip=True)
+            if report_text:
+                data['inviability_report'] = report_text.strip(' "“”')
+                break
     
     # 4. Mapa / Ubicación
     map_div = soup.select_one('.map_location')
