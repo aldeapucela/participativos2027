@@ -583,6 +583,15 @@ function applyQuickFilter(quick) {
     render();
 }
 
+function clearAllFilters() {
+    state.filters = {
+        ...DEFAULT_FILTERS,
+    };
+    updateFilterControls();
+    updateQuickChipState();
+    render();
+}
+
 function updateQuickChipState() {
     document.querySelectorAll('.mesa-quick-chip').forEach(button => {
         button.classList.toggle('is-active', button.dataset.quick === state.filters.quick);
@@ -630,6 +639,10 @@ function setupSectionActions() {
     document.getElementById('view-all-mesa-no-final')?.addEventListener('click', () => {
         applyQuickFilter('mesa-no-final');
         jumpToDetailedList();
+    });
+
+    document.getElementById('clear-filters')?.addEventListener('click', () => {
+        clearAllFilters();
     });
 
     document.addEventListener('click', event => {
