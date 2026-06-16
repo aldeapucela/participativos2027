@@ -113,6 +113,16 @@ const FILTER_QUERY_KEYS = {
     minSupport: 'min_support',
 };
 
+function hasActiveFilters(filters = state.filters) {
+    return (
+        filters.status !== DEFAULT_FILTERS.status
+        || filters.zone !== DEFAULT_FILTERS.zone
+        || filters.category !== DEFAULT_FILTERS.category
+        || filters.search.trim() !== DEFAULT_FILTERS.search
+        || filters.minSupport !== DEFAULT_FILTERS.minSupport
+    );
+}
+
 function getActaForZone(zone) {
     return ACTA_BY_ZONE[zone] || null;
 }
@@ -865,9 +875,15 @@ async function init() {
         renderActaLinks();
         setupActaModal();
         setupFilters();
+        const shouldScrollToTable = hasActiveFilters();
         setupSectionActions();
         renderTopProposals();
         render();
+        if (shouldScrollToTable) {
+            requestAnimationFrame(() => {
+                jumpToDetailedList();
+            });
+        }
     } catch (error) {
         console.error(error);
         document.getElementById('proposal-table').innerHTML = '<tr><td colspan="5" class="mesa-empty">No se han podido cargar los datos.</td></tr>';
