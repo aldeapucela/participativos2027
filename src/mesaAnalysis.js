@@ -906,7 +906,7 @@ function renderActaLinks() {
     container.innerHTML = entries.map(([zone, acta]) => `
         <a href="${escapeHtml(acta.href)}" target="_blank" rel="noopener noreferrer" class="mesa-acta-link-card">
             <strong>${escapeHtml(zone)}</strong>
-            <span class="mesa-acta-status">Abrir PDF</span>
+            <span class="mesa-acta-icon" aria-hidden="true"><i class="fa-regular fa-file-pdf"></i></span>
         </a>
     `).join('');
 }
