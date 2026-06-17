@@ -903,17 +903,16 @@ function renderTable(rows) {
 function renderActaLinks() {
     const container = document.getElementById('acta-links');
     const entries = Object.entries(ACTA_BY_ZONE).sort((a, b) => a[0].localeCompare(b[0], 'es', { numeric: true }));
-    container.innerHTML = entries.map(([zone]) => `
-        <div class="mesa-acta-link-card is-disabled" aria-disabled="true">
+    container.innerHTML = entries.map(([zone, acta]) => `
+        <a href="${escapeHtml(acta.href)}" target="_blank" rel="noopener noreferrer" class="mesa-acta-link-card">
             <strong>${escapeHtml(zone)}</strong>
-            <span class="mesa-acta-status">Retirada en revisión</span>
-        </div>
+            <span class="mesa-acta-status">Abrir PDF</span>
+        </a>
     `).join('');
 }
 
 function setupActaModal() {
-    // Emergency privacy mitigation:
-    // actas are intentionally not opened from the public UI until sanitized copies exist.
+    // The public UI now links directly to sanitized flattened copies.
 }
 
 function render() {
