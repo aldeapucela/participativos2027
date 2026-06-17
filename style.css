@@ -1106,6 +1106,29 @@ html, body {
     border-top: 1px solid var(--mesa-border);
 }
 
+.mesa-privacy-alert {
+    display: grid;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 18px 20px;
+    border: 1px solid rgba(178, 66, 77, 0.18);
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(178, 66, 77, 0.08), rgba(255, 255, 255, 0.96));
+}
+
+.mesa-privacy-alert strong {
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.4;
+    color: var(--mesa-ink);
+}
+
+.mesa-privacy-alert span {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--mesa-muted);
+}
+
 .mesa-acta-link-card {
     display: flex;
     align-items: center;
@@ -1118,6 +1141,19 @@ html, body {
     background: rgba(255, 255, 255, 0.64);
     text-align: left;
     transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.mesa-acta-link-card.is-disabled {
+    cursor: not-allowed;
+    background: rgba(248, 250, 252, 0.92);
+    border-style: dashed;
+    box-shadow: none;
+}
+
+.mesa-acta-link-card.is-disabled:hover {
+    transform: none;
+    border-color: var(--mesa-border);
+    box-shadow: none;
 }
 
 .mesa-acta-link-card:hover {
@@ -1142,6 +1178,20 @@ html, body {
     color: var(--mesa-primary);
     background: rgba(178, 66, 77, 0.08);
     font-size: 14px;
+}
+
+.mesa-acta-status {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.06);
+    color: var(--mesa-muted);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+    white-space: nowrap;
 }
 
 .mesa-item-actions {

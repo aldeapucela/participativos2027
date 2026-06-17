@@ -904,78 +904,16 @@ function renderActaLinks() {
     const container = document.getElementById('acta-links');
     const entries = Object.entries(ACTA_BY_ZONE).sort((a, b) => a[0].localeCompare(b[0], 'es', { numeric: true }));
     container.innerHTML = entries.map(([zone]) => `
-        <button type="button" class="mesa-acta-link-card" data-acta-zone="${escapeHtml(zone)}">
+        <div class="mesa-acta-link-card is-disabled" aria-disabled="true">
             <strong>${escapeHtml(zone)}</strong>
-            <span class="mesa-acta-icon" aria-hidden="true"><i class="fa-regular fa-file-pdf"></i></span>
-        </button>
+            <span class="mesa-acta-status">Retirada en revisión</span>
+        </div>
     `).join('');
 }
 
 function setupActaModal() {
-    const modal = document.getElementById('acta-modal');
-    const closeButton = document.getElementById('acta-modal-close');
-    const frame = document.getElementById('acta-modal-frame');
-
-    document.addEventListener('click', event => {
-        const trigger = event.target.closest('[data-acta-zone]');
-        if (!trigger) return;
-        const zone = trigger.dataset.actaZone;
-        if (!zone) return;
-        openActaModal(zone);
-    });
-
-    closeButton?.addEventListener('click', () => {
-        closeActaModal();
-    });
-
-    modal?.addEventListener('click', event => {
-        if (event.target === modal) {
-            closeActaModal();
-        }
-    });
-
-    modal?.addEventListener('close', () => {
-        if (frame) frame.src = 'about:blank';
-        document.body.classList.remove('mesa-modal-open');
-    });
-
-    document.addEventListener('keydown', event => {
-        if (event.key === 'Escape' && modal?.open) {
-            closeActaModal();
-        }
-    });
-}
-
-function openActaModal(zone) {
-    const acta = getActaForZone(zone);
-    const modal = document.getElementById('acta-modal');
-    const title = document.getElementById('acta-modal-title');
-    const frame = document.getElementById('acta-modal-frame');
-    const openLink = document.getElementById('acta-modal-open');
-    if (!acta || !modal || !title || !frame || !openLink) return;
-
-    title.textContent = acta.label;
-    frame.src = acta.href;
-    openLink.href = acta.href;
-    document.body.classList.add('mesa-modal-open');
-    if (typeof modal.showModal === 'function') {
-        modal.showModal();
-    } else {
-        modal.setAttribute('open', 'open');
-    }
-}
-
-function closeActaModal() {
-    const modal = document.getElementById('acta-modal');
-    if (!modal) return;
-    if (typeof modal.close === 'function') {
-        modal.close();
-    } else {
-        modal.removeAttribute('open');
-        document.body.classList.remove('mesa-modal-open');
-        const frame = document.getElementById('acta-modal-frame');
-        if (frame) frame.src = 'about:blank';
-    }
+    // Emergency privacy mitigation:
+    // actas are intentionally not opened from the public UI until sanitized copies exist.
 }
 
 function render() {

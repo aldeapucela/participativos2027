@@ -76,7 +76,11 @@
                     <p class="mesa-kicker">Comprueba tu zona</p>
                     <h2>Actas oficiales de las mesas</h2>
                 </div>
-                <p class="mesa-muted">Si quieres revisar la fuente original, aquí puedes abrir el acta completa de cada zona.</p>
+                <p class="mesa-muted">Las actas se han retirado temporalmente de esta web mientras revisamos y saneamos los documentos para evitar la exposición de datos personales.</p>
+            </div>
+            <div class="mesa-privacy-alert" role="alert">
+                <strong>Retirada preventiva por privacidad.</strong>
+                <span>Hemos detectado que algunos PDFs podían conservar texto personal extraíble aunque visualmente pareciera tachado. Hasta completar la revisión, no se mostrarán ni enlazarán desde aquí.</span>
             </div>
             <div id="acta-links" class="mesa-acta-links" aria-live="polite"></div>
             <p class="mesa-source-note">Varios vecinos y vecinas que asistieron a estas mesas nos han trasladado dudas sobre si las actas reflejan al 100% todas las decisiones adoptadas. Esta página se basa exclusivamente en lo que aparece por escrito en las actas publicadas, y conviene tener esa cautela en cuenta al interpretar los datos.</p>
@@ -205,26 +209,7 @@
             <a href="https://aldeapucela.org" target="_blank" rel="noopener noreferrer">aldeapucela.org</a>
         </div>
     </footer>
-
-    <dialog id="acta-modal" class="mesa-acta-modal">
-        <div class="mesa-acta-dialog">
-            <div class="mesa-acta-dialog-header">
-                <div>
-                    <p class="mesa-kicker">Fuente original</p>
-                    <h2 id="acta-modal-title">Acta de zona</h2>
-                </div>
-                <button id="acta-modal-close" class="mesa-acta-close" type="button" aria-label="Cerrar visor del acta">Cerrar</button>
-            </div>
-            <div class="mesa-acta-dialog-actions">
-                <a id="acta-modal-open" href="#" target="_blank" rel="noopener noreferrer">Abrir PDF en pestaña nueva</a>
-            </div>
-            <div class="mesa-acta-frame-wrap">
-                <iframe id="acta-modal-frame" title="Visor del acta de zona"></iframe>
-            </div>
-        </div>
-    </dialog>
-
-    <script type="module" src="../src/mesaAnalysis.js?v=20260616h"></script>
+    <script type="module" src="../src/mesaAnalysis.js?v=20260617privacy1"></script>
 </body>
 
 </html>
