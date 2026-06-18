@@ -1302,10 +1302,14 @@ html, body {
 }
 
 .mesa-proposal-id {
-    display: block;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
     margin-top: 4px;
     color: var(--mesa-muted);
     font-size: 12px;
+    line-height: 1.45;
 }
 
 .mesa-exclusion-note {
@@ -1654,6 +1658,15 @@ html, body {
     .mesa-table td[data-label="Categoria"] {
         font-size: 14px;
         line-height: 1.45;
+    }
+
+    .mesa-table td[data-label="Categoria"] {
+        align-items: start;
+    }
+
+    .mesa-table td[data-label="Categoria"] .mesa-categories-wrap {
+        justify-self: start;
+        align-self: start;
     }
 
     .mesa-pill {

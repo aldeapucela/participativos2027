@@ -1,6 +1,7 @@
 import { escapeHtml } from './utils.js';
 
 const CSV_URL = '../data/mesa-final-unificado.csv?v=20260616c';
+const FINAL_BUDGETS_URL = '../data/finales-web-clean.csv?v=20260618a';
 
 const ACTA_BY_ZONE = {
     'Zona Centro': {
@@ -226,7 +227,15 @@ function normalizeCategories(raw) {
     return [...new Set(valid)].join(' | ');
 }
 
-function parseRows(rows) {
+function buildFinalBudgetMap(rows) {
+    return new Map(
+        rows
+            .filter(row => row.propuesta_id && row.importe_web)
+            .map(row => [String(row.propuesta_id).trim(), String(row.importe_web).trim()]),
+    );
+}
+
+function parseRows(rows, finalBudgetMap = new Map()) {
     return rows.map(row => ({
         situacion: row.situacion,
         zona: row.zona,
@@ -245,6 +254,7 @@ function parseRows(rows) {
         razonExclusion: row.razon_exclusion || '',
         tipoRazonExclusion: row.tipo_razon_exclusion || '',
         informeInviabilidadUrl: row.informe_inviabilidad_url || '',
+        presupuestoFinal: finalBudgetMap.get(String(row.propuesta_id || '').trim()) || '',
     }));
 }
 
@@ -299,6 +309,14 @@ function formatExclusionReason(row) {
             <p>${renderReasonTextWithLinks(row.razonExclusion)}</p>
         </div>
     `;
+}
+
+function formatProposalMeta(row) {
+    const parts = [`#${escapeHtml(row.propuestaId)}`];
+    if (row.presupuestoFinal) {
+        parts.push(escapeHtml(row.presupuestoFinal));
+    }
+    return parts.join(' · ');
 }
 
 function getRowsMatchingBaseFilters() {
@@ -888,7 +906,7 @@ function renderTable(rows) {
             <td data-label="Apoyos"><strong>${row.apoyos}</strong></td>
             <td data-label="Propuesta">
                 <a href="${escapeHtml(row.enlace)}" target="_blank" rel="noopener noreferrer">${escapeHtml(row.titulo)}</a>
-                <span class="mesa-proposal-id">#${escapeHtml(row.propuestaId)}</span>
+                <span class="mesa-proposal-id">${formatProposalMeta(row)}</span>
                 ${formatExclusionReason(row)}
             </td>
             <td data-label="Categoria">
@@ -930,9 +948,14 @@ function render() {
 
 async function init() {
     try {
-        const response = await fetch(CSV_URL);
-        if (!response.ok) throw new Error('No se pudo cargar el CSV');
-        state.rows = parseRows(parseCsv(await response.text())).sort(compareRows);
+        const [mesaResponse, finalBudgetsResponse] = await Promise.all([
+            fetch(CSV_URL),
+            fetch(FINAL_BUDGETS_URL),
+        ]);
+        if (!mesaResponse.ok) throw new Error('No se pudo cargar el CSV principal');
+        if (!finalBudgetsResponse.ok) throw new Error('No se pudo cargar el CSV de importes finales');
+        const finalBudgetMap = buildFinalBudgetMap(parseCsv(await finalBudgetsResponse.text()));
+        state.rows = parseRows(parseCsv(await mesaResponse.text()), finalBudgetMap).sort(compareRows);
         document.body.classList.add('mesa-ready');
         renderActaLinks();
         setupActaModal();
